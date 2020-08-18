@@ -17,8 +17,8 @@ class ItemsSearch extends Items
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['name', 'model', 'os', 'mac', 'serial', 'product', 'modelnumber', 'invent', 'date', 'comment', 'statusName'], 'safe'],
+            [['id', 'state_id', 'type_id'], 'integer'],
+            [['name', 'model', 'os', 'mac', 'serial', 'product', 'modelnumber', 'invent', 'date', 'comment', 'statusName', 'typeName'], 'safe'],
         ];
     }
 
@@ -58,11 +58,19 @@ class ItemsSearch extends Items
             'asc' => [Types::className().'.name' => SORT_ASC],
             'desc' => [Types::className().'.name' => SORT_DESC],
         ];
+        $dataProvider->sort->attributes['typeName'] = [
+            'asc' => [Types::tableName().'.name' => SORT_ASC],
+            'desc' => [Types::tableName().'.name' => SORT_DESC],
+        ];
         
         $dataProvider->setSort([
             'defaultOrder' => [
                 'id' => SORT_ASC,
+<<<<<<< HEAD
             ],
+=======
+            ]
+>>>>>>> develop
         ]);
         $this->load($params);
 
