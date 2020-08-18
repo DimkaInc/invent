@@ -63,6 +63,14 @@ $config = [
                         'app' => 'items.app',
                     ],
                 ],
+                'types*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'app' => 'types.app',
+                    ],
+                ],
                 'contact*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
