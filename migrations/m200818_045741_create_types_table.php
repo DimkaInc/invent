@@ -51,6 +51,8 @@ class m200818_045741_create_types_table extends Migration
      */
     public function safeDown()
     {
+        echo "Отменить миграцию невозможно из-за внесённых данных";
+        return false;
         // Удаление связи таблиц оборудования и типов
         $this->dropForeignKey("fk-items-types-id", '{{%items}}');
         // Удаление индекса поля типов в таблице оборудования
