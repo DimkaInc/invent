@@ -71,7 +71,6 @@ $config = [
                         'app' => 'types.app',
                     ],
                 ],
-<<<<<<< HEAD
                 'status*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
@@ -80,8 +79,6 @@ $config = [
                         'app' => 'status.app',
                     ],
                 ],
-=======
->>>>>>> develop
                 'contact*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',

@@ -66,11 +66,7 @@ class ItemsSearch extends Items
         $dataProvider->setSort([
             'defaultOrder' => [
                 'id' => SORT_ASC,
-<<<<<<< HEAD
             ],
-=======
-            ]
->>>>>>> develop
         ]);
         $this->load($params);
 

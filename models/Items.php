@@ -64,11 +64,7 @@ class Items extends \yii\db\ActiveRecord
             'state_id' => Yii::t('items', "Состояние"),
             'statusName' => Yii::t('items', "State"),
             'type_id' => Yii::t('items', "Тип оборудования"),
-<<<<<<< HEAD
             'typeName' => Yii::t('items', "Type of item"),
-=======
-            'typeName' => Yii::t('items', "Type of item")
->>>>>>> develop
         ];
     }
     
@@ -77,17 +73,10 @@ class Items extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Status::className(), ['id' => 'state_id']);
     }
-<<<<<<< HEAD
-    
+
     // Получение типа оборудования
     public function getTypes()
     {
         return $this->hasOne(Types::className(), ['id' => 'type_id']);
-=======
-
-    public function getType()
-    {
-        return $this->hasOne(Type::className(), ['id' => 'type_id']);
->>>>>>> develop
     }
 }
