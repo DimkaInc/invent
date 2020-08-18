@@ -42,6 +42,7 @@ class ItemsSearch extends Items
     {
         $query = Items::find();
         $query->joinWith(['status']);
+        $query->joinWith(['types']);
 
         // add conditions that should always apply here
 
@@ -50,10 +51,19 @@ class ItemsSearch extends Items
         ]);
 
         $dataProvider->sort->attributes['statusName'] = [
-            'asc' => [Status::tableName().'.name' => SORT_ASC],
-            'desc' => [Status::tableName().'.name' => SORT_DESC],
+            'asc' => [Status::className().'.name' => SORT_ASC],
+            'desc' => [Status::className().'.name' => SORT_DESC],
+        ];
+        $dataProvider->sort->attributes['typeName'] = [
+            'asc' => [Types::className().'.name' => SORT_ASC],
+            'desc' => [Types::className().'.name' => SORT_DESC],
         ];
         
+        $dataProvider->setSort([
+            'defaultOrder' => [
+                'id' => SORT_ASC,
+            ],
+        ]);
         $this->load($params);
 
         if (!$this->validate()) {
@@ -68,6 +78,8 @@ class ItemsSearch extends Items
             'date' => $this->date,
         ])->andFilterWhere([
             'like', Status::tableName().'.name', $this->statusName
+        ])->andFilterWhere([
+            'like', Types::tableName().'.name', $this->typeName
         ]);
 
         $query->andFilterWhere(['ilike', 'name', $this->name])

@@ -21,6 +21,7 @@ use Yii;
 class Items extends \yii\db\ActiveRecord
 {
     public $statusName;
+    public $typeName;
      /**
      * {@inheritdoc}
      */
@@ -39,7 +40,7 @@ class Items extends \yii\db\ActiveRecord
             [['name', 'model', 'os', 'serial', 'product', 'modelnumber', 'comment' ], 'string', 'max' => 255],
             [['mac'], 'string', 'max' => 20],
             [['invent'], 'string', 'max' => 50],
-            [['state_id'], 'integer'],
+            [['state_id', 'type_id'], 'integer'],
         ];
     }
 
@@ -61,12 +62,21 @@ class Items extends \yii\db\ActiveRecord
             'date' => Yii::t('items', "Дата внесения записи"),
             'comment' => Yii::t('items', "Дополнительная информация"),
             'state_id' => Yii::t('items', "Состояние"),
-            'statusName' => Yii::t('items', 'State'),
+            'statusName' => Yii::t('items', "State"),
+            'type_id' => Yii::t('items', "Тип оборудования"),
+            'typeName' => Yii::t('items', "Type of item"),
         ];
     }
     
+    // Получение статуса оборудования
     public function getStatus()
     {
         return $this->hasOne(Status::className(), ['id' => 'state_id']);
+    }
+    
+    // Получение типа оборудования
+    public function getTypes()
+    {
+        return $this->hasOne(Types::className(), ['id' => 'type_id']);
     }
 }

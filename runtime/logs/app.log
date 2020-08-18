@@ -10923,3 +10923,180 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1597737997.819
     'REQUEST_TIME' => 1597737997
 ]
+2020-08-18 09:32:16 [-][-][-][error][yii\console\Exception] yii\console\Exception: The version argument must be either a timestamp (e.g. 101129_185401)
+or the full name of a migration (e.g. m101129_185401_create_user_table)
+or the full name of a namespaced migration (e.g. app\migrations\M101129185401CreateUserTable). in /var/www/invent/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:409
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionMark()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/console/Controller.php(181): yii\base\Controller->runAction()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest()
+#8 /var/www/invent/basic/yii(20): yii\base\Application->run()
+#9 {main}
+2020-08-18 09:32:16 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MC_SID' => '22699'
+    'SSH_CONNECTION' => '192.168.0.68 1847 192.168.0.32 22'
+    'LANG' => 'ru_RU.UTF-8'
+    'HISTCONTROL' => 'ignoreboth'
+    'MC_TMPDIR' => '/tmp/mc-zabbix'
+    'XDG_SESSION_ID' => '31518'
+    'USER' => 'zabbix'
+    'PWD' => '/home/zabbix/basic'
+    'HOME' => '/home/zabbix'
+    'SSH_CLIENT' => '192.168.0.68 1847 22'
+    'XDG_SESSION_TYPE' => 'tty'
+    'SSH_TTY' => '/dev/pts/0'
+    'MAIL' => '/var/mail/zabbix'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm'
+    'XDG_SESSION_CLASS' => 'user'
+    'SHLVL' => '2'
+    'LOGNAME' => 'zabbix'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games'
+    'OLDPWD' => '/home/zabbix/basic/models'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597743136.8479
+    'REQUEST_TIME' => 1597743136
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/mark'
+        2 => 'now'
+    ]
+    'argc' => 3
+]
+2020-08-18 09:33:25 [-][-][-][error][yii\console\Exception] yii\console\Exception: Unable to find the version '200818_123300'. in /var/www/invent/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:447
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionMark()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/console/Controller.php(181): yii\base\Controller->runAction()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest()
+#8 /var/www/invent/basic/yii(20): yii\base\Application->run()
+#9 {main}
+2020-08-18 09:33:25 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MC_SID' => '22699'
+    'SSH_CONNECTION' => '192.168.0.68 1847 192.168.0.32 22'
+    'LANG' => 'ru_RU.UTF-8'
+    'HISTCONTROL' => 'ignoreboth'
+    'MC_TMPDIR' => '/tmp/mc-zabbix'
+    'XDG_SESSION_ID' => '31518'
+    'USER' => 'zabbix'
+    'PWD' => '/home/zabbix/basic'
+    'HOME' => '/home/zabbix'
+    'SSH_CLIENT' => '192.168.0.68 1847 22'
+    'XDG_SESSION_TYPE' => 'tty'
+    'SSH_TTY' => '/dev/pts/0'
+    'MAIL' => '/var/mail/zabbix'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm'
+    'XDG_SESSION_CLASS' => 'user'
+    'SHLVL' => '2'
+    'LOGNAME' => 'zabbix'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games'
+    'OLDPWD' => '/home/zabbix/basic/migrations'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597743205.3853
+    'REQUEST_TIME' => 1597743205
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/mark'
+        2 => '200818_123300'
+    ]
+    'argc' => 3
+]
+2020-08-18 09:33:53 [-][-][-][error][yii\console\Exception] yii\console\Exception: Missing required arguments: version in /var/www/invent/basic/vendor/yiisoft/yii2/console/Controller.php:235
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\console\Controller->bindActionParams()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/console/Controller.php(181): yii\base\Controller->runAction()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest()
+#7 /var/www/invent/basic/yii(20): yii\base\Application->run()
+#8 {main}
+2020-08-18 09:33:53 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MC_SID' => '22699'
+    'SSH_CONNECTION' => '192.168.0.68 1847 192.168.0.32 22'
+    'LANG' => 'ru_RU.UTF-8'
+    'HISTCONTROL' => 'ignoreboth'
+    'MC_TMPDIR' => '/tmp/mc-zabbix'
+    'XDG_SESSION_ID' => '31518'
+    'USER' => 'zabbix'
+    'PWD' => '/home/zabbix/basic'
+    'HOME' => '/home/zabbix'
+    'SSH_CLIENT' => '192.168.0.68 1847 22'
+    'XDG_SESSION_TYPE' => 'tty'
+    'SSH_TTY' => '/dev/pts/0'
+    'MAIL' => '/var/mail/zabbix'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm'
+    'XDG_SESSION_CLASS' => 'user'
+    'SHLVL' => '2'
+    'LOGNAME' => 'zabbix'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games'
+    'OLDPWD' => '/home/zabbix/basic/migrations'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597743233.0369
+    'REQUEST_TIME' => 1597743233
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/mark'
+    ]
+    'argc' => 2
+]

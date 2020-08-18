@@ -6,6 +6,7 @@ use yii\jui\DatePicker;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
 use app\models\Status;
+use app\models\Types;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Items */
@@ -16,6 +17,8 @@ use app\models\Status;
 <div class="items-form">
 
     <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'type_id', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-2">{input}</div><div class="col-md-2">' . Html::a("Типы оборудования", ['types/index'], ['class' => 'btn btn-primary'] ) . '</div><div class="col-md-8">{error}</div></div>'])->dropDownList(ArrayHelper::merge(['empty' => "Выберите тип"], ArrayHelper::map(Types::find()->all(), 'id', 'name'))) ?>
 
     <?= $form->field($model, 'name', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->textInput(['maxlength' => true]) ?>
 
