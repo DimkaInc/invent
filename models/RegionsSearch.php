@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Status;
+use app\models\Regions;
 
 /**
- * StatusSearch represents the model behind the search form of `app\models\Status`.
+ * RegionsSearch represents the model behind the search form of `app\models\Regions`.
  */
-class StatusSearch extends Status
+class RegionsSearch extends Regions
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class StatusSearch extends Status
      */
     public function search($params)
     {
-        $query = Status::find();
+        $query = Regions::find();
 
         // add conditions that should always apply here
 

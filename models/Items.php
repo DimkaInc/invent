@@ -22,6 +22,8 @@ class Items extends \yii\db\ActiveRecord
 {
     public $statusName;
     public $typeName;
+    public $locationName;
+    public $regionName;
      /**
      * {@inheritdoc}
      */
@@ -40,7 +42,7 @@ class Items extends \yii\db\ActiveRecord
             [['name', 'model', 'os', 'serial', 'product', 'modelnumber', 'comment' ], 'string', 'max' => 255],
             [['mac'], 'string', 'max' => 20],
             [['invent'], 'string', 'max' => 50],
-            [['state_id', 'type_id'], 'integer'],
+            [['state_id', 'type_id', 'location_id'], 'integer'],
         ];
     }
 
@@ -65,9 +67,13 @@ class Items extends \yii\db\ActiveRecord
             'statusName' => Yii::t('items', "State"),
             'type_id' => Yii::t('items', "Тип оборудования"),
             'typeName' => Yii::t('items', "Type of item"),
+            'location_id' => Yii::t('items', "Место размещения"),
+            'locationName' => Yii::t('items', "Location on region"),
+            'regionName' => Yii::t('items', "Region")
+
         ];
     }
-    
+
     // Получение статуса оборудования
     public function getStatus()
     {
@@ -78,5 +84,11 @@ class Items extends \yii\db\ActiveRecord
     public function getTypes()
     {
         return $this->hasOne(Types::className(), ['id' => 'type_id']);
+    }
+
+    // Получение места размещения оборудования
+    public function getLocations()
+    {
+        return $this->hasOne(Locations::className(), ['id' => 'location_id']);
     }
 }

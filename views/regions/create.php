@@ -3,14 +3,15 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Types */
+/* @var $model app\models\Regions */
 
-$this->title = Yii::t('types', 'Create Types');
+$this->title = Yii::t('regions', 'Create Regions');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('items', 'Items'), 'url' => ['items/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('types', 'Types'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('locations', 'Locations'), 'url' => ['locations/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('regions', 'Regions'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="types-create">
+<div class="regions-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
