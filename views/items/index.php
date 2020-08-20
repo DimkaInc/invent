@@ -85,7 +85,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter' => Html::activeDropDownList(
                     $searchModel,
                     'statusName',
-                    ArrayHelper::merge(['' => "Все состояния"], ArrayHelper::map(Status::find()->all(), 'name', 'name')),
+                    ArrayHelper::merge(['' => "Все состояния"], ArrayHelper::map(Status::find()->orderBy('name')->all(), 'name', 'name')),
                     ['class' => 'form-control' ],
                 ),
                 'value' => function ($data) {

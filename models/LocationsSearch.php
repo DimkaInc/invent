@@ -4,12 +4,13 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Status;
+use app\models\Locations;
+use app\models\Regions;
 
 /**
- * StatusSearch represents the model behind the search form of `app\models\Status`.
+ * LocationsSearch represents the model behind the search form of `app\models\Locations`.
  */
-class StatusSearch extends Status
+class LocationsSearch extends Locations
 {
     /**
      * {@inheritdoc}
@@ -17,8 +18,8 @@ class StatusSearch extends Status
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['name'], 'safe'],
+            [['id', 'region_id'], 'integer'],
+            [['name', 'regionName'], 'safe'],
         ];
     }
 
@@ -40,20 +41,21 @@ class StatusSearch extends Status
      */
     public function search($params)
     {
-        $query = Status::find();
+        $query = Locations::find();
+        $query->joinWith(['regions']);
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-
+        
         $dataProvider->setSort([
             'defaultOrder' => [
                 'name' => SORT_ASC,
             ],
         ]);
-
+        
         $this->load($params);
 
         if (!$this->validate()) {
@@ -65,7 +67,15 @@ class StatusSearch extends Status
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'region_id' => $this->region_id,
+        ])->andFilterWhere([
+            'like', Regions::tableName().'.name', $this->regionName,
         ]);
+
+        $dataProvider->sort->attributes['regionName'] = [
+            'asc' => [Regions::tableName().'.name' => SORT_ASC],
+            'desc' => [Regions::tableName().'.name' => SORT_DESC],
+        ];
 
         $query->andFilterWhere(['ilike', 'name', $this->name]);
 

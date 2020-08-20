@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Status;
+use app\models\Types;
 
 /**
- * StatusSearch represents the model behind the search form of `app\models\Status`.
+ * TypesSearch represents the model behind the search form of `app\models\Types`.
  */
-class StatusSearch extends Status
+class TypesSearch extends Types
 {
     /**
      * {@inheritdoc}
@@ -40,14 +40,14 @@ class StatusSearch extends Status
      */
     public function search($params)
     {
-        $query = Status::find();
+        $query = Types::find();
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-
+        
         $dataProvider->setSort([
             'defaultOrder' => [
                 'name' => SORT_ASC,

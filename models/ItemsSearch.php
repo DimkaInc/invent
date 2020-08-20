@@ -5,6 +5,10 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Items;
+use app\models\Status;
+use app\models\Types;
+use app\models\Locations;
+use app\models\Regions;
 
 /**
  * ItemsSearch represents the model behind the search form of `app\models\Items`.
@@ -18,7 +22,7 @@ class ItemsSearch extends Items
     {
         return [
             [['id', 'state_id', 'type_id'], 'integer'],
-            [['name', 'model', 'os', 'mac', 'serial', 'product', 'modelnumber', 'invent', 'date', 'comment', 'statusName', 'typeName'], 'safe'],
+            [['name', 'model', 'os', 'mac', 'serial', 'product', 'modelnumber', 'invent', 'date', 'comment', 'statusName', 'typeName', 'locationName', 'regionName'], 'safe'],
         ];
     }
 
@@ -42,6 +46,9 @@ class ItemsSearch extends Items
     {
         $query = Items::find();
         $query->joinWith(['status']);
+        $query->joinWith(['types']);
+        $query->joinWith(['locations']);
+//        $query->joinWith(['regions']);
 
         // add conditions that should always apply here
 
@@ -49,20 +56,12 @@ class ItemsSearch extends Items
             'query' => $query,
         ]);
 
-        $dataProvider->sort->attributes['statusName'] = [
-            'asc' => [Status::tableName().'.name' => SORT_ASC],
-            'desc' => [Status::tableName().'.name' => SORT_DESC],
-        ];
-        $dataProvider->sort->attributes['typeName'] = [
-            'asc' => [Types::tableName().'.name' => SORT_ASC],
-            'desc' => [Types::tableName().'.name' => SORT_DESC],
-        ];
-        
         $dataProvider->setSort([
             'defaultOrder' => [
                 'id' => SORT_ASC,
-            ]
+            ],
         ]);
+
         $this->load($params);
 
         if (!$this->validate()) {
@@ -79,6 +78,10 @@ class ItemsSearch extends Items
             'like', Status::tableName().'.name', $this->statusName
         ])->andFilterWhere([
             'like', Types::tableName().'.name', $this->typeName
+        ])->andFilterWhere([
+            'like', Locations::tableName().'.name', $this->locationName
+//        ])->andFilterWhere([
+//            'like', Regions::tableName().'.name', $this->regionName
         ]);
 
         $query->andFilterWhere(['ilike', 'name', $this->name])
@@ -91,6 +94,23 @@ class ItemsSearch extends Items
             ->andFilterWhere(['ilike', 'invent', $this->invent])
             ->andFilterWhere(['ilike', 'comment', $this->comment]);
 
+        $dataProvider->sort->attributes['statusName'] = [
+            'asc' => [Status::tableName().'.name' => SORT_ASC],
+            'desc' => [Status::tableName().'.name' => SORT_DESC],
+        ];
+        $dataProvider->sort->attributes['typeName'] = [
+            'asc' => [Types::tableName().'.name' => SORT_ASC],
+            'desc' => [Types::tableName().'.name' => SORT_DESC],
+        ];
+        $dataProvider->sort->attributes['locationName'] = [
+            'asc' => [Locations::tableName().'.name' => SORT_ASC],
+            'desc' => [Locations::tableName().'.name' => SORT_DESC],
+        ];
+//        $dataProvider->sort->attributes['regionName'] = [
+//            'asc' => [Regions::tableName().'.name' => SORT_ASC],
+//            'desc' => [Regions::tableName().'.name' => SORT_DESC],
+//        ];
+        
         return $dataProvider;
     }
 }
