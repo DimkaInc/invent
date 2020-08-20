@@ -47,11 +47,8 @@ class ItemsSearch extends Items
         $query = Items::find();
         $query->joinWith(['status']);
         $query->joinWith(['types']);
-<<<<<<< HEAD
-=======
         $query->joinWith(['locations']);
 //        $query->joinWith(['regions']);
->>>>>>> develop
 
         // add conditions that should always apply here
 
