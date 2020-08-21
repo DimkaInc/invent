@@ -1,0 +1,483 @@
+a:14:{s:6:"config";s:1604:"a:5:{s:10:"phpVersion";s:5:"7.4.8";s:10:"yiiVersion";s:6:"2.0.36";s:11:"application";a:8:{s:3:"yii";s:6:"2.0.36";s:4:"name";s:9:"Inventory";s:7:"version";s:3:"1.0";s:8:"language";s:5:"ru-RU";s:14:"sourceLanguage";s:5:"en-US";s:7:"charset";s:5:"UTF-8";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:5:{s:7:"version";s:5:"7.4.8";s:6:"xdebug";b:0;s:3:"apc";b:0;s:8:"memcache";b:0;s:9:"memcached";b:0;}s:10:"extensions";a:6:{s:22:"yiisoft/yii2-bootstrap";a:3:{s:4:"name";s:22:"yiisoft/yii2-bootstrap";s:7:"version";s:8:"2.0.10.0";s:5:"alias";a:1:{s:14:"@yii/bootstrap";s:55:"/var/www/invent/basic/vendor/yiisoft/yii2-bootstrap/src";}}s:24:"yiisoft/yii2-swiftmailer";a:3:{s:4:"name";s:24:"yiisoft/yii2-swiftmailer";s:7:"version";s:7:"2.1.2.0";s:5:"alias";a:1:{s:16:"@yii/swiftmailer";s:57:"/var/www/invent/basic/vendor/yiisoft/yii2-swiftmailer/src";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:8:"2.1.13.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:51:"/var/www/invent/basic/vendor/yiisoft/yii2-debug/src";}}s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.1.4.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:49:"/var/www/invent/basic/vendor/yiisoft/yii2-gii/src";}}s:16:"yiisoft/yii2-jui";a:3:{s:4:"name";s:16:"yiisoft/yii2-jui";s:7:"version";s:7:"2.0.0.0";s:5:"alias";a:1:{s:8:"@yii/jui";s:56:"/var/www/invent/basic/vendor/yiisoft/yii2-jui-master/src";}}s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.4.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:47:"/var/www/invent/basic/vendor/yiisoft/yii2-faker";}}}}";s:7:"request";s:4549:"a:15:{s:7:"flashes";a:0:{}s:10:"statusCode";i:500;s:14:"requestHeaders";a:10:{s:4:"host";s:12:"192.168.0.32";s:10:"user-agent";s:78:"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0";s:6:"accept";s:74:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";s:15:"accept-language";s:35:"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3";s:7:"referer";s:58:"http://192.168.0.32/invent/index.php?r=items%2Findex&id=16";s:10:"connection";s:10:"keep-alive";s:6:"cookie";s:404:"_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=948m12f2rnlrvl51s2joe9dstd; _csrf=b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sPn6y19bfDijoWZ23AjD2mUXg3quyEr1%22%3B%7D";s:25:"upgrade-insecure-requests";s:1:"1";s:13:"cache-control";s:9:"max-age=0";s:15:"accept-encoding";s:13:"gzip, deflate";}s:15:"responseHeaders";a:8:{s:7:"Expires";s:29:"Thu, 19 Nov 1981 08:52:00 GMT";s:13:"Cache-Control";s:35:"no-store, no-cache, must-revalidate";s:6:"Pragma";s:8:"no-cache";s:12:"Content-Type";s:24:"text/html; charset=UTF-8";s:11:"X-Debug-Tag";s:13:"5f3f68fba31b2";s:16:"X-Debug-Duration";s:2:"60";s:12:"X-Debug-Link";s:60:"/invent/index.php?r=debug%2Fdefault%2Fview&tag=5f3f68fba31b2";s:10:"Set-Cookie";s:266:"_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; expires=Sun, 20-Sep-2020 06:26:03 GMT; Max-Age=2592000; path=/; HttpOnly";}s:5:"route";s:10:"site/index";s:6:"action";s:45:"app\controllers\SiteController::actionIndex()";s:12:"actionParams";a:0:{}s:7:"general";a:5:{s:6:"method";s:3:"GET";s:6:"isAjax";b:0;s:6:"isPjax";b:0;s:7:"isFlash";b:0;s:18:"isSecureConnection";b:0;}s:11:"requestBody";a:0:{}s:6:"SERVER";a:33:{s:9:"HTTP_HOST";s:12:"192.168.0.32";s:15:"HTTP_USER_AGENT";s:78:"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0";s:11:"HTTP_ACCEPT";s:74:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";s:20:"HTTP_ACCEPT_LANGUAGE";s:35:"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3";s:12:"HTTP_REFERER";s:58:"http://192.168.0.32/invent/index.php?r=items%2Findex&id=16";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:11:"HTTP_COOKIE";s:404:"_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=948m12f2rnlrvl51s2joe9dstd; _csrf=b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sPn6y19bfDijoWZ23AjD2mUXg3quyEr1%22%3B%7D";s:30:"HTTP_UPGRADE_INSECURE_REQUESTS";s:1:"1";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:4:"PATH";s:60:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";s:16:"SERVER_SIGNATURE";s:73:"<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+";s:15:"SERVER_SOFTWARE";s:22:"Apache/2.4.25 (Debian)";s:11:"SERVER_NAME";s:12:"192.168.0.32";s:11:"SERVER_ADDR";s:12:"192.168.0.32";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:12:"192.168.0.68";s:13:"DOCUMENT_ROOT";s:13:"/var/www/html";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:7:"/invent";s:21:"CONTEXT_DOCUMENT_ROOT";s:25:"/var/www/invent/basic/web";s:12:"SERVER_ADMIN";s:19:"webmaster@localhost";s:15:"SCRIPT_FILENAME";s:35:"/var/www/invent/basic/web/index.php";s:11:"REMOTE_PORT";s:5:"22162";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:3:"GET";s:12:"QUERY_STRING";s:0:"";s:11:"REQUEST_URI";s:17:"/invent/index.php";s:11:"SCRIPT_NAME";s:17:"/invent/index.php";s:8:"PHP_SELF";s:17:"/invent/index.php";s:18:"REQUEST_TIME_FLOAT";d:1597991163.663;s:12:"REQUEST_TIME";i:1597991163;}s:3:"GET";a:0:{}s:4:"POST";a:0:{}s:6:"COOKIE";a:3:{s:9:"_identity";s:130:"00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:"_identity";i:1;s:28:"["100","test100key",2592000]";}";s:9:"PHPSESSID";s:26:"948m12f2rnlrvl51s2joe9dstd";s:5:"_csrf";s:130:"b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a:2:{i:0;s:5:"_csrf";i:1;s:32:"sPn6y19bfDijoWZ23AjD2mUXg3quyEr1";}";}s:5:"FILES";a:0:{}s:7:"SESSION";a:2:{s:7:"__flash";a:0:{}s:4:"__id";s:3:"100";}}";s:6:"router";s:301:"a:3:{s:8:"messages";a:1:{i:6;a:6:{i:0;s:56:"Pretty URL not enabled. Using default URL parsing logic.";i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1597991163.668322;i:4;a:0:{}i:5;i:1266752;}}s:5:"route";s:10:"site/index";s:6:"action";s:45:"app\controllers\SiteController::actionIndex()";}";s:3:"log";s:22272:"a:1:{s:8:"messages";a:49:{i:0;a:6:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597991163.665778;i:4;a:0:{}i:5;i:863072;}i:1;a:6:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1597991163.665806;i:4;a:0:{}i:5;i:864248;}i:2;a:6:{i:0;s:15:"Session started";i:1;i:4;i:2;s:21:"yii\web\Session::open";i:3;d:1597991163.667107;i:4;a:0:{}i:5;i:1132968;}i:3;a:6:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597991163.668025;i:4;a:0:{}i:5;i:1247152;}i:4;a:6:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1597991163.668155;i:4;a:0:{}i:5;i:1260400;}i:5;a:6:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597991163.668251;i:4;a:0:{}i:5;i:1266000;}i:7;a:6:{i:0;s:19:"Route requested: ''";i:1;i:8;i:2;s:34:"yii\web\Application::handleRequest";i:3;d:1597991163.66834;i:4;a:0:{}i:5;i:1266480;}i:8;a:6:{i:0;s:24:"Route to run: site/index";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1597991163.66856;i:4;a:0:{}i:5;i:1280104;}i:9;a:6:{i:0;s:61:"Running action: app\controllers\SiteController::actionIndex()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1597991163.668867;i:4;a:0:{}i:5;i:1300120;}i:10;a:6:{i:0;s:63:"Rendering view file: /var/www/invent/basic/views/site/index.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.669049;i:4;a:1:{i:0;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1309384;}i:11;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1597991163.670408;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1574248;}i:14;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.683019;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1591824;}i:17;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.700653;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1605944;}i:20;a:6:{i:0;s:96:"SELECT COUNT(*) FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id"";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.709275;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1885640;}i:23;a:6:{i:0;s:139:"SELECT "regions".*, "locations".* FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id" ORDER BY "name" LIMIT 20";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.711635;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1888312;}i:26;a:6:{i:0;s:7124:"PDOException: SQLSTATE[42702]: Ambiguous column: 7 ОШИБКА:  выражение ORDER BY "name" неоднозначно
+LINE 1: ..."regions"."id" = "locations"."region_id" ORDER BY "name" LIM...
+                                                             ^ in /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(1159): yii\db\Command->internalExecute()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/db/Query.php(248): yii\db\Command->queryAll()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/data/ActiveDataProvider.php(116): yii\db\ActiveQuery->all()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\data\ActiveDataProvider->prepareModels()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\data\BaseDataProvider->prepare()
+#8 /var/www/invent/basic/vendor/yiisoft/yii2/data/BaseDataProvider.php(155): yii\data\BaseDataProvider->getModels()
+#9 /var/www/invent/basic/vendor/yiisoft/yii2/widgets/BaseListView.php(190): yii\data\BaseDataProvider->getCount()
+#10 /var/www/invent/basic/vendor/yiisoft/yii2/widgets/BaseListView.php(158): yii\widgets\BaseListView->renderSummary()
+#11 /var/www/invent/basic/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection()
+#12 /var/www/invent/basic/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection()
+#13 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}()
+#14 /var/www/invent/basic/vendor/yiisoft/yii2/widgets/BaseListView.php(138): preg_replace_callback()
+#15 /var/www/invent/basic/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#16 /var/www/invent/basic/vendor/yiisoft/yii2/base/Widget.php(140): yii\grid\GridView->run()
+#17 /var/www/invent/basic/views/site/index.php(45): yii\base\Widget::widget()
+#18 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/invent...')
+#19 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#20 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile()
+#21 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(409): yii\base\View->render()
+#22 /var/www/invent/basic/controllers/SiteController.php(64): yii\base\Controller->render()
+#23 [internal function]: app\controllers\SiteController->actionIndex()
+#24 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#25 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#26 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#27 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#28 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#29 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#30 {main}
+
+Next yii\db\Exception: SQLSTATE[42702]: Ambiguous column: 7 ОШИБКА:  выражение ORDER BY "name" неоднозначно
+LINE 1: ..."regions"."id" = "locations"."region_id" ORDER BY "name" LIM...
+                                                             ^
+The SQL being executed was: SELECT "regions".*, "locations".* FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id" ORDER BY "name" LIMIT 20 in /var/www/invent/basic/vendor/yiisoft/yii2/db/Schema.php:677
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(1159): yii\db\Command->internalExecute()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/db/Query.php(248): yii\db\Command->queryAll()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/data/ActiveDataProvider.php(116): yii\db\ActiveQuery->all()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\data\ActiveDataProvider->prepareModels()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\data\BaseDataProvider->prepare()
+#8 /var/www/invent/basic/vendor/yiisoft/yii2/data/BaseDataProvider.php(155): yii\data\BaseDataProvider->getModels()
+#9 /var/www/invent/basic/vendor/yiisoft/yii2/widgets/BaseListView.php(190): yii\data\BaseDataProvider->getCount()
+#10 /var/www/invent/basic/vendor/yiisoft/yii2/widgets/BaseListView.php(158): yii\widgets\BaseListView->renderSummary()
+#11 /var/www/invent/basic/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection()
+#12 /var/www/invent/basic/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection()
+#13 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}()
+#14 /var/www/invent/basic/vendor/yiisoft/yii2/widgets/BaseListView.php(138): preg_replace_callback()
+#15 /var/www/invent/basic/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#16 /var/www/invent/basic/vendor/yiisoft/yii2/base/Widget.php(140): yii\grid\GridView->run()
+#17 /var/www/invent/basic/views/site/index.php(45): yii\base\Widget::widget()
+#18 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/invent...')
+#19 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#20 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile()
+#21 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(409): yii\base\View->render()
+#22 /var/www/invent/basic/controllers/SiteController.php(64): yii\base\Controller->render()
+#23 [internal function]: app\controllers\SiteController->actionIndex()
+#24 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#25 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#26 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#27 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#28 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#29 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#30 {main}
+Additional Information:
+Array
+(
+    [0] => 42702
+    [1] => 7
+    [2] => ОШИБКА:  выражение ORDER BY "name" неоднозначно
+LINE 1: ..."regions"."id" = "locations"."region_id" ORDER BY "name" LIM...
+                                                             ^
+)
+";i:1;i:1;i:2;s:16:"yii\db\Exception";i:3;d:1597991163.713004;i:4;a:0:{}i:5;i:1874312;}i:27;a:6:{i:0;s:95:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/exception.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.713165;i:4;a:0:{}i:5;i:1867136;}i:28;a:6:{i:0;s:103:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/previousException.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.713567;i:4;a:0:{}i:5;i:1930376;}i:29;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.71392;i:4;a:0:{}i:5;i:2028688;}i:30;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.71435;i:4;a:0:{}i:5;i:2100528;}i:31;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.714769;i:4;a:0:{}i:5;i:2106904;}i:32;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.715162;i:4;a:0:{}i:5;i:2108160;}i:33;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.715584;i:4;a:0:{}i:5;i:2117448;}i:34;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.71594;i:4;a:0:{}i:5;i:2048904;}i:35;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.71619;i:4;a:0:{}i:5;i:1984008;}i:36;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.716432;i:4;a:0:{}i:5;i:1998256;}i:37;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.716674;i:4;a:0:{}i:5;i:2004888;}i:38;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.716905;i:4;a:0:{}i:5;i:2006144;}i:39;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.717174;i:4;a:0:{}i:5;i:2012808;}i:40;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.71741;i:4;a:0:{}i:5;i:2018160;}i:41;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.717693;i:4;a:0:{}i:5;i:2056376;}i:42;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.717932;i:4;a:0:{}i:5;i:2024768;}i:43;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.718094;i:4;a:0:{}i:5;i:1986328;}i:44;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.718282;i:4;a:0:{}i:5;i:2027280;}i:45;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.718539;i:4;a:0:{}i:5;i:2069592;}i:46;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.718793;i:4;a:0:{}i:5;i:2035336;}i:47;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.719008;i:4;a:0:{}i:5;i:2004824;}i:48;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.719285;i:4;a:0:{}i:5;i:2078400;}i:49;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.719572;i:4;a:0:{}i:5;i:2083752;}i:50;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.719851;i:4;a:0:{}i:5;i:2089104;}i:51;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.72014;i:4;a:0:{}i:5;i:2090544;}i:52;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.720369;i:4;a:0:{}i:5;i:2037224;}i:53;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.72053;i:4;a:0:{}i:5;i:2025000;}i:54;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.720698;i:4;a:0:{}i:5;i:2032648;}i:55;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.720943;i:4;a:0:{}i:5;i:2109392;}i:56;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.721269;i:4;a:0:{}i:5;i:2121560;}i:57;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.721505;i:4;a:0:{}i:5;i:2062584;}i:58;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.721794;i:4;a:0:{}i:5;i:2121688;}i:59;a:6:{i:0;s:99:"Rendering view file: /var/www/invent/basic/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597991163.722002;i:4;a:0:{}i:5;i:2046256;}}}";s:9:"profiling";s:12512:"a:3:{s:6:"memory";i:2408272;s:4:"time";d:0.06652712821960449;s:8:"messages";a:10:{i:12;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1597991163.670439;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1575752;}i:13;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1597991163.682824;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1578032;}i:15;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.683102;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1602992;}i:16;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.700052;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1609568;}i:18;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.700714;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1610624;}i:19;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.706781;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1612568;}i:21;a:6:{i:0;s:96:"SELECT COUNT(*) FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id"";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.709333;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1887856;}i:22;a:6:{i:0;s:96:"SELECT COUNT(*) FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id"";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.710984;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1889424;}i:24;a:6:{i:0;s:139:"SELECT "regions".*, "locations".* FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id" ORDER BY "name" LIMIT 20";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.711689;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1890688;}i:25;a:6:{i:0;s:139:"SELECT "regions".*, "locations".* FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id" ORDER BY "name" LIMIT 20";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.712898;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1926376;}}}";s:2:"db";s:11377:"a:1:{s:8:"messages";a:8:{i:15;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.683102;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1602992;}i:16;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.700052;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1609568;}i:18;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.700714;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1610624;}i:19;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.706781;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:26;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1612568;}i:21;a:6:{i:0;s:96:"SELECT COUNT(*) FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id"";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.709333;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1887856;}i:22;a:6:{i:0;s:96:"SELECT COUNT(*) FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id"";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.710984;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1889424;}i:24;a:6:{i:0;s:139:"SELECT "regions".*, "locations".* FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id" ORDER BY "name" LIMIT 20";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.711689;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1890688;}i:25;a:6:{i:0;s:139:"SELECT "regions".*, "locations".* FROM "regions" LEFT JOIN "locations" ON "regions"."id" = "locations"."region_id" ORDER BY "name" LIMIT 20";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597991163.712898;i:4;a:2:{i:0;a:5:{s:4:"file";s:42:"/var/www/invent/basic/views/site/index.php";s:4:"line";i:45;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:52:"/var/www/invent/basic/controllers/SiteController.php";s:4:"line";i:64;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1926376;}}}";s:5:"event";s:14689:"a:85:{i:0;a:5:{s:4:"time";d:1597991163.668305;s:4:"name";s:13:"beforeRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:1;a:5:{s:4:"time";d:1597991163.668626;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:2;a:5:{s:4:"time";d:1597991163.668769;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:30:"app\controllers\SiteController";}i:3;a:5:{s:4:"time";d:1597991163.66904;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:4;a:5:{s:4:"time";d:1597991163.669934;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:5;a:5:{s:4:"time";d:1597991163.670137;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:6;a:5:{s:4:"time";d:1597991163.68281;s:4:"name";s:9:"afterOpen";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\db\Connection";}i:7;a:5:{s:4:"time";d:1597991163.707497;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:8;a:5:{s:4:"time";d:1597991163.707534;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:9;a:5:{s:4:"time";d:1597991163.707776;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\grid\GridView";}i:10;a:5:{s:4:"time";d:1597991163.708205;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\grid\GridView";}i:11;a:5:{s:4:"time";d:1597991163.709059;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:12;a:5:{s:4:"time";d:1597991163.711435;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:13;a:5:{s:4:"time";d:1597991163.713155;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:14;a:5:{s:4:"time";d:1597991163.713242;s:4:"name";s:9:"beginPage";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:15;a:5:{s:4:"time";d:1597991163.713559;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:16;a:5:{s:4:"time";d:1597991163.713658;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:17;a:5:{s:4:"time";d:1597991163.713913;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:18;a:5:{s:4:"time";d:1597991163.714041;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:19;a:5:{s:4:"time";d:1597991163.714343;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:20;a:5:{s:4:"time";d:1597991163.714479;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:21;a:5:{s:4:"time";d:1597991163.714763;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:22;a:5:{s:4:"time";d:1597991163.714879;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:23;a:5:{s:4:"time";d:1597991163.715155;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:24;a:5:{s:4:"time";d:1597991163.715274;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:25;a:5:{s:4:"time";d:1597991163.715578;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:26;a:5:{s:4:"time";d:1597991163.715701;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:27;a:5:{s:4:"time";d:1597991163.715934;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:28;a:5:{s:4:"time";d:1597991163.716044;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:29;a:5:{s:4:"time";d:1597991163.716185;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:30;a:5:{s:4:"time";d:1597991163.716291;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:31;a:5:{s:4:"time";d:1597991163.716426;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:32;a:5:{s:4:"time";d:1597991163.716535;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:33;a:5:{s:4:"time";d:1597991163.716668;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:34;a:5:{s:4:"time";d:1597991163.716771;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:35;a:5:{s:4:"time";d:1597991163.716899;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:36;a:5:{s:4:"time";d:1597991163.717024;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:37;a:5:{s:4:"time";d:1597991163.717168;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:38;a:5:{s:4:"time";d:1597991163.717274;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:39;a:5:{s:4:"time";d:1597991163.717404;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:40;a:5:{s:4:"time";d:1597991163.71751;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:41;a:5:{s:4:"time";d:1597991163.717687;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:42;a:5:{s:4:"time";d:1597991163.71779;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:43;a:5:{s:4:"time";d:1597991163.717926;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:44;a:5:{s:4:"time";d:1597991163.71803;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:45;a:5:{s:4:"time";d:1597991163.718089;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:46;a:5:{s:4:"time";d:1597991163.718154;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:47;a:5:{s:4:"time";d:1597991163.718277;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:48;a:5:{s:4:"time";d:1597991163.718365;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:49;a:5:{s:4:"time";d:1597991163.718534;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:50;a:5:{s:4:"time";d:1597991163.71864;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:51;a:5:{s:4:"time";d:1597991163.718788;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:52;a:5:{s:4:"time";d:1597991163.718894;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:53;a:5:{s:4:"time";d:1597991163.719003;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:54;a:5:{s:4:"time";d:1597991163.719106;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:55;a:5:{s:4:"time";d:1597991163.719279;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:56;a:5:{s:4:"time";d:1597991163.719389;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:57;a:5:{s:4:"time";d:1597991163.719567;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:58;a:5:{s:4:"time";d:1597991163.719677;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:59;a:5:{s:4:"time";d:1597991163.719846;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:60;a:5:{s:4:"time";d:1597991163.719953;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:61;a:5:{s:4:"time";d:1597991163.720135;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:62;a:5:{s:4:"time";d:1597991163.720243;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:63;a:5:{s:4:"time";d:1597991163.720364;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:64;a:5:{s:4:"time";d:1597991163.720467;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:65;a:5:{s:4:"time";d:1597991163.720526;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:66;a:5:{s:4:"time";d:1597991163.720593;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:67;a:5:{s:4:"time";d:1597991163.720693;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:68;a:5:{s:4:"time";d:1597991163.720775;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:69;a:5:{s:4:"time";d:1597991163.720938;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:70;a:5:{s:4:"time";d:1597991163.721059;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:71;a:5:{s:4:"time";d:1597991163.721263;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:72;a:5:{s:4:"time";d:1597991163.72137;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:73;a:5:{s:4:"time";d:1597991163.7215;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:74;a:5:{s:4:"time";d:1597991163.721605;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:75;a:5:{s:4:"time";d:1597991163.721788;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:76;a:5:{s:4:"time";d:1597991163.721892;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:77;a:5:{s:4:"time";d:1597991163.721997;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:78;a:5:{s:4:"time";d:1597991163.722089;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:79;a:5:{s:4:"time";d:1597991163.722694;s:4:"name";s:7:"endBody";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:80;a:5:{s:4:"time";d:1597991163.722716;s:4:"name";s:7:"endPage";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:81;a:5:{s:4:"time";d:1597991163.723835;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:82;a:5:{s:4:"time";d:1597991163.723855;s:4:"name";s:10:"beforeSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:83;a:5:{s:4:"time";d:1597991163.724053;s:4:"name";s:12:"afterPrepare";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:84;a:5:{s:4:"time";d:1597991163.729104;s:4:"name";s:9:"afterSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}}";s:6:"assets";s:1156:"a:3:{s:22:"yii\grid\GridViewAsset";a:9:{s:10:"sourcePath";s:48:"/var/www/invent/basic/vendor/yiisoft/yii2/assets";s:2:"js";a:1:{i:0;s:15:"yii.gridView.js";}s:7:"depends";a:1:{i:0;s:16:"yii\web\YiiAsset";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/dc7fe084";s:7:"baseUrl";s:23:"/invent/assets/dc7fe084";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:16:"yii\web\YiiAsset";a:9:{s:10:"sourcePath";s:48:"/var/www/invent/basic/vendor/yiisoft/yii2/assets";s:2:"js";a:1:{i:0;s:6:"yii.js";}s:7:"depends";a:1:{i:0;s:19:"yii\web\JqueryAsset";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/dc7fe084";s:7:"baseUrl";s:23:"/invent/assets/dc7fe084";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:19:"yii\web\JqueryAsset";a:9:{s:10:"sourcePath";s:52:"/var/www/invent/basic/vendor/bower-asset/jquery/dist";s:2:"js";a:1:{i:0;s:9:"jquery.js";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/a4014a78";s:7:"baseUrl";s:23:"/invent/assets/a4014a78";s:7:"depends";a:0:{}s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}}";s:4:"mail";s:6:"a:0:{}";s:8:"timeline";s:91:"a:3:{s:5:"start";d:1597991163.664775;s:3:"end";d:1597991163.732229;s:6:"memory";i:2408272;}";s:4:"user";s:269:"a:5:{s:2:"id";s:3:"100";s:8:"identity";a:5:{s:2:"id";s:5:"'100'";s:8:"username";s:7:"'admin'";s:8:"password";s:7:"'admin'";s:7:"authKey";s:12:"'test100key'";s:11:"accessToken";s:11:"'100-token'";}s:10:"attributes";N;s:13:"rolesProvider";N;s:19:"permissionsProvider";N;}";s:4:"dump";s:6:"a:0:{}";s:7:"summary";a:12:{s:3:"tag";s:13:"5f3f68fba31b2";s:3:"url";s:36:"http://192.168.0.32/invent/index.php";s:4:"ajax";i:0;s:6:"method";s:3:"GET";s:2:"ip";s:12:"192.168.0.68";s:4:"time";d:1597991163.663;s:10:"statusCode";i:500;s:8:"sqlCount";i:4;s:9:"mailCount";i:0;s:9:"mailFiles";a:0:{}s:10:"peakMemory";i:2408272;s:14:"processingTime";d:0.06652712821960449;}s:10:"exceptions";a:0:{}}

@@ -7,6 +7,7 @@ use yii\helpers\Url;
 use yii\widgets\DetailView;
 use yii\helpers\ArrayHelper;
 use app\models\Status;
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ItemsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */

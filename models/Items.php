@@ -52,24 +52,24 @@ class Items extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('items', "Идентификатор (неизменяемый)"),
-            'name' => Yii::t('items', "Сетевое имя оборудования"),
-            'model' => Yii::t('items', "Модель оборудования"),
-            'os' => Yii::t('items', "Операционная система"),
-            'mac' => Yii::t('items', "Сетевой MAC адрес"),
-            'serial' => Yii::t('items', "Серийный номер"),
-            'product' => Yii::t('items', "Код оборудования"),
-            'modelnumber' => Yii::t('items', "Номер модели"),
-            'invent' => Yii::t('items', "Инвентарный номер"),
-            'date' => Yii::t('items', "Дата внесения записи"),
-            'comment' => Yii::t('items', "Дополнительная информация"),
-            'state_id' => Yii::t('items', "Состояние"),
-            'statusName' => Yii::t('items', "State"),
-            'type_id' => Yii::t('items', "Тип оборудования"),
-            'typeName' => Yii::t('items', "Type of item"),
-            'location_id' => Yii::t('items', "Место размещения"),
+            'id'           => Yii::t('items', "Идентификатор (неизменяемый)"),
+            'name'         => Yii::t('items', "Сетевое имя оборудования"),
+            'model'        => Yii::t('items', "Модель оборудования"),
+            'os'           => Yii::t('items', "Операционная система"),
+            'mac'          => Yii::t('items', "Сетевой MAC адрес"),
+            'serial'       => Yii::t('items', "Серийный номер"),
+            'product'      => Yii::t('items', "Код оборудования"),
+            'modelnumber'  => Yii::t('items', "Номер модели"),
+            'invent'       => Yii::t('items', "Инвентарный номер"),
+            'date'         => Yii::t('items', "Дата внесения записи"),
+            'comment'      => Yii::t('items', "Дополнительная информация"),
+            'state_id'     => Yii::t('items', "Состояние"),
+            'statusName'   => Yii::t('items', "State"),
+            'type_id'      => Yii::t('items', "Тип оборудования"),
+            'typeName'     => Yii::t('items', "Type of item"),
+            'location_id'  => Yii::t('items', "Место размещения"),
             'locationName' => Yii::t('items', "Location on region"),
-            'regionName' => Yii::t('items', "Region")
+            'regionName'   => Yii::t('items', "Region")
 
         ];
     }

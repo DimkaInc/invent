@@ -1,0 +1,1602 @@
+a:14:{s:6:"config";s:1604:"a:5:{s:10:"phpVersion";s:5:"7.4.8";s:10:"yiiVersion";s:6:"2.0.36";s:11:"application";a:8:{s:3:"yii";s:6:"2.0.36";s:4:"name";s:9:"Inventory";s:7:"version";s:3:"1.0";s:8:"language";s:5:"ru-RU";s:14:"sourceLanguage";s:5:"en-US";s:7:"charset";s:5:"UTF-8";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:5:{s:7:"version";s:5:"7.4.8";s:6:"xdebug";b:0;s:3:"apc";b:0;s:8:"memcache";b:0;s:9:"memcached";b:0;}s:10:"extensions";a:6:{s:22:"yiisoft/yii2-bootstrap";a:3:{s:4:"name";s:22:"yiisoft/yii2-bootstrap";s:7:"version";s:8:"2.0.10.0";s:5:"alias";a:1:{s:14:"@yii/bootstrap";s:55:"/var/www/invent/basic/vendor/yiisoft/yii2-bootstrap/src";}}s:24:"yiisoft/yii2-swiftmailer";a:3:{s:4:"name";s:24:"yiisoft/yii2-swiftmailer";s:7:"version";s:7:"2.1.2.0";s:5:"alias";a:1:{s:16:"@yii/swiftmailer";s:57:"/var/www/invent/basic/vendor/yiisoft/yii2-swiftmailer/src";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:8:"2.1.13.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:51:"/var/www/invent/basic/vendor/yiisoft/yii2-debug/src";}}s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.1.4.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:49:"/var/www/invent/basic/vendor/yiisoft/yii2-gii/src";}}s:16:"yiisoft/yii2-jui";a:3:{s:4:"name";s:16:"yiisoft/yii2-jui";s:7:"version";s:7:"2.0.0.0";s:5:"alias";a:1:{s:8:"@yii/jui";s:56:"/var/www/invent/basic/vendor/yiisoft/yii2-jui-master/src";}}s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.4.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:47:"/var/www/invent/basic/vendor/yiisoft/yii2-faker";}}}}";s:7:"request";s:4486:"a:15:{s:7:"flashes";a:0:{}s:10:"statusCode";i:200;s:14:"requestHeaders";a:9:{s:4:"host";s:12:"192.168.0.32";s:10:"user-agent";s:78:"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0";s:6:"accept";s:74:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";s:15:"accept-language";s:35:"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3";s:10:"connection";s:10:"keep-alive";s:7:"referer";s:36:"http://192.168.0.32/invent/index.php";s:6:"cookie";s:404:"PHPSESSID=j66jmlovhl2qi8tg6uct07qk1n; _csrf=b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sPn6y19bfDijoWZ23AjD2mUXg3quyEr1%22%3B%7D; _identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D";s:25:"upgrade-insecure-requests";s:1:"1";s:15:"accept-encoding";s:13:"gzip, deflate";}s:15:"responseHeaders";a:8:{s:7:"Expires";s:29:"Thu, 19 Nov 1981 08:52:00 GMT";s:13:"Cache-Control";s:35:"no-store, no-cache, must-revalidate";s:6:"Pragma";s:8:"no-cache";s:12:"Content-Type";s:24:"text/html; charset=UTF-8";s:11:"X-Debug-Tag";s:13:"5f3e1dabb3816";s:16:"X-Debug-Duration";s:2:"43";s:12:"X-Debug-Link";s:60:"/invent/index.php?r=debug%2Fdefault%2Fview&tag=5f3e1dabb3816";s:10:"Set-Cookie";s:266:"_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; expires=Sat, 19-Sep-2020 06:52:27 GMT; Max-Age=2592000; path=/; HttpOnly";}s:5:"route";s:11:"items/index";s:6:"action";s:46:"app\controllers\ItemsController::actionIndex()";s:12:"actionParams";a:0:{}s:7:"general";a:5:{s:6:"method";s:3:"GET";s:6:"isAjax";b:0;s:6:"isPjax";b:0;s:7:"isFlash";b:0;s:18:"isSecureConnection";b:0;}s:11:"requestBody";a:0:{}s:6:"SERVER";a:32:{s:9:"HTTP_HOST";s:12:"192.168.0.32";s:15:"HTTP_USER_AGENT";s:78:"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0";s:11:"HTTP_ACCEPT";s:74:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";s:20:"HTTP_ACCEPT_LANGUAGE";s:35:"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:12:"HTTP_REFERER";s:36:"http://192.168.0.32/invent/index.php";s:11:"HTTP_COOKIE";s:404:"PHPSESSID=j66jmlovhl2qi8tg6uct07qk1n; _csrf=b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sPn6y19bfDijoWZ23AjD2mUXg3quyEr1%22%3B%7D; _identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D";s:30:"HTTP_UPGRADE_INSECURE_REQUESTS";s:1:"1";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:4:"PATH";s:60:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";s:16:"SERVER_SIGNATURE";s:73:"<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+";s:15:"SERVER_SOFTWARE";s:22:"Apache/2.4.25 (Debian)";s:11:"SERVER_NAME";s:12:"192.168.0.32";s:11:"SERVER_ADDR";s:12:"192.168.0.32";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:12:"192.168.0.68";s:13:"DOCUMENT_ROOT";s:13:"/var/www/html";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:7:"/invent";s:21:"CONTEXT_DOCUMENT_ROOT";s:25:"/var/www/invent/basic/web";s:12:"SERVER_ADMIN";s:19:"webmaster@localhost";s:15:"SCRIPT_FILENAME";s:35:"/var/www/invent/basic/web/index.php";s:11:"REMOTE_PORT";s:5:"59108";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:3:"GET";s:12:"QUERY_STRING";s:15:"r=items%2Findex";s:11:"REQUEST_URI";s:33:"/invent/index.php?r=items%2Findex";s:11:"SCRIPT_NAME";s:17:"/invent/index.php";s:8:"PHP_SELF";s:17:"/invent/index.php";s:18:"REQUEST_TIME_FLOAT";d:1597906347.732;s:12:"REQUEST_TIME";i:1597906347;}s:3:"GET";a:1:{s:1:"r";s:11:"items/index";}s:4:"POST";a:0:{}s:6:"COOKIE";a:3:{s:9:"PHPSESSID";s:26:"j66jmlovhl2qi8tg6uct07qk1n";s:5:"_csrf";s:130:"b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a:2:{i:0;s:5:"_csrf";i:1;s:32:"sPn6y19bfDijoWZ23AjD2mUXg3quyEr1";}";s:9:"_identity";s:130:"00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:"_identity";i:1;s:28:"["100","test100key",2592000]";}";}s:5:"FILES";a:0:{}s:7:"SESSION";a:2:{s:7:"__flash";a:0:{}s:4:"__id";s:3:"100";}}";s:6:"router";s:303:"a:3:{s:8:"messages";a:1:{i:6;a:6:{i:0;s:56:"Pretty URL not enabled. Using default URL parsing logic.";i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1597906347.735457;i:4;a:0:{}i:5;i:1266152;}}s:5:"route";s:11:"items/index";s:6:"action";s:46:"app\controllers\ItemsController::actionIndex()";}";s:3:"log";s:24059:"a:1:{s:8:"messages";a:26:{i:0;a:6:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597906347.733564;i:4;a:0:{}i:5;i:862472;}i:1;a:6:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1597906347.733591;i:4;a:0:{}i:5;i:863648;}i:2;a:6:{i:0;s:15:"Session started";i:1;i:4;i:2;s:21:"yii\web\Session::open";i:3;d:1597906347.734563;i:4;a:0:{}i:5;i:1132368;}i:3;a:6:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597906347.735208;i:4;a:0:{}i:5;i:1246552;}i:4;a:6:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1597906347.735311;i:4;a:0:{}i:5;i:1259800;}i:5;a:6:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597906347.735387;i:4;a:0:{}i:5;i:1265400;}i:7;a:6:{i:0;s:30:"Route requested: 'items/index'";i:1;i:8;i:2;s:34:"yii\web\Application::handleRequest";i:3;d:1597906347.735476;i:4;a:0:{}i:5;i:1266208;}i:8;a:6:{i:0;s:25:"Route to run: items/index";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1597906347.735664;i:4;a:0:{}i:5;i:1279896;}i:9;a:6:{i:0;s:62:"Running action: app\controllers\ItemsController::actionIndex()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1597906347.735866;i:4;a:0:{}i:5;i:1297784;}i:10;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1597906347.736778;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1561440;}i:13;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'items'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.741393;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1579008;}i:16;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='items'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.748317;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1598928;}i:19;a:6:{i:0;s:64:"Rendering view file: /var/www/invent/basic/views/items/index.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597906347.751068;i:4;a:1:{i:0;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1780840;}i:20;a:6:{i:0;s:38:"SELECT * FROM "status" ORDER BY "name"";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.751308;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1864992;}i:23;a:6:{i:0;s:2666:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'status'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.752059;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1879440;}i:26;a:6:{i:0;s:874:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='status'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.755187;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1886768;}i:29;a:6:{i:0;s:205:"SELECT COUNT(*) FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id"";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.757935;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2041936;}i:32;a:6:{i:0;s:229:"SELECT "items".* FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id" ORDER BY "id" LIMIT 20";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.758897;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2045696;}i:35;a:6:{i:0;s:49:"SELECT * FROM "status" WHERE "id" IN (2, 1, 5, 6)";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.760015;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2111632;}i:38;a:6:{i:0;s:51:"SELECT * FROM "types" WHERE "id" IN (1, 2, 5, 8, 9)";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.760693;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2131328;}i:41;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'types'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.761106;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2142448;}i:44;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='types'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.764277;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2149824;}i:47;a:6:{i:0;s:57:"SELECT * FROM "locations" WHERE "id" IN (2, 4, 10, 11, 1)";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766373;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2160592;}i:50;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766908;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2171960;}i:53;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.770119;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2179936;}i:56;a:6:{i:0;s:65:"Rendering view file: /var/www/invent/basic/views/layouts/main.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597906347.773772;i:4;a:1:{i:0;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2152448;}}}";s:9:"profiling";s:43978:"a:3:{s:6:"memory";i:2434128;s:4:"time";d:0.04305005073547363;s:8:"messages";a:30:{i:11;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1597906347.736805;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1562944;}i:12;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1597906347.741327;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1565224;}i:14;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'items'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.74142;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1590176;}i:15;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'items'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.748072;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1616024;}i:17;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='items'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.748334;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1604248;}i:18;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='items'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.750312;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1608192;}i:21;a:6:{i:0;s:38:"SELECT * FROM "status" ORDER BY "name"";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.751322;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1867000;}i:22;a:6:{i:0;s:38:"SELECT * FROM "status" ORDER BY "name"";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.751869;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1871520;}i:24;a:6:{i:0;s:2666:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'status'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.752086;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1890520;}i:25;a:6:{i:0;s:2666:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'status'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.754967;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1897008;}i:27;a:6:{i:0;s:874:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='status'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.755207;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1891448;}i:28;a:6:{i:0;s:874:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='status'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.757019;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1893392;}i:30;a:6:{i:0;s:205:"SELECT COUNT(*) FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id"";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.757954;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2044504;}i:31;a:6:{i:0;s:205:"SELECT COUNT(*) FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id"";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.758651;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2046072;}i:33;a:6:{i:0;s:229:"SELECT "items".* FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id" ORDER BY "id" LIMIT 20";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.758915;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2049608;}i:34;a:6:{i:0;s:229:"SELECT "items".* FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id" ORDER BY "id" LIMIT 20";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.759548;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2070640;}i:36;a:6:{i:0;s:49:"SELECT * FROM "status" WHERE "id" IN (2, 1, 5, 6)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.76004;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2113888;}i:37;a:6:{i:0;s:49:"SELECT * FROM "status" WHERE "id" IN (2, 1, 5, 6)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.760409;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2117736;}i:39;a:6:{i:0;s:51:"SELECT * FROM "types" WHERE "id" IN (1, 2, 5, 8, 9)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.760717;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2133384;}i:40;a:6:{i:0;s:51:"SELECT * FROM "types" WHERE "id" IN (1, 2, 5, 8, 9)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.760947;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2137672;}i:42;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'types'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.761135;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2153528;}i:43;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'types'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.764058;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2160064;}i:45;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='types'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.7643;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2154504;}i:46;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='types'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766067;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2156448;}i:48;a:6:{i:0;s:57:"SELECT * FROM "locations" WHERE "id" IN (2, 4, 10, 11, 1)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766396;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2162664;}i:49;a:6:{i:0;s:57:"SELECT * FROM "locations" WHERE "id" IN (2, 4, 10, 11, 1)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766728;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2167248;}i:51;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766937;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2183040;}i:52;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.7699;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2191240;}i:54;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.770142;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2184616;}i:55;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.771956;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2187440;}}}";s:2:"db";s:42832:"a:1:{s:8:"messages";a:28:{i:14;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'items'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.74142;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1590176;}i:15;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'items'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.748072;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1616024;}i:17;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='items'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.748334;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1604248;}i:18;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='items'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.750312;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/var/www/invent/basic/models/ItemsSearch.php";s:4:"line";i:61;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:22:"app\models\ItemsSearch";s:4:"type";s:2:"->";}}i:5;i:1608192;}i:21;a:6:{i:0;s:38:"SELECT * FROM "status" ORDER BY "name"";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.751322;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1867000;}i:22;a:6:{i:0;s:38:"SELECT * FROM "status" ORDER BY "name"";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.751869;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1871520;}i:24;a:6:{i:0;s:2666:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'status'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.752086;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1890520;}i:25;a:6:{i:0;s:2666:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'status'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.754967;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1897008;}i:27;a:6:{i:0;s:874:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='status'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.755207;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1891448;}i:28;a:6:{i:0;s:874:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='status'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.757019;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:88;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1893392;}i:30;a:6:{i:0;s:205:"SELECT COUNT(*) FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id"";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.757954;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2044504;}i:31;a:6:{i:0;s:205:"SELECT COUNT(*) FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id"";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.758651;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2046072;}i:33;a:6:{i:0;s:229:"SELECT "items".* FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id" ORDER BY "id" LIMIT 20";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.758915;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2049608;}i:34;a:6:{i:0;s:229:"SELECT "items".* FROM "items" LEFT JOIN "status" ON "items"."state_id" = "status"."id" LEFT JOIN "types" ON "items"."type_id" = "types"."id" LEFT JOIN "locations" ON "items"."location_id" = "locations"."id" ORDER BY "id" LIMIT 20";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.759548;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2070640;}i:36;a:6:{i:0;s:49:"SELECT * FROM "status" WHERE "id" IN (2, 1, 5, 6)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.76004;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2113888;}i:37;a:6:{i:0;s:49:"SELECT * FROM "status" WHERE "id" IN (2, 1, 5, 6)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.760409;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2117736;}i:39;a:6:{i:0;s:51:"SELECT * FROM "types" WHERE "id" IN (1, 2, 5, 8, 9)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.760717;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2133384;}i:40;a:6:{i:0;s:51:"SELECT * FROM "types" WHERE "id" IN (1, 2, 5, 8, 9)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.760947;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2137672;}i:42;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'types'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.761135;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2153528;}i:43;a:6:{i:0;s:2665:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'types'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.764058;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2160064;}i:45;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='types'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.7643;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2154504;}i:46;a:6:{i:0;s:873:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='types'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766067;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2156448;}i:48;a:6:{i:0;s:57:"SELECT * FROM "locations" WHERE "id" IN (2, 4, 10, 11, 1)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766396;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2162664;}i:49;a:6:{i:0;s:57:"SELECT * FROM "locations" WHERE "id" IN (2, 4, 10, 11, 1)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766728;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2167248;}i:51;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.766937;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2183040;}i:52;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.7699;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2191240;}i:54;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.770142;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2184616;}i:55;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597906347.771956;i:4;a:2:{i:0;a:5:{s:4:"file";s:43:"/var/www/invent/basic/views/items/index.php";s:4:"line";i:29;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:53:"/var/www/invent/basic/controllers/ItemsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2187440;}}}";s:5:"event";s:24547:"a:141:{i:0;a:5:{s:4:"time";d:1597906347.735441;s:4:"name";s:13:"beforeRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:1;a:5:{s:4:"time";d:1597906347.735716;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:2;a:5:{s:4:"time";d:1597906347.73579;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:31:"app\controllers\ItemsController";}i:3;a:5:{s:4:"time";d:1597906347.736088;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:22:"app\models\ItemsSearch";}i:4;a:5:{s:4:"time";d:1597906347.736338;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:5;a:5:{s:4:"time";d:1597906347.736521;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:6;a:5:{s:4:"time";d:1597906347.741322;s:4:"name";s:9:"afterOpen";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\db\Connection";}i:7;a:5:{s:4:"time";d:1597906347.750539;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:8;a:5:{s:4:"time";d:1597906347.750551;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:9;a:5:{s:4:"time";d:1597906347.750559;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:10;a:5:{s:4:"time";d:1597906347.750564;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:11;a:5:{s:4:"time";d:1597906347.75057;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:12;a:5:{s:4:"time";d:1597906347.750574;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:13;a:5:{s:4:"time";d:1597906347.750579;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:14;a:5:{s:4:"time";d:1597906347.750583;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:15;a:5:{s:4:"time";d:1597906347.750588;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:16;a:5:{s:4:"time";d:1597906347.750593;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:17;a:5:{s:4:"time";d:1597906347.750597;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:18;a:5:{s:4:"time";d:1597906347.750602;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:19;a:5:{s:4:"time";d:1597906347.750608;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:20;a:5:{s:4:"time";d:1597906347.750612;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:21;a:5:{s:4:"time";d:1597906347.750617;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:22;a:5:{s:4:"time";d:1597906347.750621;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:23;a:5:{s:4:"time";d:1597906347.750626;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:24;a:5:{s:4:"time";d:1597906347.750805;s:4:"name";s:14:"beforeValidate";s:5:"class";s:19:"yii\base\ModelEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:22:"app\models\ItemsSearch";}i:25;a:5:{s:4:"time";d:1597906347.75094;s:4:"name";s:13:"afterValidate";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:22:"app\models\ItemsSearch";}i:26;a:5:{s:4:"time";d:1597906347.751065;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:27;a:5:{s:4:"time";d:1597906347.751161;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\widgets\Pjax";}i:28;a:5:{s:4:"time";d:1597906347.751219;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:29;a:5:{s:4:"time";d:1597906347.752025;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:30;a:5:{s:4:"time";d:1597906347.757153;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:31;a:5:{s:4:"time";d:1597906347.757167;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:32;a:5:{s:4:"time";d:1597906347.757176;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:33;a:5:{s:4:"time";d:1597906347.757184;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:34;a:5:{s:4:"time";d:1597906347.757191;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:35;a:5:{s:4:"time";d:1597906347.7572;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:36;a:5:{s:4:"time";d:1597906347.757203;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:37;a:5:{s:4:"time";d:1597906347.757206;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:38;a:5:{s:4:"time";d:1597906347.757209;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:39;a:5:{s:4:"time";d:1597906347.757211;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:40;a:5:{s:4:"time";d:1597906347.757214;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:41;a:5:{s:4:"time";d:1597906347.75731;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\grid\GridView";}i:42;a:5:{s:4:"time";d:1597906347.757616;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\grid\GridView";}i:43;a:5:{s:4:"time";d:1597906347.757824;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:44;a:5:{s:4:"time";d:1597906347.757853;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:45;a:5:{s:4:"time";d:1597906347.757869;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:46;a:5:{s:4:"time";d:1597906347.758798;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:47;a:5:{s:4:"time";d:1597906347.758822;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:48;a:5:{s:4:"time";d:1597906347.758837;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:49;a:5:{s:4:"time";d:1597906347.759669;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:50;a:5:{s:4:"time";d:1597906347.759694;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:51;a:5:{s:4:"time";d:1597906347.759708;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:52;a:5:{s:4:"time";d:1597906347.759719;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:53;a:5:{s:4:"time";d:1597906347.75973;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:54;a:5:{s:4:"time";d:1597906347.75974;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:55;a:5:{s:4:"time";d:1597906347.75975;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:56;a:5:{s:4:"time";d:1597906347.75976;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:57;a:5:{s:4:"time";d:1597906347.759773;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:58;a:5:{s:4:"time";d:1597906347.759784;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:59;a:5:{s:4:"time";d:1597906347.759794;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:60;a:5:{s:4:"time";d:1597906347.759805;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:61;a:5:{s:4:"time";d:1597906347.759815;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:62;a:5:{s:4:"time";d:1597906347.759825;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:63;a:5:{s:4:"time";d:1597906347.759835;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:64;a:5:{s:4:"time";d:1597906347.759869;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:65;a:5:{s:4:"time";d:1597906347.759881;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:66;a:5:{s:4:"time";d:1597906347.759889;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:67;a:5:{s:4:"time";d:1597906347.760554;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:68;a:5:{s:4:"time";d:1597906347.760578;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:69;a:5:{s:4:"time";d:1597906347.760589;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:70;a:5:{s:4:"time";d:1597906347.760597;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:71;a:5:{s:4:"time";d:1597906347.760604;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:72;a:5:{s:4:"time";d:1597906347.760608;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:73;a:5:{s:4:"time";d:1597906347.760611;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:74;a:5:{s:4:"time";d:1597906347.760613;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\models\Status";}i:75;a:5:{s:4:"time";d:1597906347.761071;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:76;a:5:{s:4:"time";d:1597906347.766243;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:77;a:5:{s:4:"time";d:1597906347.766257;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:78;a:5:{s:4:"time";d:1597906347.766266;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:79;a:5:{s:4:"time";d:1597906347.766274;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:80;a:5:{s:4:"time";d:1597906347.766282;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:81;a:5:{s:4:"time";d:1597906347.766285;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:82;a:5:{s:4:"time";d:1597906347.766288;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:83;a:5:{s:4:"time";d:1597906347.766291;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:84;a:5:{s:4:"time";d:1597906347.766294;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Types";}i:85;a:5:{s:4:"time";d:1597906347.766874;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:86;a:5:{s:4:"time";d:1597906347.772098;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:87;a:5:{s:4:"time";d:1597906347.772112;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:88;a:5:{s:4:"time";d:1597906347.772121;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:89;a:5:{s:4:"time";d:1597906347.772129;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:90;a:5:{s:4:"time";d:1597906347.772138;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:91;a:5:{s:4:"time";d:1597906347.772141;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:92;a:5:{s:4:"time";d:1597906347.772144;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:93;a:5:{s:4:"time";d:1597906347.772147;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:94;a:5:{s:4:"time";d:1597906347.772149;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:95;a:5:{s:4:"time";d:1597906347.772179;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:96;a:5:{s:4:"time";d:1597906347.772182;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:97;a:5:{s:4:"time";d:1597906347.772185;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:98;a:5:{s:4:"time";d:1597906347.772188;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:99;a:5:{s:4:"time";d:1597906347.772191;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:100;a:5:{s:4:"time";d:1597906347.772193;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:101;a:5:{s:4:"time";d:1597906347.772196;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:102;a:5:{s:4:"time";d:1597906347.772199;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:103;a:5:{s:4:"time";d:1597906347.772202;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:104;a:5:{s:4:"time";d:1597906347.772205;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:105;a:5:{s:4:"time";d:1597906347.772207;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:106;a:5:{s:4:"time";d:1597906347.77221;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:107;a:5:{s:4:"time";d:1597906347.772213;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:108;a:5:{s:4:"time";d:1597906347.772216;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:109;a:5:{s:4:"time";d:1597906347.772218;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"app\models\Items";}i:110;a:5:{s:4:"time";d:1597906347.773617;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"yii\widgets\LinkPager";}i:111;a:5:{s:4:"time";d:1597906347.773625;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"yii\widgets\LinkPager";}i:112;a:5:{s:4:"time";d:1597906347.773631;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"yii\widgets\LinkPager";}i:113;a:5:{s:4:"time";d:1597906347.773646;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\grid\GridView";}i:114;a:5:{s:4:"time";d:1597906347.773656;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\widgets\Pjax";}i:115;a:5:{s:4:"time";d:1597906347.773731;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\widgets\Pjax";}i:116;a:5:{s:4:"time";d:1597906347.773744;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:117;a:5:{s:4:"time";d:1597906347.77377;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:118;a:5:{s:4:"time";d:1597906347.773848;s:4:"name";s:9:"beginPage";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:119;a:5:{s:4:"time";d:1597906347.773909;s:4:"name";s:9:"beginBody";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:120;a:5:{s:4:"time";d:1597906347.773979;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"yii\bootstrap\NavBar";}i:121;a:5:{s:4:"time";d:1597906347.774096;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\bootstrap\Nav";}i:122;a:5:{s:4:"time";d:1597906347.774109;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\bootstrap\Nav";}i:123;a:5:{s:4:"time";d:1597906347.774152;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\bootstrap\Nav";}i:124;a:5:{s:4:"time";d:1597906347.77416;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"yii\bootstrap\NavBar";}i:125;a:5:{s:4:"time";d:1597906347.774193;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"yii\bootstrap\NavBar";}i:126;a:5:{s:4:"time";d:1597906347.774212;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"yii\widgets\Breadcrumbs";}i:127;a:5:{s:4:"time";d:1597906347.774216;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"yii\widgets\Breadcrumbs";}i:128;a:5:{s:4:"time";d:1597906347.774237;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"yii\widgets\Breadcrumbs";}i:129;a:5:{s:4:"time";d:1597906347.77426;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\widgets\Alert";}i:130;a:5:{s:4:"time";d:1597906347.774265;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\widgets\Alert";}i:131;a:5:{s:4:"time";d:1597906347.774274;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"app\widgets\Alert";}i:132;a:5:{s:4:"time";d:1597906347.774364;s:4:"name";s:7:"endBody";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:133;a:5:{s:4:"time";d:1597906347.774424;s:4:"name";s:7:"endPage";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:134;a:5:{s:4:"time";d:1597906347.774547;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:135;a:5:{s:4:"time";d:1597906347.774555;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:31:"app\controllers\ItemsController";}i:136;a:5:{s:4:"time";d:1597906347.77456;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:137;a:5:{s:4:"time";d:1597906347.774565;s:4:"name";s:12:"afterRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:138;a:5:{s:4:"time";d:1597906347.774569;s:4:"name";s:10:"beforeSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:139;a:5:{s:4:"time";d:1597906347.774623;s:4:"name";s:12:"afterPrepare";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:140;a:5:{s:4:"time";d:1597906347.775464;s:4:"name";s:9:"afterSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}}";s:6:"assets";s:2748:"a:7:{s:22:"yii\grid\GridViewAsset";a:9:{s:10:"sourcePath";s:48:"/var/www/invent/basic/vendor/yiisoft/yii2/assets";s:2:"js";a:1:{i:0;s:15:"yii.gridView.js";}s:7:"depends";a:1:{i:0;s:16:"yii\web\YiiAsset";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/2df44166";s:7:"baseUrl";s:23:"/invent/assets/2df44166";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:16:"yii\web\YiiAsset";a:9:{s:10:"sourcePath";s:48:"/var/www/invent/basic/vendor/yiisoft/yii2/assets";s:2:"js";a:1:{i:0;s:6:"yii.js";}s:7:"depends";a:1:{i:0;s:19:"yii\web\JqueryAsset";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/2df44166";s:7:"baseUrl";s:23:"/invent/assets/2df44166";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:19:"yii\web\JqueryAsset";a:9:{s:10:"sourcePath";s:52:"/var/www/invent/basic/vendor/bower-asset/jquery/dist";s:2:"js";a:1:{i:0;s:9:"jquery.js";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/8caaf936";s:7:"baseUrl";s:23:"/invent/assets/8caaf936";s:7:"depends";a:0:{}s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:21:"yii\widgets\PjaxAsset";a:9:{s:10:"sourcePath";s:50:"/var/www/invent/basic/vendor/bower-asset/yii2-pjax";s:2:"js";a:1:{i:0;s:14:"jquery.pjax.js";}s:7:"depends";a:1:{i:0;s:16:"yii\web\YiiAsset";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/cb16a0d2";s:7:"baseUrl";s:23:"/invent/assets/cb16a0d2";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:19:"app\assets\AppAsset";a:9:{s:8:"basePath";s:25:"/var/www/invent/basic/web";s:7:"baseUrl";s:7:"/invent";s:3:"css";a:1:{i:0;s:12:"css/site.css";}s:2:"js";a:0:{}s:7:"depends";a:2:{i:0;s:16:"yii\web\YiiAsset";i:1;s:28:"yii\bootstrap\BootstrapAsset";}s:10:"sourcePath";N;s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:28:"yii\bootstrap\BootstrapAsset";a:9:{s:10:"sourcePath";s:55:"/var/www/invent/basic/vendor/bower-asset/bootstrap/dist";s:3:"css";a:1:{i:0;s:17:"css/bootstrap.css";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/511a52a0";s:7:"baseUrl";s:23:"/invent/assets/511a52a0";s:7:"depends";a:0:{}s:2:"js";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:34:"yii\bootstrap\BootstrapPluginAsset";a:9:{s:10:"sourcePath";s:55:"/var/www/invent/basic/vendor/bower-asset/bootstrap/dist";s:2:"js";a:1:{i:0;s:15:"js/bootstrap.js";}s:7:"depends";a:2:{i:0;s:19:"yii\web\JqueryAsset";i:1;s:28:"yii\bootstrap\BootstrapAsset";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/511a52a0";s:7:"baseUrl";s:23:"/invent/assets/511a52a0";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}}";s:4:"mail";s:6:"a:0:{}";s:8:"timeline";s:91:"a:3:{s:5:"start";d:1597906347.732809;s:3:"end";d:1597906347.776421;s:6:"memory";i:2434128;}";s:4:"user";s:269:"a:5:{s:2:"id";s:3:"100";s:8:"identity";a:5:{s:2:"id";s:5:"'100'";s:8:"username";s:7:"'admin'";s:8:"password";s:7:"'admin'";s:7:"authKey";s:12:"'test100key'";s:11:"accessToken";s:11:"'100-token'";}s:10:"attributes";N;s:13:"rolesProvider";N;s:19:"permissionsProvider";N;}";s:4:"dump";s:6:"a:0:{}";s:7:"summary";a:12:{s:3:"tag";s:13:"5f3e1dabb3816";s:3:"url";s:52:"http://192.168.0.32/invent/index.php?r=items%2Findex";s:4:"ajax";i:0;s:6:"method";s:3:"GET";s:2:"ip";s:12:"192.168.0.68";s:4:"time";d:1597906347.732;s:10:"statusCode";i:200;s:8:"sqlCount";i:14;s:9:"mailCount";i:0;s:9:"mailFiles";a:0:{}s:10:"peakMemory";i:2434128;s:14:"processingTime";d:0.04305005073547363;}s:10:"exceptions";a:0:{}}

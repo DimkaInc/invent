@@ -1,0 +1,802 @@
+a:14:{s:6:"config";s:1604:"a:5:{s:10:"phpVersion";s:5:"7.4.8";s:10:"yiiVersion";s:6:"2.0.36";s:11:"application";a:8:{s:3:"yii";s:6:"2.0.36";s:4:"name";s:9:"Inventory";s:7:"version";s:3:"1.0";s:8:"language";s:5:"ru-RU";s:14:"sourceLanguage";s:5:"en-US";s:7:"charset";s:5:"UTF-8";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:5:{s:7:"version";s:5:"7.4.8";s:6:"xdebug";b:0;s:3:"apc";b:0;s:8:"memcache";b:0;s:9:"memcached";b:0;}s:10:"extensions";a:6:{s:22:"yiisoft/yii2-bootstrap";a:3:{s:4:"name";s:22:"yiisoft/yii2-bootstrap";s:7:"version";s:8:"2.0.10.0";s:5:"alias";a:1:{s:14:"@yii/bootstrap";s:55:"/var/www/invent/basic/vendor/yiisoft/yii2-bootstrap/src";}}s:24:"yiisoft/yii2-swiftmailer";a:3:{s:4:"name";s:24:"yiisoft/yii2-swiftmailer";s:7:"version";s:7:"2.1.2.0";s:5:"alias";a:1:{s:16:"@yii/swiftmailer";s:57:"/var/www/invent/basic/vendor/yiisoft/yii2-swiftmailer/src";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:8:"2.1.13.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:51:"/var/www/invent/basic/vendor/yiisoft/yii2-debug/src";}}s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.1.4.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:49:"/var/www/invent/basic/vendor/yiisoft/yii2-gii/src";}}s:16:"yiisoft/yii2-jui";a:3:{s:4:"name";s:16:"yiisoft/yii2-jui";s:7:"version";s:7:"2.0.0.0";s:5:"alias";a:1:{s:8:"@yii/jui";s:56:"/var/www/invent/basic/vendor/yiisoft/yii2-jui-master/src";}}s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.4.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:47:"/var/www/invent/basic/vendor/yiisoft/yii2-faker";}}}}";s:7:"request";s:6058:"a:15:{s:7:"flashes";a:0:{}s:10:"statusCode";i:200;s:14:"requestHeaders";a:13:{s:4:"host";s:12:"192.168.0.32";s:10:"user-agent";s:78:"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0";s:6:"accept";s:22:"text/html, */*; q=0.01";s:15:"accept-language";s:35:"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3";s:12:"x-csrf-token";s:88:"2JczA0FK1ZYzS2QotvDwLNKFt9IWEn3JPAc5ddU-_hGrx101OHvs9FUPDULZp6oe4cTdliR_KJFbNEgArHuMIA==";s:12:"content-type";s:48:"application/x-www-form-urlencoded; charset=UTF-8";s:6:"x-pjax";s:4:"true";s:16:"x-pjax-container";s:3:"#p0";s:16:"x-requested-with";s:14:"XMLHttpRequest";s:10:"connection";s:10:"keep-alive";s:7:"referer";s:62:"http://192.168.0.32/invent/index.php?r=locations%2Findex&id=16";s:6:"cookie";s:404:"PHPSESSID=j66jmlovhl2qi8tg6uct07qk1n; _csrf=b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sPn6y19bfDijoWZ23AjD2mUXg3quyEr1%22%3B%7D; _identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D";s:15:"accept-encoding";s:13:"gzip, deflate";}s:15:"responseHeaders";a:9:{s:7:"Expires";s:29:"Thu, 19 Nov 1981 08:52:00 GMT";s:13:"Cache-Control";s:35:"no-store, no-cache, must-revalidate";s:6:"Pragma";s:8:"no-cache";s:10:"X-Pjax-Url";s:314:"/invent/index.php?LocationsSearch%5Bname%5D=&LocationsSearch%5BregionName%5D=%D0%9D%D0%B0%D1%80%D0%BE-%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F&r=locations%2Findex&id=16&_pjax=%23p0";s:12:"Content-Type";s:24:"text/html; charset=UTF-8";s:11:"X-Debug-Tag";s:13:"5f3e237e3f345";s:16:"X-Debug-Duration";s:2:"27";s:12:"X-Debug-Link";s:60:"/invent/index.php?r=debug%2Fdefault%2Fview&tag=5f3e237e3f345";s:10:"Set-Cookie";s:266:"_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; expires=Sat, 19-Sep-2020 07:17:18 GMT; Max-Age=2592000; path=/; HttpOnly";}s:5:"route";s:15:"locations/index";s:6:"action";s:50:"app\controllers\LocationsController::actionIndex()";s:12:"actionParams";a:0:{}s:7:"general";a:5:{s:6:"method";s:3:"GET";s:6:"isAjax";b:1;s:6:"isPjax";b:1;s:7:"isFlash";b:0;s:18:"isSecureConnection";b:0;}s:11:"requestBody";a:0:{}s:6:"SERVER";a:36:{s:9:"HTTP_HOST";s:12:"192.168.0.32";s:15:"HTTP_USER_AGENT";s:78:"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0";s:11:"HTTP_ACCEPT";s:22:"text/html, */*; q=0.01";s:20:"HTTP_ACCEPT_LANGUAGE";s:35:"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3";s:17:"HTTP_X_CSRF_TOKEN";s:88:"2JczA0FK1ZYzS2QotvDwLNKFt9IWEn3JPAc5ddU-_hGrx101OHvs9FUPDULZp6oe4cTdliR_KJFbNEgArHuMIA==";s:12:"CONTENT_TYPE";s:48:"application/x-www-form-urlencoded; charset=UTF-8";s:11:"HTTP_X_PJAX";s:4:"true";s:21:"HTTP_X_PJAX_CONTAINER";s:3:"#p0";s:21:"HTTP_X_REQUESTED_WITH";s:14:"XMLHttpRequest";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:12:"HTTP_REFERER";s:62:"http://192.168.0.32/invent/index.php?r=locations%2Findex&id=16";s:11:"HTTP_COOKIE";s:404:"PHPSESSID=j66jmlovhl2qi8tg6uct07qk1n; _csrf=b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sPn6y19bfDijoWZ23AjD2mUXg3quyEr1%22%3B%7D; _identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:4:"PATH";s:60:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";s:16:"SERVER_SIGNATURE";s:73:"<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+";s:15:"SERVER_SOFTWARE";s:22:"Apache/2.4.25 (Debian)";s:11:"SERVER_NAME";s:12:"192.168.0.32";s:11:"SERVER_ADDR";s:12:"192.168.0.32";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:12:"192.168.0.68";s:13:"DOCUMENT_ROOT";s:13:"/var/www/html";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:7:"/invent";s:21:"CONTEXT_DOCUMENT_ROOT";s:25:"/var/www/invent/basic/web";s:12:"SERVER_ADMIN";s:19:"webmaster@localhost";s:15:"SCRIPT_FILENAME";s:35:"/var/www/invent/basic/web/index.php";s:11:"REMOTE_PORT";s:5:"59637";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:3:"GET";s:12:"QUERY_STRING";s:296:"LocationsSearch%5Bname%5D=&LocationsSearch%5BregionName%5D=%D0%9D%D0%B0%D1%80%D0%BE-%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F&r=locations%2Findex&id=16&_pjax=%23p0";s:11:"REQUEST_URI";s:314:"/invent/index.php?LocationsSearch%5Bname%5D=&LocationsSearch%5BregionName%5D=%D0%9D%D0%B0%D1%80%D0%BE-%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F&r=locations%2Findex&id=16&_pjax=%23p0";s:11:"SCRIPT_NAME";s:17:"/invent/index.php";s:8:"PHP_SELF";s:17:"/invent/index.php";s:18:"REQUEST_TIME_FLOAT";d:1597907838.255;s:12:"REQUEST_TIME";i:1597907838;}s:3:"GET";a:4:{s:15:"LocationsSearch";a:2:{s:4:"name";s:0:"";s:10:"regionName";s:67:"Наро-Фоминская ветеринарная станция";}s:1:"r";s:15:"locations/index";s:2:"id";s:2:"16";s:5:"_pjax";s:3:"#p0";}s:4:"POST";a:0:{}s:6:"COOKIE";a:3:{s:9:"PHPSESSID";s:26:"j66jmlovhl2qi8tg6uct07qk1n";s:5:"_csrf";s:130:"b53f21b2bea4ff45f407c359a2d1c93980ea6c45f01950a3885dc6bb24170dd3a:2:{i:0;s:5:"_csrf";i:1;s:32:"sPn6y19bfDijoWZ23AjD2mUXg3quyEr1";}";s:9:"_identity";s:130:"00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:"_identity";i:1;s:28:"["100","test100key",2592000]";}";}s:5:"FILES";a:0:{}s:7:"SESSION";a:2:{s:7:"__flash";a:0:{}s:4:"__id";s:3:"100";}}";s:6:"router";s:311:"a:3:{s:8:"messages";a:1:{i:6;a:6:{i:0;s:56:"Pretty URL not enabled. Using default URL parsing logic.";i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1597907838.259105;i:4;a:0:{}i:5;i:1272248;}}s:5:"route";s:15:"locations/index";s:6:"action";s:50:"app\controllers\LocationsController::actionIndex()";}";s:3:"log";s:13773:"a:1:{s:8:"messages";a:19:{i:0;a:6:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597907838.256814;i:4;a:0:{}i:5;i:868568;}i:1;a:6:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1597907838.256842;i:4;a:0:{}i:5;i:869744;}i:2;a:6:{i:0;s:15:"Session started";i:1;i:4;i:2;s:21:"yii\web\Session::open";i:3;d:1597907838.25803;i:4;a:0:{}i:5;i:1138464;}i:3;a:6:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597907838.258833;i:4;a:0:{}i:5;i:1252648;}i:4;a:6:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1597907838.258951;i:4;a:0:{}i:5;i:1265896;}i:5;a:6:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1597907838.259033;i:4;a:0:{}i:5;i:1271496;}i:7;a:6:{i:0;s:34:"Route requested: 'locations/index'";i:1;i:8;i:2;s:34:"yii\web\Application::handleRequest";i:3;d:1597907838.259124;i:4;a:0:{}i:5;i:1272312;}i:8;a:6:{i:0;s:29:"Route to run: locations/index";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1597907838.259323;i:4;a:0:{}i:5;i:1286024;}i:9;a:6:{i:0;s:66:"Running action: app\controllers\LocationsController::actionIndex()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1597907838.25956;i:4;a:0:{}i:5;i:1305816;}i:10;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1597907838.260323;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1567816;}i:13;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.264649;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1585392;}i:16;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.270635;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1599432;}i:19;a:6:{i:0;s:68:"Rendering view file: /var/www/invent/basic/views/locations/index.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1597907838.27289;i:4;a:1:{i:0;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1665560;}i:20;a:6:{i:0;s:39:"SELECT * FROM "regions" ORDER BY "name"";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.273188;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1847296;}i:23;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.273976;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1861576;}i:26;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.27701;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1868992;}i:29;a:6:{i:0;s:196:"SELECT COUNT(*) FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.279692;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2028240;}i:32;a:6:{i:0;s:226:"SELECT "locations".* FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%' ORDER BY "name" LIMIT 20";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.280563;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2031304;}i:35;a:6:{i:0;s:36:"SELECT * FROM "regions" WHERE "id"=3";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.281104;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2048336;}}}";s:9:"profiling";s:24101:"a:3:{s:6:"memory";i:2067016;s:4:"time";d:0.026643991470336914;s:8:"messages";a:18:{i:11;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1597907838.260349;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1569320;}i:12;a:6:{i:0;s:57:"Opening DB connection: pgsql:host=localhost;dbname=invent";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1597907838.264588;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1571600;}i:14;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.264674;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1596560;}i:15;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.270392;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1604760;}i:17;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.270652;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1604752;}i:18;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.272418;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1607576;}i:21;a:6:{i:0;s:39:"SELECT * FROM "regions" ORDER BY "name"";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.273201;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1849304;}i:22;a:6:{i:0;s:39:"SELECT * FROM "regions" ORDER BY "name"";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.273795;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1853656;}i:24;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.274001;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1872656;}i:25;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.276861;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1879232;}i:27;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.277027;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1873672;}i:28;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.278716;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1875616;}i:30;a:6:{i:0;s:196:"SELECT COUNT(*) FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.279716;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2031384;}i:31;a:6:{i:0;s:196:"SELECT COUNT(*) FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.280325;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2032992;}i:33;a:6:{i:0;s:226:"SELECT "locations".* FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%' ORDER BY "name" LIMIT 20";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.280584;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2035792;}i:34;a:6:{i:0;s:226:"SELECT "locations".* FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%' ORDER BY "name" LIMIT 20";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.280901;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2038368;}i:36;a:6:{i:0;s:36:"SELECT * FROM "regions" WHERE "id"=3";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.281124;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2051152;}i:37;a:6:{i:0;s:36:"SELECT * FROM "regions" WHERE "id"=3";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.281466;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2053296;}}}";s:2:"db";s:22930:"a:1:{s:8:"messages";a:16:{i:14;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.264674;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1596560;}i:15;a:6:{i:0;s:2669:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'locations'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.270392;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1604760;}i:17;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.270652;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1604752;}i:18;a:6:{i:0;s:877:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='locations'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.272418;i:4;a:2:{i:0;a:5:{s:4:"file";s:48:"/var/www/invent/basic/models/LocationsSearch.php";s:4:"line";i:55;s:8:"function";s:7:"setSort";s:5:"class";s:27:"yii\data\ActiveDataProvider";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:39;s:8:"function";s:6:"search";s:5:"class";s:26:"app\models\LocationsSearch";s:4:"type";s:2:"->";}}i:5;i:1607576;}i:21;a:6:{i:0;s:39:"SELECT * FROM "regions" ORDER BY "name"";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.273201;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1849304;}i:22;a:6:{i:0;s:39:"SELECT * FROM "regions" ORDER BY "name"";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.273795;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1853656;}i:24;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.274001;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1872656;}i:25;a:6:{i:0;s:2667:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false)  AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'regions'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.276861;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1879232;}i:27;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.277027;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1873672;}i:28;a:6:{i:0;s:875:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='regions'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.278716;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:51;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:1875616;}i:30;a:6:{i:0;s:196:"SELECT COUNT(*) FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.279716;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2031384;}i:31;a:6:{i:0;s:196:"SELECT COUNT(*) FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.280325;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2032992;}i:33;a:6:{i:0;s:226:"SELECT "locations".* FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%' ORDER BY "name" LIMIT 20";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.280584;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2035792;}i:34;a:6:{i:0;s:226:"SELECT "locations".* FROM "locations" LEFT JOIN "regions" ON "locations"."region_id" = "regions"."id" WHERE "regions"."name" LIKE '%Наро-Фоминская ветеринарная станция%' ORDER BY "name" LIMIT 20";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.280901;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2038368;}i:36;a:6:{i:0;s:36:"SELECT * FROM "regions" WHERE "id"=3";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.281124;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2051152;}i:37;a:6:{i:0;s:36:"SELECT * FROM "regions" WHERE "id"=3";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1597907838.281466;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"/var/www/invent/basic/views/locations/index.php";s:4:"line";i:31;s:8:"function";s:6:"widget";s:5:"class";s:15:"yii\base\Widget";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:57:"/var/www/invent/basic/controllers/LocationsController.php";s:4:"line";i:43;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}}i:5;i:2053296;}}}";s:5:"event";s:8150:"a:47:{i:0;a:5:{s:4:"time";d:1597907838.259088;s:4:"name";s:13:"beforeRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:1;a:5:{s:4:"time";d:1597907838.259384;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:2;a:5:{s:4:"time";d:1597907838.259468;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:35:"app\controllers\LocationsController";}i:3;a:5:{s:4:"time";d:1597907838.259729;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:26:"app\models\LocationsSearch";}i:4;a:5:{s:4:"time";d:1597907838.259938;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:5;a:5:{s:4:"time";d:1597907838.260091;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:6;a:5:{s:4:"time";d:1597907838.264584;s:4:"name";s:9:"afterOpen";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\db\Connection";}i:7;a:5:{s:4:"time";d:1597907838.272632;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:8;a:5:{s:4:"time";d:1597907838.272642;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:9;a:5:{s:4:"time";d:1597907838.272649;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:10;a:5:{s:4:"time";d:1597907838.272773;s:4:"name";s:14:"beforeValidate";s:5:"class";s:19:"yii\base\ModelEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:26:"app\models\LocationsSearch";}i:11;a:5:{s:4:"time";d:1597907838.272805;s:4:"name";s:13:"afterValidate";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:26:"app\models\LocationsSearch";}i:12;a:5:{s:4:"time";d:1597907838.272887;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:13;a:5:{s:4:"time";d:1597907838.273041;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\widgets\Pjax";}i:14;a:5:{s:4:"time";d:1597907838.273069;s:4:"name";s:9:"beginPage";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:15;a:5:{s:4:"time";d:1597907838.273073;s:4:"name";s:9:"beginBody";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:16;a:5:{s:4:"time";d:1597907838.273111;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:17;a:5:{s:4:"time";d:1597907838.273944;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:18;a:5:{s:4:"time";d:1597907838.278847;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:19;a:5:{s:4:"time";d:1597907838.278861;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:20;a:5:{s:4:"time";d:1597907838.278869;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:21;a:5:{s:4:"time";d:1597907838.278876;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:22;a:5:{s:4:"time";d:1597907838.278885;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:23;a:5:{s:4:"time";d:1597907838.278889;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:24;a:5:{s:4:"time";d:1597907838.278891;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:25;a:5:{s:4:"time";d:1597907838.278894;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:26;a:5:{s:4:"time";d:1597907838.278897;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:27;a:5:{s:4:"time";d:1597907838.279001;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\grid\GridView";}i:28;a:5:{s:4:"time";d:1597907838.279155;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\grid\GridView";}i:29;a:5:{s:4:"time";d:1597907838.279503;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:30;a:5:{s:4:"time";d:1597907838.280476;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:31;a:5:{s:4:"time";d:1597907838.280966;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:32;a:5:{s:4:"time";d:1597907838.281015;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:33;a:5:{s:4:"time";d:1597907838.28162;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:34;a:5:{s:4:"time";d:1597907838.281643;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"app\models\Regions";}i:35;a:5:{s:4:"time";d:1597907838.281653;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:20:"app\models\Locations";}i:36;a:5:{s:4:"time";d:1597907838.281961;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"yii\widgets\LinkPager";}i:37;a:5:{s:4:"time";d:1597907838.281968;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"yii\widgets\LinkPager";}i:38;a:5:{s:4:"time";d:1597907838.281973;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"yii\widgets\LinkPager";}i:39;a:5:{s:4:"time";d:1597907838.281986;s:4:"name";s:8:"afterRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\grid\GridView";}i:40;a:5:{s:4:"time";d:1597907838.281994;s:4:"name";s:9:"beforeRun";s:5:"class";s:20:"yii\base\WidgetEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\widgets\Pjax";}i:41;a:5:{s:4:"time";d:1597907838.282045;s:4:"name";s:7:"endBody";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:42;a:5:{s:4:"time";d:1597907838.282079;s:4:"name";s:7:"endPage";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:43;a:5:{s:4:"time";d:1597907838.282115;s:4:"name";s:12:"afterRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:44;a:5:{s:4:"time";d:1597907838.28212;s:4:"name";s:10:"beforeSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:45;a:5:{s:4:"time";d:1597907838.282177;s:4:"name";s:12:"afterPrepare";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:46;a:5:{s:4:"time";d:1597907838.282229;s:4:"name";s:9:"afterSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}}";s:6:"assets";s:1156:"a:3:{s:22:"yii\grid\GridViewAsset";a:9:{s:10:"sourcePath";s:48:"/var/www/invent/basic/vendor/yiisoft/yii2/assets";s:2:"js";a:1:{i:0;s:15:"yii.gridView.js";}s:7:"depends";a:1:{i:0;s:16:"yii\web\YiiAsset";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/2df44166";s:7:"baseUrl";s:23:"/invent/assets/2df44166";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:16:"yii\web\YiiAsset";a:9:{s:10:"sourcePath";s:48:"/var/www/invent/basic/vendor/yiisoft/yii2/assets";s:2:"js";a:1:{i:0;s:6:"yii.js";}s:7:"depends";a:1:{i:0;s:19:"yii\web\JqueryAsset";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/2df44166";s:7:"baseUrl";s:23:"/invent/assets/2df44166";s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}s:19:"yii\web\JqueryAsset";a:9:{s:10:"sourcePath";s:52:"/var/www/invent/basic/vendor/bower-asset/jquery/dist";s:2:"js";a:1:{i:0;s:9:"jquery.js";}s:8:"basePath";s:41:"/var/www/invent/basic/web/assets/8caaf936";s:7:"baseUrl";s:23:"/invent/assets/8caaf936";s:7:"depends";a:0:{}s:3:"css";a:0:{}s:9:"jsOptions";a:0:{}s:10:"cssOptions";a:0:{}s:14:"publishOptions";a:0:{}}}";s:4:"mail";s:6:"a:0:{}";s:8:"timeline";s:91:"a:3:{s:5:"start";d:1597907838.255945;s:3:"end";d:1597907838.282851;s:6:"memory";i:2067016;}";s:4:"user";s:269:"a:5:{s:2:"id";s:3:"100";s:8:"identity";a:5:{s:2:"id";s:5:"'100'";s:8:"username";s:7:"'admin'";s:8:"password";s:7:"'admin'";s:7:"authKey";s:12:"'test100key'";s:11:"accessToken";s:11:"'100-token'";}s:10:"attributes";N;s:13:"rolesProvider";N;s:19:"permissionsProvider";N;}";s:4:"dump";s:6:"a:0:{}";s:7:"summary";a:12:{s:3:"tag";s:13:"5f3e237e3f345";s:3:"url";s:333:"http://192.168.0.32/invent/index.php?LocationsSearch%5Bname%5D=&LocationsSearch%5BregionName%5D=%D0%9D%D0%B0%D1%80%D0%BE-%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F&r=locations%2Findex&id=16&_pjax=%23p0";s:4:"ajax";i:1;s:6:"method";s:3:"GET";s:2:"ip";s:12:"192.168.0.68";s:4:"time";d:1597907838.255;s:10:"statusCode";i:200;s:8:"sqlCount";i:8;s:9:"mailCount";i:0;s:9:"mailFiles";a:0:{}s:10:"peakMemory";i:2067016;s:14:"processingTime";d:0.026643991470336914;}s:10:"exceptions";a:0:{}}

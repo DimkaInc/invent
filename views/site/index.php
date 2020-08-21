@@ -1,53 +1,138 @@
 <?php
 
+use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\widgets\Pjax;
+
+//use yii\db\Query;
+//use yii\data\ActiveDataProvider;
+use yii\data\SqlDataProvider;
+
+use app\models\Regions;
+use app\models\Locations;
+
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+
+
+//    $query = Regions::find()
+//        ->joinWith(['locations as l'])
+//        ->where(['locations.region_id' => 'regions.id'])
+//        ->select('regions.*, l.name as lname');
+//    $query = (new Query())
+//        ->select(' regions.*, l.name as lname')
+//        ->from('regions')
+//        ->rightJoin(['locations as l on l.region_id = id']);
+
+//    $dataProvider = new ActiveDataProvider([
+//        'query' => $query,
+//    ]);
+
+//    $dataProvider->setSort([
+//        'defaultOrder' => [
+//            'name' => SORT_ASC,
+//        ],
+//    ]);
+
+    $count = Yii::$app->db->createCommand('
+        SELECT COUNT(*) FROM regions
+    ')->queryScalar();
+
+    $dataProvider = new SqlDataProvider([
+        'sql' => "
+            SELECT
+                r.name AS rname,
+                COUNT(i.id) AS icount
+            FROM regions AS r
+                LEFT JOIN locations AS l
+                    ON l.region_id = r.id
+                LEFT JOIN items AS i
+                    ON i.location_id = l.id
+            GROUP BY
+                rname
+            ORDER BY
+                rname
+        ",
+        'totalCount' => $count,
+        'pagination' => [
+            'pageSize' => 10,
+        ],
+        'sort' => [
+            'attributes' => [
+                'rname',
+                'icount',
+            ],
+        ],
+    ]);
+
+    $countg = Yii::$app->db->createCommand('
+        SELECT COUNT(*) FROM types
+    ')->queryScalar();
+
+    $dataProviderg = new SqlDataProvider([
+        'sql' => "
+            SELECT
+                t.name AS tname,
+                COUNT(i.id) AS icount
+            FROM types AS t
+                LEFT JOIN items AS i
+                    ON i.type_id = t.id
+            GROUP BY
+                tname
+            ORDER BY
+                tname
+        ",
+        'totalCount' => $countg,
+        'pagination' => [
+            'pageSize' => 20,
+        ],
+        'sort' => [
+            'attributes' => [
+                'tname',
+                'icount',
+            ],
+        ],
+    ]);
+
+$this->title = Yii::t('app','Inventory');
 ?>
 <div class="site-index">
+    <h2>Количество оборудования по подразделениям</h2>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => [
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+            [
+                'attribute' => 'rname',
+                'label' => Yii::t('regions', 'Regions'),
+                'value' => 'rname'
+            ],
+            [
+                'attribute' => 'icount',
+                'label' => Yii::t('regions', 'Total items count'),
+                'value' => 'icount',
+            ],
+        ],
+    ]);
+    ?>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+    <h2>Количество оборудования по типам</h2>
+    <?= GridView::widget([
+        'dataProvider' => $dataProviderg,
+        'columns' => [
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+            [
+                'attribute' => 'tname',
+                'label' => Yii::t('types', 'Types'),
+                'value' => 'tname'
+            ],
+            [
+                'attribute' => 'icount',
+                'label' => Yii::t('types', 'Total items count'),
+                'value' => 'icount',
+            ],
+        ],
+    ]);
+    ?>
 
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
 </div>

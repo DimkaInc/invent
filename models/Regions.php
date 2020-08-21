@@ -14,6 +14,7 @@ use Yii;
  */
 class Regions extends \yii\db\ActiveRecord
 {
+    public $lname;
     /**
      * {@inheritdoc}
      */
