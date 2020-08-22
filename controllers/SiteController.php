@@ -10,6 +10,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
+use yii\data\SqlDataProvider;
+
 class SiteController extends Controller
 {
     /**
@@ -61,7 +63,71 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+
+        $count = Yii::$app->db->createCommand('
+            SELECT COUNT(*) FROM regions
+        ')->queryScalar();
+
+        $dataProvider = new SqlDataProvider([
+            'sql' => "
+                SELECT
+                    r.name AS rname,
+                    COUNT(i.id) AS icount
+                FROM regions AS r
+                    LEFT JOIN locations AS l
+                        ON l.region_id = r.id
+                    LEFT JOIN items AS i
+                        ON i.location_id = l.id
+                GROUP BY
+                    rname
+                ORDER BY
+                    rname
+            ",
+            'totalCount' => $count,
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+            'sort' => [
+                'attributes' => [
+                    'rname',
+                    'icount',
+                ],
+            ],
+        ]);
+
+        $count = Yii::$app->db->createCommand('
+            SELECT COUNT(*) FROM types
+        ')->queryScalar();
+
+        $dataProviderg = new SqlDataProvider([
+            'sql' => "
+                SELECT
+                    t.name AS tname,
+                    COUNT(i.id) AS icount
+                FROM types AS t
+                    LEFT JOIN items AS i
+                        ON i.type_id = t.id
+                GROUP BY
+                    tname
+                ORDER BY
+                    tname
+            ",
+            'totalCount' => $count,
+            'pagination' => [
+                'pageSize' => 20,
+            ],
+            'sort' => [
+                'attributes' => [
+                    'tname',
+                    'icount',
+                ],
+            ],
+        ]);
+
+        return $this->render('index', [
+            'dataProvider' => $dataProvider,
+            'dataProviderg' => $dataProviderg,
+        ]);
     }
 
     /**

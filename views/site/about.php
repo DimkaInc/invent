@@ -4,15 +4,16 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About';
+$this->title = Yii::t('app', 'About');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        This is the About page. You may modify the following file to customize its content:
-    </p>
+    <div>
+        Программа инвентаризации. <sub style="color:gray;">(Версия 1.24)</sub>
+    </div>
+    <div>Разработа для ведения учёта оборудования по подразделениям.</div>
+    <div style="color:lightgray">По вопросам работы программы, обращайтесь к разработчику.</div>
 
-    <code><?= __FILE__ ?></code>
 </div>
