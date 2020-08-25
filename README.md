@@ -6,6 +6,15 @@
     <br>
 </p>
 
+<h1>ВНИМАНИЕ!</h1>
+<p>Перед использованием, необходимо внести изменения в файлы:</p>
+<ul>
+    <li><code>/config/db.php</code> - указать подключение к базе данных, лоин и пароль</li>
+    <li><code>/config/params.php</code> - указать правильные электронные адреса для администратора и отправителя</li>
+    <li><code>/config/web.php</code> - указать cookieValidationKey 32 символа.
+</ul>
+
+
 Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
 rapidly creating small projects.
 
