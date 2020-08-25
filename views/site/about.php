@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <div>
-        Программа инвентаризации. <sub style="color:gray;">(Версия 1.24)</sub>
+        Программа инвентаризации. <sub style="color:gray;">(Версия <?= Yii::$app->version ?>)</sub>
     </div>
     <div>Разработа для ведения учёта оборудования по подразделениям.</div>
     <div style="color:lightgray">По вопросам работы программы, обращайтесь к разработчику.</div>

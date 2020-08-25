@@ -4,7 +4,7 @@ use yii\db\Migration;
 
 /**
  * Class m200806_061656_update_items_table
- * Добавление поля "Комментарии" неограниченной длины
+ * Добавление поля 'Комментарии' неограниченной длины
  */
 class m200806_061656_update_items_table extends Migration
 {
@@ -24,7 +24,7 @@ class m200806_061656_update_items_table extends Migration
     {
         // Так как в комментарии добавлена важная информация, то отмена этого поля приведёт к её потере.
         // в связи с этим отмена становится невозможной.
-        echo "Миграция m200806_061656_update_items_table не может быть отменена.\n";
+        echo 'Миграция m200806_061656_update_items_table не может быть отменена.\n';
         
         return false;
     }
@@ -38,7 +38,7 @@ class m200806_061656_update_items_table extends Migration
 
     public function down()
     {
-        echo "m200806_061656_update_items_table cannot be reverted.\n";
+        echo 'm200806_061656_update_items_table cannot be reverted.\n';
 
         return false;
     }

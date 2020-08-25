@@ -30,7 +30,7 @@ class TypesController extends Controller
     }
 
     /**
-     * Lists all Types models.
+     * Список всех типов предметов/оборудования.
      * @return mixed
      */
     public function actionIndex()
@@ -45,10 +45,10 @@ class TypesController extends Controller
     }
 
     /**
-     * Displays a single Types model.
+     * Показ одного типа предмета/оборудования (не используется).
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует тип предмета/оборудования
      */
     public function actionView($id)
     {
@@ -58,8 +58,8 @@ class TypesController extends Controller
     }
 
     /**
-     * Creates a new Types model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Создание нового типа предмета/оборудования.
+     * При успешном создании, происходит переход к списку всех типов предметов/оборудования.
      * @return mixed
      */
     public function actionCreate()
@@ -76,11 +76,11 @@ class TypesController extends Controller
     }
 
     /**
-     * Updates an existing Types model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * Изменение существующего типа предмета/оборудования.
+     * При успешном изменении, происходит переход к списку всех типов предметов/оборудования.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует тип предмета/оборудования
      */
     public function actionUpdate($id)
     {
@@ -96,11 +96,11 @@ class TypesController extends Controller
     }
 
     /**
-     * Deletes an existing Types model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * Удаление существующего типа предмета/оборудования.
+     * При успешном удалении, происходит переход к списку всех типов предметов/оборудования.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует тип предмета/оборудования
      */
     public function actionDelete($id)
     {

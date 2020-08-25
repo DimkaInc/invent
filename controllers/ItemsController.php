@@ -30,7 +30,7 @@ class ItemsController extends Controller
     }
 
     /**
-     * Lists all Items models.
+     * Список всех предметов/оборудования.
      * @return mixed
      */
     public function actionIndex()
@@ -45,10 +45,10 @@ class ItemsController extends Controller
     }
 
     /**
-     * Displays a single Items model.
+     * Показ одного предмета/оборудования. (не используется)
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если предмет/оборудование отсутствует
      */
     public function actionView($id)
     {
@@ -58,8 +58,7 @@ class ItemsController extends Controller
     }
 
     /**
-     * Creates a new Items model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Создание нового предмета/оборудования.
      * @return mixed
      */
     public function actionCreate()
@@ -76,11 +75,11 @@ class ItemsController extends Controller
     }
 
     /**
-     * Updates an existing Items model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * Изменение существующего предмета/оборудвания.
+     * Если премет/обрудование сохранён, то возвращаемся на страницу списка всех предметов/оборудования.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если предмет/оборудование отсутствует
      */
     public function actionUpdate($id)
     {
@@ -96,8 +95,8 @@ class ItemsController extends Controller
     }
 
     /**
-     * Deletes an existing Items model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * Удаляет сушествующий предмет/оборудование.
+     * Если премет/обрудование удалён, то возвращаемся на страницу списка всех предметов/оборудования.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -114,7 +113,7 @@ class ItemsController extends Controller
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
      * @return Items the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если предмет/оборудование отсутствует
      */
     protected function findModel($id)
     {

@@ -17,14 +17,14 @@ use yii\data\Sort;
 //$this->registerJsFile("@web/js/regiondatepicker.js", ['depends' => [ \yii\web\JqueryAsset::className() ]] );
 
     // Создание сортированного списка для выбора типов оборудования
-    $types["empty"] = "Выберите тип";
+    $types['empty'] = Yii::t('types', 'Select type');
     $types = ArrayHelper::merge($types, ArrayHelper::map(Types::find()->orderBy('name')->all(), 'id', 'name'));
     
     // Создание сортированного списка для выбора состояний оборудования
     $states = ArrayHelper::map(Status::find()->orderBy('name')->all(), 'id', 'name');
     
     // Создание сортированного списка для выбора расположения оборудования
-    $locations['empty'] = "Выберите место";
+    $locations['empty'] = Yii::t('locations', 'Select location');
     $locations = ArrayHelper::merge($locations, ArrayHelper::map(Locations::find()->orderBy('name')->all(), 'id', 'name'));
 ?>
 
@@ -33,11 +33,11 @@ use yii\data\Sort;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model,
-        'type_id',
-        ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
-                       Html::a("Типы оборудования", ['types/index'], ['class' => 'btn btn-primary'] ) .
+            'type_id',
+            ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
+                       Html::a(Yii::t('types', 'Types'), ['types/index'], ['class' => 'btn btn-primary'] ) .
                        '</div><div class="col-md-8">{error}</div></div>']
-        )->dropDownList($types) ?>
+        )->dropDownList( $types ) ?>
 
     <?= $form->field($model, 'name', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->textInput(['maxlength' => true]) ?>
 
@@ -57,7 +57,7 @@ use yii\data\Sort;
 
     <?= $form->field($model, 'date', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->widget(
             DatePicker::className(),
-            [ 'language' => 'ru',
+            [ 'language'   => 'ru',
               'dateFormat' => 'dd.MM.yyyy',
             ]
         ) ?>
@@ -72,7 +72,7 @@ use yii\data\Sort;
             'location_id',
             ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                 Html::a(
-                    "Места размещения",
+                    Yii::t('locations', 'Locations'),
                     ['locations/index'],
                     ['class' => 'btn btn-primary'] 
                 ) .
@@ -81,15 +81,15 @@ use yii\data\Sort;
     ?>
 
     <?= $form->field($model,
-            'comment', 
+            'comment',
             ['template' => 
                 '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'
             ]
         )->textarea(['rows' => '10']) ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
-        <?= Html::a(Yii::t('app', 'Cancel'), ['index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton( Yii::t('app', 'Save'),   ['class' => 'btn btn-success'] ) ?>
+        <?= Html::a(            Yii::t('app', 'Cancel'), ['index'], ['class' => 'btn btn-primary'] ) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

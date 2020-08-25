@@ -9,7 +9,7 @@ use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('regions', 'Regions');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('items', 'Items'), 'url' => ['items/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('items',     'Items'),     'url' => ['items/index']];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('locations', 'Locations'), 'url' => ['locations/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -26,8 +26,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
+        'filterModel'  => $searchModel,
+        'columns'      => [
             ['class' => 'yii\grid\SerialColumn'],
 
             // Идентификатор региона (неизменяемое)
@@ -35,13 +35,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
             // Название региона
             ['attribute' => 'name',
-                'value' => function ($data) {
+                'value'  => function ($data) {
                     return Html::a(Html::encode($data->name), Url::to(['update', 'id' => $data->id]));
                 },
-                'format' => "raw",
+                'format' => 'raw',
             ],
  
-            ['class' => 'yii\grid\ActionColumn', 'template' => "{delete}"],
+            ['class' => 'yii\grid\ActionColumn', 'template' => '{delete}'],
         ],
     ]); ?>
 

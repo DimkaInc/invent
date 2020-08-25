@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "{{%status}}".
  *
- * @property int $id Номер по порядку
+ * @property int    $id   Номер по порядку
  * @property string $name Состояние
  *
  * @property Items[] $items
@@ -46,7 +46,7 @@ class Status extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Items]].
+     * Получение данных из связанной тблицы оборудования.
      *
      * @return \yii\db\ActiveQuery
      */

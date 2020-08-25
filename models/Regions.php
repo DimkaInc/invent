@@ -5,16 +5,20 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "{{%regions}}".
+ * Это класс модели для таблицы регионов '{{%regions}}'.
  *
- * @property int $id Идентификатор региона (неизменяемое)
- * @property string $name Наименование региона (подразделения)
+ * @property int    $id     Идентификатор региона (неизменяемое)
+ * @property string $name   Наименование региона (подразделения)
+ * @property string $lname  Наименование места/размещения
+ * @property int    $icount Количество предметов/оборудования в регионе
  *
- * @property Locations[] $locations
+ * @property Locations[] $locations Места/размежения
+ * @property Items[]     $items     Предметы/оборудование
  */
 class Regions extends \yii\db\ActiveRecord
 {
     public $lname;
+    public $icount;
     /**
      * {@inheritdoc}
      */
@@ -43,16 +47,27 @@ class Regions extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('regions', 'Идентификатор региона (неизменяемое)'),
             'name' => Yii::t('regions', 'Наименование региона (подразделения)'),
+            'icount' => Yii::t('regions', 'Count of items'),
         ];
     }
 
     /**
-     * Gets query for [[Locations]].
+     * Выполнение запроса для [[Locations]].
      *
      * @return \yii\db\ActiveQuery
      */
     public function getLocations()
     {
         return $this->hasMany(Locations::className(), ['region_id' => 'id']);
+    }
+
+    /**
+     * Выполнение запроса для [[Items]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getItems()
+    {
+        return $this->getLocations()->joinWith('items');
     }
 }

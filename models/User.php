@@ -34,9 +34,9 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     public static function findIdentity($id)
     {
         return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
-    }
+}
 
-    /**
+/**
      * {@inheritdoc}
      */
     public static function findIdentityByAccessToken($token, $type = null)
@@ -65,6 +65,14 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
         }
 
         return null;
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'username' => Yii::t("app", "User name"),
+            'password' => Yii::t("app", "Password"),
+        ];
     }
 
     /**

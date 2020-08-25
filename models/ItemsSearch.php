@@ -44,11 +44,15 @@ class ItemsSearch extends Items
      */
     public function search($params)
     {
-        $query = Items::find();
-        $query->joinWith(['status']);
-        $query->joinWith(['types']);
-        $query->joinWith(['locations']);
-//        $query->joinWith(['regions']);
+        $query = Items::find()
+            ->select(Items::tableName() . '.*, ' .
+                Locations::tableName() . '.name AS locationName, ' .
+                Types::tableName() . '.name AS typeName, ' .
+                Regions::tableName() . '.name AS regionName')
+            ->joinWith(['status'])
+            ->joinWith(['types'])
+            ->joinWith(['locations'])
+            ->joinWith(['regions']);
 
         // add conditions that should always apply here
 
@@ -72,45 +76,45 @@ class ItemsSearch extends Items
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
+            'id'   => $this->id,
             'date' => $this->date,
         ])->andFilterWhere([
-            'like', Status::tableName().'.name', $this->statusName
+            'like', Status::tableName() .    '.name', $this->statusName
         ])->andFilterWhere([
-            'like', Types::tableName().'.name', $this->typeName
+            'like', Types::tableName() .     '.name', $this->typeName
         ])->andFilterWhere([
-            'like', Locations::tableName().'.name', $this->locationName
-//        ])->andFilterWhere([
-//            'like', Regions::tableName().'.name', $this->regionName
+            'like', Locations::tableName() . '.name', $this->locationName
+        ])->andFilterWhere([
+            'like', Regions::tableName() .   '.name', $this->regionName
         ]);
 
-        $query->andFilterWhere(['ilike', 'name', $this->name])
-            ->andFilterWhere(['ilike', 'model', $this->model])
-            ->andFilterWhere(['ilike', 'os', $this->os])
-            ->andFilterWhere(['ilike', 'mac', $this->mac])
-            ->andFilterWhere(['ilike', 'serial', $this->serial])
-            ->andFilterWhere(['ilike', 'product', $this->product])
-            ->andFilterWhere(['ilike', 'modelnumber', $this->modelnumber])
-            ->andFilterWhere(['ilike', 'invent', $this->invent])
-            ->andFilterWhere(['ilike', 'comment', $this->comment]);
+        $query->andFilterWhere(['ilike', 'name',        $this->name])
+            ->andFilterWhere(  ['ilike', 'model',       $this->model])
+            ->andFilterWhere(  ['ilike', 'os',          $this->os])
+            ->andFilterWhere(  ['ilike', 'mac',         $this->mac])
+            ->andFilterWhere(  ['ilike', 'serial',      $this->serial])
+            ->andFilterWhere(  ['ilike', 'product',     $this->product])
+            ->andFilterWhere(  ['ilike', 'modelnumber', $this->modelnumber])
+            ->andFilterWhere(  ['ilike', 'invent',      $this->invent])
+            ->andFilterWhere(  ['ilike', 'comment',     $this->comment]);
 
         $dataProvider->sort->attributes['statusName'] = [
-            'asc' => [Status::tableName().'.name' => SORT_ASC],
+            'asc'  => [Status::tableName().'.name' => SORT_ASC],
             'desc' => [Status::tableName().'.name' => SORT_DESC],
         ];
         $dataProvider->sort->attributes['typeName'] = [
-            'asc' => [Types::tableName().'.name' => SORT_ASC],
+            'asc'  => [Types::tableName().'.name' => SORT_ASC],
             'desc' => [Types::tableName().'.name' => SORT_DESC],
         ];
         $dataProvider->sort->attributes['locationName'] = [
-            'asc' => [Locations::tableName().'.name' => SORT_ASC],
+            'asc'  => [Locations::tableName().'.name' => SORT_ASC],
             'desc' => [Locations::tableName().'.name' => SORT_DESC],
         ];
-//        $dataProvider->sort->attributes['regionName'] = [
-//            'asc' => [Regions::tableName().'.name' => SORT_ASC],
-//            'desc' => [Regions::tableName().'.name' => SORT_DESC],
-//        ];
-        
+        $dataProvider->sort->attributes['regionName'] = [
+            'asc'  => [Regions::tableName().'.name' => SORT_ASC],
+            'desc' => [Regions::tableName().'.name' => SORT_DESC],
+        ];
+
         return $dataProvider;
     }
 }

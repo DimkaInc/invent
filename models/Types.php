@@ -5,15 +5,19 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "{{%types}}".
+ * Это класс модели типов.
  *
- * @property int $id Идентификатор типа (неизменяемое)
- * @property string|null $name Тип оборудования
+ * @property int         $id     Идентификатор типа (неизменяемое)
+ * @property string|null $name   наименование типа оборудования
+ * @property int         $icount Количество оборудования для конкретного типа
+ * @property string|null $tname  Наименование типа оборудования
  *
- * @property Items[] $items
+ * @property Items[]     $items
  */
 class Types extends \yii\db\ActiveRecord
 {
+    public $icount;
+    public $tname;
     /**
      * {@inheritdoc}
      */
@@ -38,8 +42,10 @@ class Types extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'Идентификатор типа (неизменяемое)'),
-            'name' => Yii::t('app', 'Тип оборудования'),
+            'id'     => Yii::t('app',   'Identifire'),
+            'name'   => Yii::t('types', 'Type'),
+            'tname'  => Yii::t('types', 'Types'),
+            'icount' => Yii::t('types', 'Count of items'),
         ];
     }
 

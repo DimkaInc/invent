@@ -34,30 +34,30 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
-            
+
             // Название места размещения
             ['attribute' => 'name',
                 'value' => function ($data) {
                     return Html::a(Html::encode($data->name), Url::to(['update', 'id' => $data->id]));
                 },
-                'format' => "raw",
+                'format' => 'raw',
             ],
-            
+
             // Название региона
             ['attribute' => 'regionName',
                 'filter' => Html::activeDropDownList(
                     $searchModel,
                     'regionName',
-                    ArrayHelper::merge(['' => "Все регионы"], ArrayHelper::map(Regions::find()->orderBy('name')->all(), 'name', 'name')),
+                    ArrayHelper::merge(['' => Yii::t('locations', 'All regions')], ArrayHelper::map(Regions::find()->orderBy('name')->all(), 'name', 'name')),
                     ['class' => 'form-control' ],
                 ),
                 'value' => function ($data) {
                     return Html::a(Html::encode($data->regions->name), Url::to(['update', 'id' => $data->id]));
                 },
-                'format' => "raw",
+                'format' => 'raw',
             ],
 
-            ['class' => 'yii\grid\ActionColumn', 'template' => "{delete}"],
+            ['class' => 'yii\grid\ActionColumn', 'template' => '{delete}'],
         ],
     ]); ?>
 

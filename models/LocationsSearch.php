@@ -66,7 +66,7 @@ class LocationsSearch extends Locations
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
+            'id'        => $this->id,
             'region_id' => $this->region_id,
         ])->andFilterWhere([
             'like', Regions::tableName().'.name', $this->regionName,

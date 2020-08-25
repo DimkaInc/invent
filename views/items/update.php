@@ -9,7 +9,6 @@ $this->title = Yii::t('items', 'Update Items: {name}', [
     'name' => $model->invent,
 ]);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Items'), 'url' => ['index']];
-//$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <div class="items-update">

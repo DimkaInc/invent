@@ -8,7 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = Yii::t("contact", 'Contact');
+$this->title = Yii::t('contact', 'Contact');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
@@ -17,21 +17,21 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
         <div class="alert alert-success">
-            <?= Yii::t("contact", "Thank you for contacting us. We will respond to you as soon as possible.") ?>
+            <?= Yii::t('contact', 'Thank you for contacting us. We will respond to you as soon as possible.') ?>
         </div>
 
         <p>
-            <?= Yii::t("contact", "Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.") ?>
+            <?= Yii::t('contact', 'Note that if you turn on the Yii debugger, you should be able to view the mail message on the mail panel of the debugger.') ?>
             <?php if (Yii::$app->mailer->useFileTransport): ?>
-                <?= Yii::t("contact", "Because the application is in development mode, the email is not sent but saved as a file under") ?> <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                <?= Yii::t("contact", "Please configure the <code>useFileTransport</code> property of the <code>mail</code> application component to be false to enable email sending.") ?>
+                <?= Yii::t('contact', 'Because the application is in development mode, the email is not sent but saved as a file under') ?> <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
+                <?= Yii::t('contact', 'Please configure the <code>useFileTransport</code> property of the <code>mail</code> application component to be false to enable email sending.') ?>
             <?php endif; ?>
         </p>
 
     <?php else: ?>
 
         <p>
-            <?= Yii::t("contact", "If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.") ?>
+            <?= Yii::t('contact', 'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?>
         </p>
 
         <div class="row">
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]) ?>
 
                     <div class="form-group">
-                        <?= Html::submitButton(Yii::t("contact",'Submit'), ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <?= Html::submitButton(Yii::t('contact','Submit'), ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                     </div>
 
                 <?php ActiveForm::end(); ?>

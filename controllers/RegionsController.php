@@ -30,7 +30,7 @@ class RegionsController extends Controller
     }
 
     /**
-     * Lists all Regions models.
+     * Список всех регионов/подразделений.
      * @return mixed
      */
     public function actionIndex()
@@ -45,10 +45,10 @@ class RegionsController extends Controller
     }
 
     /**
-     * Displays a single Regions model.
+     * Плказ одного региона/подразделения (не используется).
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует регион/подразделение
      */
     public function actionView($id)
     {
@@ -58,8 +58,8 @@ class RegionsController extends Controller
     }
 
     /**
-     * Creates a new Regions model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Создание нового региона/подразделения.
+     * В случае успешного создания региона/подразделения, происходит переход к списку всех регионов/подразделений.
      * @return mixed
      */
     public function actionCreate()
@@ -76,11 +76,11 @@ class RegionsController extends Controller
     }
 
     /**
-     * Updates an existing Regions model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * Изменение существующего региона/подразделения.
+     * В случае успешного редактирования, происходит переход к списку всех ергионов/подразделений.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует регион/подразделение
      */
     public function actionUpdate($id)
     {
@@ -96,11 +96,11 @@ class RegionsController extends Controller
     }
 
     /**
-     * Deletes an existing Regions model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * Удаление существующего региона/подразделения.
+     * В случае успешного удаления, происходит переход к списку всех регоинов/подразделений.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутсвует регион/подразделение
      */
     public function actionDelete($id)
     {

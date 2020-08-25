@@ -35,3 +35,11 @@ tests/_support/_generated
 # Assets
 /web/assets
 /runtime
+/condig/db.php
+/condig/params.php
+/condig/web.php
+/migrations/m200804_115556_create_items_table.php
+/migrations/m200806_061656_update_items_table.php
+/migrations/m200810_082546_create_status_table.php
+/migrations/m200818_045741_create_types_table.php
+/migrations/m200818_123015_create_locations_table.php

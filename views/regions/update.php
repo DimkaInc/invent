@@ -8,10 +8,10 @@ use yii\helpers\Html;
 $this->title = Yii::t('regions', 'Update Regions: {name}', [
     'name' => $model->name,
 ]);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('items', 'Items'), 'url' => ['items/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('items', 'Items'),         'url' => ['items/index']];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('locations', 'Locations'), 'url' => ['locations/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('regions', 'Regions'), 'url' => ['index']];
-//$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('regions', 'Regions'),     'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => $model->name,                     'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('regions', 'Update');
 ?>
 <div class="regions-update">

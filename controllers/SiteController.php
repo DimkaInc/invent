@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
-use yii\data\SqlDataProvider;
+use app\models\Site;
 
 class SiteController extends Controller
 {
@@ -57,81 +57,21 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Показ стартовой страницы.
      *
      * @return string
      */
     public function actionIndex()
     {
 
-        $count = Yii::$app->db->createCommand('
-            SELECT COUNT(*) FROM regions
-        ')->queryScalar();
-
-        $dataProvider = new SqlDataProvider([
-            'sql' => "
-                SELECT
-                    r.name AS rname,
-                    COUNT(i.id) AS icount
-                FROM regions AS r
-                    LEFT JOIN locations AS l
-                        ON l.region_id = r.id
-                    LEFT JOIN items AS i
-                        ON i.location_id = l.id
-                GROUP BY
-                    rname
-                ORDER BY
-                    rname
-            ",
-            'totalCount' => $count,
-            'pagination' => [
-                'pageSize' => 10,
-            ],
-            'sort' => [
-                'attributes' => [
-                    'rname',
-                    'icount',
-                ],
-            ],
-        ]);
-
-        $count = Yii::$app->db->createCommand('
-            SELECT COUNT(*) FROM types
-        ')->queryScalar();
-
-        $dataProviderg = new SqlDataProvider([
-            'sql' => "
-                SELECT
-                    t.name AS tname,
-                    COUNT(i.id) AS icount
-                FROM types AS t
-                    LEFT JOIN items AS i
-                        ON i.type_id = t.id
-                GROUP BY
-                    tname
-                ORDER BY
-                    tname
-            ",
-            'totalCount' => $count,
-            'pagination' => [
-                'pageSize' => 20,
-            ],
-            'sort' => [
-                'attributes' => [
-                    'tname',
-                    'icount',
-                ],
-            ],
-        ]);
-
         return $this->render('index', [
-            'dataProvider' => $dataProvider,
-            'dataProviderg' => $dataProviderg,
+            'dataProvider' => Site::regionsDataProvider(),
+            'dataProviderTypes' => Site::typesDataProvider(),
         ]);
     }
 
     /**
-     * Login action.
+     * Вход пользователем.
      *
      * @return Response|string
      */
@@ -153,7 +93,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logout action.
+     * Выход пользователем.
      *
      * @return Response
      */
@@ -165,7 +105,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays contact page.
+     * Поках страницы с обратной связью.
      *
      * @return Response|string
      */
@@ -183,7 +123,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
+     * Показ страницы описания.
      *
      * @return string
      */
@@ -192,8 +132,8 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionSay($message = "Привет")
+    public function actionSay($message = 'Привет')
     {
-        return $this->render("say", ["message" => $message]);
+        return $this->render('say', ['message' => $message]);
     }
 }

@@ -47,7 +47,7 @@ class TypesSearch extends Types
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-        
+
         $dataProvider->setSort([
             'defaultOrder' => [
                 'name' => SORT_ASC,

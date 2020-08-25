@@ -20,7 +20,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Url::base().'/favicon.ico' ]) ?>
+    <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Url::base() . '/favicon.ico' ]) ?>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -31,7 +31,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::t("app", Yii::$app->name),
+        'brandLabel' => Yii::t('app', Yii::$app->name),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -40,17 +40,17 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => Yii::t("app", 'Home'   ), 'url' => ['/site/index']],
-            ['label' => Yii::t("app", 'About'  ), 'url' => ['/site/about']],
-            ['label' => Yii::t("app", 'Contact'), 'url' => ['/site/contact']],
-            ['label' => Yii::t("app", 'Items'  ), 'url' => ['/items/index']],
+            ['label' => Yii::t('app', 'Home'   ), 'url' => ['/site/index']],
+            ['label' => Yii::t('app', 'About'  ), 'url' => ['/site/about']],
+            ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
+            ['label' => Yii::t('app', 'Items'  ), 'url' => ['/items/index']],
             Yii::$app->user->isGuest ? (
-                ['label' => Yii::t("app", 'Login'), 'url' => ['/site/login']]
+                ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    Yii::t("app", 'Logout').' (' . Yii::$app->user->identity->username . ')',
+                    Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
@@ -72,7 +72,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <a href="mailto:dimkainc@mail.ru"><?= Yii::t("app", "Dmitry Dobryshin") ?></a> <?= date('Y') ?></p>
+        <p class="pull-left">&copy; <a href="mailto:dimkainc@mail.ru"><?= Yii::t('app', 'Dmitry Dobryshin') ?></a> <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

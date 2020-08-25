@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "{{%locations}}".
+ * This is the model class for table '{{%locations}}'.
  *
  * @property int $id Идентификатор места (неизменяемое)
  * @property int $region_id Идентификатор региона (подразделения)
@@ -46,15 +46,15 @@ class Locations extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('regions', 'Идентификатор места (неизменяемое)'),
-            'region_id' => Yii::t('regions', 'Идентификатор региона (подразделения)'),
-            'name' => Yii::t('regions', 'Нименование маста размещения'),
-            'regionName' => Yii::t('regions', 'Region Name'),
+            'id'         => Yii::t('app',       'Identifier'),
+            'region_id'  => Yii::t('locations', 'Region ID'),
+            'name'       => Yii::t('locations', 'Location name'),
+            'regionName' => Yii::t('regions',   'Region Name'),
         ];
     }
 
     /**
-     * Gets query for [[Items]].
+     * Получение связанного оборудования с конкретным местом
      *
      * @return \yii\db\ActiveQuery
      */
@@ -64,7 +64,7 @@ class Locations extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Region]].
+     * Получение подразделения для конкретного места
      *
      * @return \yii\db\ActiveQuery
      */

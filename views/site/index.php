@@ -16,16 +16,12 @@ use app\models\Locations;
 $this->title = Yii::t('app','Inventory');
 ?>
 <div class="site-index">
-    <h2>Количество оборудования по подразделениям</h2>
+    <h2><?= Yii::t('app', 'Number of equipment by regions') ?></h2>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
 
-            [
-                'attribute' => 'rname',
-                'label' => Yii::t('regions', 'Regions'),
-                'value' => 'rname'
-            ],
+            'name',
             [
                 'attribute' => 'icount',
                 'label' => Yii::t('regions', 'Total items count'),
@@ -35,16 +31,11 @@ $this->title = Yii::t('app','Inventory');
     ]);
     ?>
 
-    <h2>Количество оборудования по типам</h2>
+    <h2><?= Yii::t('app', 'Number of items by type') ?></h2>
     <?= GridView::widget([
-        'dataProvider' => $dataProviderg,
+        'dataProvider' => $dataProviderTypes,
         'columns' => [
-
-            [
-                'attribute' => 'tname',
-                'label' => Yii::t('types', 'Types'),
-                'value' => 'tname'
-            ],
+            'name',
             [
                 'attribute' => 'icount',
                 'label' => Yii::t('types', 'Total items count'),

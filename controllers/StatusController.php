@@ -30,7 +30,7 @@ class StatusController extends Controller
     }
 
     /**
-     * Lists all Status models.
+     * Показ всех состояний предметов/оборудования.
      * @return mixed
      */
     public function actionIndex()
@@ -45,10 +45,10 @@ class StatusController extends Controller
     }
 
     /**
-     * Displays a single Status model.
+     * ПОказ одного состояния предмета/оборудования (не используется).
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует состояние
      */
     public function actionView($id)
     {
@@ -58,8 +58,8 @@ class StatusController extends Controller
     }
 
     /**
-     * Creates a new Status model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Создание новго состояния предмета/оборудования.
+     * В случае успешного создания, переход осуществляется к списку всех состояний предметов/оборудования.
      * @return mixed
      */
     public function actionCreate()
@@ -76,11 +76,11 @@ class StatusController extends Controller
     }
 
     /**
-     * Updates an existing Status model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * Изменение состояния предмета/оборудования.
+     * В случае успешного изменения, переход осуществляется к списку всех состояний предметов/оборудования.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует состояние предмета/оборудования
      */
     public function actionUpdate($id)
     {
@@ -97,10 +97,10 @@ class StatusController extends Controller
 
     /**
      * Deletes an existing Status model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * В случае успешного удаления, переход осуществляется к списку всех состояний предметов/оборудования.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует состояние предмета/оборудования
      */
     public function actionDelete($id)
     {

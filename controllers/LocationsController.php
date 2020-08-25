@@ -30,7 +30,7 @@ class LocationsController extends Controller
     }
 
     /**
-     * Lists all Locations models.
+     * Список всех мест/размещений.
      * @return mixed
      */
     public function actionIndex()
@@ -45,10 +45,10 @@ class LocationsController extends Controller
     }
 
     /**
-     * Displays a single Locations model.
+     * Показ одного места размещения (не используется).
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует место/размещение
      */
     public function actionView($id)
     {
@@ -58,8 +58,8 @@ class LocationsController extends Controller
     }
 
     /**
-     * Creates a new Locations model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Создание нового места/размещения.
+     * В случае успешного создания,  происходит переход к списку всех мест/размещений.
      * @return mixed
      */
     public function actionCreate()
@@ -76,11 +76,11 @@ class LocationsController extends Controller
     }
 
     /**
-     * Updates an existing Locations model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * Изменение существующего места/размещения.
+     * В случаае успешного изменения, происходит переход к списку всех мест/размещений.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException если отсутствует место/размещение
      */
     public function actionUpdate($id)
     {
@@ -96,11 +96,11 @@ class LocationsController extends Controller
     }
 
     /**
-     * Deletes an existing Locations model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * Удаение существующего места/размещения.
+     * В случае успешного удаления, происходит переход к списку всех мест/размещений.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException Усли отсутствует место/размещение
      */
     public function actionDelete($id)
     {
