@@ -4,7 +4,9 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Items;
+use app\models\Moving;
 use app\models\ItemsSearch;
+use app\models\MovingSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -63,15 +65,45 @@ class ItemsController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Items();
-
+        $model = new Items(); // Новый предмет/оборудование
+        $modelm = new Moving();
+        $model->myMessage = '';
+//        $model->isNewRecord = true;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+            // Удалось сохранить, создаём первую запись движения
+            
+            if ($modelm->load(Yii::$app->request->post())) {
+            
+                $modelm->item_id = $model->id;
+                $modelm->comment = 'Поступление';
+
+                if ( $modelm->save() ) {                  // Пробуем сохранить движение
+                    return $this->redirect(['index', 'id' => $model->id]); // Если удалось, показываем список оборудования
+                } else {
+                    $this->findModel($model->id)->delete();  // Иначе удаляем созданную запись предмета/оборудования
+                    unset($model->id);                      // Очищаем идентификатор предмета/оборудования
+                    $model->isNewRecord = true;
+                    return $this->render('create', [        // Показываем форму создания нового предмета/оборудования
+                        'model' => $model,
+                        'modelm' => $modelm,
+                    ]);
+                }
+            } else {
+                $this->findModel($model->id)->delete();  // Иначе удаляем созданную запись предмета/оборудования
+                unset($model->id);                      // Очищаем идентификатор предмета/оборудования
+                $model->isNewRecord = true;
+                return $this->render('create', [        // Показываем форму создания нового предмета/оборудования
+                    'model' => $model,
+                    'modelm' => $modelm,
+                ]);
+            }
+        } else { // не удалось сохранить - отображаем форму создания нового предмета/оборудования
+            return $this->render('create', [
+                'model' => $model,
+                'modelm' => $modelm,
+            ]);
         }
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
     }
 
     /**
@@ -89,7 +121,13 @@ class ItemsController extends Controller
             return $this->redirect(['index', 'id' => $model->id]);
         }
 
-        return $this->render('update', [
+        $searchModelM = new MovingSearch(['item_id' => $model->id]);
+//        $searchModelM = new MovingSearch();
+        $dataProviderM = $searchModelM->search(Yii::$app->request->queryParams);
+
+         return $this->render('update', [
+            'searchModelM' => $searchModelM,
+            'dataProviderM' => $dataProviderM,
             'model' => $model,
         ]);
     }

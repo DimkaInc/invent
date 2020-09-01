@@ -18,10 +18,17 @@ class Site extends \yii\data\ActiveDataProvider
 
     public static function regionsDataProvider()
     {
+
+        $subQuery = Moving::find()
+                ->select('MAX(id) AS id')
+                ->distinct('item_id')
+                ->groupBy(['item_id']);
+
         $query = Regions::find()
             ->select(Regions::tableName() . '.name, count(' . Items::tableName() . '.id) AS icount')
-            ->joinWith(['locations', 'items'])
-            ->groupBy(Regions::tableName() . '.id');
+            ->joinWith(['locations', 'moving', 'items'])
+            ->groupBy(Regions::tableName() . '.id')
+            ->where(['in', Moving::tableName() . '.id', $subQuery]);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -36,6 +43,7 @@ class Site extends \yii\data\ActiveDataProvider
 
     public static function typesDataProvider()
     {
+
         $query = Types::find()
             ->select(Types::tableName() . '.name, count(' . Items::tableName() . '.id) AS icount')
             ->joinWith('items')

@@ -45,8 +45,8 @@ class Regions extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('regions', 'Идентификатор региона (неизменяемое)'),
-            'name' => Yii::t('regions', 'Наименование региона (подразделения)'),
+            'id'     => Yii::t('app',     'Identifier'),
+            'name'   => Yii::t('regions', 'Region'),
             'icount' => Yii::t('regions', 'Count of items'),
         ];
     }
@@ -66,8 +66,12 @@ class Regions extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
+    public function getMoving()
+    {
+        return $this->getLocations()->select(Moving::tableName() . '.*')->joinWith('moving');
+    }
     public function getItems()
     {
-        return $this->getLocations()->joinWith('items');
+        return $this->getMoving()->select(Items::tableName() . '.*')->joinWith('items');
     }
 }

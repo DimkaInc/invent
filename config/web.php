@@ -1,7 +1,14 @@
 <?php
 
+use yii\helpers\Html;
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+
+function showUrlUpdate($name, $data) {
+        return Html::a(Html::encode($name), ['update', 'id' => $data->id]);
+}
+
 
 $config = [
     'version' => '1.25',
@@ -56,28 +63,20 @@ $config = [
                         'app/error' => 'error.php',
                     ],
                 ],
+                'contact*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'app'   => 'contact.app',
+                    ],
+                ],
                 'items*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
                     'fileMap' => [
                         'app' => 'items.app',
-                    ],
-                ],
-                'types*' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app' => 'types.app',
-                    ],
-                ],
-                'status*' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app' => 'status.app',
                     ],
                 ],
                 'locations*' => [
@@ -88,6 +87,14 @@ $config = [
                         'app' => 'locations.app',
                     ],
                 ],
+                'moving*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'app'   => 'moving.app',
+                    ],
+                ],
                 'regions*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
@@ -96,12 +103,20 @@ $config = [
                         'app' => 'regions.app',
                     ],
                 ],
-                'contact*' => [
+                'status*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
                     'fileMap' => [
-                        'app'   => 'contact.app',
+                        'app' => 'status.app',
+                    ],
+                ],
+                'types*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'app' => 'types.app',
                     ],
                 ],
             ],

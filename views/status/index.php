@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'id',
             [ 'attribute' => 'name',
                 'value' => function ($data) {
-                    return Html::a( Html::encode( $data->name ), Url::to(['update', 'id' => $data->id ]) );
+                    return showUrlUpdate($data->name, $data);
                 },
                 'format' => 'raw',
             ],

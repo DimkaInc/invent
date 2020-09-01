@@ -41,21 +41,23 @@ class LocationsSearch extends Locations
      */
     public function search($params)
     {
-        $query = Locations::find();
-        $query->joinWith(['regions']);
+        $query = Locations::find()
+            ->select(Locations::tableName() . '.*, ' .
+                Regions::tableName() . '.name AS regionName')
+            ->joinWith(['regions']);
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-        
+
         $dataProvider->setSort([
             'defaultOrder' => [
                 'name' => SORT_ASC,
             ],
         ]);
-        
+
         $this->load($params);
 
         if (!$this->validate()) {
@@ -69,12 +71,12 @@ class LocationsSearch extends Locations
             'id'        => $this->id,
             'region_id' => $this->region_id,
         ])->andFilterWhere([
-            'like', Regions::tableName().'.name', $this->regionName,
+            'like', Regions::tableName() . '.name', $this->regionName,
         ]);
 
         $dataProvider->sort->attributes['regionName'] = [
-            'asc' => [Regions::tableName().'.name' => SORT_ASC],
-            'desc' => [Regions::tableName().'.name' => SORT_DESC],
+            'asc'  => [Regions::tableName() . '.name' => SORT_ASC],
+            'desc' => [Regions::tableName() . '.name' => SORT_DESC],
         ];
 
         $query->andFilterWhere(['ilike', 'name', $this->name]);

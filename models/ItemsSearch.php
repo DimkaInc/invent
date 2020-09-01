@@ -9,6 +9,7 @@ use app\models\Status;
 use app\models\Types;
 use app\models\Locations;
 use app\models\Regions;
+use app\models\Moving;
 
 /**
  * ItemsSearch represents the model behind the search form of `app\models\Items`.
@@ -44,15 +45,24 @@ class ItemsSearch extends Items
      */
     public function search($params)
     {
+        // Особенность postgresql - нет first и last, потому последнее перемещение всегда имеет наибольший номер
+        $subQuery = Moving::find()
+                ->select('MAX(id) AS id')
+                ->distinct('item_id')
+                ->groupBy(['item_id']);
+
         $query = Items::find()
             ->select(Items::tableName() . '.*, ' .
-                Locations::tableName() . '.name AS locationName, ' .
-                Types::tableName() . '.name AS typeName, ' .
-                Regions::tableName() . '.name AS regionName')
-            ->joinWith(['status'])
+                Locations::tableName() .  '.name AS locationName, ' .
+                Types::tableName() .      '.name AS typeName, ' .
+                Regions::tableName() .    '.name AS regionName, ' .
+                Status::tableName() .     '.name AS statusName ')
             ->joinWith(['types'])
+            ->joinWith(['moving'])
+            ->joinWith(['status'])
             ->joinWith(['locations'])
-            ->joinWith(['regions']);
+            ->joinWith(['regions'])
+            ->where(['in', Moving::tableName() . '.id', $subQuery]);
 
         // add conditions that should always apply here
 
@@ -77,15 +87,14 @@ class ItemsSearch extends Items
         // grid filtering conditions
         $query->andFilterWhere([
             'id'   => $this->id,
-            'date' => $this->date,
         ])->andFilterWhere([
-            'like', Status::tableName() .    '.name', $this->statusName
+            'ilike', Status::tableName() .    '.name', $this->statusName
         ])->andFilterWhere([
-            'like', Types::tableName() .     '.name', $this->typeName
+            'ilike', Types::tableName() .     '.name', $this->typeName
         ])->andFilterWhere([
-            'like', Locations::tableName() . '.name', $this->locationName
+            'ilike', Locations::tableName() . '.name', $this->locationName
         ])->andFilterWhere([
-            'like', Regions::tableName() .   '.name', $this->regionName
+            'ilike', Regions::tableName() .   '.name', $this->regionName
         ]);
 
         $query->andFilterWhere(['ilike', 'name',        $this->name])
@@ -99,20 +108,20 @@ class ItemsSearch extends Items
             ->andFilterWhere(  ['ilike', 'comment',     $this->comment]);
 
         $dataProvider->sort->attributes['statusName'] = [
-            'asc'  => [Status::tableName().'.name' => SORT_ASC],
-            'desc' => [Status::tableName().'.name' => SORT_DESC],
+            'asc'  => [Status::tableName() . '.name' => SORT_ASC],
+            'desc' => [Status::tableName() . '.name' => SORT_DESC],
         ];
         $dataProvider->sort->attributes['typeName'] = [
-            'asc'  => [Types::tableName().'.name' => SORT_ASC],
-            'desc' => [Types::tableName().'.name' => SORT_DESC],
+            'asc'  => [Types::tableName() . '.name' => SORT_ASC],
+            'desc' => [Types::tableName() . '.name' => SORT_DESC],
         ];
         $dataProvider->sort->attributes['locationName'] = [
-            'asc'  => [Locations::tableName().'.name' => SORT_ASC],
-            'desc' => [Locations::tableName().'.name' => SORT_DESC],
+            'asc'  => [Locations::tableName() . '.name' => SORT_ASC],
+            'desc' => [Locations::tableName() . '.name' => SORT_DESC],
         ];
         $dataProvider->sort->attributes['regionName'] = [
-            'asc'  => [Regions::tableName().'.name' => SORT_ASC],
-            'desc' => [Regions::tableName().'.name' => SORT_DESC],
+            'asc'  => [Regions::tableName() . '.name' => SORT_ASC],
+            'desc' => [Regions::tableName() . '.name' => SORT_DESC],
         ];
 
         return $dataProvider;

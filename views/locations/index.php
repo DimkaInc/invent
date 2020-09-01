@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // Название места размещения
             ['attribute' => 'name',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->name), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->name, $data);
                 },
                 'format' => 'raw',
             ],
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'form-control' ],
                 ),
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->regions->name), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->regions->name, $data);
                 },
                 'format' => 'raw',
             ],

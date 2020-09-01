@@ -12,17 +12,17 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
 
     private static $users = [
         '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
+            'id'          => '100',
+            'username'    => 'admin',
+            'password'    => 'admin',
+            'authKey'     => 'test100key',
             'accessToken' => '100-token',
         ],
         '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
+            'id'          => '101',
+            'username'    => 'demo',
+            'password'    => 'demo',
+            'authKey'     => 'test101key',
             'accessToken' => '101-token',
         ],
     ];
@@ -70,8 +70,8 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     public function attributeLabels()
     {
         return [
-            'username' => Yii::t("app", "User name"),
-            'password' => Yii::t("app", "Password"),
+            'username' => Yii::t('app', 'User name'),
+            'password' => Yii::t('app', 'Password'),
         ];
     }
 

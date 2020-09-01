@@ -40,7 +40,7 @@ class Status extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'Номер по порядку'),
+            'id'   => Yii::t('app', 'Номер по порядку'),
             'name' => Yii::t('app', 'Состояние'),
         ];
     }
@@ -50,8 +50,12 @@ class Status extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
+    public function getMoving()
+    {
+        return $this->hasMany(Noving::className(), ['state_id' => 'id']);
+    }
     public function getItems()
     {
-        return $this->hasMany(Items::className(), ['state_id' => 'id']);
+        return $this->getMoving()->select(Items::tableName() . '.*')->joinWith('items');
     }
 }

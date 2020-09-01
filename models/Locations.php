@@ -10,6 +10,7 @@ use Yii;
  * @property int $id Идентификатор места (неизменяемое)
  * @property int $region_id Идентификатор региона (подразделения)
  * @property string $name Нименование маста размещения
+ * @property string $regionName Нименование региона/подразделения
  *
  * @property Items[] $items
  * @property Regions $region
@@ -53,6 +54,12 @@ class Locations extends \yii\db\ActiveRecord
         ];
     }
 
+    // Получение связанных с конкретным местом перемещений предметов/оборудования 
+    public function getMoving()
+    {
+        return $this->hasMany(Moving::className(), ['location_id' => 'id']);
+    }
+
     /**
      * Получение связанного оборудования с конкретным местом
      *
@@ -60,7 +67,7 @@ class Locations extends \yii\db\ActiveRecord
      */
     public function getItems()
     {
-        return $this->hasMany(Items::className(), ['location_id' => 'id']);
+        return $this->getMoving()->select(Items::tableName() . '.*')->joinWith('items');
     }
 
     /**

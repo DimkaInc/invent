@@ -14,6 +14,7 @@ use app\models\Status;
 
 $this->title = Yii::t('items', 'Items');
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="items-index">
 
@@ -36,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /* // Дата внесения(поступления) записи
             ['attribute' => 'date', 
                 'value' => function ($data) {
-                    return Html::a(Yii::$app->formatter->asDate($data->date, 'd.MM.Y'), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate(Yii::$app->formatter->asDate($data->date, 'd.MM.Y'),  $data);
                 },
                 'format' => 'raw',
             ], // */
@@ -44,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // Инвентарный номер
             ['attribute' => 'invent',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->invent), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->invent, $data);
                 },
                 'format' => 'raw',
             ],
@@ -52,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // Серийный номер
             ['attribute' => 'serial',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->serial), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->serial, $data);
                 },
                 'format' => 'raw',
             ],
@@ -60,7 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // Модель
             ['attribute' => 'model',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->model), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->model, $data);
                 },
                 'format' => 'raw',
             ],
@@ -68,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /* // Идентификатор записи
             ['attribute' => 'id',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->id), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->id, $data);
                 },
                 'format' => 'raw',
             ], // */
@@ -76,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /* // Сетевое имя
             ['attribute' => 'name',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->name), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->name, $data);
                 },
                 'format' => 'raw',
             ], // */
@@ -84,7 +85,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // Название подразделения
             ['attribute' =>'regionName',
                 'value' => function($data) {
-                    return Html::a(Html::encode($data->regionName), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->regionName .  ' (' . $data->locationName . ')', $data);
                 },
                 'format' => 'raw',
             ],
@@ -98,7 +99,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'form-control' ],
                 ),
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->status->name), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->statusName, $data);
                 },
                 'format' => 'raw',
             ],
@@ -106,7 +107,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /* // Операционная система
             ['attribute' => 'os',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->os), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->os, $data->id);
                 },
                 'format' => 'raw',
             ], // */
@@ -114,7 +115,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /* // МАС - адрес
             ['attribute' => 'mac',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->mac), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->mac, $data);
                 },
                 'format' => 'raw',
             ], // */
@@ -122,7 +123,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /* // Код товара
             ['attribute' => 'product',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->product), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->product, $data);
                 },
                 'format' => 'raw',
             ], // */
@@ -130,7 +131,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /* // Номер модели
             ['attribute' => 'modelnumber',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->modelnumber), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->modelnumber, $data);
                 },
                 'format' => 'raw',
             ], // */
@@ -138,7 +139,7 @@ $this->params['breadcrumbs'][] = $this->title;
             /* // Примечания
             ['attribute' => 'comment',
                 'value' => function ($data) {
-                    return Html::a(Html::encode($data->comment), Url::to(['update', 'id' => $data->id]));
+                    return showUrlUpdate($data->comment, $data);
                 },
                 'format' => 'raw',
             ], // */

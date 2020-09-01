@@ -2,12 +2,15 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+//use yii\widgets\Pjax;
+use yii\grid\GridView;
 use yii\jui\DatePicker;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
 use app\models\Status;
 use app\models\Types;
 use app\models\Locations;
+use app\models\Regions;
 
 use yii\data\Sort;
 
@@ -19,13 +22,30 @@ use yii\data\Sort;
     // Создание сортированного списка для выбора типов оборудования
     $types['empty'] = Yii::t('types', 'Select type');
     $types = ArrayHelper::merge($types, ArrayHelper::map(Types::find()->orderBy('name')->all(), 'id', 'name'));
-    
-    // Создание сортированного списка для выбора состояний оборудования
-    $states = ArrayHelper::map(Status::find()->orderBy('name')->all(), 'id', 'name');
-    
-    // Создание сортированного списка для выбора расположения оборудования
-    $locations['empty'] = Yii::t('locations', 'Select location');
-    $locations = ArrayHelper::merge($locations, ArrayHelper::map(Locations::find()->orderBy('name')->all(), 'id', 'name'));
+    $defType   = ['options' => [ 'empty' => ['Disabled' => 'true']] ];
+
+    if ($model->isNewRecord) {
+        // Создание сортированного списка для выбора состояний оборудования
+        $states = ArrayHelper::map(Status::find()->orderBy('name')->all(), 'id', 'name');
+        $defState = ['options' => [Status::findOne(['name' => 'Склад'])->id => [ 'Selected' => 'true' ] ]];
+
+        // Создание сортированного списка для выбора расположения оборудования
+        $locations['empty'] = Yii::t('locations', 'Select location');
+        $locArray = ArrayHelper::map(Locations::find()->joinWith('regions')->orderBy('name')->all(), 'id', 'name');
+        foreach ($locArray as $key => $val) {
+            $locArray[$key] = $val . ' (' .
+                Regions::findOne(['id' => Locations::findOne(['id' => $key])->region_id])->name .
+                ')';
+        }
+        $locations = ArrayHelper::merge($locations, $locArray);
+        // Значения по умолчанию для случая создания нового
+        $defLocate = ['options' => [ 'empty' => ['Disabled' => 'true'], Locations::findOne(['name' => 'Матвейково'])->id => ['Selected' => 'true']] ];
+
+
+        $modelm->date = date('d.m.Y'); // Текущая дата по умолчанию
+    }
+
+
 ?>
 
 <div class="items-form">
@@ -37,7 +57,7 @@ use yii\data\Sort;
             ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                        Html::a(Yii::t('types', 'Types'), ['types/index'], ['class' => 'btn btn-primary'] ) .
                        '</div><div class="col-md-8">{error}</div></div>']
-        )->dropDownList( $types ) ?>
+        )->dropDownList( $types, $defType ) ?>
 
     <?= $form->field($model, 'name', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->textInput(['maxlength' => true]) ?>
 
@@ -54,32 +74,45 @@ use yii\data\Sort;
     <?= $form->field($model, 'modelnumber', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'invent', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'date', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->widget(
+    <?php
+        // Если предмет/оборудование создаётся, то покажем поля даты, состояния, местоположения
+        if ( isset($modelm)) {
+    ?>
+    <?= $form->field($modelm, 'date', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->widget(
             DatePicker::className(),
             [ 'language'   => 'ru',
               'dateFormat' => 'dd.MM.yyyy',
-            ]
+            ],
         ) ?>
 
-    <?= $form->field($model,
+    <?= $form->field($modelm,
             'state_id',
             ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-2">{input}</div><div class="col-md-8">{error}</div></div>']
-        )->dropDownList( $states ) ?>
+        )->dropDownList( $states, $defState ) ?>
 
     <?= $form->field(
-            $model,
+            $modelm,
             'location_id',
             ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                 Html::a(
                     Yii::t('locations', 'Locations'),
                     ['locations/index'],
-                    ['class' => 'btn btn-primary'] 
+                    ['class' => 'btn btn-primary']
                 ) .
                 '</div><div class="col-md-8">{error}</div></div>']
-        )->dropDownList($locations)
+        )->dropDownList($locations, $defLocate)
     ?>
 
+    <?php
+        } else {
+    ?>
+    <!-- ?= $form->field($model, 'date', ['template' => '{input}'])->hiddenInput() ? >
+    < ?= $form->field($model, 'state_id', ['template' => '{input}'])->hiddenInput() ? >
+    < ?= $form->field($model, 'location_id', ['template' => '{input}'])->hiddenInput() ? -->
+
+    <?php
+        }
+    ?>
     <?= $form->field($model,
             'comment',
             ['template' => 
@@ -92,6 +125,72 @@ use yii\data\Sort;
         <?= Html::a(            Yii::t('app', 'Cancel'), ['index'], ['class' => 'btn btn-primary'] ) ?>
     </div>
 
-    <?php ActiveForm::end(); ?>
+
+    <?php ActiveForm::end();
+
+        // Если предмет/оборудование редактируется, то покажем все его движения
+        if ( ! isset($modelm) ) {
+
+    ?>
+    <H3><?= Yii::t('moving', 'Movings') ?></H3>
+
+    <p>
+        <?= Html::a(Yii::t('moving', 'Create Moving'), ['moving/create', 'item_id' => $model->id ], ['class' => 'btn btn-success']) ?>
+    </p>
+
+    <?php
+            $GLOBALS['count'] = 0;
+            echo GridView::widget([
+                'dataProvider' => $dataProviderM,
+                'filterModel' => $searchModelM,
+                'columns' => [
+//                    ['class' => 'yii\grid\SerialColumn'],
+
+//                    'id',
+                    [ 'attribute' => 'date',
+                        'value' => function($data) {
+                            return Html::a(Html::encode(Yii::$app->formatter->asDate($data->date, 'dd.MM.Y')), ['moving/update', 'id' => $data->id]);
+                        },
+                    'format' => 'raw',
+                    ],
+//                    'item_id',
+                    [ 'attribute' => 'itemModel',
+                        'value' => function($data) {
+                            return Html::a(Html::encode($data->items->invent . ' (' .$data->itemModel . ')'), ['moving/update', 'id' => $data->id]);
+                        },
+                        'format' => 'raw',
+                    ],
+//                    'location_id',
+                    [ 'attribute' => 'locationName',
+                        'value' => function($data) {
+                            return Html::a(Html::encode($data->locationName . ' (' .$data->regionName . ')'), ['moving/update', 'id' => $data->id]);
+                        },
+                        'format' => 'raw',
+                    ],
+//                    'state_id',
+                    [ 'attribute' => 'statusName',
+                        'value' => function($data) {
+                            return showUrlUpdate($data->statusName, $data);
+                        },
+                        'format' => 'raw',
+                    ],
+//                    'comment:ntext',
+
+                    [ 'class' => 'yii\grid\ActionColumn',
+                        'template' => '{delete}',
+                        'buttons' => [
+                            'delete' => function ($url, $model, $index) {
+                                if ($GLOBALS['count']++ != 0) {
+                                    return Html::a('<span class="glyphicon glyphicon-trash"></span>', ['moving/delete', 'id' => $model->id], ['data' => ['confirm' => Yii::t('app', 'Are you sure you want to delete this item?'), 'method' => 'post',],]);
+                                } else { return ''; }
+                            },
+                        ],
+                    ],
+                ],
+            ]);
+
+        }
+    ?>
+
 
 </div>

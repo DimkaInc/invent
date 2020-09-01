@@ -31,6 +31,7 @@ class Items extends \yii\db\ActiveRecord
     public $typeName;
     public $locationName;
     public $regionName;
+    public $myMessage;
      /**
      * {@inheritdoc}
      */
@@ -45,11 +46,13 @@ class Items extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['date'], 'safe'],
+//            [['date'], 'safe' ],
+//            [['date'], 'date', 'format' => 'dd.MM.yyyy' ],
             [['name', 'model', 'os', 'serial', 'product', 'modelnumber', 'comment' ], 'string', 'max' => 255],
             [['mac'],    'string', 'max' => 20],
             [['invent'], 'string', 'max' => 50],
-            [['state_id', 'type_id', 'location_id'], 'integer'],
+//            [['state_id', 'type_id', 'location_id'], 'integer'],
+            [['type_id'], 'integer'],
         ];
     }
 
@@ -81,27 +84,34 @@ class Items extends \yii\db\ActiveRecord
         ];
     }
 
-    // Получение статуса оборудования
-    public function getStatus()
-    {
-        return $this->hasOne(Status::className(), ['id' => 'state_id']);
-    }
-
-    // Получение типа оборудования
+    // Получение типа предмета/оборудования
     public function getTypes()
     {
         return $this->hasOne(Types::className(), ['id' => 'type_id']);
     }
 
-    // Получение места размещения оборудования
-    public function getLocations()
+    // Получение всех перемещений предмета/оборудования
+    public function getMoving()
     {
-        return $this->hasOne(Locations::className(), ['id' => 'location_id']);
+        return $this->hasMany(Moving::className(), ['item_id' => 'id']);
     }
 
-    // Получение Получение региона/подразделения размещения оборудования
+    // Получение статусов предмета/оборудования
+    public function getStatus()
+    {
+        return $this->getMoving()->select(Status::tableName() . '.*')->joinWith('status');
+    }
+
+    // Получение места размещения предмета/оборудования
+    public function getLocations()
+    {
+        return $this->getMoving()->select(Locations::tableName() . '.*')->joinWith('locations');
+    }
+
+    // Получение Получение региона/подразделения размещения предмета/оборудования
     public function getRegions()
     {
-        return $this->getLocations()->joinWith('regions');
+        return $this->getLocations()->select(Regions::tableName() .'.*')->joinWith('regions');
     }
+
 }
