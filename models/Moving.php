@@ -93,20 +93,23 @@ class Moving extends \yii\db\ActiveRecord
                 $this->addError('date', Yii::t('moving', 'The date cannot be more than today'));
             } else {
                 if ($date < strtotime('01.01.1990')) {
-                    $this->addError('date', Yii::t('moving', 'Date cannot be less than 01.01.1990'));
+                    $this->addError('date', Yii::t('moving', 'Date cannot be less than {date}', ['date' => '01.01.1990']));
                 } else {
                     $item_id = $this->item_id;
-                    
+
                     $query = Moving::find()
-                        ->select('MAX(date) AS date')
+                        ->select('MAX(date) AS date, id')
+                        ->groupBy('id')
                         ->where(['item_id' => $item_id]);
                     if (!empty($this->id)) {
                         $query = $query->andWhere(['<', 'id', $this->id]);
                     }
                     $query = $query->all();
+
                     if ((count($query) > 0) && ($date < strtotime($query[0]->date))) {
                         $this->addError('date', Yii::t('moving', 'The date cannot be less than {date}', ['date' => date('d.m.Y', strtotime($query[0]->date))]));
                     }
+
                     if (!empty($this->id)) {
                         $query = Moving::find()
                             ->select('MIN(date) AS date, id')
@@ -115,7 +118,7 @@ class Moving extends \yii\db\ActiveRecord
                             ->andWhere(['>', 'id', $this->id])
                             ->all();
                         if ((count($query) > 0) && ($date > strtotime($query[0]->date))) {
-                            $this->addError('date', Yii::t('moving', 'The date cannot be more than {date}, {id}', ['date' => date('d.m.Y', strtotime($query[0]->date)), 'id' => $query[0]->id]));
+                            $this->addError('date', Yii::t('moving', 'The date cannot be more than {date}', ['date' => date('d.m.Y', strtotime($query[0]->date))]));
                         }
                     }
                 }

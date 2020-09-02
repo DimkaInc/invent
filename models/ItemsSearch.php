@@ -22,7 +22,7 @@ class ItemsSearch extends Items
     public function rules()
     {
         return [
-            [['id', 'state_id', 'type_id'], 'integer'],
+            [['id', 'type_id'], 'integer'],
             [['name', 'model', 'os', 'mac', 'serial', 'product', 'modelnumber', 'invent', 'date', 'comment', 'statusName', 'typeName', 'locationName', 'regionName'], 'safe'],
         ];
     }

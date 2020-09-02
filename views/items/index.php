@@ -34,14 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
             // Нумератор строк
             ['class' => 'yii\grid\SerialColumn'],
 
-            /* // Дата внесения(поступления) записи
-            ['attribute' => 'date', 
-                'value' => function ($data) {
-                    return showUrlUpdate(Yii::$app->formatter->asDate($data->date, 'd.MM.Y'),  $data);
-                },
-                'format' => 'raw',
-            ], // */
-
             // Инвентарный номер
             ['attribute' => 'invent',
                 'value' => function ($data) {

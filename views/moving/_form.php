@@ -18,7 +18,7 @@ use app\models\Regions;
 
     // Создание сортированного списка для выбора состояний оборудования
     $states = ArrayHelper::map(Status::find()->orderBy('name')->all(), 'id', 'name');
-    
+
     $defState = [];
 
     // Создание сортированного списка для выбора расположения оборудования
@@ -33,10 +33,10 @@ use app\models\Regions;
     $defLocate = ['options' => [ 'empty' => ['Disabled' => 'true'], ] ];
 
 
-        // Создание сортированного списка для выбора состояний оборудования
-        $states = ArrayHelper::map(Status::find()->orderBy('name')->all(), 'id', 'name');
+    // Создание сортированного списка для выбора состояний оборудования
+    $states = ArrayHelper::map(Status::find()->orderBy('name')->all(), 'id', 'name');
 
-        // Значения по умолчанию для случая создания нового
+    // Значения по умолчанию для случая создания нового
 
     $minDate = date('d.m.Y', strtotime('1990-01-01'));
     $maxDate = date('d.m.Y');
@@ -54,7 +54,6 @@ use app\models\Regions;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <!-- ?= $form->field($model, 'date')->textInput() ? -->
     <?= $form->field($model, 'date', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->widget(
             DatePicker::className(),
             [ 'language'   => 'ru',
@@ -86,10 +85,6 @@ use app\models\Regions;
                 '</div><div class="col-md-8">{error}</div></div>']
         )->dropDownList($locations, $defLocate)
     ?>
-
-    <!-- ?= $form->field($model, 'location_id')->textInput() ? >
-
-    < ?= $form->field($model, 'state_id')->textInput() ? -->
 
     <?= $form->field($model, 'comment')->textarea(['rows' => 6]) ?>
 

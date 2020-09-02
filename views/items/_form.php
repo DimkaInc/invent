@@ -104,13 +104,6 @@ use yii\data\Sort;
     ?>
 
     <?php
-        } else {
-    ?>
-    <!-- ?= $form->field($model, 'date', ['template' => '{input}'])->hiddenInput() ? >
-    < ?= $form->field($model, 'state_id', ['template' => '{input}'])->hiddenInput() ? >
-    < ?= $form->field($model, 'location_id', ['template' => '{input}'])->hiddenInput() ? -->
-
-    <?php
         }
     ?>
     <?= $form->field($model,
@@ -160,14 +153,14 @@ use yii\data\Sort;
                         },
                         'format' => 'raw',
                     ],
-//                    'location_id',
+
                     [ 'attribute' => 'locationName',
                         'value' => function($data) {
                             return Html::a(Html::encode($data->locationName . ' (' .$data->regionName . ')'), ['moving/update', 'id' => $data->id]);
                         },
                         'format' => 'raw',
                     ],
-//                    'state_id',
+
                     [ 'attribute' => 'statusName',
                         'value' => function($data) {
                             return showUrlUpdate($data->statusName, $data);
