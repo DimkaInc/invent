@@ -57,11 +57,7 @@ class ItemsSearch extends Items
                 Types::tableName() .      '.name AS typeName, ' .
                 Regions::tableName() .    '.name AS regionName, ' .
                 Status::tableName() .     '.name AS statusName ')
-            ->joinWith(['types'])
-            ->joinWith(['moving'])
-            ->joinWith(['status'])
-            ->joinWith(['locations'])
-            ->joinWith(['regions'])
+            ->joinWith(['types', 'moving', 'status', 'locations', 'regions'])
             ->where(['in', Moving::tableName() . '.id', $subQuery]);
 
         // add conditions that should always apply here

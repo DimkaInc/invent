@@ -22181,3 +22181,539 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1598966774.36
     'REQUEST_TIME' => 1598966774
 ]
+2020-09-02 11:52:10 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'date' of non-object in /var/www/invent/basic/models/Moving.php:106
+Stack trace:
+#0 /var/www/invent/basic/models/Moving.php(106): yii\base\ErrorHandler->handleError()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\Moving->checkValidDate()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(560): yii\base\Model->validate()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert()
+#6 /var/www/invent/basic/controllers/MovingController.php(69): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\MovingController->actionCreate()
+#8 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#9 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#10 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#11 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#12 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#13 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#14 {main}
+2020-09-02 11:52:10 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][info][application] $_GET = [
+    'r' => 'moving/create'
+    'item_id' => '12'
+]
+
+$_POST = [
+    '_csrf' => 'yGPfGhRibSB0YCiBHB2DNCTeDV08zW6faM77PfhTMCuZNIxVRBgDdzIjS9BdRbpeTrp5ZEyjA88qmZxMnDpmfQ=='
+    'Moving' => [
+        'date' => '17.08.2020'
+        'item_id' => '12'
+        'state_id' => '2'
+        'location_id' => '14'
+        'comment' => 'Тест'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'vuis5h5qurl5c5ijocnpbc2lc0'
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '244'
+    'HTTP_ORIGIN' => 'http://192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'HTTP_COOKIE' => '_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=vuis5h5qurl5c5ijocnpbc2lc0; _csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '17977'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=moving%2Fcreate&item_id=12'
+    'REQUEST_URI' => '/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599036730.098
+    'REQUEST_TIME' => 1599036730
+]
+2020-09-02 11:53:42 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'date' of non-object in /var/www/invent/basic/models/Moving.php:116
+Stack trace:
+#0 /var/www/invent/basic/models/Moving.php(116): yii\base\ErrorHandler->handleError()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\Moving->checkValidDate()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(560): yii\base\Model->validate()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert()
+#6 /var/www/invent/basic/controllers/MovingController.php(69): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\MovingController->actionCreate()
+#8 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#9 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#10 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#11 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#12 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#13 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#14 {main}
+2020-09-02 11:53:42 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][info][application] $_GET = [
+    'r' => 'moving/create'
+    'item_id' => '12'
+]
+
+$_POST = [
+    '_csrf' => 'yGPfGhRibSB0YCiBHB2DNCTeDV08zW6faM77PfhTMCuZNIxVRBgDdzIjS9BdRbpeTrp5ZEyjA88qmZxMnDpmfQ=='
+    'Moving' => [
+        'date' => '17.08.2020'
+        'item_id' => '12'
+        'state_id' => '2'
+        'location_id' => '14'
+        'comment' => 'Тест'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'vuis5h5qurl5c5ijocnpbc2lc0'
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '244'
+    'HTTP_ORIGIN' => 'http://192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=vuis5h5qurl5c5ijocnpbc2lc0; _csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '17998'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=moving%2Fcreate&item_id=12'
+    'REQUEST_URI' => '/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599036822.166
+    'REQUEST_TIME' => 1599036822
+]
+2020-09-02 11:58:56 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][error][ParseError] ParseError: syntax error, unexpected 'if' (T_IF) in /var/www/invent/basic/models/Moving.php:92
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload()
+#1 /var/www/invent/basic/controllers/MovingController.php(67): spl_autoload_call()
+#2 [internal function]: app\controllers\MovingController->actionCreate()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#8 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2020-09-02 11:58:56 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][info][application] $_GET = [
+    'r' => 'moving/create'
+    'item_id' => '12'
+]
+
+$_POST = [
+    '_csrf' => 'gyds4qAf775eZdl7KEXoIEQ_BXVEdGL1eEyqb0Bkh_zScD-t8GWB6RgmuippHdFKLltxTDQaD6U6G80eJA3Rqg=='
+    'Moving' => [
+        'date' => '02.09.2020'
+        'item_id' => '12'
+        'state_id' => '2'
+        'location_id' => '2'
+        'comment' => 'Тест'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'vuis5h5qurl5c5ijocnpbc2lc0'
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '243'
+    'HTTP_ORIGIN' => 'http://192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'HTTP_COOKIE' => '_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=vuis5h5qurl5c5ijocnpbc2lc0; _csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '18091'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=moving%2Fcreate&item_id=12'
+    'REQUEST_URI' => '/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599037136.796
+    'REQUEST_TIME' => 1599037136
+]
+2020-09-02 11:59:34 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][error][ParseError] ParseError: syntax error, unexpected ']', expecting ')' in /var/www/invent/basic/models/Moving.php:108
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload()
+#1 /var/www/invent/basic/controllers/MovingController.php(67): spl_autoload_call()
+#2 [internal function]: app\controllers\MovingController->actionCreate()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#8 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2020-09-02 11:59:34 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][info][application] $_GET = [
+    'r' => 'moving/create'
+    'item_id' => '12'
+]
+
+$_POST = [
+    '_csrf' => 'gyds4qAf775eZdl7KEXoIEQ_BXVEdGL1eEyqb0Bkh_zScD-t8GWB6RgmuippHdFKLltxTDQaD6U6G80eJA3Rqg=='
+    'Moving' => [
+        'date' => '02.09.2020'
+        'item_id' => '12'
+        'state_id' => '2'
+        'location_id' => '2'
+        'comment' => 'Тест'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'vuis5h5qurl5c5ijocnpbc2lc0'
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '243'
+    'HTTP_ORIGIN' => 'http://192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=vuis5h5qurl5c5ijocnpbc2lc0; _csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '18100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=moving%2Fcreate&item_id=12'
+    'REQUEST_URI' => '/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599037174.606
+    'REQUEST_TIME' => 1599037174
+]
+2020-09-02 12:00:07 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][error][ParseError] ParseError: syntax error, unexpected ']', expecting ')' in /var/www/invent/basic/models/Moving.php:108
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload()
+#1 /var/www/invent/basic/controllers/MovingController.php(67): spl_autoload_call()
+#2 [internal function]: app\controllers\MovingController->actionCreate()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#8 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2020-09-02 12:00:07 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][info][application] $_GET = [
+    'r' => 'moving/create'
+    'item_id' => '12'
+]
+
+$_POST = [
+    '_csrf' => 'gyds4qAf775eZdl7KEXoIEQ_BXVEdGL1eEyqb0Bkh_zScD-t8GWB6RgmuippHdFKLltxTDQaD6U6G80eJA3Rqg=='
+    'Moving' => [
+        'date' => '02.09.2020'
+        'item_id' => '12'
+        'state_id' => '2'
+        'location_id' => '2'
+        'comment' => 'Тест'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'vuis5h5qurl5c5ijocnpbc2lc0'
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '243'
+    'HTTP_ORIGIN' => 'http://192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=vuis5h5qurl5c5ijocnpbc2lc0; _csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '18127'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=moving%2Fcreate&item_id=12'
+    'REQUEST_URI' => '/invent/index.php?r=moving%2Fcreate&item_id=12'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599037207.049
+    'REQUEST_TIME' => 1599037207
+]
+2020-09-02 12:08:30 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][error][yii\db\Exception] PDOException: SQLSTATE[42803]: Grouping error: 7 ОШИБКА:  столбец "moving.id" должен фигурировать в предложении GROUP BY или использоваться в агрегатной функции
+LINE 1: SELECT MIN(date) AS "date", "id" FROM "moving" WHERE ("item_...
+                                    ^ in /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(1159): yii\db\Command->internalExecute()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/db/Query.php(248): yii\db\Command->queryAll()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all()
+#5 /var/www/invent/basic/models/Moving.php(115): yii\db\ActiveQuery->all()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\Moving->checkValidDate()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute()
+#8 /var/www/invent/basic/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes()
+#9 /var/www/invent/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(670): yii\base\Model->validate()
+#10 /var/www/invent/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update()
+#11 /var/www/invent/basic/controllers/MovingController.php(90): yii\db\BaseActiveRecord->save()
+#12 [internal function]: app\controllers\MovingController->actionUpdate()
+#13 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#14 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#15 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#16 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#17 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#18 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#19 {main}
+
+Next yii\db\Exception: SQLSTATE[42803]: Grouping error: 7 ОШИБКА:  столбец "moving.id" должен фигурировать в предложении GROUP BY или использоваться в агрегатной функции
+LINE 1: SELECT MIN(date) AS "date", "id" FROM "moving" WHERE ("item_...
+                                    ^
+The SQL being executed was: SELECT MIN(date) AS "date", "id" FROM "moving" WHERE ("item_id"='12') AND ("id" > 25) in /var/www/invent/basic/vendor/yiisoft/yii2/db/Schema.php:677
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(1159): yii\db\Command->internalExecute()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/db/Query.php(248): yii\db\Command->queryAll()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all()
+#5 /var/www/invent/basic/models/Moving.php(115): yii\db\ActiveQuery->all()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\Moving->checkValidDate()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute()
+#8 /var/www/invent/basic/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes()
+#9 /var/www/invent/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(670): yii\base\Model->validate()
+#10 /var/www/invent/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update()
+#11 /var/www/invent/basic/controllers/MovingController.php(90): yii\db\BaseActiveRecord->save()
+#12 [internal function]: app\controllers\MovingController->actionUpdate()
+#13 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#14 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#15 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#16 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#17 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#18 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#19 {main}
+Additional Information:
+Array
+(
+    [0] => 42803
+    [1] => 7
+    [2] => ОШИБКА:  столбец "moving.id" должен фигурировать в предложении GROUP BY или использоваться в агрегатной функции
+LINE 1: SELECT MIN(date) AS "date", "id" FROM "moving" WHERE ("item_...
+                                    ^
+)
+
+2020-09-02 12:08:30 [192.168.0.68][100][vuis5h5qurl5c5ijocnpbc2lc0][info][application] $_GET = [
+    'r' => 'moving/update'
+    'id' => '25'
+]
+
+$_POST = [
+    '_csrf' => 'BZ18-TUtxu2zWm_ClU2xZHomMgEpWbp48q0WKF10O6JUyi-2ZVeouvUZDJPUFYgOEEJGOFk31yiw-nFZOR1t9A=='
+    'Moving' => [
+        'date' => '01.09.2020'
+        'item_id' => '12'
+        'state_id' => '3'
+        'location_id' => '2'
+        'comment' => 'тест'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'vuis5h5qurl5c5ijocnpbc2lc0'
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=moving%2Fupdate&id=25'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '243'
+    'HTTP_ORIGIN' => 'http://192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_identity=00e9a6e2db4b91e2b975aacad149c39c64464700dcffa7796334299b74072f02a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=vuis5h5qurl5c5ijocnpbc2lc0; _csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '18261'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=moving%2Fupdate&id=25'
+    'REQUEST_URI' => '/invent/index.php?r=moving%2Fupdate&id=25'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599037710.739
+    'REQUEST_TIME' => 1599037710
+]

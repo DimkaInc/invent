@@ -48,6 +48,7 @@ class Moving extends \yii\db\ActiveRecord
             [['date', 'item_id', 'location_id', 'state_id'], 'required'],
             [['date'],        'safe'],
             [['date'],        'date', 'format' => 'dd.MM.yyyy' ],
+            [['date'], 'checkValidDate'],
             [['item_id', 'location_id', 'state_id'], 'default', 'value' => null],
             [['id', 'item_id', 'location_id', 'state_id'], 'integer'],
             [['comment'],     'string'],
@@ -75,6 +76,51 @@ class Moving extends \yii\db\ActiveRecord
             'state_id'     => Yii::t('moving',    'Status ID'),
             'statusName'   => Yii::t('status',    'Status'),
         ];
+    }
+
+    /**
+     * Проверка даты на следующие условия:
+     * 1. Дата не больше текущей
+     * 2. Если это первая запись о перемещении предмета/оборудования, то дата не меньше 1 января 1990 года
+     * 3. Если есть более ранние перемещения, то дата не меньше самой поздей даты предыдущих перемещений
+     * 4. Если есть более поздние перемещения, то дата не больше самой ранней даты последующих перемещений
+     */
+    public function checkValidDate()
+    {
+        if (!empty($this->date)) {
+            $date = strtotime($this->date);
+            if ($date > strtotime(date('d.m.Y'))) {
+                $this->addError('date', Yii::t('moving', 'The date cannot be more than today'));
+            } else {
+                if ($date < strtotime('01.01.1990')) {
+                    $this->addError('date', Yii::t('moving', 'Date cannot be less than 01.01.1990'));
+                } else {
+                    $item_id = $this->item_id;
+                    
+                    $query = Moving::find()
+                        ->select('MAX(date) AS date')
+                        ->where(['item_id' => $item_id]);
+                    if (!empty($this->id)) {
+                        $query = $query->andWhere(['<', 'id', $this->id]);
+                    }
+                    $query = $query->all();
+                    if ((count($query) > 0) && ($date < strtotime($query[0]->date))) {
+                        $this->addError('date', Yii::t('moving', 'The date cannot be less than {date}', ['date' => date('d.m.Y', strtotime($query[0]->date))]));
+                    }
+                    if (!empty($this->id)) {
+                        $query = Moving::find()
+                            ->select('MIN(date) AS date, id')
+                            ->groupBy('id')
+                            ->where(['item_id' => $item_id])
+                            ->andWhere(['>', 'id', $this->id])
+                            ->all();
+                        if ((count($query) > 0) && ($date > strtotime($query[0]->date))) {
+                            $this->addError('date', Yii::t('moving', 'The date cannot be more than {date}, {id}', ['date' => date('d.m.Y', strtotime($query[0]->date)), 'id' => $query[0]->id]));
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /**

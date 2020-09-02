@@ -46,12 +46,9 @@ class Items extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-//            [['date'], 'safe' ],
-//            [['date'], 'date', 'format' => 'dd.MM.yyyy' ],
             [['name', 'model', 'os', 'serial', 'product', 'modelnumber', 'comment' ], 'string', 'max' => 255],
             [['mac'],    'string', 'max' => 20],
             [['invent'], 'string', 'max' => 50],
-//            [['state_id', 'type_id', 'location_id'], 'integer'],
             [['type_id'], 'integer'],
         ];
     }
@@ -71,13 +68,10 @@ class Items extends \yii\db\ActiveRecord
             'product'      => Yii::t('items', 'Product number'),          // Номер продукции
             'modelnumber'  => Yii::t('items', 'Model number'),            // Номер модели
             'invent'       => Yii::t('items', 'Inventory number'),        // Инвентарный номер
-            'date'         => Yii::t('items', 'Date of entry'),           // Дата записи
             'comment'      => Yii::t('items', 'Additional Information'),  // Дополнительная информация
-            'state_id'     => Yii::t('items', 'State'),                   // Идентификатор состояния
             'statusName'   => Yii::t('items', 'State'),                   // Название состояния
             'type_id'      => Yii::t('items', 'Item type'),               // Идентификатор типа
             'typeName'     => Yii::t('items', 'Item type'),               // Название типа
-            'location_id'  => Yii::t('items', 'Location'),                // Идентификатор метоположения
             'locationName' => Yii::t('items', 'Location'),                // Название местоположения
             'regionName'   => Yii::t('items', 'Region'),                  // Название подразделения
 

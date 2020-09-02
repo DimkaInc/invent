@@ -122,7 +122,6 @@ class ItemsController extends Controller
         }
 
         $searchModelM = new MovingSearch(['item_id' => $model->id]);
-//        $searchModelM = new MovingSearch();
         $dataProviderM = $searchModelM->search(Yii::$app->request->queryParams);
 
          return $this->render('update', [

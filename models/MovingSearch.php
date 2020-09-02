@@ -50,10 +50,7 @@ class MovingSearch extends Moving
                 . Status::tableName() .    '.name AS statusName, '
                 . Locations::tableName() . '.name AS locationName, '
                 . Regions::tableName() .   '.name AS regionName' )
-            ->joinWith('items')
-            ->joinWith('status')
-            ->joinWith('locations')
-            ->joinWith('regions');
+            ->joinWith(['items', 'status', 'locations', 'regions']);
 
         // add conditions that should always apply here
 
@@ -63,7 +60,7 @@ class MovingSearch extends Moving
 
         $dataProvider->setSort([
             'defaultOrder' => [
-                'date' => SORT_ASC
+                'id' => SORT_ASC
             ],
         ]);
 
@@ -77,17 +74,17 @@ class MovingSearch extends Moving
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'date' => $this->date,
-            'item_id' => $this->item_id,
+            'id'          => $this->id,
+            'date'        => $this->date,
+            'item_id'     => $this->item_id,
             'location_id' => $this->location_id,
-            'state_id' => $this->state_id,
+            'state_id'    => $this->state_id,
         ]);
 
-        $query->andFilterWhere(['ilike', Items::tableName() .     '.model',    $this->itemModel]);
-        $query->andFilterWhere(['ilike', Status::tableName() .    '.name',    $this->statusName]);
-        $query->andFilterWhere(['ilike', Locations::tableName() . '.name', $this->locationName]);
-        $query->andFilterWhere(['ilike', Regions::tableName() .   '.name',   $this->regionName]);
+        $query->andFilterWhere(['ilike', Items::tableName() .     '.model', $this->itemModel]);
+        $query->andFilterWhere(['ilike', Status::tableName() .    '.name',  $this->statusName]);
+        $query->andFilterWhere(['ilike', Locations::tableName() . '.name',  $this->locationName]);
+        $query->andFilterWhere(['ilike', Regions::tableName() .   '.name',  $this->regionName]);
 
         $query->andFilterWhere(['ilike', 'comment', $this->comment]);
 
