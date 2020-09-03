@@ -11,6 +11,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use kartik\mpdf\Pdf;
+
 /**
  * ItemsController implements the CRUD actions for Items model.
  */
@@ -29,6 +31,20 @@ class ItemsController extends Controller
                 ],
             ],
         ];
+    }
+
+    public function actionPrint()
+    {
+            $models = Items::find()->all();
+
+            $pdf = Yii::$app->pdf;
+
+            $pdf->methods['SetHeader'] = Yii::t('items', 'Items');
+
+            $pdf->content = $this->renderPartial('print', ['models' => $models]);
+
+        return $pdf->render();
+//        return $this->renderPartial('print', ['models' => $models]);
     }
 
     /**

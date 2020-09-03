@@ -12,6 +12,10 @@ use app\models\Types;
 use app\models\Locations;
 use app\models\Regions;
 
+use xj\qrcode\QRcode;
+use xj\qrcode\widgets\Email;
+use xj\qrcode\widgets\Text;
+
 use yii\data\Sort;
 
 /* @var $this yii\web\View */
@@ -43,12 +47,24 @@ use yii\data\Sort;
 
 
         $modelm->date = date('d.m.Y'); // Текущая дата по умолчанию
+    } else {
+        echo '<div style="border: lightgray;border-style: double;display: inline-table;padding: 5px;width: 400px;margin: 0 0 20px;border-radius: 15px;">'.
+            '<div style="display:table-cell">' . Text::widget([
+            'outputDir' => '@webroot/upload/qrcode',
+            'outputDirWeb' => '@web/upload/qrcode',
+            'text' => Yii::t('app', Yii::$app->name). ':' . $model->invent . ' (' . $model->model . '), S/N: ' . $model->serial . ', Тип: ' . $model->types->name,
+            'size' => 3,
+            'margin' => 4,
+            'ecLevel' => QRcode::QR_ECLEVEL_L,
+        ]) . '</div><div style="display:table-cell;vertical-align:middle;font-size: 18pt;font-weight: bolder;text-align:center;">' . $model->invent . '<br />' . $model->model .
+        '</div></div>';
     }
-
 
 ?>
 
+
 <div class="items-form">
+
 
     <?php $form = ActiveForm::begin(); ?>
 

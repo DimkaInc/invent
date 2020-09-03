@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use kartik\mpdf\Pdf;
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
@@ -26,6 +27,33 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '4u6WczdipA-FIzbuf8PYgjoiid_6zdNy',
         ],
+        'pdf' => [
+            'mode' => Pdf::MODE_UTF8,
+            'class' => Pdf::className(),
+            'format' => Pdf::FORMAT_A4,
+            'orientation' => Pdf::ORIENT_PORTRAIT,
+            'destination' => Pdf::DEST_BROWSER,
+            'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
+            'cssInline' => '.kv-heading-1{font-size:18px}',
+            'methods' => [
+                'SetHeader' => [Yii::t('app', 'Inventory')],
+                'SetFooter' => ['{PAGENO}'],
+            ],
+//            'defaultFont' => 'DejaVu Sans',
+            // refer settings section for all configuration options
+        ],
+        /*
+        'response' => [
+            'formatters' => [
+                'pdf' => [
+                    'class' => 'robregonm\pdf\PdfResponseFormatter',
+                    'format' => 'A4',
+                    'options' => [
+                        'title' => 'Document',
+                    ],
+                ],
+            ],
+        ], // */
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
