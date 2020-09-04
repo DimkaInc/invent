@@ -33,18 +33,38 @@ class ItemsController extends Controller
         ];
     }
 
+    /**
+     * Формирование PDF файла для печати QR-кодов для наклеек
+     * @param integer|array|null id
+     * @return mixed
+     */
     public function actionPrint()
     {
-            $models = Items::find()->all();
+        
+        $id = Yii::$app->request->get('id');
 
-            $pdf = Yii::$app->pdf;
+        $models = Items::find();
+        if (isset($id))
+            if (is_array($id)) {
+                $models = $models->where(['in', 'id', $id]);
+            } else {
+                $models = $models->where(['id' => $id]);
+            }
+        $models = $models->all();
 
-            $pdf->methods['SetHeader'] = Yii::t('items', 'Items');
+        $pdf = Yii::$app->pdf;
 
-            $pdf->content = $this->renderPartial('print', ['models' => $models]);
+        $pdf->methods['SetHeader'] = ''; // Yii::t('items', 'Items');
+        $pdf->methods['SetFooter'] = ''; // ['{PAGENO}'];
+        $pdf->marginLeft   = 0;
+        $pdf->marginRight  = 0;
+        $pdf->marginTop    = 0;
+        $pdf->marginBottom = 0;
+        $pdf->filename     = Yii::t('app', Yii::$app->name) . ' (' . Yii::t('items', 'Items') . ').pdf';
+
+        $pdf->content = $this->renderPartial('print', ['models' => $models]);
 
         return $pdf->render();
-//        return $this->renderPartial('print', ['models' => $models]);
     }
 
     /**

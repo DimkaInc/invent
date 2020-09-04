@@ -13,6 +13,7 @@ return [
     'Model number'      => 'Номер модели',
     'Operating system'  => 'Операционная система',
     'Print Items'       => 'Печать этикеток',
+    'Print selected labels' => 'Печать выбранных этикеток',
     'Product number'    => 'Код оборудования',
     'Region'            => 'Подразделение',
     'Serial number'     => 'Серийный номер',

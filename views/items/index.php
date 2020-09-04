@@ -20,11 +20,26 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+<script language="JavaScript">
+    function aaaaa(href) {
+        url = href.attr("href");
+        var ids = $("input[name='selection[]']");
+        var res = '';
+        for ( var i = 0; i < ids.length; i++) {
+            if (ids[i]["checked"] == true) {
+                res += "&id[]=" + ids[i]["value"];
+            }
+        }
+        href.attr("href", url + res);
+        return false;
+    }
+</script>
+
     <p>
         <?= Html::a(Yii::t('items', 'Create Items'), ['create'], ['class' => 'btn btn-success']) ?> <?= Html::a(Yii::t('items', 'Print Items'), ['print'], ['class' => 'btn btn-warning', 'target' => '_blank']) ?>
     </p>
 
-    <?php Pjax::begin(); ?>
+    <?php // Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
@@ -136,11 +151,31 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'raw',
             ], // */
 
+            // Чекбоксы для выбора предметов/оборудования для печати QR меток
+            [
+                'class' => 'yii\grid\CheckboxColumn',
+                'checkboxOptions' => function($model, $key, $index, $column) {
+                    return ['value' => $model->id, ];
+                },
+            ],
+
             // Кнопки действий {view} {update} {delete}
-            ['class' => 'yii\grid\ActionColumn', 'template' => '{delete}' ],
+            ['class' => 'yii\grid\ActionColumn',
+                'template' => '{delete} {print}',
+                'buttons' => [
+                    'print' => function ($url, $model, $key) {
+                        return Html::a('<span class="glyphicon glyphicon-print"></span>',
+                            ['print', 'id[]' => $model->id],
+                            [
+                                'target' => '_blank',
+                                'onclick' => 'aaaaa($(this));',
+                                'title' => Yii::t('items', 'Print selected labels'),
+                            ]);
+                    },
+                ], ],
         ],
     ]); ?>
 
-    <?php Pjax::end(); ?>
+    <?php // Pjax::end(); ?>
 
 </div>

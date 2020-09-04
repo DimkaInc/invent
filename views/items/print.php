@@ -14,11 +14,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="items-index">
 
-    <!-- h1 style="font-family:Helvetica"><?= Html::encode($this->title) ?></h1 -->
-    <table width="100%" border="2">
+    <table width="100%">
         <tbody>
             <?php
                 $counts = 3;
+                $percent = (100 / $counts) % 100;
                 $ind = 0;
                 foreach ($models as $model ) {
             ?>
@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
                     $ind++;
                 ?>
-                <td>
-                    <div style="margin:2px;border-color:black;border-width:4,4;border-style:solid;border-radius:15px;height:95%;width:100%">
+                <td style="width:<?= $percent ?>%;">
+                    <div style="margin:2px 2px 2px 2px;border-color:black;border-width:4,4;border-style:double;border-radius:15px;height:94%;width:98%">
                         <table width="100%" height="100%">
                             <tbody>
                                 <tr>
@@ -52,17 +52,19 @@ $this->params['breadcrumbs'][] = $this->title;
                         </table>
                     </div>
                 </td>
-            <?php
-                if ($ind % $counts == 0) {
+                <?php
+                    if ($ind % $counts == 0) {
+                        echo '</tr>';
+                    }
+                }
+                if ($ind % $counts != 0) {
+                    while ($ind % $counts != 0) {
+                        echo '<td>&nbsp;</td>';
+                        $ind++;
+                    }
                     echo '</tr>';
                 }
             ?>
-        <?php
-            }
-            if ($ind % $counts != 0) {
-                echo '</tr>';
-            }
-        ?>
         </tbody>
     </table>
 </div>
