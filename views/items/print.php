@@ -9,7 +9,7 @@ use xj\qrcode\widgets\Email;
 use xj\qrcode\widgets\Text;
 
 $this->title = Yii::t('items', 'Items');
-$this->params['breadcrumbs'][] = $this->title;
+$this->params[ 'breadcrumbs' ][] = $this->title;
 
 ?>
 <div class="items-index">
@@ -20,11 +20,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 $counts = 3;
                 $percent = (100 / $counts) % 100;
                 $ind = 0;
-                foreach ($models as $model ) {
+                foreach ($models as $model )
+                {
             ?>
 
                 <?php
-                    if ($ind % $counts == 0) {
+                    if ($ind % $counts == 0)
+                    {
                         echo '<tr style="height:120px;min-height:120px;max-height:120px;">';
                     }
                     $ind++;
@@ -36,12 +38,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <tr>
                                     <td style="vertical-align:middle;">
                                         <?= Text::widget([
-                                            'outputDir' => '@webroot/upload/qrcode',
+                                            'outputDir'    => '@webroot/upload/qrcode',
                                             'outputDirWeb' => '@web/upload/qrcode',
-                                            'text' => $model->invent . ', ' . $model->serial,
-                                            'size' => 3,
-                                            'margin' => 4,
-                                            'ecLevel' => QRcode::QR_ECLEVEL_L,
+                                            'text'         => $model->invent . ', ' . $model->serial,
+                                            'size'         => 3,
+                                            'margin'       => 4,
+                                            'ecLevel'      => QRcode::QR_ECLEVEL_L,
                                         ]) ?>
                                     </td>
                                     <td style="vertical-align:middle;">
@@ -53,12 +55,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </td>
                 <?php
-                    if ($ind % $counts == 0) {
+                    if ($ind % $counts == 0)
+                    {
                         echo '</tr>';
                     }
                 }
-                if ($ind % $counts != 0) {
-                    while ($ind % $counts != 0) {
+                if ($ind % $counts != 0)
+                {
+                    while ($ind % $counts != 0)
+                    {
                         echo '<td>&nbsp;</td>';
                         $ind++;
                     }

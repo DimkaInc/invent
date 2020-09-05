@@ -22,15 +22,16 @@ use app\models\Regions;
     $defState = [];
 
     // Создание сортированного списка для выбора расположения оборудования
-    $locations['empty'] = Yii::t('locations', 'Select location');
+    $locations[ 'empty' ] = Yii::t('locations', 'Select location');
     $locArray = ArrayHelper::map(Locations::find()->joinWith('regions')->orderBy('name')->all(), 'id', 'name');
-    foreach ($locArray as $key => $val) {
+    foreach ($locArray as $key => $val)
+    {
         $locArray[$key] = $val . ' (' .
-            Regions::findOne(['id' => Locations::findOne(['id' => $key])->region_id])->name .
+            Regions::findOne([ 'id' => Locations::findOne(['id' => $key])->region_id ])->name .
             ')';
     }
     $locations = ArrayHelper::merge($locations, $locArray);
-    $defLocate = ['options' => [ 'empty' => ['Disabled' => 'true'], ] ];
+    $defLocate = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ], ]];
 
 
     // Создание сортированного списка для выбора состояний оборудования
@@ -41,9 +42,10 @@ use app\models\Regions;
     $minDate = date('d.m.Y', strtotime('1990-01-01'));
     $maxDate = date('d.m.Y');
 
-    if ($model->isNewRecord) {
-        $defState = ['options' => [Status::findOne(['name' => 'Работает'])->id => [ 'Selected' => 'true' ] ]];
-        $defLocate = ['options' => [ 'empty' => ['Disabled' => 'true'], Locations::findOne(['name' => 'Матвейково'])->id => ['Selected' => 'true']] ];
+    if ($model->isNewRecord)
+    {
+        $defState    = [ 'options' => [ Status::findOne([ 'name' => 'Работает' ])->id => [ 'Selected' => 'true' ] ]];
+        $defLocate   = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ], Locations::findOne([ 'name' => 'Матвейково' ])->id => [ 'Selected' => 'true' ]] ];
         $model->date = date('d.m.Y');
     }
 
@@ -54,7 +56,8 @@ use app\models\Regions;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'date', ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>'])->widget(
+    <?= $form->field($model, 'date', [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
+        ->widget(
             DatePicker::className(),
             [ 'language'   => 'ru',
               'dateFormat' => 'dd.MM.yyyy',
@@ -70,27 +73,26 @@ use app\models\Regions;
 
     <?= $form->field($model,
             'state_id',
-            ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-2">{input}</div><div class="col-md-8">{error}</div></div>']
-        )->dropDownList( $states, $defState ) ?>
+            [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-2">{input}</div><div class="col-md-8">{error}</div></div>' ])
+            ->dropDownList($states, $defState) ?>
 
     <?= $form->field(
             $model,
             'location_id',
-            ['template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
+            [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                 Html::a(
                     Yii::t('locations', 'Locations'),
                     ['locations/index'],
-                    ['class' => 'btn btn-primary']
-                ) .
-                '</div><div class="col-md-8">{error}</div></div>']
-        )->dropDownList($locations, $defLocate)
+                    ['class' => 'btn btn-primary']) .
+                '</div><div class="col-md-8">{error}</div></div>'])
+            ->dropDownList($locations, $defLocate)
     ?>
 
-    <?= $form->field($model, 'comment')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'comment')->textarea([ 'rows' => 6 ]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Save'),   ['class' => 'btn btn-success']) ?>
-        <?= Html::a(           Yii::t('app', 'Cancel'), ['items/update', 'id' => $model->item_id ], ['class' => 'btn btn-primary'] ) ?>
+        <?= Html::submitButton(Yii::t('app', 'Save'),   [ 'class' => 'btn btn-success' ]) ?>
+        <?= Html::a(           Yii::t('app', 'Cancel'), [ 'items/update', 'id' => $model->item_id ], [ 'class' => 'btn btn-primary' ]) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

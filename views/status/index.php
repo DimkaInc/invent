@@ -9,14 +9,14 @@ use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', 'Statuses');
-$this->params['breadcrumbs'][] = $this->title;
+$this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 <div class="status-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Status'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create Status'), [ 'create' ], [ 'class' => 'btn btn-success' ]) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -24,19 +24,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+        'filterModel'  => $searchModel,
+        'columns'      => [
+            [ 'class' => 'yii\grid\SerialColumn' ],
 
 //            'id',
             [ 'attribute' => 'name',
-                'value' => function ($data) {
+                'value'   => function ($data)
+                {
                     return showUrlUpdate($data->name, $data);
                 },
-                'format' => 'raw',
+                'format'  => 'raw',
             ],
 
-            ['class' => 'yii\grid\ActionColumn', 'template' => '{delete}'],
+            [ 'class' => 'yii\grid\ActionColumn', 'template' => '{delete}' ],
         ],
     ]); ?>
 

@@ -25,9 +25,9 @@ class ItemsController extends Controller
     {
         return [
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class'   => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => [ 'POST' ],
                 ],
             ],
         ];
@@ -40,30 +40,36 @@ class ItemsController extends Controller
      */
     public function actionPrint()
     {
-        
+        // Список предметов/оборудования, если есть
         $id = Yii::$app->request->get('id');
 
         $models = Items::find();
         if (isset($id))
-            if (is_array($id)) {
-                $models = $models->where(['in', 'id', $id]);
-            } else {
-                $models = $models->where(['id' => $id]);
+            if (is_array($id))
+            {
+                $models = $models->where([ 'in', 'id', $id ]); // Несколько предметов/оборудования
+            } else
+            {
+                $models = $models->where([ 'id' => $id ]); // Один предмет/оборудование
             }
-        $models = $models->all();
+        $models = $models->all(); // Формирование списка
 
-        $pdf = Yii::$app->pdf;
+        $pdf = Yii::$app->pdf; // Pабота с PDF
 
-        $pdf->methods['SetHeader'] = ''; // Yii::t('items', 'Items');
-        $pdf->methods['SetFooter'] = ''; // ['{PAGENO}'];
-        $pdf->marginLeft   = 0;
-        $pdf->marginRight  = 0;
-        $pdf->marginTop    = 0;
-        $pdf->marginBottom = 0;
+        $pdf->methods[ 'SetHeader' ] = ''; // Yii::t('items', 'Items');
+        $pdf->methods[ 'SetFooter' ] = ''; // ['{PAGENO}'];
+        // Границы листа
+        $pdf->marginLeft   = 5;
+        $pdf->marginRight  = 5;
+        $pdf->marginTop    = 9;
+        $pdf->marginBottom = 15;
+        // Имя файла для выгрузки, по умолчанию document.pdf
         $pdf->filename     = Yii::t('app', Yii::$app->name) . ' (' . Yii::t('items', 'Items') . ').pdf';
 
-        $pdf->content = $this->renderPartial('print', ['models' => $models]);
+        // Заполнение страницы данными
+        $pdf->content = $this->renderPartial('print', [ 'models' => $models ]);
 
+        // Выгрузка PDF
         return $pdf->render();
     }
 
@@ -103,39 +109,41 @@ class ItemsController extends Controller
     {
         $model = new Items(); // Новый предмет/оборудование
         $modelm = new Moving();
-        $model->myMessage = '';
-//        $model->isNewRecord = true;
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
             // Удалось сохранить, создаём первую запись движения
-            
-            if ($modelm->load(Yii::$app->request->post())) {
-            
+            if ($modelm->load(Yii::$app->request->post()))
+            {
                 $modelm->item_id = $model->id;
                 $modelm->comment = 'Поступление';
 
-                if ( $modelm->save() ) {                  // Пробуем сохранить движение
-                    return $this->redirect(['index', 'id' => $model->id]); // Если удалось, показываем список оборудования
-                } else {
+                if ( $modelm->save() ) // Пробуем сохранить движение
+                {
+                    return $this->redirect([ 'index', 'id' => $model->id ]); // Если удалось, показываем список оборудования
+                } else
+                {
                     $this->findModel($model->id)->delete();  // Иначе удаляем созданную запись предмета/оборудования
-                    unset($model->id);                      // Очищаем идентификатор предмета/оборудования
+                    unset($model->id);                       // Очищаем идентификатор предмета/оборудования
                     $model->isNewRecord = true;
-                    return $this->render('create', [        // Показываем форму создания нового предмета/оборудования
-                        'model' => $model,
+                    return $this->render('create', [         // Показываем форму создания нового предмета/оборудования
+                        'model'  => $model,
                         'modelm' => $modelm,
                     ]);
                 }
-            } else {
+            } else
+            {
                 $this->findModel($model->id)->delete();  // Иначе удаляем созданную запись предмета/оборудования
                 unset($model->id);                      // Очищаем идентификатор предмета/оборудования
                 $model->isNewRecord = true;
                 return $this->render('create', [        // Показываем форму создания нового предмета/оборудования
-                    'model' => $model,
+                    'model'  => $model,
                     'modelm' => $modelm,
                 ]);
             }
-        } else { // не удалось сохранить - отображаем форму создания нового предмета/оборудования
+        } else // не удалось сохранить - отображаем форму создания нового предмета/оборудования
+        {
             return $this->render('create', [
-                'model' => $model,
+                'model'  => $model,
                 'modelm' => $modelm,
             ]);
         }
@@ -153,17 +161,18 @@ class ItemsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'index', 'id' => $model->id ]);
         }
 
-        $searchModelM = new MovingSearch(['item_id' => $model->id]);
+        $searchModelM = new MovingSearch([ 'item_id' => $model->id ]);
         $dataProviderM = $searchModelM->search(Yii::$app->request->queryParams);
 
          return $this->render('update', [
-            'searchModelM' => $searchModelM,
+            'searchModelM'  => $searchModelM,
             'dataProviderM' => $dataProviderM,
-            'model' => $model,
+            'model'         => $model,
         ]);
     }
 
@@ -178,7 +187,7 @@ class ItemsController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect([ 'index' ]);
     }
 
     /**
@@ -190,7 +199,8 @@ class ItemsController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Items::findOne($id)) !== null) {
+        if (($model = Items::findOne($id)) !== null)
+        {
             return $model;
         }
 

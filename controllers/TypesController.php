@@ -21,9 +21,9 @@ class TypesController extends Controller
     {
         return [
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class'   => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => [ 'POST' ],
                 ],
             ],
         ];
@@ -35,11 +35,11 @@ class TypesController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new TypesSearch();
+        $searchModel  = new TypesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
+            'searchModel'  => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -66,8 +66,9 @@ class TypesController extends Controller
     {
         $model = new Types();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'index', 'id' => $model->id ]);
         }
 
         return $this->render('create', [
@@ -86,8 +87,9 @@ class TypesController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'index', 'id' => $model->id ]);
         }
 
         return $this->render('update', [
@@ -106,7 +108,7 @@ class TypesController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect([ 'index' ]);
     }
 
     /**
@@ -118,7 +120,8 @@ class TypesController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Types::findOne($id)) !== null) {
+        if (($model = Types::findOne($id)) !== null)
+        {
             return $model;
         }
 

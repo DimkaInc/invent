@@ -21,9 +21,9 @@ class MovingController extends Controller
     {
         return [
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class'   => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => [ 'POST' ],
                 ],
             ],
         ];
@@ -35,11 +35,11 @@ class MovingController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new MovingSearch();
+        $searchModel  = new MovingSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
+            'searchModel'  => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -66,8 +66,9 @@ class MovingController extends Controller
     {
         $model = new Moving();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['items/update', 'id' => $model->item_id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'items/update', 'id' => $model->item_id ]);
         }
 
         $model->item_id = $item_id;
@@ -87,8 +88,9 @@ class MovingController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['items/update', 'id' => $model->item_id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'items/update', 'id' => $model->item_id ]);
         }
 
         return $this->render('update', [
@@ -105,11 +107,11 @@ class MovingController extends Controller
      */
     public function actionDelete($id)
     {
-        $model = $this->findModel($id);
+        $model   = $this->findModel($id);
         $item_id = $model->item_id;
         $model->delete();
 
-        return $this->redirect(['items/update', 'id' => $item_id]);
+        return $this->redirect([ 'items/update', 'id' => $item_id ]);
     }
 
     /**
@@ -121,7 +123,8 @@ class MovingController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Moving::findOne($id)) !== null) {
+        if (($model = Moving::findOne($id)) !== null)
+        {
             return $model;
         }
 

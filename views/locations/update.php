@@ -8,9 +8,9 @@ use yii\helpers\Html;
 $this->title = Yii::t('locations', 'Update Locations: {name}', [
     'name' => $model->name,
 ]);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('items', 'Items'),         'url' => ['items/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('locations', 'Locations'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = Yii::t('app', 'Update');
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'),         'url' => [ 'items/index' ]];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('locations', 'Locations'), 'url' => [ 'index' ]];
+$this->params[ 'breadcrumbs' ][] = Yii::t('app', 'Update');
 ?>
 <div class="locations-update">
 

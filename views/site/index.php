@@ -13,7 +13,7 @@ use app\models\Locations;
 
 
 
-$this->title = Yii::t('app','Inventory');
+$this->title = Yii::t('app',Yii::$app->name);
 ?>
 <div class="site-index">
     <h2><?= Yii::t('app', 'Number of equipment by regions') ?></h2>
@@ -24,8 +24,8 @@ $this->title = Yii::t('app','Inventory');
             'name',
             [
                 'attribute' => 'icount',
-                'label' => Yii::t('regions', 'Total items count'),
-                'value' => 'icount',
+                'label'     => Yii::t('regions', 'Total items count'),
+                'value'     => 'icount',
             ],
         ],
     ]);
@@ -38,8 +38,8 @@ $this->title = Yii::t('app','Inventory');
             'name',
             [
                 'attribute' => 'icount',
-                'label' => Yii::t('types', 'Total items count'),
-                'value' => 'icount',
+                'label'     => Yii::t('types', 'Total items count'),
+                'value'     => 'icount',
             ],
         ],
     ]);

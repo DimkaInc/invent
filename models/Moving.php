@@ -87,38 +87,47 @@ class Moving extends \yii\db\ActiveRecord
      */
     public function checkValidDate()
     {
-        if (!empty($this->date)) {
+        if (!empty($this->date))
+        {
             $date = strtotime($this->date);
-            if ($date > strtotime(date('d.m.Y'))) {
+            if ($date > strtotime(date('d.m.Y')))
+            {
                 $this->addError('date', Yii::t('moving', 'The date cannot be more than today'));
-            } else {
-                if ($date < strtotime('01.01.1990')) {
-                    $this->addError('date', Yii::t('moving', 'Date cannot be less than {date}', ['date' => '01.01.1990']));
-                } else {
+            } else
+            {
+                if ($date < strtotime('01.01.1990'))
+                {
+                    $this->addError('date', Yii::t('moving', 'Date cannot be less than {date}', [ 'date' => '01.01.1990' ]));
+                } else
+                {
                     $item_id = $this->item_id;
 
                     $query = Moving::find()
                         ->select('MAX(date) AS date, id')
                         ->groupBy('id')
                         ->where(['item_id' => $item_id]);
-                    if (!empty($this->id)) {
+                    if (!empty($this->id))
+                    {
                         $query = $query->andWhere(['<', 'id', $this->id]);
                     }
                     $query = $query->all();
 
-                    if ((count($query) > 0) && ($date < strtotime($query[0]->date))) {
-                        $this->addError('date', Yii::t('moving', 'The date cannot be less than {date}', ['date' => date('d.m.Y', strtotime($query[0]->date))]));
+                    if ((count($query) > 0) && ($date < strtotime($query[0]->date)))
+                    {
+                        $this->addError('date', Yii::t('moving', 'The date cannot be less than {date}', [ 'date' => date('d.m.Y', strtotime($query[0]->date)) ]));
                     }
 
-                    if (!empty($this->id)) {
+                    if (!empty($this->id))
+                    {
                         $query = Moving::find()
                             ->select('MIN(date) AS date, id')
                             ->groupBy('id')
                             ->where(['item_id' => $item_id])
                             ->andWhere(['>', 'id', $this->id])
                             ->all();
-                        if ((count($query) > 0) && ($date > strtotime($query[0]->date))) {
-                            $this->addError('date', Yii::t('moving', 'The date cannot be more than {date}', ['date' => date('d.m.Y', strtotime($query[0]->date))]));
+                        if ((count($query) > 0) && ($date > strtotime($query[0]->date)))
+                        {
+                            $this->addError('date', Yii::t('moving', 'The date cannot be more than {date}', [ 'date' => date('d.m.Y', strtotime($query[0]->date)) ]));
                         }
                     }
                 }
@@ -133,7 +142,7 @@ class Moving extends \yii\db\ActiveRecord
      */
     public function getItems()
     {
-        return $this->hasOne(Items::className(), ['id' => 'item_id']);
+        return $this->hasOne(Items::className(), [ 'id' => 'item_id' ]);
     }
 
     /**
@@ -143,7 +152,7 @@ class Moving extends \yii\db\ActiveRecord
      */
     public function getLocations()
     {
-        return $this->hasOne(Locations::className(), ['id' => 'location_id']);
+        return $this->hasOne(Locations::className(), [ 'id' => 'location_id' ]);
     }
 
     /**
@@ -163,6 +172,6 @@ class Moving extends \yii\db\ActiveRecord
      */
     public function getStatus()
     {
-        return $this->hasOne(Status::className(), ['id' => 'state_id']);
+        return $this->hasOne(Status::className(), [ 'id' => 'state_id' ]);
     }
 }

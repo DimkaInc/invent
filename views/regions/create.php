@@ -6,10 +6,10 @@ use yii\helpers\Html;
 /* @var $model app\models\Regions */
 
 $this->title = Yii::t('regions', 'Create Regions');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('items',     'Items'),     'url' => ['items/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('locations', 'Locations'), 'url' => ['locations/index']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('regions',   'Regions'),   'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items',     'Items'),     'url' => [ 'items/index' ]];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('locations', 'Locations'), 'url' => [ 'locations/index' ]];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('regions',   'Regions'),   'url' => [ 'index' ]];
+$this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 <div class="regions-create">
 

@@ -2,6 +2,7 @@
 
 use yii\db\Migration;
 
+use app\models\Items;
 /**
  * Handles the creation of table `{{%locations}}`.
  * Has foreign keys to the tables:
@@ -11,88 +12,57 @@ use yii\db\Migration;
  */
 class m200818_123015_create_locations_table extends Migration
 {
+    public $regions   = '{{%regions}}';
+    public $locations = '{{%locations}}';
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
         // Создание таблицы регионов
-        $this->createTable('{{%regions}}', [
+        $this->createTable($regions, [
             'id' => 'SERIAL',
-            'name' => $this->string(120)->notNull()->unique(),
+            'name' => $this->string(120)->notNull()->unique()->comment('Наименование региона (подразделения)'),
         ]);
 
         // Добавлнение комментариев в таблицу и поля
-        $this->addCommentOnTable('{{%regions}}', 'Регионы (подразделения)');
-        $this->addCommentOnColumn('{{%regions}}', 'id', 'Идентификатор региона (неизменяемое)');
-        $this->addCommentOnColumn('{{%regions}}', 'name', 'Наименование региона (подразделения)');
+        $this->addCommentOnTable( $regions, 'Регионы (подразделения)');
+        $this->addCommentOnColumn($regions, 'id', 'Идентификатор региона (неизменяемое)');
 
         // Создание основного ключа регионов
-        $this->addPrimaryKey(
-            'pk-regions-id',
-            '{{%regions}}',
-            'id'
-        );
+        $this->addPrimaryKey('pk-regions-id', $regions, 'id');
 
         // Создание таблицы расположений
-        $this->createTable('{{%locations}}', [
-            'id' => 'SERIAL',
-            'region_id' => $this->integer()->notNull(),
-            'name' => $this->string(120)->notNull(),
+        $this->createTable($locations, [
+            'id'        => 'SERIAL',
+            'region_id' => $this->integer()->notNull()->comment('Идентификатор региона (подразделения)'),
+            'name'      => $this->string(120)->notNull()->comment('Наименование маста размещения'),
         ]);
 
         // Добавлнение комментариев в таблицу и поля
-        $this->addCommentOnTable('{{%locations}}', 'Места размещения оборудования');
-        $this->addCommentOnColumn('{{%locations}}', 'id', 'Идентификатор места (неизменяемое)');
-        $this->addCommentOnColumn('{{%locations}}', 'region_id', 'Идентификатор региона (подразделения)');
-        $this->addCommentOnColumn('{{%locations}}', 'name', 'Наименование маста размещения');
+        $this->addCommentOnTable($locations,  'Места размещения оборудования');
+        $this->addCommentOnColumn($locations, 'id', 'Идентификатор места (неизменяемое)');
 
         // Создание основного ключа
-        $this->addPrimaryKey(
-            'pk-locations-id',
-            '{{%locations}}', 
-            'id'
-        );
+        $this->addPrimaryKey('pk-locations-id', $locations, 'id');
 
         // Создание индексирования для указателя региона
-        $this->createIndex(
-            'idx-locations-region_id',
-            '{{%locations}}',
-            'region_id'
-        );
+        $this->createIndex('idx-locations-region_id', $locations, 'region_id');
 
         // Создание указателя места размещения в таблице оборудования
-        $this->addColumn('{{%items}}', 'location_id', $this->integer());
+        $this->addColumn(Items::tableName(), 'location_id', $this->integer());
 
         // Добавление комментария для поля места  размещения
-        $this->addCommentOnColumn('{{%items}}', 'location_id', 'Идентификатор места размещения');
+        $this->addCommentOnColumn(Items::tableName(), 'location_id', 'Идентификатор места размещения');
 
         // Создание индексирования для указателя места размещения
-        $this->createIndex(
-            'idx-items-location_id',
-            '{{%items}}',
-            'location_id'
-        );
+        $this->createIndex('idx-items-location_id', Items::tableName(), 'location_id');
 
         // Создание связи между таблицами оборудования и размещений
-        $this->addForeignKey(
-            'fk-items-locations-id',
-            '{{%items}}',
-            'location_id',
-            '{{%locations}}',
-            'id',
-            'CASCADE'
-        );
+        $this->addForeignKey('fk-items-locations-id', Items::tableName(), 'location_id', $locations, 'id', 'CASCADE');
 
         // Создание связи `{{%regions}}`
-        $this->addForeignKey(
-            'fk-locations-regions-id',
-            '{{%locations}}',
-            'region_id',
-            '{{%regions}}',
-            'id',
-            'CASCADE'
-        );
+        $this->addForeignKey('fk-locations-regions-id', $locations, 'region_id', $regions, 'id', 'CASCADE');
     }
 
     /**
@@ -101,45 +71,30 @@ class m200818_123015_create_locations_table extends Migration
     public function safeDown()
     {
         // Удаление связи между таблицами locations и regions
-        $this->dropForeignKey(
-            'fk-locations-regions-id',
-            '{{%locations}}'
-        );
+        $this->dropForeignKey('fk-locations-regions-id', $locations);
 
         // Удаление связи таблиц оборудования и мест размещения
-        $this->dropForeignKey(
-            'fk-items-locations-id',
-            '{{%items}}'
-        );
+        $this->dropForeignKey('fk-items-locations-id', Items::tableName());
 
         // Удвление индексации для идентификатора мест размещения в таблице оборудования
-        $this->dropIndex('idx-items-location_id', '{{%items}}');
+        $this->dropIndex('idx-items-location_id', Items::tableName());
 
         // Удаление идентификатора местра размещения из таблицы оборудования
-        $this->dropColumn('{{%items}}', 'location_id');
+        $this->dropColumn(Items::tableName(), 'location_id');
 
         // удаление индексации для поля регионов
-        $this->dropIndex(
-            'idx-locations-region_id',
-            '{{%locations}}'
-        );
+        $this->dropIndex('idx-locations-region_id', $locations);
 
         // удаление основного ключа для таблицы мест размещения
-        $this->dropPrimaryKey(
-            'pk-locations-id',
-            '{{%locations}}'
-        );
+        $this->dropPrimaryKey('pk-locations-id', $locations);
 
         // Удаление таблицы размещений
-        $this->dropTable('{{%locations}}');
+        $this->dropTable($locations);
 
         // удаление основного ключа для таблицы регионов
-        $this->dropPrimaryKey(
-            'pk-regions-id',
-            '{{%regions}}'
-        );
+        $this->dropPrimaryKey('pk-regions-id', $regions);
 
         // Удаление таблицы регионов
-        $this->dropTable('{{%regions}}');
+        $this->dropTable($regions);
     }
 }

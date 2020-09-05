@@ -11,22 +11,22 @@ use yii\widgets\ActiveForm;
 <div class="items-search">
 
     <?php $form = ActiveForm::begin([
-        'action' => ['index'],
+        'action' => [ 'index' ],
         'method' => 'get',
         'options' => [
             'data-pjax' => 1
         ],
     ]); ?>
 
-    <? //= $form->field($model, 'id') ?>
+    <?= //$form->field($model, 'id') ?>
 
     <?= $form->field($model, 'name') ?>
 
     <?= $form->field($model, 'model') ?>
 
-    <? //= $form->field($model, 'os') ?>
+    <?= //$form->field($model, 'os') ?>
 
-    <? //= $form->field($model, 'mac') ?>
+    <?= //$form->field($model, 'mac') ?>
 
     <?= $form->field($model, 'serial') ?>
 
@@ -37,12 +37,12 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'invent') ?>
 
     <?= $form->field($model, 'date') ?>
-    
+
     <?php // echo $form->field($model, 'comment') ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton( Yii::t('app', 'Reset'),  ['class' => 'btn btn-outline-secondary']) ?>
+        <?= Html::submitButton(Yii::t('app', 'Search'), [ 'class' => 'btn btn-primary' ]) ?>
+        <?= Html::resetButton( Yii::t('app', 'Reset'),  [ 'class' => 'btn btn-outline-secondary' ]) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

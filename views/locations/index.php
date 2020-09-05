@@ -13,15 +13,15 @@ use app\models\Regions;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('locations', 'Locations');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('items', 'Items'), 'url' => ['items/index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
+$this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 <div class="locations-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('locations', 'Create Locations'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('locations', 'Create Locations'), [ 'create' ], [ 'class' => 'btn btn-success' ]) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -31,33 +31,35 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            [ 'class' => 'yii\grid\SerialColumn' ],
 
 //            'id',
 
             // Название места размещения
-            ['attribute' => 'name',
-                'value' => function ($data) {
+            [ 'attribute' => 'name',
+                'value' => function ($data)
+                {
                     return showUrlUpdate($data->name, $data);
                 },
                 'format' => 'raw',
             ],
 
             // Название региона
-            ['attribute' => 'regionName',
+            [ 'attribute' => 'regionName',
                 'filter' => Html::activeDropDownList(
                     $searchModel,
                     'regionName',
-                    ArrayHelper::merge(['' => Yii::t('locations', 'All regions')], ArrayHelper::map(Regions::find()->orderBy('name')->all(), 'name', 'name')),
-                    ['class' => 'form-control' ],
+                    ArrayHelper::merge([ '' => Yii::t('locations', 'All regions') ], ArrayHelper::map(Regions::find()->orderBy('name')->all(), 'name', 'name')),
+                    [ 'class' => 'form-control' ],
                 ),
-                'value' => function ($data) {
+                'value' => function ($data)
+                {
                     return showUrlUpdate($data->regions->name, $data);
                 },
                 'format' => 'raw',
             ],
 
-            ['class' => 'yii\grid\ActionColumn', 'template' => '{delete}'],
+            [ 'class' => 'yii\grid\ActionColumn', 'template' => '{delete}' ],
         ],
     ]); ?>
 

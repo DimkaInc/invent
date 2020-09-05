@@ -2,6 +2,8 @@
 
 use yii\db\Migration;
 
+use app\models\Items;
+
 /**
  * Class m200806_061656_update_items_table
  * Добавление поля 'Комментарии' неограниченной длины
@@ -13,8 +15,8 @@ class m200806_061656_update_items_table extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn('{{%items}}', 'comment', $this->string());
-        $this->addCommentOnColumn('{{%items}}', 'comment', 'Дополнительная информация');
+        $this->addColumn(Items::tableName(), 'comment', $this->string());
+        $this->addCommentOnColumn(Items::tableName(), 'comment', 'Дополнительная информация');
     }
 
     /**
@@ -29,18 +31,4 @@ class m200806_061656_update_items_table extends Migration
         return false;
     }
 
-    /*
-    // Use up()/down() to run migration code without a transaction.
-    public function up()
-    {
-
-    }
-
-    public function down()
-    {
-        echo 'm200806_061656_update_items_table cannot be reverted.\n';
-
-        return false;
-    }
-    */
 }

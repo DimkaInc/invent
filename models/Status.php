@@ -52,7 +52,7 @@ class Status extends \yii\db\ActiveRecord
      */
     public function getMoving()
     {
-        return $this->hasMany(Noving::className(), ['state_id' => 'id']);
+        return $this->hasMany(Noving::className(), [ 'state_id' => 'id' ]);
     }
     public function getItems()
     {

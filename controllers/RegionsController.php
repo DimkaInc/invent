@@ -21,9 +21,9 @@ class RegionsController extends Controller
     {
         return [
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class'   => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => [ 'POST' ],
                 ],
             ],
         ];
@@ -35,11 +35,11 @@ class RegionsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new RegionsSearch();
+        $searchModel  = new RegionsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
+            'searchModel'  => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -66,8 +66,9 @@ class RegionsController extends Controller
     {
         $model = new Regions();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'index', 'id' => $model->id ]);
         }
 
         return $this->render('create', [
@@ -86,8 +87,9 @@ class RegionsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'index', 'id' => $model->id ]);
         }
 
         return $this->render('update', [
@@ -106,7 +108,7 @@ class RegionsController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect([ 'index' ]);
     }
 
     /**
@@ -118,7 +120,8 @@ class RegionsController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Regions::findOne($id)) !== null) {
+        if (($model = Regions::findOne($id)) !== null)
+        {
             return $model;
         }
 

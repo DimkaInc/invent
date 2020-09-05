@@ -21,9 +21,9 @@ class LocationsController extends Controller
     {
         return [
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class'   => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => [ 'POST' ],
                 ],
             ],
         ];
@@ -39,7 +39,7 @@ class LocationsController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
+            'searchModel'  => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -66,8 +66,9 @@ class LocationsController extends Controller
     {
         $model = new Locations();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'index', 'id' => $model->id ]);
         }
 
         return $this->render('create', [
@@ -86,8 +87,9 @@ class LocationsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            return $this->redirect([ 'index', 'id' => $model->id ]);
         }
 
         return $this->render('update', [
@@ -106,7 +108,7 @@ class LocationsController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect([ 'index' ]);
     }
 
     /**
@@ -118,7 +120,8 @@ class LocationsController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Locations::findOne($id)) !== null) {
+        if (($model = Locations::findOne($id)) !== null)
+        {
             return $model;
         }
 

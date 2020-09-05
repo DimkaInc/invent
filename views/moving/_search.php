@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 <div class="moving-search">
 
     <?php $form = ActiveForm::begin([
-        'action' => ['index'],
+        'action' => [ 'index' ],
         'method' => 'get',
         'options' => [
             'data-pjax' => 1
@@ -31,8 +31,8 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'comment') ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('moving', 'Search'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton(Yii::t('moving', 'Reset'), ['class' => 'btn btn-outline-secondary']) ?>
+        <?= Html::submitButton(Yii::t('moving', 'Search'), [ 'class' => 'btn btn-primary' ]) ?>
+        <?= Html::resetButton( Yii::t('moving', 'Reset'),  [ 'class' => 'btn btn-outline-secondary' ]) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

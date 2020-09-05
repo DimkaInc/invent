@@ -9,15 +9,15 @@ use yii\helpers\Url;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('types', 'Types');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('items', 'Items'), 'url' => ['items/index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
+$this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 <div class="types-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('types', 'Create Types'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('types', 'Create Types'), [ 'create' ], [ 'class' => 'btn btn-success' ]) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -25,21 +25,22 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+        'filterModel'  => $searchModel,
+        'columns'      => [
+            [ 'class' => 'yii\grid\SerialColumn' ],
 
 //            'id',
             // Наименование типа оборудования
 //            'name',
-            ['attribute' => 'name',
-                'value' => function ($data) {
+            [ 'attribute' => 'name',
+                'value'   => function ($data)
+                {
                     return showUrlUpdate($data->name, $data);
                 },
-                'format' => 'raw',
+                'format'  => 'raw',
             ],
 
-            ['class' => 'yii\grid\ActionColumn', 'template' => '{delete}'],
+            [ 'class' => 'yii\grid\ActionColumn', 'template' => '{delete}' ],
         ],
     ]); ?>
 

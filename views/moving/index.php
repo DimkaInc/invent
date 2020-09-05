@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('moving', 'Movings');
-$this->params['breadcrumbs'][] = $this->title;
+$this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 <div class="moving-index">
 
@@ -23,34 +23,38 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+        'filterModel'  => $searchModel,
+        'columns'      => [
+            [ 'class' => 'yii\grid\SerialColumn' ],
 
 //            'id',
             [ 'attribute' => 'date',
-                'value' => function($data) {
+                'value' => function($data)
+                {
                     return showUrlUpdate($data->date, $data);
                 },
                 'format' => 'raw',
             ],
 //            'item_id',
             [ 'attribute' => 'itemModel',
-                'value' => function($data) {
+                'value' => function($data)
+                {
                     return showUrlUpdate($data->items->invent . ' (' .$data->items->model . ')', $data);
                 },
                 'format' => 'raw',
             ],
 //            'location_id',
             [ 'attribute' => 'locationName',
-                'value' => function($data) {
+                'value' => function($data)
+                {
                     return showUrlUpdate($data->locations->name, $data);
                 },
                 'format' => 'raw',
             ],
 //            'state_id',
             [ 'attribute' => 'statusName',
-                'value' => function($data) {
+                'value' => function($data)
+                {
                     return showUrlUpdate($data->status->name, $data);
                 },
                 'format' => 'raw',

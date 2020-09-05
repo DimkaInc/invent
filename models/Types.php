@@ -56,6 +56,6 @@ class Types extends \yii\db\ActiveRecord
      */
     public function getItems()
     {
-        return $this->hasMany(Items::className(), ['type_id' => 'id']);
+        return $this->hasMany(Items::className(), [ 'type_id' => 'id' ]);
     }
 }

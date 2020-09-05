@@ -11,11 +11,9 @@ use yii\widgets\ActiveForm;
 <div class="locations-search">
 
     <?php $form = ActiveForm::begin([
-        'action'        => ['index'],
+        'action'        => [ 'index' ],
         'method'        => 'get',
-        'options'       => [
-            'data-pjax' => 1
-        ],
+        'options'       => [ 'data-pjax' => 1 ],
     ]); ?>
 
     <?= $form->field($model, 'id') ?>
@@ -25,8 +23,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'name') ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton( Yii::t('app', 'Reset'),  ['class' => 'btn btn-outline-secondary']) ?>
+        <?= Html::submitButton(Yii::t('app', 'Search'), [ 'class' => 'btn btn-primary' ]) ?>
+        <?= Html::resetButton( Yii::t('app', 'Reset'),  [ 'class' => 'btn btn-outline-secondary' ]) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -81,29 +81,29 @@ class MovingSearch extends Moving
             'state_id'    => $this->state_id,
         ]);
 
-        $query->andFilterWhere(['ilike', Items::tableName() .     '.model', $this->itemModel]);
-        $query->andFilterWhere(['ilike', Status::tableName() .    '.name',  $this->statusName]);
-        $query->andFilterWhere(['ilike', Locations::tableName() . '.name',  $this->locationName]);
-        $query->andFilterWhere(['ilike', Regions::tableName() .   '.name',  $this->regionName]);
+        $query->andFilterWhere([ 'ilike', Items::tableName() .     '.model', $this->itemModel ]);
+        $query->andFilterWhere([ 'ilike', Status::tableName() .    '.name',  $this->statusName ]);
+        $query->andFilterWhere([ 'ilike', Locations::tableName() . '.name',  $this->locationName ]);
+        $query->andFilterWhere([ 'ilike', Regions::tableName() .   '.name',  $this->regionName ]);
 
         $query->andFilterWhere(['ilike', 'comment', $this->comment]);
 
-        $dataProvider->sort->attributes['itemModel'] = [
-            'asc'  => [Items::tableName() . '.model' => SORT_ASC],
-            'desc' => [Items::tableName() . '.model' => SORT_DESC],
+        $dataProvider->sort->attributes[ 'itemModel' ] = [
+            'asc'  => [ Items::tableName() . '.model' => SORT_ASC ],
+            'desc' => [ Items::tableName() . '.model' => SORT_DESC ],
         ];
 
-        $dataProvider->sort->attributes['statusName'] = [
-            'asc'  => [Status::tableName() . '.name' => SORT_ASC],
-            'desc' => [Status::tableName() . '.name' => SORT_DESC],
+        $dataProvider->sort->attributes[ 'statusName' ] = [
+            'asc'  => [ Status::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Status::tableName() . '.name' => SORT_DESC ],
         ];
-        $dataProvider->sort->attributes['locationName'] = [
-            'asc'  => [Locations::tableName() . '.name' => SORT_ASC],
-            'desc' => [Locations::tableName() . '.name' => SORT_DESC],
+        $dataProvider->sort->attributes[ 'locationName' ] = [
+            'asc'  => [ Locations::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Locations::tableName() . '.name' => SORT_DESC ],
         ];
-        $dataProvider->sort->attributes['regionName'] = [
-            'asc'  => [Regions::tableName() . '.name' => SORT_ASC],
-            'desc' => [Regions::tableName() . '.name' => SORT_DESC],
+        $dataProvider->sort->attributes[ 'regionName' ] = [
+            'asc'  => [ Regions::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Regions::tableName() . '.name' => SORT_DESC ],
         ];
 
         return $dataProvider;

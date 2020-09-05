@@ -67,7 +67,7 @@ class RegionsSearch extends Regions
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['ilike', 'name', $this->name]);
+        $query->andFilterWhere([ 'ilike', 'name', $this->name ]);
 
         return $dataProvider;
     }

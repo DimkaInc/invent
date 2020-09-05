@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $model app\models\Items */
 
 $this->title = Yii::t('items', 'Create Items');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Items'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('app', 'Items'), 'url' => [ 'index' ]];
+$this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 <div class="items-create">
 

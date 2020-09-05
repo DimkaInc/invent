@@ -6,8 +6,12 @@ use kartik\mpdf\Pdf;
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
-function showUrlUpdate($name, $data) {
-        return Html::a(Html::encode($name), ['update', 'id' => $data->id]);
+function showUrlUpdate($name, $data)
+{
+    return Html::a(Html::encode($name), 
+        ['update',
+            'id' => $data->id,
+        ]);
 }
 
 
@@ -27,43 +31,34 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '4u6WczdipA-FIzbuf8PYgjoiid_6zdNy',
         ],
-        'pdf' => [
-            'mode' => Pdf::MODE_UTF8,
+        'pdf' => [                                 // Формирование PDF по умолчанию
+            'mode' => Pdf::MODE_UTF8,              // Кодировка
             'class' => Pdf::className(),
-            'format' => Pdf::FORMAT_A4,
-            'orientation' => Pdf::ORIENT_PORTRAIT,
-            'destination' => Pdf::DEST_BROWSER,
+            'format' => Pdf::FORMAT_A4,            // Лист А4
+            'orientation' => Pdf::ORIENT_PORTRAIT, // Напраление - по вертикали большая сторона
+            'destination' => Pdf::DEST_BROWSER,    // Результат показать в браузере
             'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
             'cssInline' => '.kv-heading-1{font-size:18px}',
             'methods' => [
-                'SetHeader' => [Yii::t('app', 'Inventory')],
-                'SetFooter' => ['{PAGENO}'],
+                'SetHeader' => [Yii::t('app', Yii::$app->name)], // Верхний колонтитул
+                'SetFooter' => ['{PAGENO}'],                     // Нижний колонтитул
             ],
-//            'defaultFont' => 'DejaVu Sans',
             // refer settings section for all configuration options
         ],
-        /*
-        'response' => [
-            'formatters' => [
-                'pdf' => [
-                    'class' => 'robregonm\pdf\PdfResponseFormatter',
-                    'format' => 'A4',
-                    'options' => [
-                        'title' => 'Document',
-                    ],
-                ],
-            ],
-        ], // */
+
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
+
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             // send all mails to a file by default. You have to set
@@ -71,6 +66,7 @@ $config = [
             // for the mailer to send real emails.
             'useFileTransport' => false,
         ],
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -80,18 +76,19 @@ $config = [
                 ],
             ],
         ],
-        'i18n' => [
+
+        'i18n' => [ // Переводы сообщений
             'translations' => [
-                'app*' => [
+                'app*' => [                                 // Для приложения
                     'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
+                    'sourceLanguage' => 'en-US',            // Исходный текст на английском
                     'basePath' => '@app/messages',
                     'fileMap' => [
                         'app'       => 'app.php',
                         'app/error' => 'error.php',
                     ],
                 ],
-                'contact*' => [
+                'contact*' => [                             // Для формы обратой связи
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -99,7 +96,7 @@ $config = [
                         'app'   => 'contact.app',
                     ],
                 ],
-                'items*' => [
+                'items*' => [                               // Для предметов/оборудования
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -107,7 +104,7 @@ $config = [
                         'app' => 'items.app',
                     ],
                 ],
-                'locations*' => [
+                'locations*' => [                           // Для мест размещения
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -115,7 +112,7 @@ $config = [
                         'app' => 'locations.app',
                     ],
                 ],
-                'moving*' => [
+                'moving*' => [                              // Для перемещений
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -123,7 +120,7 @@ $config = [
                         'app'   => 'moving.app',
                     ],
                 ],
-                'regions*' => [
+                'regions*' => [                             // Для регионов/подразделений
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -131,7 +128,7 @@ $config = [
                         'app' => 'regions.app',
                     ],
                 ],
-                'status*' => [
+                'status*' => [                              // Для состояний предметов/оборудования
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -139,7 +136,7 @@ $config = [
                         'app' => 'status.app',
                     ],
                 ],
-                'types*' => [
+                'types*' => [                               // Для типов оборудования
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',

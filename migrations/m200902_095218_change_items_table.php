@@ -28,7 +28,7 @@ class m200902_095218_change_items_table extends Migration
      */
     public function safeDown()
     {
-        echo "m200902_095218_change_items_table не может быть отменено.\n";
+        echo "Миграция m200902_095218_change_items_table не может быть отменена.\n";
 
         return false;
     }
