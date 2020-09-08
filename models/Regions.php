@@ -10,7 +10,8 @@ use Yii;
  * @property int    $id     Идентификатор региона (неизменяемое)
  * @property string $name   Наименование региона (подразделения)
  * @property string $lname  Наименование места/размещения
- * @property int    $icount Количество предметов/оборудования в регионе
+ * @property int    $icount Количество предметов/оборудования в регионе/подразделении
+ * @property int    $icount Количество проинвентаризарованных предметов/оборудования в регионе/подразделении
  *
  * @property Locations[] $locations Места/размежения
  * @property Items[]     $items     Предметы/оборудование
@@ -19,6 +20,7 @@ class Regions extends \yii\db\ActiveRecord
 {
     public $lname;
     public $icount;
+    public $ccount;
     /**
      * {@inheritdoc}
      */
@@ -47,7 +49,8 @@ class Regions extends \yii\db\ActiveRecord
         return [
             'id'     => Yii::t('app',     'Identifier'),
             'name'   => Yii::t('regions', 'Region'),
-            'icount' => Yii::t('regions', 'Count of items'),
+            'icount' => Yii::t('items',   'Total items count'),
+            'ccount' => Yii::t('items',   'Total items checked'),
         ];
     }
 

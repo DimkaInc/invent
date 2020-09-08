@@ -23,9 +23,7 @@ use yii\data\Sort;
 //$this->registerJsFile("@web/js/regiondatepicker.js", ['depends' => [ \yii\web\JqueryAsset::className() ]] );
 
     // Создание сортированного списка для выбора типов оборудования
-    $types[ 'empty' ] = Yii::t('types', 'Select type');
-    $types = ArrayHelper::merge($types, ArrayHelper::map(Types::find()->orderBy('name')->all(), 'id', 'name'));
-    $defType   = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ]] ];
+    $types = ArrayHelper::map(Types::find()->orderBy('name')->all(), 'id', 'name');
 
     if ($model->isNewRecord)
     {
@@ -34,20 +32,19 @@ use yii\data\Sort;
         $defState = [ 'options' => [Status::findOne([ 'name' => 'Склад' ])->id => [ 'Selected' => 'true' ] ]];
 
         // Создание сортированного списка для выбора расположения оборудования
-        $locations[ 'empty' ] = Yii::t('locations', 'Select location');
-        $locArray = ArrayHelper::map(Locations::find()->joinWith('regions')->orderBy('name')->all(), 'id', 'name');
-        foreach ($locArray as $key => $val) {
-            $locArray[ $key ] = $val . ' (' .
+        $locations = ArrayHelper::map(Locations::find()->joinWith('regions')->orderBy('name')->all(), 'id', 'name');
+        foreach ($locations as $key => $val) {
+            $locations[ $key ] = $val . ' (' .
                 Regions::findOne(['id' => Locations::findOne(['id' => $key])->region_id])->name .
                 ')';
         }
-        $locations = ArrayHelper::merge($locations, $locArray);
         // Значения по умолчанию для случая создания нового
         $defLocate = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ], Locations::findOne([ 'name' => 'Матвейково' ])->id => [ 'Selected' => 'true' ]] ];
 
 
         $modelm->date = date('d.m.Y'); // Текущая дата по умолчанию
     } else {
+        // Показ QR-кода инвентаризации
         echo '<div style="border: lightgray;border-style: double;display: inline-table;padding: 5px;width: 400px;margin: 0 0 20px;border-radius: 15px;">'.
             '<div style="display:table-cell">' . Text::widget([
             'outputDir' => '@webroot/upload/qrcode',
@@ -73,7 +70,7 @@ use yii\data\Sort;
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                        Html::a(Yii::t('types', 'Types'), [ 'types/index' ], [ 'class' => 'btn btn-primary' ] ) .
                        '</div><div class="col-md-8">{error}</div></div>' ])
-            ->dropDownList( $types, $defType ) ?>
+            ->dropDownList( $types, ['prompt' => Yii::t('types', 'Select type')] ) ?>
 
     <?= $form->field($model,
             'name',
@@ -144,7 +141,7 @@ use yii\data\Sort;
                         [ 'class' => 'btn btn-primary' ]
                     ) .
                     '</div><div class="col-md-8">{error}</div></div>' ])
-                ->dropDownList($locations, $defLocate) ?>
+                ->dropDownList($locations, $defLocate, ['prompt' => Yii::t('locations', 'Select location')]) ?>
 
     <?php
         }

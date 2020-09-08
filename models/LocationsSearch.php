@@ -6,6 +6,8 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Locations;
 use app\models\Regions;
+use app\models\Moving;
+use app\models\Items;
 
 /**
  * LocationsSearch represents the model behind the search form of `app\models\Locations`.
@@ -33,10 +35,28 @@ class LocationsSearch extends Locations
     }
 
     /**
+     * Список мест/размещений, где не проинвентаризированы предметы/оборудование
+     */
+     public static function noinvent()
+     {
+        $query = Locations::find()
+            ->innerJoin([ 'm' => Moving::find()
+                ->distinct()
+                ->select('location_id')
+                ->innerJoin([ 'm' => Moving::find()
+                    ->select('MAX(' . Moving::tableName() . '.id) AS mid')
+                    ->joinWith([ 'items' ])
+                    ->where([ Items::tableName() . '.checked' => false ])
+                    ->groupBy([ 'item_id' ])
+                ], 'id = m.mid')
+            ], Locations::tableName() . '.id = m.location_id');
+        return $query;
+     }
+
+    /**
      * Creates data provider instance with search query applied
      *
      * @param array $params
-     *
      * @return ActiveDataProvider
      */
     public function search($params)

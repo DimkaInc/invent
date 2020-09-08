@@ -9,7 +9,8 @@ use Yii;
  *
  * @property int         $id     Идентификатор типа (неизменяемое)
  * @property string|null $name   наименование типа оборудования
- * @property int         $icount Количество оборудования для конкретного типа
+ * @property int         $icount Количество предметов/оборудования для конкретного типа
+ * @property int         $ccount Количество проинвентаризированных предметов/оборудования для конкретного типа
  * @property string|null $tname  Наименование типа оборудования
  *
  * @property Items[]     $items
@@ -18,6 +19,7 @@ class Types extends \yii\db\ActiveRecord
 {
     public $icount;
     public $tname;
+    public $ccount;
     /**
      * {@inheritdoc}
      */
@@ -45,7 +47,8 @@ class Types extends \yii\db\ActiveRecord
             'id'     => Yii::t('app',   'Identifire'),
             'name'   => Yii::t('types', 'Type'),
             'tname'  => Yii::t('types', 'Types'),
-            'icount' => Yii::t('types', 'Count of items'),
+            'icount' => Yii::t('items', 'Total items count'),
+            'ccount' => Yii::t('items', 'Total items checked')
         ];
     }
 

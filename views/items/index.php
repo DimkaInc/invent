@@ -28,7 +28,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
         var res = '';
         for ( var i = 0; i < ids.length; i++)
         {
-            if (ids[i]["checked"] == true)
+            if (ids[ i ][ "checked" ] == true)
             {
                 res += "&id[]=" + ids[ i ][ "value" ];
             }
@@ -48,6 +48,10 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
             [ 'class' => 'btn btn-warning',
                 'target' => '_blank'
             ]) ?>
+        <?= Html::a(Yii::t('items', 'Start checking'),
+            [ 'start_checking' ],
+            [ 'class' => 'btn btn-info',
+            ]) ?>
     </p>
 
     <?= GridView::widget([
@@ -55,9 +59,13 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
         'filterModel' => $searchModel,   // Модель поиска
         'rowOptions' => function($model) // Функция окраски неинвентаризированных предметов/оборудования
             {
-                if ($model->id == 3)     // Критерий проверки планируется $model->invent == false. Для демонстрации другое условие
+                if ($model->checked == false)     // Критерий проверки планируется
                 {
                     return [ 'class' => 'danger' ]; // Отметка неинвентаризированной строки
+                } else
+                if ($model->statusName == 'Списано')
+                {
+                    return [ 'class' => 'info' ];
                 }
             },
         'columns' => [

@@ -19,6 +19,8 @@ return [
     'Serial number'     => 'Серийный номер',
     'State'             => 'Состояние',
     'Status Name'       => 'Состояние',
+    'Total items checked' => 'Проинвентаризировано',
+    'Total items count' => 'Количество оборудования',
     'Update Items'      => 'Редактирование оборудования',
     'Update Items: {name}' => 'Изменение оборудования: {name}',
 ];

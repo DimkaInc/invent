@@ -8,22 +8,20 @@ use Yii;
  * This is the model class for table 'items'.
  *
  * @property int $id                   Идентификатор (неизменяемый)
- * @property int $state_id             Идентификатор состояния
  * @property int $type_id              Идентификатор типа оборудования
- * @property int $location_id          Идентификатор места размещения
- * @property string|null $name         Сетевое имя оборудования
- * @property string|null $model        Модель оборудования
- * @property string|null $os           Операционная система
- * @property string|null $mac          Сетевой MAC адрес
- * @property string|null $serial       Серийный номер
- * @property string|null $product      Код оборудования
- * @property string|null $modelnumber  Номер модели
- * @property string|null $invent       Инвентарный номер
- * @property string|null $date         Дата внесения записи
- * @property string|null $statusName   Наименование состояния
- * @property string|null $typeName     Наименование типа
- * @property string|null $locationName Наименование места размещения
- * @property string|null $regionName   Наименование региона/подразделения
+ * @property string|null  $name         Сетевое имя оборудования
+ * @property string|null  $model        Модель оборудования
+ * @property string|null  $os           Операционная система
+ * @property string|null  $mac          Сетевой MAC адрес
+ * @property string|null  $serial       Серийный номер
+ * @property string|null  $product      Код оборудования
+ * @property string|null  $modelnumber  Номер модели
+ * @property string|null  $invent       Инвентарный номер
+ * @property boolean      $checked      Флаг прохождения инвентаризации
+ * @property string|null  $statusName   Наименование состояния
+ * @property string|null  $typeName     Наименование типа
+ * @property string|null  $locationName Наименование места размещения
+ * @property string|null  $regionName   Наименование региона/подразделения
  */
 class Items extends \yii\db\ActiveRecord
 {
@@ -37,7 +35,7 @@ class Items extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'items';
+        return '{{%items}}';
     }
 
     /**
@@ -50,6 +48,7 @@ class Items extends \yii\db\ActiveRecord
             [['mac'],    'string', 'max' => 20],
             [['invent'], 'string', 'max' => 50],
             [['type_id'], 'integer'],
+            [['checked'], 'boolean'],
         ];
     }
 
@@ -69,6 +68,7 @@ class Items extends \yii\db\ActiveRecord
             'modelnumber'  => Yii::t('items', 'Model number'),            // Номер модели
             'invent'       => Yii::t('items', 'Inventory number'),        // Инвентарный номер
             'comment'      => Yii::t('items', 'Additional Information'),  // Дополнительная информация
+            'checked'      => Yii::t('items', 'Location checked'),        // Проинвентаризировано
             'statusName'   => Yii::t('items', 'State'),                   // Название состояния
             'type_id'      => Yii::t('items', 'Item type'),               // Идентификатор типа
             'typeName'     => Yii::t('items', 'Item type'),               // Название типа

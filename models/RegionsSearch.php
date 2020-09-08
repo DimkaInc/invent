@@ -5,6 +5,7 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Regions;
+use app\models\LocationsSearch;
 
 /**
  * RegionsSearch represents the model behind the search form of `app\models\Regions`.
@@ -29,6 +30,14 @@ class RegionsSearch extends Regions
     {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
+    }
+
+    public static function noinvent()
+    {
+        $query = LocationsSearch::noinvent()
+            ->select('regions.*')
+            ->joinWith('regions');
+        return $query;
     }
 
     /**

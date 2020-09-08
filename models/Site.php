@@ -25,8 +25,14 @@ class Site extends \yii\data\ActiveDataProvider
                 ->groupBy(['item_id']);
 
         $query = Regions::find()
-            ->select(Regions::tableName() . '.name, count(' . Items::tableName() . '.id) AS icount')
+            ->select(Regions::tableName() . '.name, count(' . Items::tableName() . '.id) AS icount, count(c.tid) AS ccount')
             ->joinWith(['locations', 'moving', 'items'])
+            ->leftJoin(['c' => Regions::find()
+                    ->select(Regions::tableName() . '.id, ' . Items::tableName() . '.id AS tid')
+                    ->joinWith(['locations', 'moving', 'items'])
+                    ->where(['in', Moving::tableName() . '.id', $subQuery])
+                    ->andWhere(Items::tableName() . '.checked = true')
+                ], Regions::tableName() . '.id = c.id AND ' . Items::tableName() . '.id = c.tid')
             ->groupBy(Regions::tableName() . '.id')
             ->where(['in', Moving::tableName() . '.id', $subQuery]);
 
@@ -38,6 +44,7 @@ class Site extends \yii\data\ActiveDataProvider
                 'name' => SORT_ASC,
             ],
         ]);
+
         return $dataProvider;
     }
 
@@ -45,8 +52,12 @@ class Site extends \yii\data\ActiveDataProvider
     {
 
         $query = Types::find()
-            ->select(Types::tableName() . '.name, count(' . Items::tableName() . '.id) AS icount')
+            ->select(Types::tableName() . '.name, count(' . Items::tableName() . '.id) AS icount, count( c.tid ) AS ccount')
             ->joinWith('items')
+            ->leftJoin(['c' => Items::find()
+                    ->select('id AS tid')
+                    ->where(['checked' => true ])
+                ], Items::tableName() . '.id = c.tid')
             ->groupBy(Types::tableName() . '.id');
 
         $dataProvider = new ActiveDataProvider([

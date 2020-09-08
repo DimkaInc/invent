@@ -36,6 +36,66 @@ class ItemsSearch extends Items
         return Model::scenarios();
     }
 
+    public function noinvent($params)
+    {
+
+        $query = Moving::find()
+            ->select('MAX(' . Moving::tableName() . '.id) AS mid');
+        if (isset($params->region) && ($params->region != ''))
+        {
+            $query->joinWith([ 'locations' ])
+                ->where([ 'region_id' => $params->region ]);
+        }
+        if (isset($params->location) && ($params->location != ''))
+        {
+            if (isset($params->region) && ($params->location != ''))
+            {
+                $query->andWhere(['location_id' => $params->location]);
+            }
+            else
+            {
+                $query->where(['location_id' => $params->location]);
+            }
+        }
+        $query->distinct('item_id')->groupBy('item_id');
+
+        $query = Items::find()
+            ->select(Items::tableName() . '.*, ' .
+                Locations::tableName() .  '.name AS locationName, ' .
+                Types::tableName() .      '.name AS typeName, ' .
+                Regions::tableName() .    '.name AS regionName, ' .
+                Status::tableName() .     '.name AS statusName ')
+            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions' ])
+            ->where([ 'in', Moving::tableName() . '.id', $query ])
+            ->andWhere([ 'checked' => false ]);
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+        $dataProvider->setSort([
+            'defaultOrder' => [
+                'id' => SORT_ASC,
+            ],
+        ]);
+        $dataProvider->sort->attributes['statusName'] = [
+            'asc'  => [Status::tableName() . '.name' => SORT_ASC],
+            'desc' => [Status::tableName() . '.name' => SORT_DESC],
+        ];
+        $dataProvider->sort->attributes['typeName'] = [
+            'asc'  => [Types::tableName() . '.name' => SORT_ASC],
+            'desc' => [Types::tableName() . '.name' => SORT_DESC],
+        ];
+        $dataProvider->sort->attributes['locationName'] = [
+            'asc'  => [Locations::tableName() . '.name' => SORT_ASC],
+            'desc' => [Locations::tableName() . '.name' => SORT_DESC],
+        ];
+        $dataProvider->sort->attributes['regionName'] = [
+            'asc'  => [Regions::tableName() . '.name' => SORT_ASC],
+            'desc' => [Regions::tableName() . '.name' => SORT_DESC],
+        ];
+        return $dataProvider;
+    }
+
     /**
      * Creates data provider instance with search query applied
      *
@@ -49,7 +109,7 @@ class ItemsSearch extends Items
         $subQuery = Moving::find()
                 ->select('MAX(id) AS id')
                 ->distinct('item_id')
-                ->groupBy(['item_id']);
+                ->groupBy([ 'item_id' ]);
 
         $query = Items::find()
             ->select(Items::tableName() . '.*, ' .
@@ -57,8 +117,8 @@ class ItemsSearch extends Items
                 Types::tableName() .      '.name AS typeName, ' .
                 Regions::tableName() .    '.name AS regionName, ' .
                 Status::tableName() .     '.name AS statusName ')
-            ->joinWith(['types', 'moving', 'status', 'locations', 'regions'])
-            ->where(['in', Moving::tableName() . '.id', $subQuery]);
+            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions' ])
+            ->where([ 'in', Moving::tableName() . '.id', $subQuery ]);
 
         // add conditions that should always apply here
 

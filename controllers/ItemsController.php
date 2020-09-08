@@ -4,9 +4,13 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Items;
+use app\models\Check;
 use app\models\Moving;
+use app\models\Locations;
+use app\models\ItemsCheck;
 use app\models\ItemsSearch;
 use app\models\MovingSearch;
+use app\models\Status;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -74,6 +78,68 @@ class ItemsController extends Controller
     }
 
     /**
+     * Процедура начала инвентаризации.
+     * @return mixed
+     */
+    public function actionStart_checking()
+    {
+        // Запрос на получение списка идентификаторов предметов/оборудования, которые списаны
+        $modelS = Moving::find()
+            ->select('item_id')
+            ->joinWith('status')
+            ->Where([ 'ilike', Status::tableName() . '.name', 'Списано' ]);
+
+        // Получаем список всех предметов/оборудования, кроме списанного
+        $model = Items::find()
+            ->select('id')
+            ->innerJoin([ 'm' => $modelS ], 'not m.item_id = id')
+            ->all();
+
+        // Устанавливаем флаг непроинвентаризированных для всех предметов/оборудования из полученного списка.
+        Items::updateAll([ 'checked' => false ], [ 'in', 'id', $model ]);
+
+        // Переход к списку предметов/оборудования.
+        return $this->redirect([ 'index' ]);
+    }
+
+    /**
+     * Инвентаризация
+     * @param string|null $qrcheck считанный QR-код
+     * @return mixed
+     */
+     public function actionCheck()
+     {
+        $model = new Check();
+        $message = '';
+        if ($model->load(Yii::$app->request->post()))
+        {
+            if ((! empty($model->qrcheck)) && strpos($model->qrcheck, ',') !== false)
+            {
+                $keys = explode(',', $model->qrcheck);
+                Items::updateAll([ 'checked' => true ], [ 'invent' => trim($keys[ 0 ]), 'serial' => trim($keys[ 1 ]) ]);
+                $items = Items::find()->where([ 'invent' => trim($keys[ 0 ]), 'serial' => trim($keys[ 1 ]) ])->all();
+                //$message = '[0] = "' . $keys[0] . '", [1] = "' . $keys[1] . '"<br />';
+                foreach ($items as $row)
+                {
+                    $message .= $row->model . ' (' . $row->id . ')';
+                }
+                if ($message != '')
+                    $message = Yii::t('items', 'Checked item(s): ') . $message;
+                $model->qrcheck = '';
+            }
+        }
+        $searchModel = new ItemsCheck();
+        $dataProvider = $searchModel->noinvent($model);
+
+        return $this->render('check', [
+            'message'      => $message,
+            'model'        => $model,
+            'searchModel'  => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+     }
+
+    /**
      * Список всех предметов/оборудования.
      * @return mixed
      */
@@ -108,6 +174,7 @@ class ItemsController extends Controller
     public function actionCreate()
     {
         $model = new Items(); // Новый предмет/оборудование
+        $model->checked = true;
         $modelm = new Moving();
         if ($model->load(Yii::$app->request->post()) && $model->save())
         {
