@@ -203,7 +203,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
                     'print' => function ($url, $model, $key)
                         {
                             return Html::a('<span class="glyphicon glyphicon-print"></span>',
-                                [ 'print', 'id[]' => $model->id ],
+                                Url::to([ 'print', 'id[]' => $model->id ], 'http'),
                                 [ 'target' => '_blank',
                                     'onclick' => 'markToPrint($(this));',
                                     'title' => Yii::t('items', 'Print selected labels'),

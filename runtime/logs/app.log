@@ -48883,3 +48883,260 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1600064004.303
     'REQUEST_TIME' => 1600064004
 ]
+2020-09-14 09:36:13 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-14 09:36:13 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+    'id' => [
+        0 => '47'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+    'PHPSESSID' => 'snhl4p03g1a99269s5ddb65m0b'
+    'PPA_ID' => '6aprj2c28j87h6aqn0fl8av2eo'
+    'webfx-tree-cookie-persistence' => 'wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Findex&id=47&page=2'
+    'HTTP_COOKIE' => '_csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D; PHPSESSID=snhl4p03g1a99269s5ddb65m0b; PPA_ID=6aprj2c28j87h6aqn0fl8av2eo; webfx-tree-cookie-persistence=wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '12295'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint&id%5B%5D=47'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint&id%5B%5D=47'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600065373.718
+    'REQUEST_TIME' => 1600065373
+]
+2020-09-14 09:38:21 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-14 09:38:21 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+    'id' => [
+        0 => '47'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+    'PHPSESSID' => 'snhl4p03g1a99269s5ddb65m0b'
+    'PPA_ID' => '6aprj2c28j87h6aqn0fl8av2eo'
+    'webfx-tree-cookie-persistence' => 'wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Findex&id=47&page=2'
+    'HTTP_COOKIE' => '_csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D; PHPSESSID=snhl4p03g1a99269s5ddb65m0b; PPA_ID=6aprj2c28j87h6aqn0fl8av2eo; webfx-tree-cookie-persistence=wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_IF_MODIFIED_SINCE' => 'Mon, 14 Sep 2020 06:36:13 GMT'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '12393'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint&id%5B%5D=47'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint&id%5B%5D=47'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600065501.033
+    'REQUEST_TIME' => 1600065501
+]
+2020-09-14 09:38:28 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-14 09:38:28 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+    'id' => [
+        0 => '47'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+    'PHPSESSID' => 'snhl4p03g1a99269s5ddb65m0b'
+    'PPA_ID' => '6aprj2c28j87h6aqn0fl8av2eo'
+    'webfx-tree-cookie-persistence' => 'wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D; PHPSESSID=snhl4p03g1a99269s5ddb65m0b; PPA_ID=6aprj2c28j87h6aqn0fl8av2eo; webfx-tree-cookie-persistence=wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '12404'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint&id%5B%5D=47'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint&id%5B%5D=47'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600065508.769
+    'REQUEST_TIME' => 1600065508
+]
