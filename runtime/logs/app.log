@@ -45258,3 +45258,3628 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1599635348.797
     'REQUEST_TIME' => 1599635348
 ]
+2020-09-10 10:51:35 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-10 10:51:35 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-10 10:51:35 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '38hhu1n04cjh82gd2h63iri24s'
+    '_csrf' => '21aaa69b9a2094b24786285a0b06f5b3d74fb0bade1c851dd21b357646b2efe9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"3XoRWahwLcZhWL_C88g4ndRcsPKe3dTy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; U; Android 6.0.1;ru_ru; Le X527 Build/IMXOSOP5801910311S) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/49.0.0.0 Mobile Safari/537.36 EUI Browser/5.8.019S'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,en-US;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=38hhu1n04cjh82gd2h63iri24s; _csrf=21aaa69b9a2094b24786285a0b06f5b3d74fb0bade1c851dd21b357646b2efe9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223XoRWahwLcZhWL_C88g4ndRcsPKe3dTy%22%3B%7D'
+    'HTTP_X_REQUESTED_WITH' => 'com.android.browser'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49088'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599724295.282
+    'REQUEST_TIME' => 1599724295
+]
+2020-09-10 14:06:45 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-10 14:06:45 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '36dtuu8rtcsb32ap1m2qb648s1'
+    '_csrf' => 'e0e50e3cb65647a0cb934745cb3a65f0e0b2395442397eb9f98e1712972d36b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lyyOJ6RlQrLIcvfZTCKiUlc5pSpA4iov\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Findex'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=36dtuu8rtcsb32ap1m2qb648s1; _csrf=e0e50e3cb65647a0cb934745cb3a65f0e0b2395442397eb9f98e1712972d36b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lyyOJ6RlQrLIcvfZTCKiUlc5pSpA4iov%22%3B%7D'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '12749'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599736005.1
+    'REQUEST_TIME' => 1599736005
+]
+2020-09-10 14:07:07 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-10 14:07:06 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+    'PHPSESSID' => 'snhl4p03g1a99269s5ddb65m0b'
+    'PPA_ID' => '6aprj2c28j87h6aqn0fl8av2eo'
+    'webfx-tree-cookie-persistence' => 'wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Findex'
+    'HTTP_COOKIE' => '_csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D; PHPSESSID=snhl4p03g1a99269s5ddb65m0b; PPA_ID=6aprj2c28j87h6aqn0fl8av2eo; webfx-tree-cookie-persistence=wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '12805'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599736026.982
+    'REQUEST_TIME' => 1599736026
+]
+2020-09-10 14:07:26 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-10 14:07:26 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+    'PHPSESSID' => 'snhl4p03g1a99269s5ddb65m0b'
+    'PPA_ID' => '6aprj2c28j87h6aqn0fl8av2eo'
+    'webfx-tree-cookie-persistence' => 'wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D; PHPSESSID=snhl4p03g1a99269s5ddb65m0b; PPA_ID=6aprj2c28j87h6aqn0fl8av2eo; webfx-tree-cookie-persistence=wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '12820'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599736046.434
+    'REQUEST_TIME' => 1599736046
+]
+2020-09-10 14:08:04 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-10 14:08:04 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+    'PHPSESSID' => 'snhl4p03g1a99269s5ddb65m0b'
+    'PPA_ID' => '6aprj2c28j87h6aqn0fl8av2eo'
+    'webfx-tree-cookie-persistence' => 'wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D; PHPSESSID=snhl4p03g1a99269s5ddb65m0b; PPA_ID=6aprj2c28j87h6aqn0fl8av2eo; webfx-tree-cookie-persistence=wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_IF_MODIFIED_SINCE' => 'Thu, 10 Sep 2020 11:07:26 GMT'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '12929'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599736084.268
+    'REQUEST_TIME' => 1599736084
+]
+2020-09-10 14:08:20 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-10 14:08:20 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '36dtuu8rtcsb32ap1m2qb648s1'
+    '_csrf' => 'e0e50e3cb65647a0cb934745cb3a65f0e0b2395442397eb9f98e1712972d36b3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"lyyOJ6RlQrLIcvfZTCKiUlc5pSpA4iov\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=36dtuu8rtcsb32ap1m2qb648s1; _csrf=e0e50e3cb65647a0cb934745cb3a65f0e0b2395442397eb9f98e1712972d36b3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22lyyOJ6RlQrLIcvfZTCKiUlc5pSpA4iov%22%3B%7D'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '12959'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599736100.288
+    'REQUEST_TIME' => 1599736100
+]
+2020-09-11 16:10:37 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-11 16:10:36 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_IF_MODIFIED_SINCE' => 'Thu, 10 Sep 2020 11:08:20 GMT'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '48787'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599829836.602
+    'REQUEST_TIME' => 1599829836
+]
+2020-09-11 16:25:52 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:25:52 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:25:52 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '38hhu1n04cjh82gd2h63iri24s'
+    '_csrf' => '21aaa69b9a2094b24786285a0b06f5b3d74fb0bade1c851dd21b357646b2efe9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"3XoRWahwLcZhWL_C88g4ndRcsPKe3dTy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; U; Android 6.0.1;ru_ru; Le X527 Build/IMXOSOP5801910311S) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/49.0.0.0 Mobile Safari/537.36 EUI Browser/5.8.019S'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,en-US;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=38hhu1n04cjh82gd2h63iri24s; _csrf=21aaa69b9a2094b24786285a0b06f5b3d74fb0bade1c851dd21b357646b2efe9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223XoRWahwLcZhWL_C88g4ndRcsPKe3dTy%22%3B%7D'
+    'HTTP_X_REQUESTED_WITH' => 'com.android.browser'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49636'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599830752.428
+    'REQUEST_TIME' => 1599830752
+]
+2020-09-11 16:26:26 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:26:26 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:26:25 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '38hhu1n04cjh82gd2h63iri24s'
+    '_csrf' => '21aaa69b9a2094b24786285a0b06f5b3d74fb0bade1c851dd21b357646b2efe9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"3XoRWahwLcZhWL_C88g4ndRcsPKe3dTy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '0ad5da761ec1510b12cf2ccc3b366ded524bcf46f79f03b45e18aed1d35c26af'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; U; Android 6.0.1;ru_ru; Le X527 Build/IMXOSOP5801910311S) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/49.0.0.0 Mobile Safari/537.36 EUI Browser/5.8.019S'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,en-US;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=38hhu1n04cjh82gd2h63iri24s; _csrf=21aaa69b9a2094b24786285a0b06f5b3d74fb0bade1c851dd21b357646b2efe9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223XoRWahwLcZhWL_C88g4ndRcsPKe3dTy%22%3B%7D'
+    'HTTP_X_REQUESTED_WITH' => 'com.android.browser'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49662'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599830785.984
+    'REQUEST_TIME' => 1599830785
+]
+2020-09-11 16:27:57 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/SiteController.php:69
+2020-09-11 16:27:57 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:27:57 [192.168.0.180][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '46916'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/invent/'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599830877.224
+    'REQUEST_TIME' => 1599830877
+]
+2020-09-11 16:28:01 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:28:01 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:28:01 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '46918'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599830881.467
+    'REQUEST_TIME' => 1599830881
+]
+2020-09-11 16:28:25 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:28:25 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:28:25 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '46931'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599830905.662
+    'REQUEST_TIME' => 1599830905
+]
+2020-09-11 16:28:46 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:28:46 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:28:46 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49730'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599830926.182
+    'REQUEST_TIME' => 1599830926
+]
+2020-09-11 16:30:19 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:30:19 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:30:19 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '46974'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599831019.033
+    'REQUEST_TIME' => 1599831019
+]
+2020-09-11 16:30:30 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/SiteController.php:69
+2020-09-11 16:30:30 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:30:30 [192.168.0.180][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '46975'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/invent/'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599831030.6
+    'REQUEST_TIME' => 1599831030
+]
+2020-09-11 16:51:27 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/SiteController.php:69
+2020-09-11 16:51:27 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:51:27 [192.168.0.180][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '46997'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/invent/'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599832287.475
+    'REQUEST_TIME' => 1599832287
+]
+2020-09-11 16:51:35 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/SiteController.php:69
+2020-09-11 16:51:35 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:51:35 [192.168.0.180][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49780'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/invent/'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599832295.131
+    'REQUEST_TIME' => 1599832295
+]
+2020-09-11 16:51:39 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:51:39 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:51:39 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'f767c7f559c5368c6cb0ce14c06a449e6334159c4d42a683ec17ea1091b45e5f'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49786'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599832299.685
+    'REQUEST_TIME' => 1599832299
+]
+2020-09-11 16:52:04 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:52:04 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:52:04 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'O79VzPbtJl9GoFaYnj28Xc6btyGVT67_ixiqw-lVzu9u1GGfvdoUBzbWEMDPD8QTqdTRF8Y7-LnvU-Wyth2J2w=='
+    'Check' => [
+        'qrcheck' => 'ЗАКУП, S72114200820'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'f767c7f559c5368c6cb0ce14c06a449e6334159c4d42a683ec17ea1091b45e5f'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '204'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49804'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599832324.198
+    'REQUEST_TIME' => 1599832324
+]
+2020-09-11 16:52:40 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:52:40 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:52:40 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'RE3lBpYihUSjiYE1xyyL7DbbM5h6EA4JvGTWwuVk5m8RJtFV3RW3HNP_x22WHvOiUZRVrilkWE_YL5mzuiyhWw=='
+    'Check' => [
+        'qrcheck' => '0001361822, 16274032900128'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'f767c7f559c5368c6cb0ce14c06a449e6334159c4d42a683ec17ea1091b45e5f'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '186'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49810'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599832360.782
+    'REQUEST_TIME' => 1599832360
+]
+2020-09-11 16:53:28 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:53:28 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:53:28 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'Cu2N0fVeHX0mqklgbdzJJNfTb1BM2snpcYwZLGEVK6tfhrmCvmkvJVbcDzg87rFqsJwJZh-un68Vx1ZdPl1snw=='
+    'Check' => [
+        'qrcheck' => '210134000339, 8CG0117XM1'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'f767c7f559c5368c6cb0ce14c06a449e6334159c4d42a683ec17ea1091b45e5f'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '184'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49822'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599832408.301
+    'REQUEST_TIME' => 1599832408
+]
+2020-09-11 16:54:08 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-11 16:54:08 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-11 16:54:08 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => '4GTBiBnBefekUK1zjgeX1PEl5PMKgDqHHZsMxFlNeFW1D_XbUvZLr9Qm6yvfNe-almqCxVn0bMF50EO1BgU_YQ=='
+    'Check' => [
+        'qrcheck' => '210134000337, 8CG0117XM9'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd212a5g9dbmf1usnef0nhb4hu3'
+    '_csrf' => 'b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'f767c7f559c5368c6cb0ce14c06a449e6334159c4d42a683ec17ea1091b45e5f'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '184'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=d212a5g9dbmf1usnef0nhb4hu3; _csrf=b4822a796e9a0733e16de9a8ac2c707a7752c1593fabd7752de5c5f310454b95a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Uk4SK72XpvFXQ2xNgOf6StVFdKOq_HG4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '49826'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1599832448.118
+    'REQUEST_TIME' => 1599832448
+]
+2020-09-14 07:57:17 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-14 07:57:17 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+    1 => 'http'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+    'PHPSESSID' => 'snhl4p03g1a99269s5ddb65m0b'
+    'PPA_ID' => '6aprj2c28j87h6aqn0fl8av2eo'
+    'webfx-tree-cookie-persistence' => 'wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Findex'
+    'HTTP_COOKIE' => '_csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D; PHPSESSID=snhl4p03g1a99269s5ddb65m0b; PPA_ID=6aprj2c28j87h6aqn0fl8av2eo; webfx-tree-cookie-persistence=wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '7566'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint&1=http'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint&1=http'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600059437.354
+    'REQUEST_TIME' => 1600059437
+]
+2020-09-14 07:59:37 [192.168.0.68][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/invent/basic/vendor/mpdf/mpdf/mpdf.php on line 9416. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2020-09-14 07:59:37 [192.168.0.68][-][-][info][application] $_GET = [
+    'r' => 'items/print'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV\";}'
+    'PHPSESSID' => 'snhl4p03g1a99269s5ddb65m0b'
+    'PPA_ID' => '6aprj2c28j87h6aqn0fl8av2eo'
+    'webfx-tree-cookie-persistence' => 'wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=9cd10890ce565e5719bc74fbcb6d26666562c006677f6a4f46a4b20d221e6667a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QWSOPznWFCcQAX9jjdt9pnmPBWgqdiVV%22%3B%7D; PHPSESSID=snhl4p03g1a99269s5ddb65m0b; PPA_ID=6aprj2c28j87h6aqn0fl8av2eo; webfx-tree-cookie-persistence=wfxt-4+wfxt-6+wfxt-8+wfxt-14+wfxt-16+wfxt-18+wfxt-24'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '7693'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fprint'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fprint'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600059577.863
+    'REQUEST_TIME' => 1600059577
+]
+2020-09-14 09:02:24 [192.168.0.180][-][r8r9s3uc4rtsahlncic6eh2jd0][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Не удалось проверить переданные данные. in /var/www/invent/basic/vendor/yiisoft/yii2/web/Controller.php:204
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#4 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#5 {main}
+2020-09-14 09:02:24 [192.168.0.180][-][r8r9s3uc4rtsahlncic6eh2jd0][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+2020-09-14 09:02:24 [192.168.0.180][-][r8r9s3uc4rtsahlncic6eh2jd0][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+2020-09-14 09:02:24 [192.168.0.180][-][r8r9s3uc4rtsahlncic6eh2jd0][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:02:24 [192.168.0.180][-][r8r9s3uc4rtsahlncic6eh2jd0][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => '4GTBiBnBefekUK1zjgeX1PEl5PMKgDqHHZsMxFlNeFW1D_XbUvZLr9Qm6yvfNe-almqCxVn0bMF50EO1BgU_YQ=='
+    'Check' => [
+        'qrcheck' => '210134000337, 8CG0117XM9'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '184'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51031'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063344.825
+    'REQUEST_TIME' => 1600063344
+]
+2020-09-14 09:02:34 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/SiteController.php:69
+2020-09-14 09:02:34 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:02:34 [192.168.0.180][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '17c9c16406a22253dba346eab773089ef3031e96027c6286f69b0c843a533d0b'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51039'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/invent/index.php'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063353.999
+    'REQUEST_TIME' => 1600063353
+]
+2020-09-14 09:02:37 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:02:37 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:02:37 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '17c9c16406a22253dba346eab773089ef3031e96027c6286f69b0c843a533d0b'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51039'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063357.063
+    'REQUEST_TIME' => 1600063357
+]
+2020-09-14 09:03:56 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:03:56 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:03:56 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'obxeLwYFxtIs9XwIG1p16ZC-XIl_CnBykUn0ZZmyRLHH1j9ER3GAinPNOCVxODi2pP0r5jNhFifFC5JU-vl91A=='
+    'Check' => [
+        'qrcheck' => '210134000338, 8CG0117XMB'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '17c9c16406a22253dba346eab773089ef3031e96027c6286f69b0c843a533d0b'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '184'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51065'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063436.734
+    'REQUEST_TIME' => 1600063436
+]
+2020-09-14 09:05:02 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:05:02 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:05:02 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'GetGLUYo1lhMuV277JpsYg3HujfG-0bQctbuv6X8zo9_gSdGB1yQABOBGZaG-CE9OYTNWIqQIIUmlIiOxrf36g=='
+    'Check' => [
+        'qrcheck' => '210134000342, 8CG0117XMC'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '17c9c16406a22253dba346eab773089ef3031e96027c6286f69b0c843a533d0b'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '184'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51077'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063502.329
+    'REQUEST_TIME' => 1600063502
+]
+2020-09-14 09:05:58 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:05:58 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:05:58 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'olsswhnOZDfEhrnoHdj358nzVuYBw0dg_GSQrxMtKDvEMU2pWLoib5u-_cV3urq4_bAhiU2oITWoJvaecGYRXg=='
+    'Check' => [
+        'qrcheck' => '210134000343, 8CG0117XM4'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '17c9c16406a22253dba346eab773089ef3031e96027c6286f69b0c843a533d0b'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '184'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51088'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063558.047
+    'REQUEST_TIME' => 1600063558
+]
+2020-09-14 09:07:29 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:07:29 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:07:29 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'I8HLbOY0jnX6ketRLyS3xDt_FkE6oMUHiUIyQrB2v09Fq6oHp0DILaWpr3xFRvqbDzxhLnbLo1LdAFRz0z2GKg=='
+    'Check' => [
+        'qrcheck' => '0001360182, PHKFB04882'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '182'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063649.53
+    'REQUEST_TIME' => 1600063649
+]
+2020-09-14 09:08:12 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:08:12 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:08:12 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => '44ik2HTb2Z2zopSebxsMl5f-6aY_1xG7D0xld3xxfriF4sWzNa-fxeya0LMFeUHIo72eyXO8d-5bDgNGHzpH3Q=='
+    'Check' => [
+        'qrcheck' => 'Код 6740, 1QB7N3004969'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '42bb413c87c82fb2043eb1936614534ee08b88557708a4ea4565239b87a91968'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '197'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51110'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063692.226
+    'REQUEST_TIME' => 1600063692
+]
+2020-09-14 09:08:47 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:08:47 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:08:47 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'aZBk_ZLDxvXHVrqI48GrcYw9KnpeT5uVsusfE3iNE3YP-gWW07eArZhu_qWJo-YuuH5dFRIk_cDmqXkiG8YqEw=='
+    'Check' => [
+        'qrcheck' => '0001350301, CNCJ872548'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '42bb413c87c82fb2043eb1936614534ee08b88557708a4ea4565239b87a91968'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '182'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51115'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063727.115
+    'REQUEST_TIME' => 1600063727
+]
+2020-09-14 09:09:31 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:09:31 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:09:31 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'obVyv5fBHhLin1Of2UDvjKQfbmIhJGKwANjpWvxegRfH3xPU1rVYSr2nF7KzIqLTkFwZDW1PBOVUmo9rnxW4cg=='
+    'Check' => [
+        'qrcheck' => '1630573, UHBA1624060454'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '42bb413c87c82fb2043eb1936614534ee08b88557708a4ea4565239b87a91968'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '183'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51121'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063771.544
+    'REQUEST_TIME' => 1600063771
+]
+2020-09-14 09:10:06 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:10:06 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:10:06 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'cZ2GBzmZSTD0fSoGDXZjD-qpzOnQsapIKkGjjS5OPoAX9-dseO0PaKtFbitnFC5Q3uq7hpzazB1-A8W8TQUH5Q=='
+    'Check' => [
+        'qrcheck' => '0001380059, 3ABSM021027'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '42bb413c87c82fb2043eb1936614534ee08b88557708a4ea4565239b87a91968'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '183'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51127'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063806.034
+    'REQUEST_TIME' => 1600063806
+]
+2020-09-14 09:10:45 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:10:45 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:10:45 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => '0HsamNIpcxJIp2uIcKjU0cuHgR4ZH3CIKfru8k-yBIi2EXvzk101ShefL6UaypmO_8T2cVV0Ft19uIjDLPk97Q=='
+    'Check' => [
+        'qrcheck' => '210134000344, VDX0647124'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '42bb413c87c82fb2043eb1936614534ee08b88557708a4ea4565239b87a91968'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '184'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51135'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063845.864
+    'REQUEST_TIME' => 1600063845
+]
+2020-09-14 09:11:27 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:11:27 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:11:27 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'zVIuZTHOjRHMZS4FM6LjdyXHkHU12RX2RW5APgWgosKrOE8OcLrLSZNdaihZwK4oEYTnGnmyc6MRLCYPZuubpw=='
+    'Check' => [
+        'qrcheck' => '0001361881, NT00009949'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '42bb413c87c82fb2043eb1936614534ee08b88557708a4ea4565239b87a91968'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '182'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51141'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063887.741
+    'REQUEST_TIME' => 1600063887
+]
+2020-09-14 09:12:14 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:12:14 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:12:14 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'yucAWRVYUjAkZtDa9_hrhXcpy22Gc75DvfQhP1illQusjWEyVCwUaHtelPedmibaQ2q8AsoY2BbptkcOO-6sbg=='
+    'Check' => [
+        'qrcheck' => '0001360069, 4X006084TB'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '42bb413c87c82fb2043eb1936614534ee08b88557708a4ea4565239b87a91968'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '182'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51145'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063934.3
+    'REQUEST_TIME' => 1600063934
+]
+2020-09-14 09:12:47 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:138
+2020-09-14 09:12:47 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:12:47 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/check'
+]
+
+$_POST = [
+    '_csrf' => 'Wql0kJ8_hR4w0YLYEv5wywlNIW3LCmgZ_j_iWlczxdQ8wxX73kvDRm_pxvV4nD2UPQ5WAodhDkyqfYRrNHj8sQ=='
+    'Check' => [
+        'qrcheck' => '1630799, USU44252'
+        'region' => ''
+        'location' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '177'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'https://192.168.0.32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51153'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=items%2Fcheck'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Fcheck'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063967.635
+    'REQUEST_TIME' => 1600063967
+]
+2020-09-14 09:13:11 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/SiteController.php:69
+2020-09-14 09:13:11 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:13:11 [192.168.0.180][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '509ca758022ddc432a3a5fbe020121b19d008ceaffb7bae54c50167ed8f71304'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?r=items%2Fcheck'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51157'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/invent/index.php'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600063991.701
+    'REQUEST_TIME' => 1600063991
+]
+2020-09-14 09:13:24 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+    in /var/www/invent/basic/views/layouts/main.php:81
+    in /var/www/invent/basic/controllers/ItemsController.php:153
+2020-09-14 09:13:24 [192.168.0.180][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.180
+2020-09-14 09:13:24 [192.168.0.180][-][-][info][application] $_GET = [
+    'r' => 'items/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r8r9s3uc4rtsahlncic6eh2jd0'
+    '_csrf' => 'ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'SPb'
+    'SSL_SERVER_S_DN_L' => 'SPb'
+    'SSL_SERVER_S_DN_O' => 'Global Security'
+    'SSL_SERVER_S_DN_OU' => 'IT Department'
+    'SSL_SERVER_S_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_S_DN_CN_1' => 'invent'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'SPb'
+    'SSL_SERVER_I_DN_L' => 'SPb'
+    'SSL_SERVER_I_DN_O' => 'Global Security'
+    'SSL_SERVER_I_DN_OU' => 'IT Department'
+    'SSL_SERVER_I_DN_CN' => '102.168.0.32'
+    'SSL_SERVER_I_DN_CN_1' => 'invent'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '93EB09334403FBAC'
+    'SSL_SERVER_V_START' => 'Sep  9 06:31:10 2020 GMT'
+    'SSL_SERVER_V_END' => 'Apr 19 06:31:10 2026 GMT'
+    'SSL_SERVER_S_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_I_DN' => 'CN=invent,CN=102.168.0.32,OU=IT Department,O=Global Security,L=SPb,ST=SPb,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '509ca758022ddc432a3a5fbe020121b19d008ceaffb7bae54c50167ed8f71304'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0.1; Le X527) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=r8r9s3uc4rtsahlncic6eh2jd0; _csrf=ccab9d0dd120016d3acebbe024a2541acd1c78e3def9112837b18050ced36b6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fjakAtFX_8D-jbM_4CwoLkfUTBf1cK9e%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.180'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '51163'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Findex'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Findex'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1600064004.303
+    'REQUEST_TIME' => 1600064004
+]

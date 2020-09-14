@@ -22,6 +22,7 @@ return [
     'Password'  => 'Пароль',
     'Please contact us if you think this is a server error. Thank you.' => 'Свяжитесь с нами, если вы считаете, что это ошибка сервера. Спасибо.',
     'Please fill out the following fields to login:' => 'Пожалуйста, заполните следующие поля для входа:',
+    'Register'  => 'Учесть',
     'Remember Me' => 'Запомнить меня',
     'Reset'     => 'Сброс',
     'Save'      => 'Сохранить',

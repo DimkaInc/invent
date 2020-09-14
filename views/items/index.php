@@ -44,7 +44,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
             [ 'create' ],
             [ 'class' => 'btn btn-success' ]) ?>
         <?= Html::a(Yii::t('items', 'Print Items'),
-            [ 'print' ],
+            Url::to([ 'print' ], 'http'),
             [ 'class' => 'btn btn-warning',
                 'target' => '_blank'
             ]) ?>

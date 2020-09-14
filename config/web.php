@@ -16,7 +16,7 @@ function showUrlUpdate($name, $data)
 
 
 $config = [
-    'version' => '1.26',
+    'version' => '1.27',
     'name' => 'Inventory',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),

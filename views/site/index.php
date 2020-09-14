@@ -41,7 +41,7 @@ $this->title = Yii::t('app',Yii::$app->name);
     ?>
 
     <div>
-        <?= Html::a(Yii::t('app', 'Invent'), [ 'items/check' ], [ 'class' => 'btn btn-info' ]) ?>
+        <?= Html::a(Yii::t('app', 'Inventory'), [ 'items/check' ], [ 'class' => 'btn btn-info' ]) ?>
     </div>
 
 </div>

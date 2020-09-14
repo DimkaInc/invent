@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\ActiveForm;
-//use yii\widgets\Pjax;
+use yii\widgets\Pjax;
 
 //use yii\helpers\Url;
 use yii\widgets\DetailView;
@@ -32,136 +32,53 @@ foreach ($locations as $key => $val) {
 
 $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), 'id', 'name');
 ?>
-
-<script language="JavaScript">
-    function getData()
-    {
-        $("form").submit();
-    }
-    
-/*    window.onload = function () {
-    var canvas = document.getElementById('canvas');
-    var video = document.getElementById('video');
-    var button = document.getElementById('button');
-    var allow = document.getElementById('allow');
-    var context = canvas.getContext('2d');
-    var videoStreamUrl = false;
-
-    // функция которая будет выполнена при нажатии на кнопку захвата кадра
-    var captureMe = function () {
-      if (!videoStreamUrl) alert('То-ли вы не нажали "разрешить" в верху окна, то-ли что-то не так с вашим видео стримом')
-      // переворачиваем canvas зеркально по горизонтали (см. описание внизу статьи)
-      context.translate(canvas.width, 0);
-      context.scale(-1, 1);
-      // отрисовываем на канвасе текущий кадр видео
-      context.drawImage(video, 0, 0, video.width, video.height);
-      // получаем data: url изображения c canvas
-      var base64dataUrl = canvas.toDataURL('image/png');
-      context.setTransform(1, 0, 0, 1, 0, 0); // убираем все кастомные трансформации canvas
-      // на этом этапе можно спокойно отправить  base64dataUrl на сервер и сохранить его там как файл (ну или типа того) 
-      // но мы добавим эти тестовые снимки в наш пример:
-      var img = new Image();
-      img.src = base64dataUrl;
-      window.document.body.appendChild(img);
-    }
-
-    button.addEventListener('click', captureMe);
-
-/*
-    async function getMedia(constraints) {
-        let stream = null;
-
-        try {
-            stream = await navigator.mediaDevices.getUserMedia(constraints);
-            allow.style.display = "none";
-            videoStreamUrl = window.URL.createObjectURL(stream);
-            video.src = videoStreamUrl;
-            //* используем поток 
-        } catch(err) {
-            //* обработка ошибки
-            console.log('что-то не так с видеостримом или пользователь запретил его использовать :P');
+    <script src="https://github.com/mebjas/html5-qrcode/releases/download/V1.2.1/html5-qrcode.min.js"></script>
+    <script>
+        function docReady(fn) {
+            // see if DOM is already available
+            if (document.readyState === "complete"
+                || document.readyState === "interactive")
+            {
+                // call on next available tick
+                setTimeout(fn, 1);
+            }
+            else
+            {
+                document.addEventListener("DOMContentLoaded", fn);
+            }
         }
-    }
-    getMedia({video: true}); // * /
-/*
-    // navigator.getUserMedia  и   window.URL.createObjectURL (смутные времена браузерных противоречий 2012)
-    navigator.getUserMedia = (
-        navigator.getUserMedia ||
-        navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia ||
-        navigator.msGetUserMedia); // * /
-//    window.URL.createObjectURL = window.URL.createObjectURL || window.URL.webkitCreateObjectURL || window.URL.mozCreateObjectURL || window.URL.msCreateObjectURL;
-/*
-    // запрашиваем разрешение на доступ к поточному видео камеры
-    navigator.getUserMedia({video: true}, function (stream) {
-      // разрешение от пользователя получено
-      // скрываем подсказку
-      allow.style.display = "none";
-      // получаем url поточного видео
-      videoStreamUrl = window.URL.createObjectURL(stream);
-      // устанавливаем как источник для video 
-      video.src = videoStreamUrl;
-    }, function () {
-      console.log('что-то не так с видеостримом или пользователь запретил его использовать :P');
-    });
-    // * /
-    navigator.getUserMedia = navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia;
 
-    if (navigator.getUserMedia) {
-    navigator.getUserMedia({ audio: false, video: { width: 640, height: 480 } },
-      function(stream) {
-         var video = document.querySelector('video');
-         video.srcObject = stream;
-         video.onloadedmetadata = function(e) {
-           video.play();
-         };
-      },
-      function(err) {
-         console.log("The following error occurred: " + err.name);
-      }
-   );
-} else {
-   console.log("getUserMedia not supported");
-}    
-  }; // */
-</script>
+        docReady(function ()
+        {
+            var resultContainer = document.getElementById('check-qrcheck');
+            var lastResult;
+            function onScanSuccess(qrCodeMessage)
+            {
+                if (qrCodeMessage !== lastResult)
+                {
+                    lastResult = qrCodeMessage;
+                    resultContainer.value
+                        = decodeURIComponent(escape(`${qrCodeMessage}`));
+                }
+            }
 
-<style>
-    video{
-/*          transform: scaleX(-1);
-       -o-transform: scaleX(-1);
-      -ms-transform: scaleX(-1);
-     -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1); */
-}
-</style>
+            var html5QrcodeScanner = new Html5QrcodeScanner(
+                "qr-reader", { fps: 10, qrbox: 250 });
+            html5QrcodeScanner.render(onScanSuccess);
+        });
+    </script>
 
-<div class="items-index">
-
-    <!-- h1><?= Html::encode($this->title) ?></h1 -- >
-    <pre>
-        <?= $dataProvider->query->createCommand()->sql ?>
-    </pre -- >
-    <div id="allow"> Разрешите использовать камеру<br />(сверху текущей страницы)</div>
-    <div class="item">
-        <span> video </span>
-        <video id="video" autoplay="autoplay"></video>
+    <div class="row">
+        <div class="col-md-4" id="qr-reader"></div>
     </div>
-    
-    <div class="item">
-        <span> canvas </span>
-        <canvas id="canvas" width="320" height="240"></canvas>
+    <div class="row"><br /><br />
+        <div class="col-md-4"><?= $message ?></div>
     </div>
-    <input id="button" type="button" value="Поехали!" / -->
-    <p>
-        <?= $message ?>
-    </p>
 
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model,
+            // Поле ввода QR-кода
             'qrcheck',
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                  Html::submitButton(Yii::t('app', 'Register'),   [ 'class' => 'btn btn-success' ]) .
@@ -169,12 +86,14 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
             ->textInput() ?>
 
     <?= $form->field($model,
+            // Поле выбора региона
             'region',
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                 '</div><div class="col-md-8">{error}</div></div>' ])
             ->dropDownList($regions, [ 'onchange' => 'getData();', 'class' => 'form-control', 'prompt' => Yii::t('regions', 'Select region') ]) ?>
 
     <?= $form->field($model,
+            // Поле выбора места размещения
             'location',
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                 '</div><div class="col-md-8">{error}</div></div>' ])
@@ -196,7 +115,6 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
             'model',
 
             // Название подразделения
-            
             [ 'attribute' => 'regionName',
                 'value' => function($data)
                     {

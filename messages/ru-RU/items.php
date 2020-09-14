@@ -1,9 +1,11 @@
 <?php
 return [
     'Additional Information' => 'Дополнительная информация',
+    'Checked item(s): ' => 'Учтено оборудование: ',
     'Create Items'      => 'Добавить оборудование',
     'Date of entry'     => 'Дата внесения записи',
     'Inventory number'  => 'Инвентарный номер',
+    'Inventory QR-code' => 'Инвентарный QR-код',
     'Item network name' => 'Сетевое имя',
     'Item type'         => 'Тип оборудования',
     'Items'             => 'Оборудование',
@@ -17,6 +19,7 @@ return [
     'Product number'    => 'Код оборудования',
     'Region'            => 'Подразделение',
     'Serial number'     => 'Серийный номер',
+    'Start checking'    => 'Начать инвентаризацию',
     'State'             => 'Состояние',
     'Status Name'       => 'Состояние',
     'Total items checked' => 'Проинвентаризировано',
