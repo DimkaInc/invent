@@ -48,17 +48,27 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
             }
         }
 
+    </script>
+
+    <script>
+        function getData()
+        {
+            $('form').submit();
+        }
+
         docReady(function ()
         {
-            var resultContainer = document.getElementById('check-qrcheck');
             var lastResult;
             function onScanSuccess(qrCodeMessage)
             {
+                var resultContainer = document.getElementById('check-qrcheck');
                 if (qrCodeMessage !== lastResult)
                 {
                     lastResult = qrCodeMessage;
                     resultContainer.value
                         = decodeURIComponent(escape(`${qrCodeMessage}`));
+
+                    getData();
                 }
             }
 
@@ -66,16 +76,21 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
                 "qr-reader", { fps: 10, qrbox: 250 });
             html5QrcodeScanner.render(onScanSuccess);
         });
+        
     </script>
+
 
     <div class="row">
         <div class="col-md-4" id="qr-reader"></div>
     </div>
+
+    <?php Pjax::begin(); ?>
+
     <div class="row"><br /><br />
         <div class="col-md-4"><?= $message ?></div>
     </div>
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([ 'options' => [ 'data-pjax' => true ]]); ?>
 
     <?= $form->field($model,
             // Поле ввода QR-кода
@@ -172,5 +187,7 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
 
         ],
     ]); ?>
+
+    <?php Pjax::end(); ?>
 
 </div>

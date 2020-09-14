@@ -22,8 +22,8 @@ return [
     'Start checking'    => 'Начать инвентаризацию',
     'State'             => 'Состояние',
     'Status Name'       => 'Состояние',
-    'Total items checked' => 'Проинвентаризировано',
-    'Total items count' => 'Количество оборудования',
+    'Total items checked' => 'Учтено',
+    'Total items count' => 'Всего',
     'Update Items'      => 'Редактирование оборудования',
     'Update Items: {name}' => 'Изменение оборудования: {name}',
 ];

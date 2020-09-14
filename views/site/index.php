@@ -21,10 +21,27 @@ $this->title = Yii::t('app',Yii::$app->name);
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-
             'name',
-            'icount',
-            'ccount',
+            [ 'attribute' => 'icount',
+                'contentOptions' => [
+                    'class' => 'text-center',
+                    'style' => 'max-width:100px; width:100px;',
+                ],
+                'headerOptions' => [
+                    'class' => 'text-center',
+                    'style' => 'max-width:100px; width:100px;',
+                ],
+            ],
+            [ 'attribute' => 'ccount',
+                'contentOptions' => [
+                    'class' => 'text-center',
+                    'style' => 'max-width:100px; width:100px;',
+                ],
+                'headerOptions' => [
+                    'class' => 'text-center',
+                    'style' => 'max-width:100px; width:100px;',
+                ],
+            ],
         ],
     ]);
     ?>
@@ -34,14 +51,34 @@ $this->title = Yii::t('app',Yii::$app->name);
         'dataProvider' => $dataProviderTypes,
         'columns' => [
             'name',
-            'icount',
-            'ccount',
+            [ 'attribute' => 'icount',
+                'contentOptions' => [
+                    'class' => 'text-center',
+                    'style' => 'max-width:100px; width:100px;',
+                ],
+                'headerOptions' => [
+                    'class' => 'text-center',
+                    'style' => 'max-width:100px; width:100px;',
+                ],
+            ],
+            [ 'attribute' => 'ccount',
+                'contentOptions' => [
+                    'class' => 'text-center',
+                    'style' => 'max-width:100px; width:100px;',
+                ],
+                'headerOptions' => [
+                    'class' => 'text-center',
+                    'style' => 'max-width:100px; width:100px;',
+                ],
+            ],
+//            'icount',
+//            'ccount',
         ],
     ]);
     ?>
 
-    <div>
-        <?= Html::a(Yii::t('app', 'Inventory'), [ 'items/check' ], [ 'class' => 'btn btn-info' ]) ?>
+    <div class="row">
+        <div class="col-md-3"><?= Html::a(Yii::t('app', 'Inventory'), [ 'items/check' ], [ 'class' => 'btn btn-info' ]) ?></div>
     </div>
 
 </div>
