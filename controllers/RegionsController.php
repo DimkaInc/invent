@@ -30,6 +30,35 @@ class RegionsController extends Controller
     }
 
     /**
+     * Добавление региона/подразделения
+     *
+     * @param array $options
+              string 'name'    - наименование
+     * @return integer|boolean - Идентификатор записи или FALSE, если записать не удалось
+     */
+    public function addIfNeed($options)
+    {
+        if (is_array($options) && isset($options[ 'name' ]))
+        {
+            // Ищем регион
+            $region = Regions::find()
+                ->where(['like', 'name', $options[ 'name' ]])
+                ->all();
+            if (count($region) > 0)
+            {
+                return $region[0]->id; // Нашёлся, вернём первый найденный
+            }
+            $region = new Regions();   // Не нашёлся, добавляем новый
+            $region->name = $options[ 'name' ];
+            if ($region->validate() && $region->save()) // Пробуем записать
+            {
+                return $region->id; // Если удалось записать, возвращаем идентификатор
+            }
+        }
+        return FALSE; // Если не удалась запись, вернём FALSE
+    }
+
+    /**
      * Список всех регионов/подразделений.
      * @return mixed
      */

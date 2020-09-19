@@ -10,6 +10,7 @@ return [
     'Dmitry Dobryshin' => 'Добрышин Дмитрий',
     'Home'      => 'Начало',
     'Identifier' => 'Идентификатор (неизменяемый)',
+    'Import'    => 'Импортировать',
     'Incorrect username or password.' => 'Неправильное имя пользователя или пароль',
     'Inventory' => 'Инвентаризация',
     'Insert'    => 'Добавить',

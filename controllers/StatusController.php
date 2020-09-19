@@ -30,6 +30,31 @@ class StatusController extends Controller
     }
 
     /**
+     * Добавление в случае необходимости состояния
+     * @param array $options
+     *        string 'name'  - Наименование состояния
+     * @return mixed
+     */
+    public function addIfNeed($options)
+    {
+        if (is_array($options) && isset($options[ 'name' ]))
+        $status = Status::find()
+            ->where([ 'like', 'name', $options[ 'name' ]])
+            ->all();
+        if (count($status) > 0)
+        {
+            return $status[0]->id;
+        }
+        $status = new Status();
+        $status->name = $options[ 'name' ];
+        if ($status->validate() && $status->save())
+        {
+            return $status->id;
+        }
+        return FALSE;
+    }
+
+    /**
      * Показ всех состояний предметов/оборудования.
      * @return mixed
      */

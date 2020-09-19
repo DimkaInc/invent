@@ -14,6 +14,12 @@ function showUrlUpdate($name, $data)
         ]);
 }
 
+function writeLog($logline)
+{
+    $fp = fopen('data.log', 'a');
+    fwrite($fp, $logline . "\n");
+    fclose($fp);
+}
 
 $config = [
     'version' => '1.27',

@@ -38,21 +38,27 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
     }
 </script>
 
-    <p>
+    <div class="row">
         <?php // Кнопки на форме ?>
-        <?= Html::a(Yii::t('items', 'Create Items'),
+        <div class="col-md-2"><?= Html::a(Yii::t('items', 'Create Items'),
             [ 'create' ],
-            [ 'class' => 'btn btn-success' ]) ?>
-        <?= Html::a(Yii::t('items', 'Print Items'),
+            [ 'class' => 'btn btn-success' ]) ?></div>
+        <div class="col-md-2"><?= Html::a(Yii::t('items', 'Import'),
+            [ 'import' ],
+            [ 'class' => 'btn btn-success',
+                'style' => 'width: 100%;',
+            ]) ?></div>
+        <div class="col-md-2"><?= Html::a(Yii::t('items', 'Print Items'),
             Url::to([ 'print' ], 'http'),
             [ 'class' => 'btn btn-warning',
-                'target' => '_blank'
-            ]) ?>
-        <?= Html::a(Yii::t('items', 'Start checking'),
+                'style' => 'width: 100%;',
+                'target' => '_blank',
+            ]) ?></div>
+        <div class="col-md-2"><?= Html::a(Yii::t('items', 'Start checking'),
             [ 'start_checking' ],
             [ 'class' => 'btn btn-info',
-            ]) ?>
-    </p>
+            ]) ?></div>
+    </div>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider, // Источник данных

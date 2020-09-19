@@ -30,6 +30,33 @@ class TypesController extends Controller
     }
 
     /**
+     * Добавление типа, если необходимо
+     * @param array $options
+     *        string 'name' - наименование
+     * @return integer|boolean - Идентификатор типа или FALSE в случае неудачи
+     */
+     public function addIfNeed($options)
+     {
+        if (is_array($options) && isset($options[ 'name' ]))
+        {
+            $type = Types::find()
+                ->where([ 'like', 'name', $options[ 'name' ] ])
+                ->all();
+            if (count($type) > 0)
+            {
+                return $type[0]->id;
+            }
+            $type = new Types();
+            $type->name = $options[ 'name' ];
+            if ($type->validate() && $type->save())
+            {
+                return $type->id;
+            }
+        }
+        return FALSE;
+     }
+
+    /**
      * Список всех типов предметов/оборудования.
      * @return mixed
      */

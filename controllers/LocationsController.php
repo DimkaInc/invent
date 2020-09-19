@@ -30,6 +30,50 @@ class LocationsController extends Controller
     }
 
     /**
+     * Добавление места разположения
+     *
+     * @param array $options
+     *        string 'name'    - наименование места расположения
+     *        string|NULL  'region'    - наименование региона/подразделения
+     *        integer|NULL 'region_id' - идентификатор региона/подразделения
+     * @return integer|boolean - идентификатор записи места расположения или FALSE
+     */
+    public static function addIfNeed($options)
+    {
+        if (is_array($options) && isset($options[ 'name' ]) && (isset($options[ 'region' ]) || isset($options[ 'region_id' ])))
+        {
+            if (isset($options[ 'region' ]))
+            {
+                $region_id = RegionsController::addIfNeed([ 'name' => $options[ 'region' ]]);
+            }
+            else
+            {
+                $region_id = $options[ 'region_id' ];
+            }
+            if ($region_id !== FALSE) {
+                // Ищем расположение, совпадающее по наименованию и региону/подразделению
+                $location = Locations::find()
+                    ->where([ 'like', 'name', $options[ 'name' ]])
+                    ->andWhere([ 'region_id' => $region_id ])
+                    ->all();
+                if (count($location) > 0)
+                {
+                    return $location[0]->id; // Если нашли, возвращаем идентификатор записи
+                }
+                // Не нашли, пробуем добавить место расположения
+                $location = new Locations();
+                $location->name = $options[ 'name' ];
+                $location->region_id = $region_id;
+                if($location->validate() && $location->save())
+                {
+                    return $location->id; // Если удалось сохранить, вернём идентификатор места расположения
+                }
+            }
+        }
+        return FALSE; // Записать не удалось, вернём FALSE
+    }
+
+    /**
      * Список всех мест/размещений.
      * @return mixed
      */
