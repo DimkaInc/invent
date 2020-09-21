@@ -9,7 +9,7 @@ class LoginFormCest
 
     public function openLoginPage(\FunctionalTester $I)
     {
-        $I->see('Login', 'h1');
+        $I->see(Yii::t('app', 'Login'), 'h1');
 
     }
 
@@ -18,7 +18,7 @@ class LoginFormCest
     {
         $I->amLoggedInAs(100);
         $I->amOnPage('/');
-        $I->see('Logout (admin)');
+        $I->see(Yii::t('app', 'Logout') . ' (admin)');
     }
 
     // demonstrates `amLoggedInAs` method
@@ -26,15 +26,15 @@ class LoginFormCest
     {
         $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnPage('/');
-        $I->see('Logout (admin)');
+        $I->see(Yii::t('app', 'Logout') . ' (admin)');
     }
 
     public function loginWithEmptyCredentials(\FunctionalTester $I)
     {
         $I->submitForm('#login-form', []);
         $I->expectTo('see validations errors');
-        $I->see('Username cannot be blank.');
-        $I->see('Password cannot be blank.');
+        $I->see(Yii::t('yii', '{attribute} cannot be blank.', ['attribute' => Yii::t('app', 'Username')]));
+        $I->see(Yii::t('yii', '{attribute} cannot be blank.', ['attribute' => Yii::t('app', 'Password')]));
     }
 
     public function loginWithWrongCredentials(\FunctionalTester $I)
@@ -44,7 +44,7 @@ class LoginFormCest
             'LoginForm[password]' => 'wrong',
         ]);
         $I->expectTo('see validations errors');
-        $I->see('Incorrect username or password.');
+        $I->see(Yii::t('app', 'Incorrect username or password.'));
     }
 
     public function loginSuccessfully(\FunctionalTester $I)
@@ -53,7 +53,26 @@ class LoginFormCest
             'LoginForm[username]' => 'admin',
             'LoginForm[password]' => 'admin',
         ]);
-        $I->see('Logout (admin)');
-        $I->dontSeeElement('form#login-form');              
+        $I->see(Yii::t('app', 'Logout') . ' (admin)');
+        $I->dontSeeElement('form#login-form');
+    }
+    public function loginDemoWithWrongCredentials(\FunctionalTester $I)
+    {
+        $I->submitForm('#login-form', [
+            'LoginForm[username]' => 'demo',
+            'LoginForm[password]' => 'wrong',
+        ]);
+        $I->expectTo('see validations errors');
+        $I->see(Yii::t('app', 'Incorrect username or password.'));
+    }
+
+    public function loginDemoSuccessfully(\FunctionalTester $I)
+    {
+        $I->submitForm('#login-form', [
+            'LoginForm[username]' => 'demo',
+            'LoginForm[password]' => 'demo',
+        ]);
+        $I->see(Yii::t('app', 'Logout') . ' (demo)');
+        $I->dontSeeElement('form#login-form');
     }
 }

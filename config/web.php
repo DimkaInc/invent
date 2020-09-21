@@ -85,69 +85,20 @@ $config = [
 
         'i18n' => [ // Переводы сообщений
             'translations' => [
-                'app*' => [                                 // Для приложения
+                '*' => [                                 // Для всех разделов
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',            // Исходный текст на английском
                     'basePath' => '@app/messages',
                     'fileMap' => [
-                        'app'       => 'app.php',
-                        'app/error' => 'error.php',
-                    ],
-                ],
-                'contact*' => [                             // Для формы обратой связи
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app'   => 'contact.app',
-                    ],
-                ],
-                'items*' => [                               // Для предметов/оборудования
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app' => 'items.app',
-                    ],
-                ],
-                'locations*' => [                           // Для мест размещения
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app' => 'locations.app',
-                    ],
-                ],
-                'moving*' => [                              // Для перемещений
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app'   => 'moving.app',
-                    ],
-                ],
-                'regions*' => [                             // Для регионов/подразделений
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app' => 'regions.app',
-                    ],
-                ],
-                'status*' => [                              // Для состояний предметов/оборудования
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app' => 'status.app',
-                    ],
-                ],
-                'types*' => [                               // Для типов оборудования
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app' => 'types.app',
+                        'app'       => 'app.php',           // Для преложения
+                        'app/error' => 'error.php',         // Для ошибок
+                        'contact'   => 'contact.php',       // Для обратной связи
+                        'items'     => 'items.php',         // Для предметов/оборудования
+                        'locations' => 'locations.php',     // Для мета расположения
+                        'moving'    => 'moving.php',        // Для перемещений
+                        'regions'   => 'regions.php',       // Для регионов/подразделений
+                        'status'    => 'status.php',        // Для состояний предметов/оборудования
+                        'types'     => 'types.php',         // Для типов предметов/оборудования
                     ],
                 ],
             ],
@@ -171,7 +122,7 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['127.0.0.1', '::1', '192.168.0.68'],
+        'allowedIPs' => ['127.0.0.1', '::1', '192.168.0.68', ],
     ];
 
     $config['bootstrap'][] = 'gii';

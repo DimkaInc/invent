@@ -74,7 +74,7 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     public function attributeLabels()
     {
         return [
-            'username' => Yii::t('app', 'User name'),
+            'username' => Yii::t('app', 'Username'),
             'password' => Yii::t('app', 'Password'),
         ];
     }
