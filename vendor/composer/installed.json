@@ -481,6 +481,59 @@
         ]
     },
     {
+        "name": "codeception/module-db",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Codeception/module-db.git",
+            "reference": "13a2b86206d09c50ab2e5375b261df35b650e58f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Codeception/module-db/zipball/13a2b86206d09c50ab2e5375b261df35b650e58f",
+            "reference": "13a2b86206d09c50ab2e5375b261df35b650e58f",
+            "shasum": ""
+        },
+        "require": {
+            "codeception/codeception": "*@dev",
+            "php": ">=5.6.0 <8.0"
+        },
+        "conflict": {
+            "codeception/codeception": "<4.0"
+        },
+        "require-dev": {
+            "codeception/util-robohelpers": "dev-master"
+        },
+        "time": "2019-12-08T17:56:49+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Bodnarchuk"
+            },
+            {
+                "name": "Gintautas Miselis"
+            }
+        ],
+        "description": "WebDriver module for Codeception",
+        "homepage": "http://codeception.com/",
+        "keywords": [
+            "acceptance-testing",
+            "browser-testing",
+            "codeception"
+        ]
+    },
+    {
         "name": "codeception/module-filesystem",
         "version": "1.0.2",
         "version_normalized": "1.0.2.0",
@@ -531,6 +584,59 @@
         "keywords": [
             "codeception",
             "filesystem"
+        ]
+    },
+    {
+        "name": "codeception/module-rest",
+        "version": "1.2.3",
+        "version_normalized": "1.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Codeception/module-rest.git",
+            "reference": "63d09a1ed9fb9bb981d22396e7c2c7d20570f217"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Codeception/module-rest/zipball/63d09a1ed9fb9bb981d22396e7c2c7d20570f217",
+            "reference": "63d09a1ed9fb9bb981d22396e7c2c7d20570f217",
+            "shasum": ""
+        },
+        "require": {
+            "codeception/codeception": "^4.0",
+            "flow/jsonpath": "^0.5",
+            "justinrainbow/json-schema": "^5.2.9",
+            "php": ">=5.6.0 <8.0"
+        },
+        "require-dev": {
+            "codeception/lib-innerbrowser": "^1.0",
+            "codeception/util-robohelpers": "dev-master",
+            "codeception/util-universalframework": "^1.0"
+        },
+        "suggest": {
+            "aws/aws-sdk-php": "For using AWS Auth"
+        },
+        "time": "2020-09-17T13:36:51+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Gintautas Miselis"
+            }
+        ],
+        "description": "REST module for Codeception",
+        "homepage": "http://codeception.com/",
+        "keywords": [
+            "codeception",
+            "rest"
         ]
     },
     {
@@ -1012,6 +1118,49 @@
         ]
     },
     {
+        "name": "flow/jsonpath",
+        "version": "0.5.0",
+        "version_normalized": "0.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FlowCommunications/JSONPath.git",
+            "reference": "b9738858c75d008c1211612b973e9510f8b7f8ea"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FlowCommunications/JSONPath/zipball/b9738858c75d008c1211612b973e9510f8b7f8ea",
+            "reference": "b9738858c75d008c1211612b973e9510f8b7f8ea",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "peekmo/jsonpath": "dev-master",
+            "phpunit/phpunit": "^7.0"
+        },
+        "time": "2019-07-15T17:23:22+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Flow\\JSONPath": "src/",
+                "Flow\\JSONPath\\Test": "tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Stephen Frank",
+                "email": "stephen@flowsa.com"
+            }
+        ],
+        "description": "JSONPath implementation for parsing, searching and flattening arrays"
+    },
+    {
         "name": "fzaninotto/faker",
         "version": "v1.9.1",
         "version_normalized": "1.9.1.0",
@@ -1134,6 +1283,74 @@
             "stream",
             "uri",
             "url"
+        ]
+    },
+    {
+        "name": "justinrainbow/json-schema",
+        "version": "5.2.10",
+        "version_normalized": "5.2.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/justinrainbow/json-schema.git",
+            "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+            "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
+            "json-schema/json-schema-test-suite": "1.2.0",
+            "phpunit/phpunit": "^4.8.35"
+        },
+        "time": "2020-05-27T16:41:55+00:00",
+        "bin": [
+            "bin/validate-json"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "JsonSchema\\": "src/JsonSchema/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bruno Prieto Reis",
+                "email": "bruno.p.reis@gmail.com"
+            },
+            {
+                "name": "Justin Rainbow",
+                "email": "justin.rainbow@gmail.com"
+            },
+            {
+                "name": "Igor Wiedler",
+                "email": "igor@wiedler.ch"
+            },
+            {
+                "name": "Robert Schönthal",
+                "email": "seroscho@googlemail.com"
+            }
+        ],
+        "description": "A library to validate a json schema.",
+        "homepage": "https://github.com/justinrainbow/json-schema",
+        "keywords": [
+            "json",
+            "schema"
         ]
     },
     {

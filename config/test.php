@@ -1,6 +1,12 @@
 <?php
+
+use yii\helpers\Html;
+use kartik\mpdf\Pdf;
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/test_db.php';
+
+require_once __DIR__ . '/myfunctions.php';
 
 /**
  * Application configuration shared by all test types
@@ -37,7 +43,22 @@ return [
                 ],
             ],
         ],
-         'db' => $db,
+        'pdf' => [                                 // Формирование PDF по умолчанию
+            'mode' => Pdf::MODE_UTF8,              // Кодировка
+            'class' => Pdf::className(),
+            'format' => Pdf::FORMAT_A4,            // Лист А4
+            'orientation' => Pdf::ORIENT_PORTRAIT, // Напраление - по вертикали большая сторона
+            'destination' => Pdf::DEST_BROWSER,    // Результат показать в браузере
+            'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
+            'cssInline' => '.kv-heading-1{font-size:18px}',
+            'methods' => [
+                'SetHeader' => [Yii::t('app', 'Inventory')], // Верхний колонтитул
+                'SetFooter' => ['{PAGENO}'],                     // Нижний колонтитул
+            ],
+            // refer settings section for all configuration options
+        ],
+
+        'db' => $db,
         'mailer' => [
             'useFileTransport' => true,
         ],

@@ -6,20 +6,7 @@ use kartik\mpdf\Pdf;
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
-function showUrlUpdate($name, $data)
-{
-    return Html::a(Html::encode($name), 
-        ['update',
-            'id' => $data->id,
-        ]);
-}
-
-function writeLog($logline)
-{
-    $fp = fopen('data.log', 'a');
-    fwrite($fp, $logline . "\n");
-    fclose($fp);
-}
+require_once __DIR__ . '/myfunctions.php';
 
 $config = [
     'version' => '1.27',

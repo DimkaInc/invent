@@ -63,7 +63,7 @@ use yii\data\Sort;
 <div class="items-form">
 
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([ 'id' => 'ItemForm' ]); ?>
 
     <?= $form->field($model,
             'type_id',
