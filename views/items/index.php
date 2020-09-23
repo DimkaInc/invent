@@ -61,6 +61,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
     </div>
 
     <?= GridView::widget([
+        'id' => 'ItemsTable',
         'dataProvider' => $dataProvider, // Источник данных
         'filterModel' => $searchModel,   // Модель поиска
         'rowOptions' => function($model) // Функция окраски неинвентаризированных предметов/оборудования

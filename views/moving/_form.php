@@ -54,7 +54,9 @@ use app\models\Regions;
 
 <div class="moving-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        'id' => 'MovingForm',
+    ]); ?>
 
     <?= $form->field($model, 'date', [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
         ->widget(
@@ -74,7 +76,8 @@ use app\models\Regions;
     <?= $form->field($model,
             'state_id',
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-2">{input}</div><div class="col-md-8">{error}</div></div>' ])
-            ->dropDownList($states, $defState) ?>
+            ->dropDownList($states, $defState)
+            ->label(Yii::t('status', 'Status')) ?>
 
     <?= $form->field(
             $model,
@@ -86,6 +89,7 @@ use app\models\Regions;
                     ['class' => 'btn btn-primary']) .
                 '</div><div class="col-md-8">{error}</div></div>'])
             ->dropDownList($locations, $defLocate)
+            ->label(Yii::t('locations', 'Location'))
     ?>
 
     <?= $form->field($model, 'comment')->textarea([ 'rows' => 6 ]) ?>

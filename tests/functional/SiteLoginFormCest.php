@@ -1,6 +1,6 @@
 <?php
 
-class LoginFormCest
+class SiteLoginFormCest
 {
     public function _before(\FunctionalTester $I)
     {

@@ -19,6 +19,7 @@ $this->title = Yii::t('app',Yii::$app->name);
 
     <h2><?= Yii::t('app', 'Number of equipment by regions') ?></h2>
     <?= GridView::widget([
+        'id' => 'RegionsTable',
         'dataProvider' => $dataProvider,
         'columns' => [
             'name',
@@ -48,6 +49,7 @@ $this->title = Yii::t('app',Yii::$app->name);
 
     <h2><?= Yii::t('app', 'Number of items by type') ?></h2>
     <?= GridView::widget([
+        'id' => 'TypesTable',
         'dataProvider' => $dataProviderTypes,
         'columns' => [
             'name',

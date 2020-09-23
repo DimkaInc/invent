@@ -13,8 +13,25 @@ class ItemsCreateCest
     // Открыта страница добавления
     public function openCreatePage(\FunctionalTester $I)
     {
-        $I->amOnPage([ 'items/create' ]);
+        // Заголовок
         $I->see(Yii::t('items', 'Create Items'), 'h1');
+        // Поля
+        $I->see(Yii::t('items', 'Item type'), 'label');
+        $I->see(Yii::t('items', 'Item network name'), 'label');
+        $I->see(Yii::t('items', 'Model'), 'label');
+        $I->see(Yii::t('items', 'Operating system'), 'label');
+        $I->see(Yii::t('items', 'MAC address'), 'label');
+        $I->see(Yii::t('items', 'Serial number'), 'label');
+        $I->see(Yii::t('items', 'Product number'), 'label');
+        $I->see(Yii::t('items', 'Model number'), 'label');
+        $I->see(Yii::t('items', 'Inventory number'), 'label');
+        $I->see(Yii::t('items', 'Additional Information'), 'label');
+        $I->see(Yii::t('moving', 'Moving date'), 'label');
+        $I->see(Yii::t('status', 'Status'), 'label');
+        $I->see(Yii::t('locations', 'Location'), 'label');
+        // Кнопки
+        $I->see(Yii::t('app', 'Save'), 'button');
+        $I->see(Yii::t('app', 'Cancel'), 'a.btn');
     }
 
     // Заполнение формы
@@ -37,15 +54,17 @@ class ItemsCreateCest
         ]);
         $I->see(Yii::t('items', 'Items'), 'h1');
         $I->dontSee(Yii::t('items', 'Create Items'), 'h1');
-        $I->haveInDatabase('items', ['name' => 'TEST-WS-0001', 'model' => 'Тестовый компьютер', 'serial' => '*TEST SERIAL NUMBER*', 'invent' => '*TEST INVENTORY NUMBER*']);
+        $id = $I->haveInDatabase('items', [ 'name' => 'TEST-WS-0001', 'model' => 'Тестовый компьютер', 'serial' => '*TEST SERIAL NUMBER*', 'invent' => '*TEST INVENTORY NUMBER*', 'comment' => 'Тестирование. Это тестовая запись.' ]);
+        $I->haveInDatabase('moving', [ 'date' => '2020-01-01', 'state_id' => '1', 'location_id' => '1', 'item_id' => $id ]);
     }
-    
+
     // Нажатие на кнопку "Типы"
     public function pushTypes(\FunctionalTester $I)
     {
         $I->click(Locator::contains('div a', Yii::t('types', 'Types')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
         $I->see(Yii::t('types', 'Types'), 'h1');
+        $I->dontSee(Yii::t('items', 'Create Items'), 'h1');
     }
 
     // Нажатие на кнопку "Места размещения"
@@ -54,6 +73,15 @@ class ItemsCreateCest
         $I->click(Locator::contains('div a', Yii::t('locations', 'Locations')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
         $I->see(Yii::t('locations', 'Locations'), 'h1');
+        $I->dontSee(Yii::t('items', 'Create Items'), 'h1');
     }
 
+    // Нажатие на кнопку "Отмена"
+    public function pushCancel(\FunctionalTester $I)
+    {
+        $I->click(Locator::contains('div a', Yii::t('app', 'Cancel')));
+        $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
+        $I->see(Yii::t('items', 'Items'), 'h1');
+        $I->dontSee(Yii::t('items', 'Create Items'), 'h1');
+    }
 }

@@ -4,9 +4,6 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\StatusSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', 'Statuses');
 $this->params[ 'breadcrumbs' ][] = $this->title;
@@ -20,15 +17,14 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
     </p>
 
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
+        'id' => 'StatusTable',
         'dataProvider' => $dataProvider,
         'filterModel'  => $searchModel,
         'columns'      => [
             [ 'class' => 'yii\grid\SerialColumn' ],
 
-//            'id',
             [ 'attribute' => 'name',
                 'value'   => function ($data)
                 {

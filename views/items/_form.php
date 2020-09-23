@@ -129,10 +129,10 @@ use yii\data\Sort;
         <?= $form->field($modelm,
                 'state_id',
                 [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-2">{input}</div><div class="col-md-8">{error}</div></div>' ])
-                ->dropDownList($states, $defState) ?>
+                ->dropDownList($states, $defState)
+                ->label(Yii::t('status', 'Status')) ?>
 
-        <?= $form->field(
-                $modelm,
+        <?= $form->field($modelm,
                 'location_id',
                 [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                     Html::a(
@@ -141,7 +141,8 @@ use yii\data\Sort;
                         [ 'class' => 'btn btn-primary' ]
                     ) .
                     '</div><div class="col-md-8">{error}</div></div>' ])
-                ->dropDownList($locations, $defLocate, ['prompt' => Yii::t('locations', 'Select location')]) ?>
+                ->dropDownList($locations, $defLocate, ['prompt' => Yii::t('locations', 'Select location')])
+                ->label(Yii::t('locations', 'Location')) ?>
 
     <?php
         }
@@ -173,10 +174,10 @@ use yii\data\Sort;
     <?php
             $GLOBALS['count'] = 0;
             echo GridView::widget([
+                'id' => 'MovingTable',
                 'dataProvider' => $dataProviderM,
                 'filterModel' => $searchModelM,
                 'columns' => [
-//                    ['class' => 'yii\grid\SerialColumn'],
 
 //                    'id',
                     [ 'attribute' => 'date',

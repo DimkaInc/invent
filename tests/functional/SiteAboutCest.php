@@ -1,6 +1,6 @@
 <?php
 
-class AboutCest
+class SiteAboutCest
 {
     public function _before(\FunctionalTester $I)
     {
@@ -9,6 +9,7 @@ class AboutCest
 
     public function openAboutPage(\FunctionalTester $I)
     {
+        $I->see(Yii::t('app', 'About'), 'h1');
         $I->see(Yii::$app->version);
     }
 }

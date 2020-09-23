@@ -10,10 +10,15 @@ class ItemsIndexCest
         $I->amOnPage(['items/index']);
     }
 
-    // Есть заголовок
+    // наполнение страницы
     public function openItemsPage(\FunctionalTester $I)
     {
         $I->see(Yii::t('items', 'Items'), 'h1');
+        $I->see(Yii::t('items', 'Inventory number'), '#ItemsTable tr th a');
+        $I->see(Yii::t('items', 'Serial number'), '#ItemsTable tr th a');
+        $I->see(Yii::t('items', 'Model'), '#ItemsTable tr th a');
+        $I->see(Yii::t('regions', 'Region'), '#ItemsTable tr th a');
+        $I->see(Yii::t('status', 'Status'), '#ItemsTable tr th a');
     }
 
     // Переход к странице добавления
@@ -31,7 +36,7 @@ class ItemsIndexCest
     }
 
     // Формирование печатной формы PDF
-    public function moveToPrintItemsCheck(\FunctionalTester $I)
+    public function pushPrintItems(\FunctionalTester $I)
     {
         $I->click(Locator::contains('div a', Yii::t('items', 'Print Items')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
@@ -50,23 +55,23 @@ class ItemsIndexCest
     }
 
     // Начало инвентаризации
-    public function startInventoryCheck(\FunctionalTester $I)
+    public function pushStartInventory(\FunctionalTester $I)
     {
         $I->click(Locator::contains('div a', Yii::t('items', 'Start checking')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
         $I->see('', 'tr.danger');
     }
 
-    //* // Нажатие на кнопку "Удалить"
-    public function deleteItemCheck(\FunctionalTester $I)
+    // Нажатие на кнопку "Удалить"
+    public function clickDeleteItem(\FunctionalTester $I)
     {
         $I->click(Locator::find('a', [ 'title' => Yii::t('yii', 'Delete') ]));
         $I->seeResponseCodeIs(405);
         //$I->see(Yii::t('yii', 'Are you sure you want to delete this item?'));
-    } // */
+    }
 
     // Печать отдельной наклейки
-    public function printItemCheck(\FunctionalTester $I)
+    public function clickPrintItem(\FunctionalTester $I)
     {
         $I->click(Locator::find('a', [ 'title' => Yii::t('items', 'Print selected labels') ]));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
@@ -74,7 +79,7 @@ class ItemsIndexCest
     }
 
     // переход к редактированию элемента
-    public function clickItemCheck(\FunctionalTester $I)
+    public function clickItem(\FunctionalTester $I)
     {
         $I->click(Locator::contains('tr td a', ''));
         $I->see(Yii::t('items', 'Update Items: {name}', [ 'name' => '', ]), 'h1');

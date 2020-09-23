@@ -22,6 +22,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
+        'id' => 'MovingTable',
         'dataProvider' => $dataProvider,
         'filterModel'  => $searchModel,
         'columns'      => [

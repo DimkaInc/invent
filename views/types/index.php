@@ -21,17 +21,15 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
     </p>
 
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
+        'id' => 'TypesTable',
         'dataProvider' => $dataProvider,
         'filterModel'  => $searchModel,
         'columns'      => [
             [ 'class' => 'yii\grid\SerialColumn' ],
 
-//            'id',
             // Наименование типа оборудования
-//            'name',
             [ 'attribute' => 'name',
                 'value'   => function ($data)
                 {
