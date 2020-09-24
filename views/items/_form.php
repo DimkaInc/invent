@@ -183,7 +183,10 @@ use yii\data\Sort;
                     [ 'attribute' => 'date',
                         'value' => function($data)
                         {
-                            return Html::a(Html::encode(Yii::$app->formatter->asDate($data->date, 'dd.MM.Y')), [ 'moving/update', 'id' => $data->id ]);
+                            $date = explode('-', $data->date);
+                            $date = $date[2] . '.' . $date[1] . '.' . $date[0];
+                            // Yii::$app->formatter->asDate($data->date, 'dd.MM.Y')
+                            return Html::a(Html::encode($date), [ 'moving/update', 'id' => $data->id ]);
                         },
                     'format' => 'raw',
                     ],
