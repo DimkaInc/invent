@@ -5,7 +5,7 @@ use yii\helpers\Url;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 
-$this->title = Yii::t('app', 'Statuses');
+$this->title = Yii::t('status', 'Statuses');
 $this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 <div class="status-index">
@@ -13,7 +13,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Status'), [ 'create' ], [ 'class' => 'btn btn-success' ]) ?>
+        <?= Html::a(Yii::t('status', 'Create status'), [ 'create' ], [ 'class' => 'btn btn-success' ]) ?>
     </p>
 
     <?php Pjax::begin(); ?>

@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Regions */
 
-$this->title = Yii::t('regions', 'Create Regions');
+$this->title = Yii::t('regions', 'Create region');
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items',     'Items'),     'url' => [ 'items/index' ]];
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('locations', 'Locations'), 'url' => [ 'locations/index' ]];
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('regions',   'Regions'),   'url' => [ 'index' ]];

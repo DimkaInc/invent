@@ -18,7 +18,7 @@
  */
 return [
     'All regions' => 'Все подразделения',
-    'Create Locations' => 'Добавить место',
+    'Create location' => 'Добавить место',
     'Location' => 'Место размещения',
     'Location name' => 'Наименование места размещения',
     'Locations' => 'Места размещения',

@@ -46,7 +46,6 @@ class MovingInsertCest
         ]);
         $I->see(Yii::t('items', 'Update Items: {name}', [ 'name' => '', ]), 'h1');
         $I->dontSee(Yii::t('moving', 'Create Moving'), 'h1');
-        $I->haveInDatabase('moving', [ 'item_id' => '1', 'date' => '2020-09-20', 'state_id' => '1', 'location_id' => '1', 'comment' => '*TEST MOVE COMMENT*' ]);
         $I->see('20.09.2020', '#MovingTable a');
     }
 

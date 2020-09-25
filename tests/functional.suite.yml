@@ -8,10 +8,4 @@
 #basic/web/index.php
 class_name: FunctionalTester
 modules:
-    enabled: [ Filesystem, Yii2, Db ]
-    config:
-        Db:
-            dsn: 'pgsql:host=localhost;dbname=invent'
-            user: 'invent'
-            password: 'Rfhkc0y'
-            cleanup: false
+    enabled: [ Filesystem, Yii2 ]

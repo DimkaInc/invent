@@ -17,9 +17,10 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Create Types' => 'Добавить тип оборудования',
+    'Create type' => 'Добавить тип оборудования',
     'Select type' => 'Выберите тип',
     'Type' => 'Тип оборудования',
+    'Type name' => 'Наименование типа',
     'Types' => 'Типы оборудования',
     'Update Types: {name}' => 'Изменение типа оборудования: {name}',
     'Update Types' => '@@Редактирование типа оборудования@@',

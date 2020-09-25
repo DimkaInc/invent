@@ -49,8 +49,6 @@ class ItemsUpdateCest
         // Проверка перехода
         $I->see(Yii::t('items', 'Items'), 'h1');
         $I->dontSee(Yii::t('items', 'Update Items: {name}', [ 'name' => '', ]), 'h1');
-        // Проверка записи в базу данных
-        $I->haveInDatabase('items', [ 'name' => '*TEST CHANGE NAME*' ]);
     }
 
     // Нажатие на "Отменить"

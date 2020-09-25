@@ -18,9 +18,10 @@
  */
 return [
     'Status' => 'Состояние',
-    'Create Status' => '@@Добавление состояния@@',
-    'Select status' => '@@Выберите состояние@@',
-    'Status Name' => '@@Состояние@@',
-    'Update Status' => '@@Редактирование состояния@@',
-    'Update Status: {name}' => '@@Изменение состояния: {name}@@',
+    'Statuses' => 'Состояния',
+    'Create status' => 'Добавление состояния',
+    'Select status' => 'Выберите состояние',
+    'Status name' => 'Состояние',
+    'Update Status' => 'Редактирование состояния',
+    'Update Status: {name}' => 'Изменение состояния: {name}',
 ];

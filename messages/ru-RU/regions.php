@@ -17,9 +17,9 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Create Regions' => 'Добавление региона',
+    'Create region' => 'Добавление региона',
     'Region' => 'Подразделение',
-    'Region Name' => 'Подразделение',
+    'Region name' => 'Подразделение',
     'Regions' => 'Подразделения',
     'Select region' => 'Выберите подразделение',
     'Update Regions: {name}' => 'Изменение региона: {name}',

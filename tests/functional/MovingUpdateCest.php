@@ -25,7 +25,6 @@ class MovingUpdateCest
         $I->fillField('Moving[comment]', '*TEST COMMENT UPDATE*');
         $I->click(Yii::t('app', 'Save'), 'button');
         $I->see(Yii::t('items', 'Update Items: {name}', [ 'name' => '', ]), 'h1');
-        $I->haveInDatabase('moving', ['item_id' => '1', 'date' => '2000-01-01', 'state_id' => $state_id, 'location_id' => $location_id, 'comment' => '*TEST COMMENT UPDATE*']);
         $I->see('01.01.2000', '#MovingTable td a');
     }
 }

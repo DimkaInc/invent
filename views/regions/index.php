@@ -18,7 +18,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('regions', 'Create Regions'), [ 'create' ], [ 'class' => 'btn btn-success' ]) ?>
+        <?= Html::a(Yii::t('regions', 'Create region'), [ 'create' ], [ 'class' => 'btn btn-success' ]) ?>
     </p>
 
     <?php Pjax::begin(); ?>

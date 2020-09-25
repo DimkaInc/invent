@@ -50,7 +50,7 @@ class Locations extends \yii\db\ActiveRecord
             'id'         => Yii::t('app',       'Identifier'),
             'region_id'  => Yii::t('locations', 'Region ID'),
             'name'       => Yii::t('locations', 'Location name'),
-            'regionName' => Yii::t('regions',   'Region Name'),
+            'regionName' => Yii::t('regions',   'Region name'),
         ];
     }
 

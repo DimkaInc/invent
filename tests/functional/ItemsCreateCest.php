@@ -54,8 +54,6 @@ class ItemsCreateCest
         ]);
         $I->see(Yii::t('items', 'Items'), 'h1');
         $I->dontSee(Yii::t('items', 'Create Items'), 'h1');
-        $id = $I->haveInDatabase('items', [ 'name' => 'TEST-WS-0001', 'model' => 'Тестовый компьютер', 'serial' => '*TEST SERIAL NUMBER*', 'invent' => '*TEST INVENTORY NUMBER*', 'comment' => 'Тестирование. Это тестовая запись.' ]);
-        $I->haveInDatabase('moving', [ 'date' => '2020-01-01', 'state_id' => '1', 'location_id' => '1', 'item_id' => $id ]);
     }
 
     // Нажатие на кнопку "Типы"

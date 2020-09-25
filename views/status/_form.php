@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="status-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([ 'id' => 'StatusForm' ]); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 

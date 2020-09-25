@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Status */
 
-$this->title = Yii::t('app', 'Update Status: {name}', [
+$this->title = Yii::t('status', 'Update Status: {name}', [
     'name' => $model->name,
 ]);
-$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('app', 'Statuses'), 'url' => [ 'index' ]];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('status', 'Statuses'), 'url' => [ 'index' ]];
 $this->params[ 'breadcrumbs' ][] = Yii::t('app', 'Update');
 ?>
 <div class="status-update">

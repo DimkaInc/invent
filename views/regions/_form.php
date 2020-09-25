@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="regions-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([ 'id' => 'RegionsForm' ]); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
