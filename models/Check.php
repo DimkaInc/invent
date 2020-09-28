@@ -6,23 +6,11 @@ use Yii;
 use yii\base\Model;
 
 /**
- * This is the model class for table 'items'.
+ * Эта модель создана для формы items/check.
  *
- * @property int $id                   Идентификатор (неизменяемый)
- * @property int $type_id              Идентификатор типа оборудования
- * @property string|null  $name         Сетевое имя оборудования
- * @property string|null  $model        Модель оборудования
- * @property string|null  $os           Операционная система
- * @property string|null  $mac          Сетевой MAC адрес
- * @property string|null  $serial       Серийный номер
- * @property string|null  $product      Код оборудования
- * @property string|null  $modelnumber  Номер модели
- * @property string|null  $invent       Инвентарный номер
- * @property boolean      $checked      Флаг прохождения инвентаризации
- * @property string|null  $statusName   Наименование состояния
- * @property string|null  $typeName     Наименование типа
- * @property string|null  $locationName Наименование места размещения
- * @property string|null  $regionName   Наименование региона/подразделения
+ * @property string|null $qrcheck  QR-код инвентарного номера
+ * @property int|null    $location Идентификатор места расположения
+ * @property int|null    $region   Идентификатор региона/подразделения
  */
 class Check extends Model
 {
