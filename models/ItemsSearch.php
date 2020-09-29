@@ -148,11 +148,15 @@ class ItemsSearch extends Items
             'ilike', Status::tableName() .    '.name', $this->statusName
         ])->andFilterWhere([
             'ilike', Types::tableName() .     '.name', $this->typeName
-        ])->andFilterWhere([
-            'ilike', Locations::tableName() . '.name', $this->locationName
-        ])->andFilterWhere([
+        ])->andFilterWhere([ 'OR', [
+            'ilike', Locations::tableName() . '.name', $this->regionName
+        ], [
             'ilike', Regions::tableName() .   '.name', $this->regionName
-        ]);
+        ]])->andFilterWhere([ 'OR', [
+            'ilike', Locations::tableName() . '.name', $this->locationName
+        ], [
+            'ilike', Regions::tableName() .   '.name', $this->locationName
+        ]]);
 
         $query->andFilterWhere(['ilike', 'name',        $this->name])
             ->andFilterWhere(  ['ilike', 'model',       $this->model])

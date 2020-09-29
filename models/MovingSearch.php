@@ -83,8 +83,10 @@ class MovingSearch extends Moving
 
         $query->andFilterWhere([ 'ilike', Items::tableName() .     '.model', $this->itemModel ]);
         $query->andFilterWhere([ 'ilike', Status::tableName() .    '.name',  $this->statusName ]);
-        $query->andFilterWhere([ 'ilike', Locations::tableName() . '.name',  $this->locationName ]);
-        $query->andFilterWhere([ 'ilike', Regions::tableName() .   '.name',  $this->regionName ]);
+        $query->andFilterWhere([ 'OR', [ 'ilike', Locations::tableName() . '.name',  $this->locationName ],
+            [ 'ilike', Regions::tableName() .   '.name',  $this->locationName ]]);
+        $query->andFilterWhere([ 'OR', [ 'ilike', Locations::tableName() . '.name',  $this->regionName ],
+            [ 'ilike', Regions::tableName() .   '.name',  $this->regionName ]]);
 
         $query->andFilterWhere(['ilike', 'comment', $this->comment]);
 
