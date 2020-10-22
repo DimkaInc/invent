@@ -60,7 +60,7 @@ git clone https://gitlab.com/DimkaInc/invent.git
 Проект находится в режиме постоянной разработки.
 
 Если вам не трудно, поддержите мой проект.
-<iframe src="https://promo-money.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82&targets-hint=&default-sum=300&button-text=14&payment-type-choice=on&mobile-payment-type-choice=on&hint=&successURL=https%3A%2F%2Fgithub.com%2FDimkaInc&quickpay=shop&account=41001153778587" width="100%" height="224" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+<a href="https://promo-money.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82&targets-hint=&default-sum=300&button-text=14&payment-type-choice=on&mobile-payment-type-choice=on&hint=&successURL=https%3A%2F%2Fgithub.com%2FDimkaInc&quickpay=shop&account=41001153778587" target="blank">Поддержать проект</a>
 
 
 История версий
