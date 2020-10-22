@@ -8,6 +8,7 @@ use app\models\StatusSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\User;
 
 /**
  * StatusController implements the CRUD actions for Status model.
@@ -60,6 +61,10 @@ class StatusController extends Controller
      */
     public function actionIndex()
     {
+        if (! User::canPermission('createRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $searchModel = new StatusSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -70,13 +75,17 @@ class StatusController extends Controller
     }
 
     /**
-     * ПОказ одного состояния предмета/оборудования (не используется).
+     * Показ одного состояния предмета/оборудования (не используется).
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException если отсутствует состояние
      */
     public function actionView($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['index']);
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -89,6 +98,10 @@ class StatusController extends Controller
      */
     public function actionCreate()
     {
+        if (! User::canPermission('createRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = new Status();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -109,6 +122,10 @@ class StatusController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['index']);
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -129,6 +146,10 @@ class StatusController extends Controller
      */
     public function actionDelete($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['index']);
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

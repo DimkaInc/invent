@@ -8,6 +8,7 @@ use app\models\LocationsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\User;
 
 /**
  * LocationsController implements the CRUD actions for Locations model.
@@ -79,6 +80,10 @@ class LocationsController extends Controller
      */
     public function actionIndex()
     {
+        if (! User::canPermission('createRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $searchModel = new LocationsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -96,6 +101,10 @@ class LocationsController extends Controller
      */
     public function actionView($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['index']);
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -108,6 +117,10 @@ class LocationsController extends Controller
      */
     public function actionCreate()
     {
+        if (! User::canPermission('createRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = new Locations();
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -129,6 +142,10 @@ class LocationsController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -150,6 +167,10 @@ class LocationsController extends Controller
      */
     public function actionDelete($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['index']);
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect([ 'index' ]);

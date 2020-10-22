@@ -18,7 +18,7 @@
  */
 return [
     'Additional Information' => 'Дополнительная информация',
-    'CSV file' => 'Файл CSV',
+    'CSV or XLS file' => 'Файл CSV или XLS',
     'Checked item(s): ' => 'Учтено оборудование: ',
     'Create Items' => 'Добавить оборудование',
     'Import' => 'Импортировать',

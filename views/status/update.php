@@ -1,10 +1,15 @@
 <?php
 
 use yii\helpers\Html;
+use app\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Status */
 
+if (! User::canPermission('updateRecord'))
+{
+    return $this->redirect(['index']);
+}
 $this->title = Yii::t('status', 'Update Status: {name}', [
     'name' => $model->name,
 ]);

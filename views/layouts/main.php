@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use yii\helpers\Url;
+use app\models\User;
 
 AppAsset::register($this);
 ?>
@@ -37,14 +38,15 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items'   => [
-            [ 'label' => Yii::t('app', 'Home'   ), 'url' => [ '/site/index' ]],
-            [ 'label' => Yii::t('app', 'About'  ), 'url' => [ '/site/about' ]],
-            [ 'label' => Yii::t('app', 'Contact'), 'url' => [ '/site/contact' ]],
-            [ 'label' => Yii::t('app', 'Items'  ), 'url' => [ '/items/index' ]],
-            Yii::$app->user->isGuest ? (
+    $items = [];
+    array_push($items, [ 'label' => Yii::t('app', 'Home'   ), 'url' => [ '/site/index' ]] );
+    array_push($items, [ 'label' => Yii::t('app', 'About'  ), 'url' => [ '/site/about' ]] );
+    array_push($items, [ 'label' => Yii::t('app', 'Contact'), 'url' => [ '/site/contact' ]] );
+    if (User::canPermission('createRecord'))
+    {
+        array_push($items, [ 'label' => Yii::t('app', 'Items' ), 'url' => [ '/items/index' ]] );
+    }
+    array_push($items, Yii::$app->user->isGuest ? (
                 [ 'label' => Yii::t('app', 'Login'), 'url' => [ '/site/login' ]]
             ) : (
                 '<li>'
@@ -55,8 +57,11 @@ AppAsset::register($this);
                 )
                 . Html::endForm()
                 . '</li>'
-            )
-        ],
+            ) );
+
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items'   => $items,
     ]);
     NavBar::end();
     ?>

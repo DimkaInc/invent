@@ -2,10 +2,15 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Moving */
 
+if (! User::canPermission('updateRecord'))
+{
+    return $this->redirect(['site/index']);
+}
 $this->title = $model->items->invent . $model->date;
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/update', 'id' => $model->item_id ]];

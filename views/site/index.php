@@ -8,6 +8,7 @@ use yii\data\SqlDataProvider;
 
 use app\models\Regions;
 use app\models\Locations;
+use app\models\User;
 
 /* @var $this yii\web\View */
 
@@ -77,10 +78,15 @@ $this->title = Yii::t('app',Yii::$app->name);
 //            'ccount',
         ],
     ]);
+    // Подключение кнопки если есть права
+    if ( User::canPermission('takingInventory') )
+    {
     ?>
 
     <div class="row">
         <div class="col-md-3"><?= Html::a(Yii::t('app', 'Inventory'), [ 'items/check' ], [ 'class' => 'btn btn-info' ]) ?></div>
     </div>
-
+    <?php
+    }
+    ?>
 </div>

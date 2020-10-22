@@ -1,10 +1,15 @@
 <?php
 
 use yii\helpers\Html;
+use app\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Types */
 
+if (! User::canPermission('createRecord'))
+{
+    return $this->redirect(['site/index']);
+}
 $this->title = Yii::t('types', 'Create type');
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('types', 'Types'), 'url' => [ 'index' ]];

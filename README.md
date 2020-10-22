@@ -46,10 +46,28 @@ git clone https://github.com/DimkaInc/invent.git
 или
 git clone https://gitlab.com/DimkaInc/invent.git
 
+Для начала использования необходимо внести правки в файлы:
+
+./config/params.php, изменив электронную почту на нужную для отправки уведомлений
+./config/db.php, изменив доступ к серверу БД и название БД
+
+Затем выполнить следующие команды:
+
+./yii migrate/up
+./yii migrate --migrationPath=@yii/rbac/migrations
+./yii rbac/init
+
 Проект находится в режиме постоянной разработки.
+
+Если вам не трудно, поддержите мой проект.
+<iframe src="https://promo-money.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82&targets-hint=&default-sum=300&button-text=14&payment-type-choice=on&mobile-payment-type-choice=on&hint=&successURL=https%3A%2F%2Fgithub.com%2FDimkaInc&quickpay=shop&account=41001153778587" width="100%" height="224" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
 
 История версий
 --------------
+
+1.28 Внесены изменеия в способ авторизации пользователей. Теперь пользователи хранятся в базе данных. Добавлен
+контроль доступа на основе ролей (RBAC).
 
 1.27 Добавлена возможность начать инвентаризацию из списка предметов/оборудования. Добавлена цветовая пометка
 списанного, инвентаризированного и не инвентаризированного оборудования. Добавлена форма инвентаризанции с

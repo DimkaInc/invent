@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use kartik\mpdf\Pdf;
+//use yii\rbac\Role;
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
@@ -9,7 +10,7 @@ $db = require __DIR__ . '/db.php';
 require_once __DIR__ . '/myfunctions.php';
 
 $config = [
-    'version' => '1.27',
+    'version' => '1.28',
     'name' => 'Inventory',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
@@ -47,6 +48,11 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
+        // Авторизация пользователей из БД
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => [ 'admin', 'woker' ],
+        ], // */
 
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -86,6 +92,7 @@ $config = [
                         'regions'   => 'regions.php',       // Для регионов/подразделений
                         'status'    => 'status.php',        // Для состояний предметов/оборудования
                         'types'     => 'types.php',         // Для типов предметов/оборудования
+                        'users'     => 'users.php',         // Для пользователей
                     ],
                 ],
             ],

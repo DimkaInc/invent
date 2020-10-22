@@ -11,6 +11,7 @@ use app\models\Locations;
 use app\models\ItemsSearch;
 use app\models\MovingSearch;
 use app\models\Status;
+use app\models\User;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
@@ -112,6 +113,9 @@ class ItemsController extends Controller
      */
     public function actionPrint()
     {
+        if (! User::canPermission('takingInventory') ) {
+            return $this->redirect(['site/index']);
+        }
         // Список предметов/оборудования, если есть
         $id = Yii::$app->request->get('id');
 
@@ -151,6 +155,9 @@ class ItemsController extends Controller
      */
     public function actionStart_checking()
     {
+        if (! User::canPermission('takingInventory') ) {
+            return $this->redirect(['site/index']);
+        }
         // Запрос на получение списка идентификаторов предметов/оборудования, которые списаны
         $modelS = Moving::find()
             ->select('item_id')
@@ -177,6 +184,9 @@ class ItemsController extends Controller
      */
      public function actionCheck()
      {
+        if (! User::canPermission('takingInventory') ) {
+            return $this->redirect(['site/index']);
+        }
         $model = new Check();
         $message = '';
         if ($model->load(Yii::$app->request->post()))
@@ -213,6 +223,9 @@ class ItemsController extends Controller
      */
     public function actionIndex()
     {
+        if (! User::canPermission('createRecord') ) {
+            return $this->redirect(['site/index']);
+        }
         $searchModel = new ItemsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -231,6 +244,9 @@ class ItemsController extends Controller
      */
     public function actionImport()
     {
+        if (! User::canPermission('updateRecord') ) {
+            return $this->redirect(['site/index']);
+        }
         $model   = new Import();
         $count   = 0;
         $counti  = 0;
@@ -272,7 +288,7 @@ class ItemsController extends Controller
                                         {
                                             $state_id = NULL;
                                         } // Состояние предмета/оборудование
-                                        
+
                                         $moving = new Moving();
                                         $moving->date = $date;
                                         $moving->item_id = $item_id;
@@ -325,6 +341,9 @@ class ItemsController extends Controller
      */
     public function actionView($id)
     {
+        if (! User::canPermission('updateRecord') ) {
+            return $this->redirect(['index']);
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -336,6 +355,9 @@ class ItemsController extends Controller
      */
     public function actionCreate()
     {
+        if (! User::canPermission('createRecord') ) {
+            return $this->redirect(['site/index']);
+        }
         $model = new Items(); // Новый предмет/оборудование
         $model->checked = true;
         $modelm = new Moving();
@@ -389,6 +411,9 @@ class ItemsController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (! User::canPermission('updateRecord') ) {
+            return $this->redirect(['index']);
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -415,6 +440,9 @@ class ItemsController extends Controller
      */
     public function actionDelete($id)
     {
+        if (! User::canPermission('updateRecord') ) {
+            return $this->redirect(['site/index']);
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect([ 'index' ]);

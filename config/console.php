@@ -26,8 +26,15 @@ $config = [
             ],
         ],
         'db' => $db,
+        
+        // Авторизация пользователей из БД.
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => [ 'admin', 'woker' ],
+        ], // */
     ],
     'params' => $params,
+    
     /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.
