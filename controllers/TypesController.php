@@ -8,6 +8,7 @@ use app\models\TypesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\User;
 
 /**
  * TypesController implements the CRUD actions for Types model.
@@ -62,6 +63,10 @@ class TypesController extends Controller
      */
     public function actionIndex()
     {
+        if (! User::canPermission('createRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $searchModel  = new TypesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -79,6 +84,10 @@ class TypesController extends Controller
      */
     public function actionView($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['index']);
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -91,6 +100,10 @@ class TypesController extends Controller
      */
     public function actionCreate()
     {
+        if (! User::canPermission('createRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = new Types();
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -112,6 +125,10 @@ class TypesController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -133,6 +150,10 @@ class TypesController extends Controller
      */
     public function actionDelete($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect([ 'index' ]);

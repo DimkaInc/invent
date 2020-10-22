@@ -3,10 +3,16 @@
 use yii\helpers\Html;
 use app\models\Items;
 use app\models\Types;
+use app\models\User;
 
 use xj\qrcode\QRcode;
 use xj\qrcode\widgets\Email;
 use xj\qrcode\widgets\Text;
+
+if (! User::canPermission('updateRecord'))
+{
+    return $this->redirect(['site/index']);
+}
 
 $this->title = Yii::t('items', 'Items');
 $this->params[ 'breadcrumbs' ][] = $this->title;

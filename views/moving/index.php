@@ -3,10 +3,16 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use app\models\User;
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\MovingSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+if (! User::canPermission('updateRecord'))
+{
+    return $this->redirect(['site/index']);
+}
 $this->title = Yii::t('moving', 'Movings');
 $this->params[ 'breadcrumbs' ][] = $this->title;
 ?>

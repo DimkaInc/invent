@@ -8,6 +8,7 @@ use app\models\MovingSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\User;
 
 /**
  * MovingController implements the CRUD actions for Moving model.
@@ -35,7 +36,11 @@ class MovingController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel  = new MovingSearch();
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
+         $searchModel  = new MovingSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -52,6 +57,10 @@ class MovingController extends Controller
      */
     public function actionView($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -64,6 +73,10 @@ class MovingController extends Controller
      */
     public function actionCreate($item_id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = new Moving();
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -86,6 +99,10 @@ class MovingController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -107,6 +124,10 @@ class MovingController extends Controller
      */
     public function actionDelete($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model   = $this->findModel($id);
         $item_id = $model->item_id;
         $model->delete();

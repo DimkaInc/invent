@@ -8,6 +8,7 @@ use app\models\RegionsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\User;
 
 /**
  * RegionsController implements the CRUD actions for Regions model.
@@ -64,6 +65,10 @@ class RegionsController extends Controller
      */
     public function actionIndex()
     {
+        if (! User::canPermission('createRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $searchModel  = new RegionsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -81,6 +86,10 @@ class RegionsController extends Controller
      */
     public function actionView($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -93,6 +102,10 @@ class RegionsController extends Controller
      */
     public function actionCreate()
     {
+        if (! User::canPermission('createRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = new Regions();
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -114,6 +127,10 @@ class RegionsController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
@@ -135,6 +152,10 @@ class RegionsController extends Controller
      */
     public function actionDelete($id)
     {
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->redirect(['site/index']);
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect([ 'index' ]);

@@ -1,10 +1,15 @@
 <?php
 
 use yii\helpers\Html;
+use app\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Types */
 
+if (! User::canPermission('updateRecord'))
+{
+    return $this->redirect(['index']);
+}
 $this->title = Yii::t('types', 'Update Types: {name}', [
     'name' => $model->name,
 ]);

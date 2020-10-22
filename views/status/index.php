@@ -4,9 +4,34 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use app\models\User;
 
+if (! User::canPermission('createRecord'))
+{
+    return $this->redirect(['site/index']);
+}
 $this->title = Yii::t('status', 'Statuses');
 $this->params[ 'breadcrumbs' ][] = $this->title;
+
+$columns = [[ 'class' => 'yii\grid\SerialColumn' ]];
+$template = '';
+if (User::canPermission('updateRecord'))
+{
+    $template .= '{delete}';
+    array_push($columns, [
+        'attribute' => 'name',
+        'value'   => function ($data)
+        {
+            return showUrlUpdate($data->name, $data);
+        },
+        'format'  => 'raw',
+    ]);
+} else
+{
+    array_push($columns, 'name');
+}
+array_push($columns, [ 'class' => 'yii\grid\ActionColumn', 'template' => $template ]);
+
 ?>
 <div class="status-index">
 
@@ -22,19 +47,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
         'id' => 'StatusTable',
         'dataProvider' => $dataProvider,
         'filterModel'  => $searchModel,
-        'columns'      => [
-            [ 'class' => 'yii\grid\SerialColumn' ],
-
-            [ 'attribute' => 'name',
-                'value'   => function ($data)
-                {
-                    return showUrlUpdate($data->name, $data);
-                },
-                'format'  => 'raw',
-            ],
-
-            [ 'class' => 'yii\grid\ActionColumn', 'template' => '{delete}' ],
-        ],
+        'columns'      => $columns,
     ]); ?>
 
     <?php Pjax::end(); ?>

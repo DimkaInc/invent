@@ -1,9 +1,15 @@
 <?php
 
 use yii\helpers\Html;
+use app\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Regions */
+
+if (! User::canPermission('updateRecord'))
+{
+    return $this->redirect(['index']);
+}
 
 $this->title = Yii::t('regions', 'Update Regions: {name}', [
     'name' => $model->name,

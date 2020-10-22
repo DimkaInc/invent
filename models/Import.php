@@ -30,7 +30,7 @@ class Import extends Model
     public function attributeLabels()
     {
         return [
-            'filecsv' => Yii::t('items', 'CSV file'), // Файл csv
+            'filecsv' => Yii::t('items', 'CSV or XLS file'), // Файл csv
         ];
     }
     

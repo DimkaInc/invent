@@ -33,7 +33,7 @@ use yii\data\Sort;
             'filecsv',
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                        '</div><div class="col-md-8">{error}</div></div>' ])
-            ->fileInput([ 'accept' => '.csv' ]) ?>
+            ->fileInput([ 'accept' => '.csv,.xls,.xlsx' ]) ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Import'),   [ 'class' => 'btn btn-success' ]) ?>
