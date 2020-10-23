@@ -53,7 +53,7 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
     <script>
         function getData()
         {
-            $('form').submit();
+            $('#btnsend').click();
         }
 
         docReady(function ()
@@ -96,7 +96,7 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
             // Поле ввода QR-кода
             'qrcheck',
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
-                 Html::submitButton(Yii::t('app', 'Register'),   [ 'class' => 'btn btn-success' ]) .
+                 Html::submitButton(Yii::t('app', 'Register'),   [ 'id' => 'btnsend', 'class' => 'btn btn-success' ]) .
                 '</div><div class="col-md-8">{error}</div></div>' ])
             ->textInput() ?>
 

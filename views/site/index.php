@@ -79,14 +79,14 @@ $this->title = Yii::t('app',Yii::$app->name);
         ],
     ]);
     // Подключение кнопки если есть права
-    //if ( User::canPermission('takingInventory') )
-    //{
+    if ( User::canPermission('takingInventory') )
+    {
     ?>
 
     <div class="row">
         <div class="col-md-3"><?= Html::a(Yii::t('app', 'Inventory'), [ 'items/check' ], [ 'class' => 'btn btn-info' ]) ?></div>
     </div>
     <?php
-    //}
+    }
     ?>
 </div>

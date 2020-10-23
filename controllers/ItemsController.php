@@ -184,7 +184,7 @@ class ItemsController extends Controller
      */
      public function actionCheck()
      {
-        /*
+        //*
         if (! User::canPermission('takingInventory') ) {
             return $this->redirect(['site/index']);
         } // */
