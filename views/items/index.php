@@ -88,7 +88,7 @@ if (User::canPermission('updateRecord'))
             ArrayHelper::merge(
                 [ '' => Yii::t('app', 'All statuses') ],
                 ArrayHelper::map(Status::find()->orderBy('name')->all(), 'name', 'name')),
-            [ 'class' => 'form-control' ]
+            [ 'class' => 'form-control' ],
         ),
         'value' => function ($data)
         {

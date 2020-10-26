@@ -1,18 +1,19 @@
 <?php
 
 use Codeception\Util\Locator;
+use app\models\User;
 
 class ItemsCreateCest
 {
-    public function _before(\FunctionalTester $I)
+    public function _before(FunctionalTester $I)
     {
-        $I->amLoggedInAs(\app\models\User::findByUsername('user'));
+        $I->amLoggedInAs(User::findByUsername('user'));
         $I->amOnRoute('items/create');
     }
 
     // tests
     // Открыта страница добавления
-    public function openCreatePage(\FunctionalTester $I)
+    public function openCreatePage(FunctionalTester $I)
     {
         // Заголовок
         $I->see(Yii::t('items', 'Create Items'), 'h1');
@@ -36,7 +37,7 @@ class ItemsCreateCest
     }
 
     // Заполнение формы
-    public function enterData(\FunctionalTester $I)
+    public function enterData(FunctionalTester $I)
     {
         $I->submitForm('#ItemForm', [
             'Items[type_id]'      => '1',
@@ -58,7 +59,7 @@ class ItemsCreateCest
     }
 
     // Нажатие на кнопку "Типы"
-    public function pushTypes(\FunctionalTester $I)
+    public function pushTypes(FunctionalTester $I)
     {
         $I->click(Locator::contains('div a', Yii::t('types', 'Types')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
@@ -67,7 +68,7 @@ class ItemsCreateCest
     }
 
     // Нажатие на кнопку "Места размещения"
-    public function pushLocations(\FunctionalTester $I)
+    public function pushLocations(FunctionalTester $I)
     {
         $I->click(Locator::contains('div a', Yii::t('locations', 'Locations')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
@@ -76,7 +77,7 @@ class ItemsCreateCest
     }
 
     // Нажатие на кнопку "Отмена"
-    public function pushCancel(\FunctionalTester $I)
+    public function pushCancel(FunctionalTester $I)
     {
         $I->click(Locator::contains('div a', Yii::t('app', 'Cancel')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
