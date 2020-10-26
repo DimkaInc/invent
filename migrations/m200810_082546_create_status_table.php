@@ -56,7 +56,7 @@ class m200810_082546_create_status_table extends Migration
      */
     public function safeDown()
     {
-        echo 'В связи с модификацией алгоритма работы программы от 17.08.2020, отмена миграции невозможна.'
+        echo 'В связи с модификацией алгоритма работы программы от 17.08.2020, отмена миграции невозможна.';
         return false;
         
         $status = Status::tableName();
