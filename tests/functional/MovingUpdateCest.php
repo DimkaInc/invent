@@ -21,8 +21,8 @@ class MovingUpdateCest
         $I->fillField('Moving[date]', '01.01.2000');
         $I->selectOption('Moving[state_id]', 'Склад');
         $state_id = '1'; // id Склад
-        $I->selectOption('Moving[location_id]', 'Бородино (Можайская ветеринарная станция)');
-        $location_id = 14; // id Бородино (Можайская ветеринарная станция)
+        $I->selectOption('Moving[location_id]', 'Матвейково (Одинцовская ветеринарная станция)');
+        $location_id = 1; // id Бородино (Можайская ветеринарная станция)
         $I->fillField('Moving[comment]', '*TEST COMMENT UPDATE*');
         $I->click(Yii::t('app', 'Save'), 'button');
         $I->see(Yii::t('items', 'Update Items: {name}', [ 'name' => '', ]), 'h1');

@@ -14,13 +14,14 @@ class UserTest extends \Codeception\Test\Unit
         expect_not(User::findIdentity(999));
     }
 
+    /*
     public function testFindUserByAccessToken()
     {
         expect_that($user = User::findIdentityByAccessToken('56hQdDGKA2YiINzfkfcPAevHSmFKUF0Y'));
         expect($user->username)->equals('admin');
 
         expect_not(User::findIdentityByAccessToken('non-existing'));
-    }
+    } // */
 
     public function testFindUserByUsername()
     {
