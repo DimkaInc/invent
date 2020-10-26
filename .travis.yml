@@ -7,11 +7,14 @@ php:
 services:
     - postgresql
 
+before_install:
+    - php /home/travis/.phpenv/version/7.4/bin/composer.phar self-update
+
 before_script:
     # Check sintax errors
     - '! find . -path ./vendor -prune -o -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
     # composer update
-    - composer self-update --2
+    #- composer self-update --2
     # Postgersql
     - psql -c 'CREATE DATABASE invent;' -U postgres
     - psql -c "CREATE USER invent WITH PASSWORD 'Rfhkc0y';" -U postgres
