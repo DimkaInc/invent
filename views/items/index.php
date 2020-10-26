@@ -90,7 +90,7 @@ if (User::canPermission('updateRecord'))
                 ArrayHelper::map(Status::find()->orderBy('name')->all(), 'name', 'name')
             ),
             [ 'class' => 'form-control', ],
-        ),
+        ) ,
         'value' => function ($data)
         {
             return showUrlUpdate($data->statusName, $data);

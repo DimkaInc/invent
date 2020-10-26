@@ -116,15 +116,15 @@ use yii\data\Sort;
         if ( isset($modelm))
         {
     ?>
-        <?= $form->field($modelm,
+        <?= $form->field( $modelm,
                 'date',
-                [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
+                [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ] )
                 ->widget(
                     DatePicker::className(),
                     [ 'language'   => 'ru',
                       'dateFormat' => 'dd.MM.yyyy',
                     ],
-                );
+                ) ;
         ?>
 
         <?= $form->field($modelm,

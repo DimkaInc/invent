@@ -5,7 +5,7 @@ services:
 
 before_script:
     # Check sintax errors
-    - '! find . -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
+    - '! find . -path ./vendor -prune -o -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
     # Postgersql
     - psql -c 'CREATE DATABASE invent;' -U postgres
     - psql -c "CREATE USER invent WITH PASSWORD 'Rfhkc0y';" -U postgres
