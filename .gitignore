@@ -36,3 +36,4 @@ tests/_support/_generated
 #web/assets
 runtime
 web/upload
+addgit.sh
