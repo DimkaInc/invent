@@ -236,7 +236,7 @@ class ItemsController extends Controller
 
         return $this->render('index', [
             'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'dataProvider' => $dataProvider
         ]);
     }
 
@@ -401,7 +401,7 @@ class ItemsController extends Controller
         {
             return $this->render('create', [
                 'model'  => $model,
-                'modelm' => $modelm,
+                'modelm' => $modelm
             ]);
         }
 
