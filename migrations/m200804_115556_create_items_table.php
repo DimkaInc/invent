@@ -2,19 +2,22 @@
 
 use yii\db\Migration;
 
+use app\models\Items;
+
 /**
  * Класс создания таблицы `{{%items}}`.
  * Учёт наименовний товаров
  */
 class m200804_115556_create_items_table extends Migration
 {
-    public $table = '{{%items}}';
+    public $table = Items::tableName();
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable($this->table, [
+        $table = $this->table;
+        $this->createTable($table, [
             'id'          => 'SERIAL',
             'date'        => $this->date()->comment('Дата внесения записи'),
             'invent'      => $this->string(50)->comment('Инвентарный номер'),
@@ -26,10 +29,10 @@ class m200804_115556_create_items_table extends Migration
             'product'     => $this->string(255)->comment('Код оборудования'),
             'modelnumber' => $this->string(255)->comment('Номер модели'),
         ]);
-        $this->addPrimaryKey('id_pk', $this->table, 'id');
+        $this->addPrimaryKey('id_pk', $table, 'id');
 
-        $this->addCommentOnTable( $this->table, 'Список оборудования');
-        $this->addCommentOnColumn($this->table, 'id', 'Идентификатор (неизменяемый)');
+        $this->addCommentOnTable( $table, 'Список оборудования');
+        $this->addCommentOnColumn($table, 'id', 'Идентификатор (неизменяемый)');
         $this->insert($table, [
             'name'        => 'MTV-WS-0001',
             'model'       => 'HP ProOne 440 G5 23.8-in All-in-One',
@@ -40,7 +43,7 @@ class m200804_115556_create_items_table extends Migration
             'modelnumber' => 'TPC-W056-23 440G5POTeA/59500T/1hq/8G54fL24 RUSS',
             'date'        => '2020-07-31',
         ]);
-        $this->insert($this->table, [
+        $this->insert($table, [
             'name'        => 'GOL-WS-0001',
             'model'       => 'HP ProOne 440 G5 23.8-in All-in-One',
             'os'          => 'Windows 10 Pro',
@@ -50,7 +53,7 @@ class m200804_115556_create_items_table extends Migration
             'modelnumber' => 'TPC-W056-23 440G5POTeA/59500T/1hq/8G54fL24 RUSS',
             'date'        => '2020-07-31',
         ]);
-        $this->insert($this->table, [
+        $this->insert($table, [
             'name'        => 'GOL-WS-0002',
             'model'       => 'HP ProOne 440 G5 23.8-in All-in-One',
             'os'          => 'Windows 10 Pro',
@@ -67,7 +70,8 @@ class m200804_115556_create_items_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropPrimaryKey('id_pk', $this->table);
-        $this->dropTable($this->table);
+        $table = $this->table;
+        $this->dropPrimaryKey('id_pk', $table);
+        $this->dropTable($table);
     }
 }
