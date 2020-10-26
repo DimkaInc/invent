@@ -1,12 +1,19 @@
 language: php
 
+services:
+    - postgresql
+
 before_script:
+    # Postgersql
+    - psql -c 'CREATE DATABASE invent;' -U postgres
+    - psql -c 'CREATE USER invent WITH PASSWORD "Rfhkc0y";' -U postgres
     # Start up a web server
     - php -S 127.0.0.1:8888 -t web >/dev/null 2>&1 &
     # Start up the webdriver
     - phantomjs --webdriver=4444 >/dev/null 2>&1 &
     # Install codeception
     - composer install --prefer-source
+    - echo "yes" | ./yii migration/up
 
 script:
     - vendor/bin/codecept run
