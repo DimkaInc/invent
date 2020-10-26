@@ -33,6 +33,6 @@ tests/_support/_generated
 .vagrant
 
 # Assets
-web/assets
+#web/assets
 runtime
 web/upload
