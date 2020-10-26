@@ -34,8 +34,8 @@ class LocationsUpdateCest
     // изменение данных
     public function updateData(\FunctionalTester $I)
     {
-        $I->selectOption('Locations[region_id]', 'Истринская ветеринарная станция');
-        $region_id = '4';
+        $I->selectOption('Locations[region_id]', 'Одинцовская ветеринарная станция');
+        $region_id = '1';
         $I->fillField('Locations[name]', '*TEST LOCATION*');
         $I->click(Yii::t('app', 'Save'));
         $I->see(Yii::t('locations', 'Locations'), 'h1');

@@ -90,6 +90,7 @@ class Moving extends \yii\db\ActiveRecord
         if (!empty($this->date))
         {
             $date = strtotime($this->date);
+            $this->date = date('Y-m-d', $date);
             if ($date > strtotime(date('d.m.Y')))
             {
                 $this->addError('date', Yii::t('moving', 'The date cannot be more than today'));
