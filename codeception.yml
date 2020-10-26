@@ -12,9 +12,9 @@ modules:
     config:
         Yii2:
             configFile: 'config/test.php'
-        WebDriver:
-            url: 'http://127.0.0.1:8888'
-            browser: phantomjs
+#        WebDriver:
+#            url: 'http://127.0.0.1:8888'
+#            browser: phantomjs
 
 # To enable code coverage:
 #coverage:
