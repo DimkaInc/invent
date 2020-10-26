@@ -26,7 +26,7 @@ $columns = [[ 'class' => 'yii\grid\SerialColumn' ]];
 $template = '';
 
 // Кнопки и колонки
-if (User::canPermission('updaterecord'))
+if (User::canPermission('updateRecord'))
 {
     $template = '{delete}';
     // Название места размещения
@@ -40,7 +40,7 @@ if (User::canPermission('updaterecord'))
 
     // Название региона
     array_push($columns, [
-        'attribute' => 'name',
+        'attribute' => 'regionName',
         'filter' => Html::activeDropDownList(
             $searchModel,
             'regionName',
@@ -60,7 +60,7 @@ if (User::canPermission('updaterecord'))
 
     // Название региона
     array_push($columns, [
-        'attribute' => 'name',
+        'attribute' => 'regionName',
         'filter' => Html::activeDropDownList(
             $searchModel,
             'regionName',

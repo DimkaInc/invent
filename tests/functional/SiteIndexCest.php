@@ -19,7 +19,7 @@ class SiteIndexCest
         $I->see(Yii::t('app', 'Home'), '.nav li.active a');
         $I->see(Yii::t('app', 'About'), '.nav li a');
         $I->see(Yii::t('app', 'Contact'), '.nav li a');
-        $I->see(Yii::t('app', 'Items'), '.nav li a');
+        //$I->see(Yii::t('app', 'Items'), '.nav li a');
         $I->see(Yii::t('app', 'Login'), '.nav li a');
         // Содержимое сайта
         $I->see(Yii::t('app', 'Inventory'), 'a');
@@ -34,12 +34,14 @@ class SiteIndexCest
         $I->see(Yii::t('items', 'Total items count'), '#TypesTable tr  th');
         $I->see(Yii::t('items', 'Total items checked'), '#TypesTable tr th');
         // Кнопка
-        $I->see(Yii::t('app', 'Inventory'), 'a.btn');
+        //$I->see(Yii::t('app', 'Inventory'), 'a.btn');
     }
 
     // Проверка перехода на страницу учёта
     public function moveToCheckInventory(\FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
+        $I->amOnPage('/');
         $I->click(Yii::t('app', 'Inventory'), 'a.btn');
         $I->see(Yii::t('items', 'Inventory QR-code'));
     }
@@ -67,6 +69,8 @@ class SiteIndexCest
     // Проверка перехода на страницу Items
     public function moveToItems(\FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('user'));
+        $I->amOnPage('/');
         $I->click(Yii::t('app', 'Items'), 'a');
         $I->dontSee(Yii::t('app', 'Home'), '.nav li.active a');
         $I->see(Yii::t('app', 'Items'), '.nav li.active a');

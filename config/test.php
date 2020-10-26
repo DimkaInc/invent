@@ -68,6 +68,12 @@ return [
         'urlManager' => [
             'showScriptName' => true,
         ],
+        // Авторизация пользователей из БД
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => [ 'admin', 'woker' ],
+        ], // */
+
         'user' => [
             'identityClass' => 'app\models\User',
         ],

@@ -4,6 +4,7 @@ class TypesCreateCest
 {
     public function _before(FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('user'));
         $I->amOnRoute('types/create');
     }
 
@@ -14,7 +15,7 @@ class TypesCreateCest
         $listHeader = Yii::t('types', 'Types');
         $name = '*TEST CREATE TYPE*';
         $btSave = Yii::t('app', 'Save');
-        
+
         $I->see($header, 'h1');
         $I->fillField('Types[name]', $name);
         $I->click($btSave);

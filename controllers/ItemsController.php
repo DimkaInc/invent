@@ -155,8 +155,10 @@ class ItemsController extends Controller
      */
     public function actionStart_checking()
     {
+        // Проверка доступа для проведения инвентаризации
         if (! User::canPermission('takingInventory') ) {
-            return $this->redirect(['site/index']);
+            // Переход к списку предметов/оборудования, если доступ не разрешён.
+            return $this->redirect(['index']);
         }
         // Запрос на получение списка идентификаторов предметов/оборудования, которые списаны
         $modelS = Moving::find()
@@ -184,10 +186,12 @@ class ItemsController extends Controller
      */
      public function actionCheck()
      {
-        //*
+        // Проверка доступа для проведения инвентаризации
         if (! User::canPermission('takingInventory') ) {
+            // Показ стартовой страницы, если доступ не разрешён.
             return $this->redirect(['site/index']);
-        } // */
+        }
+
         $model = new Check();
         $message = '';
         if ($model->load(Yii::$app->request->post()))

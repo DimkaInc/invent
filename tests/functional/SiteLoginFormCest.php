@@ -16,7 +16,7 @@ class SiteLoginFormCest
     // demonstrates `amLoggedInAs` method
     public function internalLoginById(\FunctionalTester $I)
     {
-        $I->amLoggedInAs(100);
+        $I->amLoggedInAs(1);
         $I->amOnPage('/');
         $I->see(Yii::t('app', 'Logout') . ' (admin)');
     }
@@ -59,7 +59,7 @@ class SiteLoginFormCest
     public function loginDemoWithWrongCredentials(\FunctionalTester $I)
     {
         $I->submitForm('#login-form', [
-            'LoginForm[username]' => 'demo',
+            'LoginForm[username]' => 'user',
             'LoginForm[password]' => 'wrong',
         ]);
         $I->expectTo('see validations errors');
@@ -69,10 +69,10 @@ class SiteLoginFormCest
     public function loginDemoSuccessfully(\FunctionalTester $I)
     {
         $I->submitForm('#login-form', [
-            'LoginForm[username]' => 'demo',
-            'LoginForm[password]' => 'demo',
+            'LoginForm[username]' => 'user',
+            'LoginForm[password]' => 'user',
         ]);
-        $I->see(Yii::t('app', 'Logout') . ' (demo)');
+        $I->see(Yii::t('app', 'Logout') . ' (user)');
         $I->dontSeeElement('form#login-form');
     }
 }

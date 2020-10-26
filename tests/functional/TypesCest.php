@@ -4,6 +4,7 @@ class TypesCest
 {
     public function _before(FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnRoute('types/index');
     }
 
@@ -15,7 +16,7 @@ class TypesCest
         $colName = Yii::t('types', 'Type');
         $btCreate = Yii::t('types', 'Create type');
         $btCancel = Yii::t('app', 'Cancel');
-        
+
         // Заголовок
         $I->see($header, 'h1');
         // Таблица

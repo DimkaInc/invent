@@ -4,6 +4,7 @@ class TypesUpdateCest
 {
     public function _before(FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnRoute('types/update', [ 'id' => '1' ]);
     }
 
@@ -14,7 +15,7 @@ class TypesUpdateCest
         $listHeader = Yii::t('types', 'Types');
         $name = '*TEST UPDATE TYPE*';
         $btSave = Yii::t('types', 'Types');
-        
+
         $I->see($header, 'h1');
         $I->fillField('Types[name]', $name);
         $I->click($btSave);

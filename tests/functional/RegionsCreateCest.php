@@ -5,11 +5,12 @@ class RegionsCreateCest
 
     public function _before(FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnRoute('regions/create');
     }
 
     // tests
-    
+
     // Запись данных
     public function saveDate(FunctionalTester $I)
     {

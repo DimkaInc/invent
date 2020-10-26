@@ -6,6 +6,7 @@ class MovingUpdateCest
 {
     public function _before(FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnRoute('items/update', [ 'id' => '1' ]);
         $I->see(Yii::t('items', 'Update Items: {name}', [ 'name' => '' ]), 'h1' );
         $I->click('', '#MovingTable td a');

@@ -6,6 +6,7 @@ class ItemsCreateCest
 {
     public function _before(\FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('user'));
         $I->amOnRoute('items/create');
     }
 

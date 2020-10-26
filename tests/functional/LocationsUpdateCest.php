@@ -4,6 +4,7 @@ class LocationsUpdateCest
 {
     public function _before(\FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnRoute('locations/update', [ 'id' => '1' ]);
     }
 

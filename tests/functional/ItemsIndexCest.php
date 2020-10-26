@@ -7,6 +7,7 @@ class ItemsIndexCest
     // Страница Items
     public function _before(\FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnPage(['items/index']);
     }
 

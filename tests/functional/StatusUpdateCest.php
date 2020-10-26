@@ -4,6 +4,7 @@ class StatusUpdateCest
 {
     public function _before(FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnRoute('status/update', [ 'id' => '1' ]);
     }
 

@@ -6,6 +6,7 @@ class ItemsUpdateCest
 {
     public function _before(\FunctionalTester $I)
     {
+        $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnRoute('items/update', [ 'id' => '1' ]);
     }
 
