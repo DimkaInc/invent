@@ -10,13 +10,12 @@ use app\models\Items;
  */
 class m200804_115556_create_items_table extends Migration
 {
-    public $table = Items::tableName();
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $table = $this->table;
+        $table = Items::tableName();
         $this->createTable($table, [
             'id'          => 'SERIAL',
             'date'        => $this->date()->comment('Дата внесения записи'),
@@ -70,7 +69,7 @@ class m200804_115556_create_items_table extends Migration
      */
     public function safeDown()
     {
-        $table = $this->table;
+        $table = Items::tableName();
         $this->dropPrimaryKey('id_pk', $table);
         $this->dropTable($table);
     }

@@ -10,13 +10,12 @@ use app\models\Items;
  */
 class m200806_061656_update_items_table extends Migration
 {
-    public $table = Items::tableName();
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $table = $this->table;
+        $table = Items::tableName();
         $this->addColumn($table, 'comment', $this->string());
         $this->addCommentOnColumn($table, 'comment', 'Дополнительная информация');
     }

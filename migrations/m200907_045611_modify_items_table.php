@@ -15,8 +15,9 @@ class m200907_045611_modify_items_table extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn(Items::tableName(), 'checked', $this->boolean());
-        $this->addCommentOnColumn(Items::tableName(), 'checked', 'Флаг прохождения инвентаризации');
+        $table = Items::tableName();
+        $this->addColumn($table, 'checked', $this->boolean());
+        $this->addCommentOnColumn($table, 'checked', 'Флаг прохождения инвентаризации');
     }
 
     /**
@@ -24,6 +25,7 @@ class m200907_045611_modify_items_table extends Migration
      */
     public function safeDown()
     {
+        $table = Items::tableName();
         $this->dropColumn(Items::tableName(), 'checked');
     }
 }

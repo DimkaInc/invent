@@ -3,18 +3,20 @@
 use yii\db\Migration;
 use yii\helper\Security;
 
+use app\models\User;
+
 /**
  * Handles the creation of table `{{%users}}`.
  */
 class m201019_061204_create_users_table extends Migration
 {
-    private $tableName = '{{%users}}';
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable($this->tableName, [
+        $table = User::tableName();
+        $this->createTable($table, [
             'id' => 'SERIAL',
             'username' => $this->string(128)->notNull()->unique(),
             'password' => $this->string(128)->notNull(),
@@ -23,24 +25,24 @@ class m201019_061204_create_users_table extends Migration
             'password_reset_token' => $this->string(),
 
         ]);
-        $this->addCommentOnTable( $this->tableName, 'Таблица пользователей');
-        $this->addCommentOnColumn( $this->tableName, 'id', 'Идентификатор записи (неизменяемое)');
-        $this->addCommentOnColumn( $this->tableName, 'username', 'Имя пользователя');
-        $this->addCommentOnColumn( $this->tableName, 'password', 'Пароль');
-        $this->addCommentOnColumn( $this->tableName, 'auth_key', 'Ключ авторизации');
-        $this->addCommentOnColumn( $this->tableName, 'password_reset_token', 'Флаг сброса пароля');
+        $this->addCommentOnTable( $table, 'Таблица пользователей');
+        $this->addCommentOnColumn( $table, 'id', 'Идентификатор записи (неизменяемое)');
+        $this->addCommentOnColumn( $table, 'username', 'Имя пользователя');
+        $this->addCommentOnColumn( $table, 'password', 'Пароль');
+        $this->addCommentOnColumn( $table, 'auth_key', 'Ключ авторизации');
+        $this->addCommentOnColumn( $table, 'password_reset_token', 'Флаг сброса пароля');
         // Создание основного ключа
-        $this->addPrimaryKey('pk-users-id', $this->tableName, 'id');
+        $this->addPrimaryKey('pk-users-id', $table, 'id');
 
         // Добавление администратора
-        $this->insert($this->tableName, [
+        $this->insert($table, [
             'username' => 'admin',
             'password' => Yii::$app->getSecurity()->generatePasswordHash('admin'),
             'access_token' => Yii::$app->getSecurity()->generateRandomString(),
             ]);
 
         // Добавление пользователя
-        $this->insert($this->tableName, [
+        $this->insert($table, [
             'username' => 'user',
             'password' => Yii::$app->getSecurity()->generatePasswordHash('user'),
             'access_token' => Yii::$app->getSecurity()->generateRandomString(),
@@ -53,9 +55,10 @@ class m201019_061204_create_users_table extends Migration
      */
     public function safeDown()
     {
+        $table = User::tableName();
         // Удаление основного ключа
-        $this->dropPrimaryKey('pk-users-id', $this->tableName );
+        $this->dropPrimaryKey('pk-users-id', $table );
         // Удаление таблицы
-        $this->dropTable($this->tableName);
+        $this->dropTable($table);
     }
 }

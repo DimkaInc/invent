@@ -3,6 +3,7 @@
 use yii\db\Migration;
 
 use app\models\Items;
+use app\models\Status;
 
 /**
  * Handles the creation of table `{{%status}}`.
@@ -10,12 +11,13 @@ use app\models\Items;
  */
 class m200810_082546_create_status_table extends Migration
 {
-    public $status = '{{%status}}';
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
+        $status = Status::tableName();
+        $items = Items::tableName();
         // Создание таблицы состояний оборудования
         $this->createTable($status, [
             'id' => 'SERIAL',
@@ -29,9 +31,9 @@ class m200810_082546_create_status_table extends Migration
         $this->addCommentOnColumn($status, 'id', 'Номер по порядку');
         
         // Создание в таблице оборудования колонки с состоянием
-        $this->addColumn(Items::tableName(), 'state_id', $this->integer());
-        $this->addCommentOnColumn(Items::tableName(), 'state_id', 'Состояние');
-        $this->createIndex('idx-items-state', Items::tableName(), 'state_id');
+        $this->addColumn($items, 'state_id', $this->integer());
+        $this->addCommentOnColumn($items, 'state_id', 'Состояние');
+        $this->createIndex('idx-items-state', $items, 'state_id');
         
         // Добавление состояний в табличу
         $this->insert($status, ['name' => 'Склад']);
@@ -43,10 +45,10 @@ class m200810_082546_create_status_table extends Migration
         $this->insert($status, ['name' => 'Списано']);
         
         // Всем объектам назначим состояние 'Работает'
-        $this->update(Items::tableName(), [ 'state_id' => $ind ]);
+        $this->update($items, [ 'state_id' => $ind ]);
 
         // Создадим связь между таблицами оборудования и состояния
-        $this->addForeignKey('fk-items-status-id', Items::tableName(), 'state_id', $status, 'id', 'CASCADE');
+        $this->addForeignKey('fk-items-status-id', $items, 'state_id', $status, 'id', 'CASCADE');
     }
 
     /**
@@ -57,12 +59,14 @@ class m200810_082546_create_status_table extends Migration
         echo 'В связи с модификацией алгоритма работы программы от 17.08.2020, отмена миграции невозможна.'
         return false;
         
+        $status = Status::tableName();
+        $items = Items::tableName();
         // Удаление связи таблиц items и status
-        $this->dropForeignKey('fk-items-status-id', Items::tableName());
+        $this->dropForeignKey('fk-items-status-id', $items);
         // Удаление индексации поля состояний в таблице оборудования
-        $this->dropIndex('idx-items-state', Items::tableName());
+        $this->dropIndex('idx-items-state', $items);
         // Удаление поля состояния в таблице оборудования
-        $this->dropColumn(Items::tableName(), 'state_id');
+        $this->dropColumn($items, 'state_id');
         // Удаление основного ключа сортировки для таблицы состояний
         $this->dropPrimaryKey('id_status', $status);
         // Удаление талицы состояний

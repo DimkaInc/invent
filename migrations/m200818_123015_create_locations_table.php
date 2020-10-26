@@ -3,6 +3,9 @@
 use yii\db\Migration;
 
 use app\models\Items;
+use app\models\Locations;
+use app\models\Regions;
+
 /**
  * Handles the creation of table `{{%locations}}`.
  * Has foreign keys to the tables:
@@ -12,13 +15,14 @@ use app\models\Items;
  */
 class m200818_123015_create_locations_table extends Migration
 {
-    public $regions   = '{{%regions}}';
-    public $locations = '{{%locations}}';
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
+        $regions   = Regions::tableName();
+        $locations = Locations::tableName();
+        $items     = Items::tableName();
         // Создание таблицы регионов
         $this->createTable($regions, [
             'id' => 'SERIAL',
@@ -50,19 +54,24 @@ class m200818_123015_create_locations_table extends Migration
         $this->createIndex('idx-locations-region_id', $locations, 'region_id');
 
         // Создание указателя места размещения в таблице оборудования
-        $this->addColumn(Items::tableName(), 'location_id', $this->integer());
+        $this->addColumn($items, 'location_id', $this->integer());
 
         // Добавление комментария для поля места  размещения
-        $this->addCommentOnColumn(Items::tableName(), 'location_id', 'Идентификатор места размещения');
+        $this->addCommentOnColumn($items, 'location_id', 'Идентификатор места размещения');
 
         // Создание индексирования для указателя места размещения
-        $this->createIndex('idx-items-location_id', Items::tableName(), 'location_id');
+        $this->createIndex('idx-items-location_id', $items, 'location_id');
 
         // Создание связи между таблицами оборудования и размещений
-        $this->addForeignKey('fk-items-locations-id', Items::tableName(), 'location_id', $locations, 'id', 'CASCADE');
+        $this->addForeignKey('fk-items-locations-id', $items, 'location_id', $locations, 'id', 'CASCADE');
 
         // Создание связи `{{%regions}}`
         $this->addForeignKey('fk-locations-regions-id', $locations, 'region_id', $regions, 'id', 'CASCADE');
+        $this->insert($regions, [ 'name' => 'Одинцовская ветеринарная станция' ]);
+        $regionId = Yii::$app->db->getlastInsertID();
+        $this->insert($locations, [ 'region_id' => $regionId, 'name' => 'Матвейково' ]);
+        $locationId = Yii::$app->db->getlastInsertID();
+        $this->update($items, [ 'location_id' => $locationId ]);
     }
 
     /**
@@ -70,17 +79,20 @@ class m200818_123015_create_locations_table extends Migration
      */
     public function safeDown()
     {
+        $regions   = Regions::tableName();
+        $locations = Locations::tableName();
+        $items     = Items::tableName();
         // Удаление связи между таблицами locations и regions
         $this->dropForeignKey('fk-locations-regions-id', $locations);
 
         // Удаление связи таблиц оборудования и мест размещения
-        $this->dropForeignKey('fk-items-locations-id', Items::tableName());
+        $this->dropForeignKey('fk-items-locations-id', $items);
 
         // Удвление индексации для идентификатора мест размещения в таблице оборудования
-        $this->dropIndex('idx-items-location_id', Items::tableName());
+        $this->dropIndex('idx-items-location_id', $items);
 
         // Удаление идентификатора местра размещения из таблицы оборудования
-        $this->dropColumn(Items::tableName(), 'location_id');
+        $this->dropColumn($items, 'location_id');
 
         // удаление индексации для поля регионов
         $this->dropIndex('idx-locations-region_id', $locations);
