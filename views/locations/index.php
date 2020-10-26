@@ -44,8 +44,9 @@ if (User::canPermission('updateRecord'))
         'filter' => Html::activeDropDownList(
             $searchModel,
             'regionName',
-            ArrayHelper::merge([ '' => Yii::t('locations', 'All regions') ], ArrayHelper::map(Regions::find()->orderBy('name')->all(), 'name', 'name')),
-            [ 'class' => 'form-control' ],
+            ArrayHelper::merge([ '' => Yii::t('locations', 'All regions'), ], ArrayHelper::map(Regions::find()->orderBy('name')->all(), 'name', 'name')
+            ) ,
+            [ 'class' => 'form-control', ],
         ),
         'value' => function ($data)
         {
@@ -85,7 +86,8 @@ array_push($columns, [ 'class' => 'yii\grid\ActionColumn', 'template' => $templa
     </p>
 
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    ?>
 
     <?= GridView::widget([
         'id'           => 'LocationsTable',

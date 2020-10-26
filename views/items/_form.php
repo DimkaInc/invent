@@ -124,7 +124,8 @@ use yii\data\Sort;
                     [ 'language'   => 'ru',
                       'dateFormat' => 'dd.MM.yyyy',
                     ],
-                ) ?>
+                );
+        ?>
 
         <?= $form->field($modelm,
                 'state_id',

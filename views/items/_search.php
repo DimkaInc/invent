@@ -18,27 +18,33 @@ use yii\widgets\ActiveForm;
         ],
     ]); ?>
 
-    <?= //$form->field($model, 'id') ?>
+    <?php //= $form->field($model, 'id') 
+    ?>
 
     <?= $form->field($model, 'name') ?>
 
     <?= $form->field($model, 'model') ?>
 
-    <?= //$form->field($model, 'os') ?>
+    <?php //= $form->field($model, 'os') 
+    ?>
 
-    <?= //$form->field($model, 'mac') ?>
+    <?php //= $form->field($model, 'mac') 
+    ?>
 
     <?= $form->field($model, 'serial') ?>
 
-    <?php // echo $form->field($model, 'product') ?>
+    <?php // echo $form->field($model, 'product'); 
+    ?>
 
-    <?php // echo $form->field($model, 'modelnumber') ?>
+    <?php // echo $form->field($model, 'modelnumber'); 
+    ?>
 
     <?= $form->field($model, 'invent') ?>
 
     <?= $form->field($model, 'date') ?>
 
-    <?php // echo $form->field($model, 'comment') ?>
+    <?php // echo $form->field($model, 'comment'); 
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), [ 'class' => 'btn btn-primary' ]) ?>
