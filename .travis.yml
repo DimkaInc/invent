@@ -7,8 +7,8 @@ php:
 services:
     - postgresql
 
-before_install:
-    - composer self-update --2
+#before_install:
+#    - composer self-update --2
 
 before_script:
     # Check sintax errors
