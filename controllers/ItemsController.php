@@ -18,6 +18,9 @@ use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
 
 use kartik\mpdf\Pdf;
+use phpoffice\phpexcel;
+
+#require "/vendor/phpoffice/phpexcel/Classes/PHPExcel.php";
 
 /**
  * ItemsController implements the CRUD actions for Items model.
@@ -245,6 +248,7 @@ class ItemsController extends Controller
      * Структура файла данных при выгрузке из 1С:
      * | № п/п |  | Предмет/оборудование |  |  |  |  |  |  | Инвентарный номер | Материально отвественное лицо |  |  | Место размещения | Регион/подразделение | Количество |
      * | 0     | 1| 2                    | 3| 4| 5| 6| 7| 8| 9                 |10                             |11|12|13                |14                    |15          |
+     * | A     | B| C                    | D| E| F| G| H| I| J                 | K                             | L| M| N                | O                    | P          |
      * Так как 1С из коробки не умеет выгружать форму в .csv, то приходится сначала выгрузить в .xls(x), и уже из MS Excel/Lible office Calc сохранять в .csv
      */
     public function actionImport()
@@ -269,21 +273,85 @@ class ItemsController extends Controller
                 $handle = fopen('upload/' . $model->filecsv->baseName . '.' . $model->filecsv->extension, 'r');
                 if ($handle !== FALSE)
                 {
-                    while (($row = fgetcsv($handle, 1024, ';')) !== false )
+                    if (strcasecmp($model->filecsv->extension, 'csv') === 0 )
                     {
-                        if (intval($row[ 0 ]) . '' == $row[ 0 ])
+                        while (($row = fgetcsv($handle, 1024, ';')) !== false )
                         {
-                            $location = $row[ 13 ];
-                            $region   = $row[ 14 ];
-                            $count++;
+                            if (intval($row[ 0 ]) . '' == $row[ 0 ])
+                            {
+                                $location = $row[ 13 ];
+                                $region   = $row[ 14 ];
+                                $count++;
+                                $location_id = LocationsController::addIfNeed([ 'name' => $location, 'region' => $region ]);
+                                if ($location_id !== FALSE)
+                                {
+                                    $invent  = $row[ 9 ];
+                                    if (count(Items::find()->where([ 'like', 'invent', $invent ])->all()) == 0)
+                                    {
+                                        $model_  = $row[ 2 ];
+                                        $comment = Yii::t('moving', 'Imported. {comment}', [ 'comment' => $row[ 10 ] ]);
+                                        $item_id = $this::addIfNeed([ 'invent' => $invent, 'model' => $model_, 'comment' => $comment ]);
+                                        if ( $item_id !== FALSE)
+                                        {
+                                            $date = date('d.m.Y');
+                                            $state_id = StatusController::addIfNeed([ 'name' => 'Склад' ]);
+                                            if ($state_id === FALSE)
+                                            {
+                                                $state_id = NULL;
+                                            } // Состояние предмета/оборудование
+
+                                            $moving = new Moving();
+                                            $moving->date = $date;
+                                            $moving->item_id = $item_id;
+                                            $moving->state_id = $state_id;
+                                            $moving->location_id = $location_id;
+                                            $moving->comment = $comment;
+                                            if ($moving->validate() && $moving->save())
+                                            {
+                                                $counti++;
+                                            } // Добавление перемещение
+                                            else
+                                            {
+                                                Items::find([ 'id' => $item_id ])->delete();
+                                                $skip++;
+                                                $errors .= '<br>Движение: ' . implode(';', $row);
+                                            } // Не удалось добавить перемещение
+                                        }
+                                    } // Предмет/оборудование добавлено
+                                    else
+                                    {
+                                        $existi++;
+                                    } // Предмет/оборудование уже есть
+                                }
+                                else
+                                {
+                                    $skip++;
+                                    $errors .= '<br>Место расположения: ' . implode(';', $row);
+                                } // не удалось найти или добавить место размещения
+                            } // Строка с данными
+                        } // Перебор строк файла
+                    } else // xls файлы
+                    {
+                        //$phpExcel = new PHPExcel();
+                        $inputFileType = \PHPExcel_IOFactory::identify('upload/' . $model->filecsv->baseName . '.' . $model->filecsv->extension);
+                        $excelReader = \PHPExcel_IOFactory::createReader($inputFileType);
+                        $excelObj = $excelReader->load('upload/' . $model->filecsv->baseName . '.' . $model->filecsv->extension);
+                        $worksheet = $excelObj->getSheet(0);
+                        $lastRow = $worksheet->getHighestRow();
+                        $lastColumn = $worksheet->getHighestColumn();
+                        for ($row = 1; $row <= $lastRow; $row++)
+                        {
+                            $location = $worksheet->getCell('N' . $row)->getValue();
+                            $region   = $worksheet->getCell('O' . $row)->getValue();
                             $location_id = LocationsController::addIfNeed([ 'name' => $location, 'region' => $region ]);
                             if ($location_id !== FALSE)
                             {
-                                $invent  = $row[ 9 ];
+                                $count++;
+                                $invent  = $worksheet->getCell('J' . $row)->getValue();
                                 if (count(Items::find()->where([ 'like', 'invent', $invent ])->all()) == 0)
                                 {
-                                    $model_  = $row[ 2 ];
-                                    $comment = Yii::t('moving', 'Imported. {comment}', [ 'comment' => $row[ 10 ] ]);
+                                    $model_  = $worksheet->getCell('C' . $row)->getValue();
+                                    $comment = Yii::t('moving', 'Imported. {comment}', [ 'comment' => $worksheet->getCell('K' . $row)->getValue() ]);
                                     $item_id = $this::addIfNeed([ 'invent' => $invent, 'model' => $model_, 'comment' => $comment ]);
                                     if ( $item_id !== FALSE)
                                     {
@@ -306,9 +374,9 @@ class ItemsController extends Controller
                                         } // Добавление перемещение
                                         else
                                         {
-                                            Items::find([ 'id' => $item_id ])->delete();
+                                            Items::find([ 'id' => $item_id ])->one()->delete();
                                             $skip++;
-                                            $errors .= '<br>Движение: ' . implode(';', $row);
+                                            $errors .= '<br>Движение: ('. implode('===',$moving->errors['date']) . '::' . $moving->date .')' . implode(';', $worksheet->rangeToArray('A' . $row . ':' . $lastColumn . $row, NULL, NULL, FALSE)[0]);
                                         } // Не удалось добавить перемещение
                                     }
                                 } // Предмет/оборудование добавлено
@@ -320,10 +388,10 @@ class ItemsController extends Controller
                             else
                             {
                                 $skip++;
-                                $errors .= '<br>Место расположения: ' . implode(';', $row);
+                                $errors .= '<br>Место расположения: ' . implode(';', $worksheet->rangeToArray('A' . $row . ':' . $lastColumn . $row, NULL, NULL, FALSE)[0]);
                             } // не удалось найти или добавить место размещения
-                        } // Строка с данными
-                    } // Перебор строк файла
+                        }
+                    }
                     fclose($handle);
                 }
                 $message .= Yii::t('items', 'Read {count} records.<br />Imported {counti} Items.<br />Exists {exist} Items.<br />Error read {skip} records.<br />{errors}', 
