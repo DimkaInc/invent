@@ -96,9 +96,9 @@ class Moving extends \yii\db\ActiveRecord
                 $this->addError('date', Yii::t('moving', 'The date cannot be more than today'));
             } else
             {
-                if ($date < strtotime('01.01.1990'))
+                if ($date < strtotime('01.01.1900'))
                 {
-                    $this->addError('date', Yii::t('moving', 'Date cannot be less than {date}', [ 'date' => '01.01.1990' ]));
+                    $this->addError('date', Yii::t('moving', 'Date cannot be less than {date}', [ 'date' => '01.01.1900' ]));
                 } else
                 {
                     $item_id = $this->item_id;
