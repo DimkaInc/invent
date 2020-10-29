@@ -86,6 +86,7 @@ $config = [
                         'app'       => 'app.php',           // Для преложения
                         'app/error' => 'error.php',         // Для ошибок
                         'contact'   => 'contact.php',       // Для обратной связи
+                        'import'    => 'import.php',        // Для импорта. Обозначение полей таблицы
                         'items'     => 'items.php',         // Для предметов/оборудования
                         'locations' => 'locations.php',     // Для мета расположения
                         'moving'    => 'moving.php',        // Для перемещений

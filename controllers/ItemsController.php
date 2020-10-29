@@ -274,10 +274,26 @@ class ItemsController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         if (Yii::$app->request->isPost)
         {
+            $nppColumnName         = Yii::t('import', 'No. in order');
+            $itemColumnName        = Yii::t('import', 'Primary means');
+            $netColumnName         = Yii::t('import', 'Network name');
+            $inventColumnName      = Yii::t('import', 'Inventory number');
+            $molColumnName         = Yii::t('import', 'Financially responsible person');
+            $osColumnName          = Yii::t('import', 'Operation system');
+            $macColumnName         = Yii::t('import', 'MAC address');
+            $serialColumnName      = Yii::t('import', 'Serial number');
+            $ProdictColumnName     = Yii::t('import', 'Product number');
+            $modelNumberColumnName = Yii::t('import', 'Model number');
+            $dateColumnName        = Yii::t('import', 'Date of acceptance for registration');
+            $locationColumnName    = Yii::t('import', 'Location');
+            $regionColumnName      = Yii::t('import', 'Region');
+            $typeColumnName        = Yii::t('import', 'Type');
+
             $model->filecsv = UploadedFile::getInstance($model, 'filecsv');
             if ($model->upload())
             {
-                $handle = fopen('upload/' . $model->filecsv->baseName . '.' . $model->filecsv->extension, 'r');
+                $fileName = 'upload/' . $model->filecsv->baseName . '.' . $model->filecsv->extension;
+                $handle = fopen($fileName, 'r');
                 if ($handle !== FALSE)
                 {
                     if (strcasecmp($model->filecsv->extension, 'csv') === 0 )
@@ -444,7 +460,7 @@ class ItemsController extends Controller
                                                 } // Добавление перемещение
                                                 else
                                                 {
-                                                    Items::find([ 'id' => $item_id ])->one()->delete();
+                                                    Items::find([ 'id' => $item_id, 'checked' => FALSE ])->one()->delete();
                                                     $skip++;
                                                     $errors .= '<br>Движение: ('. implode('===',$moving->errors['date']) . '::' . $moving->date .')' . implode(';', $worksheet->rangeToArray('A' . $rowNum . ':' . $lastColumn . $rowNum, NULL, NULL, FALSE)[0]);
                                                 } // Не удалось добавить перемещение
@@ -466,9 +482,6 @@ class ItemsController extends Controller
                                 {
                                     $skip++;
                                 }
-                            // Формирование строки для тестирования
-                            //$skip++;
-                            //$errors .= '<br />Проверка:' . implode(';', $myRow);
                             }
                         }
                     }
