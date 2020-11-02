@@ -232,10 +232,30 @@ class ItemsController extends Controller
      */
     public function actionIndex()
     {
-        if (! User::canPermission('createRecord') ) {
+        if (! User::canPermission('createRecord') )
+        {
             return $this->redirect(['site/index']);
         }
         $searchModel = new ItemsSearch();
+        if (isset(Yii::$app->request->queryParams['id']))
+        {
+            $id = Yii::$app->request->queryParams['id'];
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            $dataProvider->query->select(Items::tableName() . '.id');
+            $pageSize = $dataProvider->pagination->pageSize;
+            $dataProvider->pagination = FALSE;
+            $rows = $dataProvider->getModels();
+            $page = 0;
+            foreach ($rows as $key => $val)
+            {
+                if ($id == $val->id)
+                {
+                    $page = ceil(($key + 1) / $pageSize);
+                    break;
+                }
+            }
+            return $this->redirect(['index', 'page' => $page]);
+        }
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -533,7 +553,7 @@ class ItemsController extends Controller
     public function actionView($id)
     {
         if (! User::canPermission('updateRecord') ) {
-            return $this->redirect(['index']);
+            return $this->redirect([ 'index', 'id' => $id ]);
         }
         return $this->render('view', [
             'model' => $this->findModel($id),
