@@ -48,14 +48,13 @@ class ItemsController extends Controller
      *        string 'invent'
      *        string 'model'
      *        string 'comment'
-     *        integer|NULL 'type_id'
-     *        string|NULL 'typeName'
-     *        string|NULL 'name'
+     *        string|NULL 'type'
+     *        string|NULL 'netname'
      *        string|NULL 'os'
      *        string|NULL 'mac'
      *        string|NULL 'serial'
      *        string|NULL 'product'
-     *        string|NULL 'modelnum'
+     *        string|NULL 'modelnumber'
      * @return integer|FALSE
      */
     public static function addIfNeed($options)
@@ -64,7 +63,7 @@ class ItemsController extends Controller
         if (is_array($options) && isset($options[ 'invent' ]))
         {
             $item = Items::find()
-                ->where([ 'like', 'invent', $options[ 'invent' ]]); // Ищем оборудование с инвентарным номером.
+                ->where([ 'invent' => $options[ 'invent' ]]); // Ищем оборудование с инвентарным номером.
             // Если указан серийный номер
             if (isset($options[ 'serial' ])) {
                 $item = $item->andWhere([ 'like', 'serial', $options[ 'serial' ]]); // Ищем дополнительно с серийным номером
@@ -73,38 +72,33 @@ class ItemsController extends Controller
 
             if (count($item) > 0) // Записи найдены, выводим первую совпавшую
             {
-                return $item[0]->id;
+                return $item[ 0 ]->id;
             }
             // Внесённого оборудования не найдено. Добавим новую запись
             if (isset($options[ 'model' ]))
             {
                 // Если указан тип предмета/оборудования
-                if (isset($options[ 'typeName' ]))
+                if (isset($options[ 'type' ]))
                 {
-                    $type_id = TypesController::addIfNeed($options[ 'typeName' ]); // Найдём или добавим тип
+                    $type_id = TypesController::addIfNeed($options[ 'type' ]); // Найдём или добавим тип
                     // Если тип не добавили
                     if($type_id === FALSE)
                     {
                         $type_id = NULL; // сделаем его пустым
                     }
                 }
-                else
-                {
-                    // Если указан идентификатор типа, укажем его
-                    $type_id = isset($options[ 'type_id' ]) ? $options[ 'type_id' ] : NULL;
-                }
                 // Создаём новую запись предмета/оборудования
                 $item = new Items();
-                $item->name        = isset($options[ 'name' ]) ? $options[ 'name' ] : NULL;       // Сетевое имя
+                $item->name        = isset($options[ 'netName' ]) ? $options[ 'netName' ] : NULL; // Сетевое имя
                 $item->model       = isset($options[ 'model' ]) ? $options[ 'model' ] : NULL;     // Наименование
                 $item->invent      = isset($options[ 'invent' ]) ? $options[ 'invent' ] : NULL;   // Инвентарный номер
                 $item->comment     = isset($options[ 'comment' ]) ? $options[ 'comment' ] : NULL; // Коментарий
-                $item->type_id     = $type_id;                                                    // Идентификатор типа
+                $item->type_id     = isset($type_id) ? $type_id : NULL;                           // Идентификатор типа
                 $item->os          = isset($options[ 'os' ]) ? $options[ 'os' ] : NULL;           // Операционная система
                 $item->mac         = isset($options[ 'mac' ]) ? $options[ 'mac' ] : NULL;         // MAC-адрес
                 $item->serial      = isset($options[ 'serial' ]) ? $options[ 'serial' ] : NULL;   // Серийный номер
                 $item->product     = isset($options[ 'product' ]) ? $options[ 'product' ] : NULL; // Код оборудования
-                $item->modelnumber = isset($options[ 'modelnumber' ]) ? $options[ 'modelnumber' ] : NULL; // Номер модели
+                $item->modelnumber = isset($options[ 'modelnum' ]) ? $options[ 'modelnum' ] : NULL; // Номер модели
                 $item->checked     = false;                                                       // Не инвентризирован (требует внимания после импорта)
                 // Сохраняем запись
                 if ($item->validate() && $item->save())
@@ -251,11 +245,115 @@ class ItemsController extends Controller
     }
 
     /**
+     * Импортирование строк товаров из массива
+     */
+    public function doImport($arrayRows)
+    {
+        // Инициализация счётчиков
+        $arrayReturn = [
+            'countRows'     => count($arrayRows),
+            'countImported' => 0,
+            'countExists'   => 0,
+            'countErrors'   => 0,
+            'errors'        => '',
+        ];
+        
+        // Проверка наличия ключевых полей
+        if ((!isset($arrayRows[ 0 ][ 'model' ]))
+            || (!isset($arrayRows[ 0 ][ 'invent' ]))
+            || (!isset($arrayRows[ 0 ][ 'location' ]))
+            || (!isset($arrayRows[ 0 ][ 'region' ]))
+            || (!isset($arrayRows[ 0 ][ 'date' ]))
+        )
+        {
+            // Сообщение об ошибке
+            $arrayReturn[ 'countErrors' ] = count($arrayRows);
+            $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Skip all. Key column not found.: ' . print_r($arrayRows[0], TRUE));
+        }
+        else
+        {
+            // Просмотрим весь массив
+            foreach($arrayRows as $row)
+            {
+                // ПОлучим местоположения
+                $location = LocationsController::addIfNeed($row); // Получение идентификатора расположения
+                if ( $location[ 'id' ] === FALSE)
+                {
+                    // Сообщим об ошибке
+                    $arrayReturn[ 'countErrors' ]++;
+                    $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Location: {location} ({region})', $row) . ' :: ' . $location[ 'error' ];
+                }
+                else
+                {
+                    // Попробуем найти или добавить предмет/оборудование
+                    $item_id = $this->addIfNeed($row);
+                    if (!isset($item_id))
+                    {
+                        $arrayReturn[ 'errors' ] .= '<br />Оборудование: ' . print_r($row, TRUE);
+                        continue;
+                    }
+                    if ($item_id === FALSE)
+                    {
+                        // Сообщим об ошибке
+                        $arrayReturn[ 'countErrors' ]++;
+                        $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Item: {model}, Invent: {invent}, serial No:, comment: {comment}', $row);
+                    }
+                    else
+                    {
+                        // Проверка, что предмет/оборудование уже были в базе
+                        $item = Items::find()->where([ 'id' => $item_id ])->one();
+                        if ($item->checked === TRUE)
+                        {
+                            $arrayReturn[ 'countExists' ]++;
+                        }
+                        else
+                        {
+                            $state = isset($row[ 'status' ]) ? StatusController::addIfNeed($row) : StatusController::addIfNeed([ 'name' => 'Склад' ]);
+                            if ( $state['id'] === FALSE )
+                            {
+                                // Сообщим об ошибке
+                                $arrayReturn[ 'countErrors' ]++;
+                                $arrayReturn[ 'errors' ] .= '<br />' . $state[ 'error' ];
+                            }
+                            else
+                            {
+                                // Новый предмет/оборудование. Пробуем добавить первое перемещение
+                                $moving = new Moving();
+                                $moving->date = $row[ 'date' ];
+                                $moving->state_id = $state['id'];
+                                $moving->item_id = $item_id;
+                                $moving->location_id = $location[ 'id' ];
+                                $moving->comment = Yii::t('import', 'Import: {comment}', $row);
+
+                                if ($moving->validate() && $moving->save())
+                                {
+                                    // Записаали первое движение
+                                    $arrayReturn[ 'countImported' ]++;
+                                }
+                                else
+                                {
+                                    // Запись не удалась, пробуем удалить предмет/оборудование
+                                    Items::find()->where([ 'id' => $item_id, 'checked' => FALSE ])->one()->delete();
+                                    // Сообщим об ошибке
+                                    $arrayReturn[ 'countErrors' ]++;
+                                    $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Moving: {date} ('.$moving->errors['date'][0].'), Инвентарный номер:{invent} {model}, location: {location} ( {region} )' , $row);
+                                }
+                                unset($moving);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Возврат результата импорта
+        return $arrayReturn;
+    }
+
+    /**
      * Импорт данных из файла csv
-     * Структура файла данных при выгрузке из 1С:
+     * Структура файла данных при выгрузке из 1С: (Колонки могут меняться.
      * | № п/п |  | Предмет/оборудование |  |  |  |  |  |  | Инвентарный номер | Материально отвественное лицо |  |  | Место размещения | Регион/подразделение | Количество |
-     * | 0     | 1| 2                    | 3| 4| 5| 6| 7| 8| 9                 |10                             |11|12|13                |14                    |15          |
-     * | A     | B| C                    | D| E| F| G| H| I| J                 | K                             | L| M| N                | O                    | P          |
      * Так как 1С из коробки не умеет выгружать форму в .csv, то приходится сначала выгрузить в .xls(x), и уже из MS Excel/Lible office Calc сохранять в .csv
      */
     public function actionImport()
@@ -264,31 +362,30 @@ class ItemsController extends Controller
             return $this->redirect(['site/index']);
         }
         $model   = new Import();
-        $count   = 0;
-        $counti  = 0;
-        $skip    = 0;
-        $existi  = 0;
-        $errors  = '';
         $message = '';
         $searchModel = new ItemsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         if (Yii::$app->request->isPost)
         {
-            $nppColumnName         = Yii::t('import', 'No. in order');
-            $itemColumnName        = Yii::t('import', 'Primary means');
-            $netColumnName         = Yii::t('import', 'Network name');
-            $inventColumnName      = Yii::t('import', 'Inventory number');
-            $molColumnName         = Yii::t('import', 'Financially responsible person');
-            $osColumnName          = Yii::t('import', 'Operation system');
-            $macColumnName         = Yii::t('import', 'MAC address');
-            $serialColumnName      = Yii::t('import', 'Serial number');
-            $ProdictColumnName     = Yii::t('import', 'Product number');
-            $modelNumberColumnName = Yii::t('import', 'Model number');
-            $dateColumnName        = Yii::t('import', 'Date of acceptance for registration');
-            $locationColumnName    = Yii::t('import', 'Location');
-            $regionColumnName      = Yii::t('import', 'Region');
-            $typeColumnName        = Yii::t('import', 'Type');
-
+            $rows = [];
+            $columns = [];
+            $columnsNames = [
+                'npp'         => Yii::t('import', 'No. in order'),
+                'model'       => Yii::t('import', 'Primary means'),
+                'netname'     => Yii::t('import', 'Network name'),
+                'invent'      => Yii::t('import', 'Inventory number'),
+                'comment'     => Yii::t('import', 'Financially responsible person'),
+                'os'          => Yii::t('import', 'Operation system'),
+                'mac'         => Yii::t('import', 'MAC address'),
+                'serial'      => Yii::t('import', 'Serial number'),
+                'product'     => Yii::t('import', 'Product number'),
+                'modelnumber' => Yii::t('import', 'Model number'),
+                'date'        => Yii::t('import', 'Date of acceptance for registration'),
+                'location'    => Yii::t('import', 'Location'),
+                'region'      => Yii::t('import', 'Region'),
+                'type'        => Yii::t('import', 'Type'),
+                'status'      => Yii::t('import', 'State'),
+            ];
             $model->filecsv = UploadedFile::getInstance($model, 'filecsv');
             if ($model->upload())
             {
@@ -298,197 +395,125 @@ class ItemsController extends Controller
                 {
                     if (strcasecmp($model->filecsv->extension, 'csv') === 0 )
                     {
-                        while (($row = fgetcsv($handle, 1024, ';')) !== false )
+                        // Построчное чтение CSV файла
+                        while (($row = fgetcsv($handle, 2048, ';')) !== false )
                         {
-                            if (intval($row[ 0 ]) . '' == $row[ 0 ])
+                            // Пока не собраны индексы столбцов из шапки
+                            if (count($columns) == 0)
                             {
-                                $location = $row[ 13 ];
-                                $region   = $row[ 14 ];
-                                $count++;
-                                $location_id = LocationsController::addIfNeed([ 'name' => $location, 'region' => $region ]);
-                                if ($location_id !== FALSE)
+                                // Ищем строку с заголовком таблицы
+                                if ( stripos($row[0], $columnNames[ 'npp' ]) !== FALSE )
                                 {
-                                    $invent  = $row[ 9 ];
-                                    if (count(Items::find()->where([ 'like', 'invent', $invent ])->all()) == 0)
+                                    // Перебираем все колонки
+                                    foreach ($row as $key => $item)
                                     {
-                                        $model_  = $row[ 2 ];
-                                        $comment = Yii::t('moving', 'Imported. {comment}', [ 'comment' => $row[ 10 ] ]);
-                                        $item_id = $this::addIfNeed([ 'invent' => $invent, 'model' => $model_, 'comment' => $comment ]);
-                                        if ( $item_id !== FALSE)
+                                        // Перебираем все названия заголовков колонок
+                                        foreach($columnNamses as $name => $text)
                                         {
-                                            $date = date('d.m.Y');
-                                            $state_id = StatusController::addIfNeed([ 'name' => 'Склад' ]);
-                                            if ($state_id === FALSE)
+                                            // Если название совпало,
+                                            if (stripos($item, $text) !== FALSE)
                                             {
-                                                $state_id = NULL;
-                                            } // Состояние предмета/оборудование
-
-                                            $moving = new Moving();
-                                            $moving->date = $date;
-                                            $moving->item_id = $item_id;
-                                            $moving->state_id = $state_id;
-                                            $moving->location_id = $location_id;
-                                            $moving->comment = $comment;
-                                            if ($moving->validate() && $moving->save())
-                                            {
-                                                $counti++;
-                                            } // Добавление перемещение
-                                            else
-                                            {
-                                                Items::find([ 'id' => $item_id ])->delete();
-                                                $skip++;
-                                                $errors .= '<br>Движение: ' . implode(';', $row);
-                                            } // Не удалось добавить перемещение
-                                            unset($moving);
+                                                // Сохраняем индек колонки
+                                                $columns[ $name ] = $key;
+                                            }
                                         }
-                                    } // Предмет/оборудование добавлено
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                // Перебираем предметы/оборудование (Номер по порядку должен быть целым числом)
+                                if (ctype_digit(str_replace(' ', '', $row[ $columns[ 'npp' ]])))
+                                {
+                                    // Заполняем очередную строку для таблицы
+                                    $line = [];
+                                    foreach ($columns as $key => $index)
+                                    {
+                                        $line[ $key ] = $row[ $index ];
+                                    }
+                                    if (isset($line[ 'date' ]))
+                                    {
+                                        if ($line[ 'date' ] == '#NULL!') $line[ 'date' ] = date('d.m.Y');
+                                    }
                                     else
                                     {
-                                        $existi++;
-                                    } // Предмет/оборудование уже есть
+                                        $line[ 'date' ] = date('d.m.Y');
+                                    }
+                                    array_push($rows, $line);
                                 }
-                                else
-                                {
-                                    $skip++;
-                                    $errors .= '<br>Место расположения: ' . implode(';', $row);
-                                } // не удалось найти или добавить место размещения
-                            } // Строка с данными
+                            }
                         } // Перебор строк файла
-                    } else // xls файлы
+                    }
+                    else // xls(x) файлы
                     {
-                        $fileName = 'upload/' . $model->filecsv->baseName . '.' . $model->filecsv->extension;
                         $inputFileType = \PHPExcel_IOFactory::identify($fileName); // Получение типа данных в файле
                         $excelReader = \PHPExcel_IOFactory::createReader($inputFileType); // Создание потока чтения из файла
                         $excelObj = $excelReader->load($fileName); // Открытие файла
                         $worksheet = $excelObj->getSheet(0);       // Работаем только с первым листом (обычно туда выгружает 1С)
                         // Индексы ячеек
-                        $modelInd       = NULL;
-                        $nameInd        = NULL;
-                        $inventInd      = NULL;
-                        $commentInd     = NULL;
-                        $osInd          = NULL;
-                        $macInd         = NULL;
-                        $serialInd      = NULL;
-                        $productInd     = NULL;
-                        $modelnumberInd = NULL;
-                        $dateInd        = NULL;
-                        $locationInd    = NULL;
-                        $regionInd      = NULL;
-                        $typeInd        = NULL;
 
                         // Цикл по всем строкам
-                        $rowNum = 0;
-                        $lastColumn = $worksheet->getHighestColumn();
                         foreach ($worksheet->getRowIterator() as $row)
                         {
-                            $rowNum++;
                             $cellIterator = $row->getCellIterator(); // Получаем итератор ячеек в строке
                             $cellIterator->setIterateOnlyExistingCells(FALSE); // Указываем проверять даже не установленные ячейки
-                            
-                            //$myRow = []; // Массив ячеек исключительно для тестирования
-                            $flag = FALSE; // Признак строки шапки
-                            if ($inventInd === NULL) // Пока не найдена шапка, проверяем строку
-                                foreach($cellIterator as $key => $cell)
+
+                            if (count($columns) == 0) // Пока не найдена шапка, проверяем строку
+                            {
+                                $flag = FALSE;
+                                foreach ($cellIterator as $key => $item)
                                 {
-                                    if (($key == 'A') && (stripos($cell->getValue(), '№') !== FALSE) ) $flag = TRUE; // Если строка шапка, установим флаг
-                                    
-                                    if ($flag) // Работаем с шапкой
+                                    if (($key == 'A') && (stripos($item->getValue(), $columnsNames[ 'npp' ]) !== FALSE)) $flag = TRUE;
+                                    if ($flag)
                                     {
-                                        $counti = $rowNum;
-                                        $val = $cell->getValue(); // Получаем значение ячейки
-                                        if (stripos($val, 'Основное средство') !== FALSE) $modelInd       = $key; // Фиксируем колонку, в которой предмет/оборудование
-                                        if (stripos($val, 'Сетевое имя')       !== FALSE) $nameInd        = $key; // Фиксируем колонку, в которой сетевое имя
-                                        if (stripos($val, 'Инвентарный номер') !== FALSE) $inventInd      = $key; // Фиксируем колонку, в которой инвентарный номер
-                                        if (stripos($val, 'МОЛ')               !== FALSE) $commentInd     = $key; // Фиксируем колонку, в которой Комментарии
-                                        if (stripos($val, 'Операционная система') !== FALSE) $osInd       = $key; // Фиксируем колонку, в которой операционная система
-                                        if (stripos($val, 'Сетевой адрес')     !== FALSE) $macInd         = $key; // Фиксируем колонку, в которой сетевой адрес
-                                        if (stripos($val, 'Серийный номер')    !== FALSE) $serialInd      = $key; // Фиксируем колонку, в которой серийный номер
-                                        if (stripos($val, 'Код продукта')      !== FALSE) $productInd     = $key; // Фиксируем колонку, в которой код продукта
-                                        if (stripos($val, 'Номер модели')      !== FALSE) $modelnumberInd = $key; // Фиксируем колонку, в которой номер модели
-                                        if (stripos($val, 'Дата')              !== FALSE) $dateInd        = $key; // Фиксируем колонку, в которой дата постановки на учёт
-                                        if (stripos($val, 'ИФО')               !== FALSE) $locationInd    = $key; // Фиксируем колонку, в которой место хранения
-                                        if (stripos($val, 'Место хранения')    !== FALSE) $regionInd      = $key; // Фиксируем колонку, в которой регион/подразделение
-                                        if (stripos($val, 'Тип')               !== FALSE) $typeInd        = $key; // Фиксируем колонку, в которой тип оборудования
+                                        foreach ($columnsNames as $name => $text)
+                                        {
+                                            if (stripos($item->getValue(), $text) !== FALSE)
+                                            {
+                                                $columns[ $name ] = $key;
+                                            }
+                                        }
                                     }
-                                    
-                                    //array_push($myRow, '['.$key.']:' . $cell->getValue()); // Наполнение массива ячеек
                                 }
+                            }
                             else
                             {
-                                $npp = str_replace(' ', '', $worksheet->getCell('A'.$rowNum)->getValue());
-                                if (ctype_digit($npp))
+                                $flag = FALSE;
+                                $line = [];
+                                foreach ($cellIterator as $key => $item)
                                 {
-                                    if (($modelInd === NULL) || ($inventInd === NULL) || ($locationInd === NULL) || ($regionInd === NULL))
+                                    if ($key == $columns[ 'npp' ])
                                     {
-                                        $errors .= '<br>одно из важных полей отсутствует';
-                                        break;
+                                        $npp = str_replace(' ', '', $item->getValue());
+                                        if (ctype_digit($npp)) $flag = TRUE;
                                     }
-                                    $location = $worksheet->getCell($locationInd . $rowNum)->getValue();
-                                    $region   = $worksheet->getCell($regionInd . $rowNum)->getValue();
-                                    $location_id = LocationsController::addIfNeed([ 'name' => $location, 'region' => $region ]); // Получение идентификатора расположения
-                                    if ($location_id !== FALSE)
+                                    if ($flag)
                                     {
-                                        $count++; // Посчитаем строку оборудования
-                                        $invent = $worksheet->getCell($inventInd . $rowNum)->getValue(); // Инвентарный номер
-                                        if (count(Items::find()->where([ 'like', 'invent', $invent ])->all()) == 0)
+                                        foreach($columns as $keym => $index)
                                         {
-                                            $model_ = $worksheet->getCell($modelInd . $rowNum)->getValue();
-                                            $comment = $commentInd !== NULL ? Yii::t('moving', 'Imported. {comment}', [ 'comment' => $worksheet->getCell($commentInd . $rowNum)->getValue() ]) : NULL; // Комментарии
-                                            $item_id = ($typeInd !== NULL ? 
-                                                $this::addIfNeed([ 'invent' => $invent, 'model' => $model_, 'comment' => $comment, 'typeName' => $worksheet->getCell($typeInd . $rowNum)->getValue() ]) : 
-                                                $this::addIfNeed([ 'invent' => $invent, 'model' => $model_, 'comment' => $comment ])); // Получение идентификатора оборудования
-                                            if ($item_id !== FALSE)
-                                            {
-                                                $date = $dateInd !== NULL ? $worksheet->getCell($dateInd . $rowNum)->getValue() : date('d.m.Y');
-                                                if ($date  == '#NULL!') $date = date('d.m.Y');
-
-                                                $state_id = StatusController::addIfNeed([ 'name' => 'Склад' ]);
-                                                if ($state_id === FALSE)
-                                                {
-                                                    $state_id = NULL;
-                                                } // Состояние предмета/оборудование
-
-                                                $moving = new Moving();
-                                                $moving->date = $date;
-                                                $moving->item_id = $item_id;
-                                                $moving->state_id = $state_id;
-                                                $moving->location_id = $location_id;
-                                                $moving->comment = $comment;
-                                                if ($moving->validate() && $moving->save())
-                                                {
-                                                    $counti++;
-                                                } // Добавление перемещение
-                                                else
-                                                {
-                                                    Items::find([ 'id' => $item_id, 'checked' => FALSE ])->one()->delete();
-                                                    $skip++;
-                                                    $errors .= '<br>Движение: ('. implode('===',$moving->errors['date']) . '::' . $moving->date .')' . implode(';', $worksheet->rangeToArray('A' . $rowNum . ':' . $lastColumn . $rowNum, NULL, NULL, FALSE)[0]);
-                                                } // Не удалось добавить перемещение
-                                                unset($moving);
-                                            }
-                                        } // Предмет/оборудование добавлено
-                                        else
-                                        {
-                                            $existi++;
-                                        } // Предмет/оборудование уже есть
+                                            if ($index == $key) $line[ $keym ] = $item->getValue();
+                                        }
+                                    }
+                                }
+                                if ($flag)
+                                {
+                                    if (isset($line[ 'date' ]))
+                                    {
+                                        if ($line[ 'date' ] == '#NULL!') $line[ 'date' ] = date('d.m.Y');
                                     }
                                     else
                                     {
-                                        $skip++;
-                                        $errors .= '<br>Место расположения: ' . implode(';', $worksheet->rangeToArray('A' . $rowNum . ':' . $lastColumn . $rowNum, NULL, NULL, FALSE)[0]);
-                                    } // не удалось найти или добавить место размещения
-                                }
-                                else
-                                {
-                                    $skip++;
+                                        $line[ 'date' ] = date('d.m.Y');
+                                    }
+                                    array_push($rows, $line);
                                 }
                             }
                         }
                     }
                     fclose($handle);
+                    $res = $this->doImport($rows);
                 }
-                $message .= Yii::t('items', 'Read {count} records.<br />Imported {counti} Items.<br />Exists {exist} Items.<br />Error read {skip} records.<br />{errors}', 
-                    [ 'counti' => $counti, 'count' => $count, 'exist' => $existi, 'skip' => $skip, 'errors' => $errors ]);
+                $message .= Yii::t('items', 'Read {countRows} records.<br />Imported {countImported} Items.<br />Exists {countExists} Items.<br />Error read {countErrors} records.<br />{errors}', $res);
             }
         }
         return $this->render('import',[

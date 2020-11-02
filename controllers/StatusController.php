@@ -38,21 +38,34 @@ class StatusController extends Controller
      */
     public function addIfNeed($options)
     {
-        if (is_array($options) && isset($options[ 'name' ]))
+        $result = [
+            'id' => FALSE,
+            'error' => Yii::t('status', 'Status: Have not key column "status" ' . print_r($options, TRUE)),
+        ];
+        if (is_array($options) && isset($options[ 'status' ]))
         $status = Status::find()
-            ->where([ 'like', 'name', $options[ 'name' ]])
+            ->where([ 'like', 'name', $options[ 'status' ]])
             ->all();
         if (count($status) > 0)
         {
-            return $status[0]->id;
+            $result[ 'id' ] = $status[0]->id;
+            $result [ 'error' ] = '';
         }
-        $status = new Status();
-        $status->name = $options[ 'name' ];
-        if ($status->validate() && $status->save())
+        else
         {
-            return $status->id;
+            $status = new Status();
+            $status->name = $options[ 'status' ];
+            if ($status->validate() && $status->save())
+            {
+                $result[ 'id' ] = $status->id;
+                $result[ 'error' ] = '';
+            }
+            else
+            {
+                $result[ 'error' ] = Yii::t('status', 'Status: Can\'t create field "{status}"', $options);
+            }
         }
-        return FALSE;
+        return $result;
     }
 
     /**

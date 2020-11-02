@@ -39,24 +39,37 @@ class RegionsController extends Controller
      */
     public function addIfNeed($options)
     {
-        if (is_array($options) && isset($options[ 'name' ]))
+        $result = [
+            'id' => FALSE,
+            'error' => Yii::t('regions', 'Regions: Have not key field "region"' . print_r($options, TRUE))
+        ];
+        if (is_array($options) && isset($options[ 'region' ]))
         {
             // Ищем регион
             $region = Regions::find()
-                ->where(['like', 'name', $options[ 'name' ]])
+                ->where(['like', 'name', $options[ 'region' ]])
                 ->all();
             if (count($region) > 0)
             {
-                return $region[0]->id; // Нашёлся, вернём первый найденный
+                $result[ 'id' ] = $region[0]->id; // Нашёлся, вернём первый найденный
+                $result[ 'error' ] = '';
             }
-            $region = new Regions();   // Не нашёлся, добавляем новый
-            $region->name = $options[ 'name' ];
-            if ($region->validate() && $region->save()) // Пробуем записать
+            else
             {
-                return $region->id; // Если удалось записать, возвращаем идентификатор
+                $region = new Regions();   // Не нашёлся, добавляем новый
+                $region->name = $options[ 'region' ];
+                if ($region->validate() && $region->save()) // Пробуем записать
+                {
+                    $result[ 'id' ] = $region->id; // Если удалось записать, возвращаем идентификатор
+                    $result[ 'error' ] = '';
+                }
+                else
+                {
+                    $result[ 'error' ] = Yii::t('regions', 'Regions: can\'t add region "{region}"', $options);
+                }
             }
         }
-        return FALSE; // Если не удалась запись, вернём FALSE
+        return $result; // Если не удалась запись, вернём FALSE
     }
 
     /**

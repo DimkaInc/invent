@@ -41,37 +41,56 @@ class LocationsController extends Controller
      */
     public static function addIfNeed($options)
     {
-        if (is_array($options) && isset($options[ 'name' ]) && (isset($options[ 'region' ]) || isset($options[ 'region_id' ])))
+        $result = [
+            'id'    => FALSE,
+            'error' => Yii::t('locations', 'Have not key fields location and region :') . print_r($options, TRUE),
+        ];
+        if (is_array($options) && isset($options[ 'location' ]) && (isset($options[ 'region' ]) || isset($options[ 'region_id' ])))
         {
             if (isset($options[ 'region' ]))
             {
-                $region_id = RegionsController::addIfNeed([ 'name' => $options[ 'region' ]]);
+                $region = RegionsController::addIfNeed($options);
             }
             else
             {
                 $region_id = $options[ 'region_id' ];
             }
-            if ($region_id !== FALSE) {
+            if ($region['id'] !== FALSE) {
                 // Ищем расположение, совпадающее по наименованию и региону/подразделению
                 $location = Locations::find()
-                    ->where([ 'like', 'name', $options[ 'name' ]])
-                    ->andWhere([ 'region_id' => $region_id ])
+                    ->where([ 'like', 'name', $options[ 'location' ]])
+                    ->andWhere([ 'region_id' => $region['id'] ])
                     ->all();
                 if (count($location) > 0)
                 {
-                    return $location[0]->id; // Если нашли, возвращаем идентификатор записи
+                    // Если нашли, возвращаем идентификатор записи
+                    $result[ 'id' ] = $location[0]->id;
+                    $result[ 'error' ] = '';
                 }
-                // Не нашли, пробуем добавить место расположения
-                $location = new Locations();
-                $location->name = $options[ 'name' ];
-                $location->region_id = $region_id;
-                if($location->validate() && $location->save())
+                else
                 {
-                    return $location->id; // Если удалось сохранить, вернём идентификатор места расположения
+                    // Не нашли, пробуем добавить место расположения
+                    $location = new Locations();
+                    $location->name = $options[ 'location' ];
+                    $location->region_id = $region[ 'id' ];
+                    if($location->validate() && $location->save())
+                    {
+                        // Если удалось сохранить, вернём идентификатор места расположения
+                        $result[ 'id' ] = $location->id;
+                        $result[ 'error' ] = '';
+                    }
+                    else
+                    {
+                        $result[ 'error' ] = Yii::t('locations', 'Error to create location "{location}"', $options);
+                    }
                 }
             }
+            else
+            {
+                $result[ 'error' ] = $region[ 'error' ];
+            }
         }
-        return FALSE; // Записать не удалось, вернём FALSE
+        return $result; // Записать не удалось, вернём FALSE
     }
 
     /**

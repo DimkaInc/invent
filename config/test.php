@@ -14,7 +14,7 @@ require_once __DIR__ . '/myfunctions.php';
 return [
     'id' => 'basic-tests',
     'name' => 'Inventory',
-    'version' => '1.27',
+    'version' => '1.29',
     'basePath' => dirname(__DIR__),
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
