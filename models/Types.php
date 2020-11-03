@@ -34,7 +34,7 @@ class Types extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'string', 'max' => 20],
+            [['name'], 'string', 'max' => 100],
         ];
     }
 
