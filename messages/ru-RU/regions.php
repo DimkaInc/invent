@@ -21,9 +21,10 @@ return [
     'Region' => 'Подразделение',
     'Region name' => 'Подразделение',
     'Regions' => 'Подразделения',
+    'Regions: can\'t add region "{region}"' => 'Подразделения: невозможно добавить подразделение "{region}"',
     'Select region' => 'Выберите подразделение',
-    'Update Regions: {name}' => 'Изменение региона: {name}',
     'The requested page does not exist.' => 'Запрошенная страница отсутствует.',
     'Update' => 'Обновить',
-    'Update Regions' => '@@Редактирование региона@@',
+    'Update Regions: {name}' => 'Изменение региона: {name}',
+    'Regions: Key field missing "region"' => 'Подразделения: Отсуствует ключевое поле "подразделение"',
 ];

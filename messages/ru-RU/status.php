@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Status' => 'Состояние',
-    'Statuses' => 'Состояния',
     'Create status' => 'Добавление состояния',
-    'Select status' => 'Выберите состояние',
+    'Status' => 'Состояние',
     'Status name' => 'Состояние',
-    'Update Status' => 'Редактирование состояния',
+    'Statuses' => 'Состояния',
     'Update Status: {name}' => 'Изменение состояния: {name}',
+    'Failed to add entry "{status}"' => 'Ошибка добавление записи "{status}"',
+    'Status: Key field missing "status" :' => 'Состояния: Отсутствует ключевое поле "состояние" :',
 ];

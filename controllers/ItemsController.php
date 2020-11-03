@@ -59,6 +59,10 @@ class ItemsController extends Controller
      */
     public static function addIfNeed($options)
     {
+        $result = [
+            'id' => FALSE,
+            'error' => Yii::t('items', 'Items: Key field missing "invent", "serial", "model"') . print_r($options, TRUE),
+        ];
         // Если указан инвентарный номер
         if (is_array($options) && isset($options[ 'invent' ]))
         {
@@ -72,19 +76,22 @@ class ItemsController extends Controller
 
             if (count($item) > 0) // Записи найдены, выводим первую совпавшую
             {
-                return $item[ 0 ]->id;
+                $result[ 'id' ] = $item[ 0 ]->id;
+                $result[ 'error' ] = '';
             }
             // Внесённого оборудования не найдено. Добавим новую запись
             if (isset($options[ 'model' ]))
             {
+                $result[ 'error' ] = '';
                 // Если указан тип предмета/оборудования
                 if (isset($options[ 'type' ]))
                 {
-                    $type_id = TypesController::addIfNeed($options[ 'type' ]); // Найдём или добавим тип
+                    $type = TypesController::addIfNeed($options[ 'type' ]); // Найдём или добавим тип
                     // Если тип не добавили
-                    if($type_id === FALSE)
+                    if($type[ 'id' ] === FALSE)
                     {
-                        $type_id = NULL; // сделаем его пустым
+                        $result[ 'error' ] = $type[ 'error' ] . '<br />';
+                        $type[ 'id' ] = NULL; // сделаем его пустым
                     }
                 }
                 // Создаём новую запись предмета/оборудования
@@ -93,7 +100,7 @@ class ItemsController extends Controller
                 $item->model       = isset($options[ 'model' ]) ? $options[ 'model' ] : NULL;     // Наименование
                 $item->invent      = isset($options[ 'invent' ]) ? $options[ 'invent' ] : NULL;   // Инвентарный номер
                 $item->comment     = isset($options[ 'comment' ]) ? $options[ 'comment' ] : NULL; // Коментарий
-                $item->type_id     = isset($type_id) ? $type_id : NULL;                           // Идентификатор типа
+                $item->type_id     = isset($type[ 'id' ]) ? $type[ 'id' ] : NULL;                 // Идентификатор типа
                 $item->os          = isset($options[ 'os' ]) ? $options[ 'os' ] : NULL;           // Операционная система
                 $item->mac         = isset($options[ 'mac' ]) ? $options[ 'mac' ] : NULL;         // MAC-адрес
                 $item->serial      = isset($options[ 'serial' ]) ? $options[ 'serial' ] : NULL;   // Серийный номер
@@ -103,11 +110,15 @@ class ItemsController extends Controller
                 // Сохраняем запись
                 if ($item->validate() && $item->save())
                 {
-                    return $item->id; // Возвращаем идентификатор записанного оборудования
+                    $result[ 'id' ] = $item->id; // Возвращаем идентификатор записанного оборудования
+                }
+                else
+                {
+                    $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry') . print_r($item->errors());
                 }
             }
         }
-        return FALSE;
+        return $result;
     }
 
     /**
@@ -288,7 +299,7 @@ class ItemsController extends Controller
         {
             // Сообщение об ошибке
             $arrayReturn[ 'countErrors' ] = count($arrayRows);
-            $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Skip all. Key column not found.: ' . print_r($arrayRows[0], TRUE));
+            $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Skip all. Key column not found: ') . print_r($arrayRows[0], TRUE);
         }
         else
         {
@@ -306,22 +317,16 @@ class ItemsController extends Controller
                 else
                 {
                     // Попробуем найти или добавить предмет/оборудование
-                    $item_id = $this->addIfNeed($row);
-                    if (!isset($item_id))
+                    $item = $this->addIfNeed($row);
+                    if ($item[ 'id' ] === FALSE)
                     {
-                        $arrayReturn[ 'errors' ] .= '<br />Оборудование: ' . print_r($row, TRUE);
-                        continue;
-                    }
-                    if ($item_id === FALSE)
-                    {
-                        // Сообщим об ошибке
                         $arrayReturn[ 'countErrors' ]++;
-                        $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Item: {model}, Invent: {invent}, serial No:, comment: {comment}', $row);
+                        $arrayReturn[ 'errors' ] .= '<br />' . $item[ 'error' ];
                     }
                     else
                     {
                         // Проверка, что предмет/оборудование уже были в базе
-                        $item = Items::find()->where([ 'id' => $item_id ])->one();
+                        $item = Items::find()->where([ 'id' => $item[ 'id' ]])->one();
                         if ($item->checked === TRUE)
                         {
                             $arrayReturn[ 'countExists' ]++;
@@ -329,7 +334,7 @@ class ItemsController extends Controller
                         else
                         {
                             $state = isset($row[ 'status' ]) ? StatusController::addIfNeed($row) : StatusController::addIfNeed([ 'name' => 'Склад' ]);
-                            if ( $state['id'] === FALSE )
+                            if ( $state[ 'id' ] === FALSE )
                             {
                                 // Сообщим об ошибке
                                 $arrayReturn[ 'countErrors' ]++;
@@ -339,11 +344,11 @@ class ItemsController extends Controller
                             {
                                 // Новый предмет/оборудование. Пробуем добавить первое перемещение
                                 $moving = new Moving();
-                                $moving->date = $row[ 'date' ];
-                                $moving->state_id = $state['id'];
-                                $moving->item_id = $item_id;
+                                $moving->date        = $row[ 'date' ];
+                                $moving->state_id    = $state[ 'id' ];
+                                $moving->item_id     = $item[ 'id' ];
                                 $moving->location_id = $location[ 'id' ];
-                                $moving->comment = Yii::t('import', 'Import: {comment}', $row);
+                                $moving->comment     = Yii::t('import', 'Import: {comment}', $row);
 
                                 if ($moving->validate() && $moving->save())
                                 {
@@ -356,7 +361,7 @@ class ItemsController extends Controller
                                     Items::find()->where([ 'id' => $item_id, 'checked' => FALSE ])->one()->delete();
                                     // Сообщим об ошибке
                                     $arrayReturn[ 'countErrors' ]++;
-                                    $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Moving: {date} ('.$moving->errors['date'][0].'), Инвентарный номер:{invent} {model}, location: {location} ( {region} )' , $row);
+                                    $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Moving: {date} (') . $moving->errors['date'][0]. Yii::t('import', '), Inventory number:{invent}, model: {model}, location: {location} ( {region} )' , $row);
                                 }
                                 unset($moving);
                             }

@@ -17,5 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Add user' => 'Добавить пользователя',
+    'Password' => 'Пароль',
+    'User name' => 'Имя пользователя',
 ];

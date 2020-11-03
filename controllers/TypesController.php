@@ -38,23 +38,36 @@ class TypesController extends Controller
      */
      public function addIfNeed($options)
      {
-        if (is_array($options) && isset($options[ 'name' ]))
+        $result = [
+            'id' => FALSE,
+            'error' => Yii::t('types', 'Types: key field "type" missing') . print_r($options, TRUE),
+        ];
+        if (is_array($options) && isset($options[ 'type' ]))
         {
-            $type = Types::find()
-                ->where([ 'like', 'name', $options[ 'name' ] ])
+            $model = Types::find()
+                ->where([ 'like', 'name', $options[ 'type' ] ])
                 ->all();
-            if (count($type) > 0)
+            if (count($model) > 0)
             {
-                return $type[0]->id;
+                $result['id'] = $model[0]->id;
+                $result['error'] = '';
             }
-            $type = new Types();
-            $type->name = $options[ 'name' ];
-            if ($type->validate() && $type->save())
+            else
             {
-                return $type->id;
+                $model = new Types();
+                $model->name = $options[ 'type' ];
+                if ($model->validate() && $model->save())
+                {
+                    $result['id'] = $model[0]->id;
+                    $result['error'] = '';
+                }
+                else
+                {
+                    $result['error'] = Yii::t('types', 'Failed to add entry {type}', $options) . print_r($model->errors()['name']);
+                }
             }
         }
-        return FALSE;
+        return $result;
      }
 
     /**
