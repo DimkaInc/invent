@@ -241,7 +241,7 @@ class ItemsController extends Controller
         {
             $id = Yii::$app->request->queryParams['id'];
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-            $dataProvider->query->select(Items::tableName() . '.id');
+            //$dataProvider->query->select(Items::tableName() . '.id');
             $pageSize = $dataProvider->pagination->pageSize;
             $dataProvider->pagination = FALSE;
             $rows = $dataProvider->getModels();

@@ -103,7 +103,24 @@ class LocationsController extends Controller
         {
             return $this->redirect(['site/index']);
         }
+
         $searchModel = new LocationsSearch();
+        if (isset(Yii::$app->request->queryParams['id'])) {
+            $id = Yii::$app->request->queryParams['id'];
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            //$dataProvider->query->select([Locations::tableName() . '.id', Locations::tableName() . '.name']);
+            $pageSize = $dataProvider->pagination->pageSize;
+            $dataProvider->pagination = FALSE;
+            $rows = $dataProvider->getModels();
+            $page = 0;
+            foreach ($rows as $key => $val) {
+                if ($id == $val->id) {
+                    $page = ceil(($key + 1) / $pageSize);
+                    break;
+                }
+            }
+            return $this->redirect(['index', 'page' => $page]);
+        }
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
