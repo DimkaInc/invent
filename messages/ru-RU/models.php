@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Create status' => 'Добавление состояния',
-    'Status' => 'Состояние',
-    'Status name' => 'Состояние',
-    'Statuses' => 'Состояния',
-    'Update Status: {name}' => 'Изменение состояния: {name}',
-    'Failed to add entry "{status}"' => 'Ошибка добавление записи "{status}"',
-    'Status: Key field missing "status" :' => 'Состояния: Отсутствует ключевое поле "status" :',
+    'Create Model' => 'Добавить модель',
+    'Model name' => 'Наименование предмета/оборудования',
+    'Model number' => 'Номер модели',
+    'Models' => 'Модели',
+    'Prodict number' => 'Код оборудования',
+    'Type identify' => 'Идентификатор типа',
+    'Update Model: {name}' => 'Изменение модели {name}',
 ];

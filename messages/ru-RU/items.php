@@ -48,5 +48,5 @@ return [
     'Total items count' => 'Всего',
     'Update Items: {name}' => 'Изменение оборудования: {name}',
     'Items: Failed to add entry' => 'Оборудование: Не удалось добавить запись',
-    'Items: Key field missing "invent", "serial", "model"' => 'Оборудование: Отсутсвуют ключевые поля: "Инвентарный номер", "серийный номер", "основное средство"',
+    'Items: Key field missing "invent", "serial", "model"' => 'Оборудование: Отсутсвуют ключевые поля: "invent", "serial", "model"',
 ];

@@ -23,5 +23,5 @@ return [
     'Types' => 'Типы оборудования',
     'Update Types: {name}' => 'Изменение типа оборудования: {name}',
     'Failed to add entry {type}' => 'Ошибка добавления записи {type}',
-    'Types: key field "type" missing' => 'Типы: Ключевое поле "тип" отсутствует',
+    'Types: key field "type" missing' => 'Типы: Ключевое поле "type" отсутствует',
 ];

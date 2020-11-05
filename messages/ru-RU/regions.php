@@ -26,5 +26,5 @@ return [
     'The requested page does not exist.' => 'Запрошенная страница отсутствует.',
     'Update' => 'Обновить',
     'Update Regions: {name}' => 'Изменение региона: {name}',
-    'Regions: Key field missing "region"' => 'Подразделения: Отсуствует ключевое поле "подразделение"',
+    'Regions: Key field missing "region"' => 'Подразделения: Отсуствует ключевое поле "region"',
 ];

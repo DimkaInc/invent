@@ -208,7 +208,7 @@ use yii\data\Sort;
                     [ 'attribute' => 'statusName',
                         'value' => function($data)
                         {
-                            return showUrlUpdate($data->statusName, $data);
+                            return Html::a(Html::encode($data->statusName), [ 'moving/update', 'id' => $data->id ]);
                         },
                         'format' => 'raw',
                     ],

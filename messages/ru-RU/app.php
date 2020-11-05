@@ -53,5 +53,4 @@ return [
     'Username' => 'Имя пользователя',
     'You may login with' => 'Вы можете войти как',
     'or' => 'или',
-    'Update Status: {name}' => '@@Изменение состояния: {name}@@',
 ];

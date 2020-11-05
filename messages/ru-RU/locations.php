@@ -27,5 +27,5 @@ return [
     'Select location' => 'Выберите место',
     'The requested page does not exist.' => 'Запрошенная страница отсуствует',
     'Update Locations: {name}' => 'Изменение места: {name}',
-    'Locations: Key field missing "location" and "region" :' => 'Размещение: Отсутсвуют ключевые поля "размещение" и "подразделение" :',
+    'Locations: Key field missing "location" and "region" :' => 'Размещение: Отсутсвуют ключевые поля "location" и "region" :',
 ];

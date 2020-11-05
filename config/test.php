@@ -35,6 +35,7 @@ return [
                         'import'    => 'import.php',        // Для импорта. Обозначение полей таблицы
                         'items'     => 'items.php',         // Для предметов/оборудования
                         'locations' => 'locations.php',     // Для мета расположения
+                        'models'    => 'models.php',        // Для моделей предметов/оборудования
                         'moving'    => 'moving.php',        // Для перемещений
                         'regions'   => 'regions.php',       // Для регионов/подразделений
                         'status'    => 'status.php',        // Для состояний предметов/оборудования
