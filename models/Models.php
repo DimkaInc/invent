@@ -17,6 +17,7 @@ use Yii;
  */
 class Models extends \yii\db\ActiveRecord
 {
+    public $typeName;
     /**
      * {@inheritdoc}
      */
@@ -51,6 +52,7 @@ class Models extends \yii\db\ActiveRecord
             'type_id' => Yii::t('models', 'Type identify'),
             'modelnum' => Yii::t('models', 'Model number'),
             'product' => Yii::t('models', 'Prodict number'),
+            'typeName' => Yii::t('types', 'Type'),
         ];
     }
 
@@ -59,7 +61,7 @@ class Models extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getType()
+    public function getTypes()
     {
         return $this->hasOne(Types::className(), ['id' => 'type_id']);
     }

@@ -5,6 +5,7 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Models;
+use app\models\Types;
 
 /**
  * ModelsSearch represents the model behind the search form of `app\models\Models`.
@@ -18,7 +19,7 @@ class ModelsSearch extends Models
     {
         return [
             [['id', 'type_id'], 'integer'],
-            [['name', 'modelnum', 'product'], 'safe'],
+            [['name', 'modelnum', 'product', 'typeName'], 'safe'],
         ];
     }
 
@@ -40,13 +41,20 @@ class ModelsSearch extends Models
      */
     public function search($params)
     {
-        $query = Models::find();
+        $query = Models::find()
+            ->select(Models::tableName().'.*, ' . Types::tableName() . 'name AS typeName')
+            ->joinWith([ 'types' ]);
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+
+        $dataProvider->sort->attributes['typeName'] = [
+            'asc'  => [ Types::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Types::tableName() . '.name' => SORT_DESC ],
+        ];
 
         $this->load($params);
 
@@ -62,9 +70,10 @@ class ModelsSearch extends Models
             'type_id' => $this->type_id,
         ]);
 
-        $query->andFilterWhere(['ilike', 'name', $this->name])
-            ->andFilterWhere(['ilike', 'modelnum', $this->modelnum])
-            ->andFilterWhere(['ilike', 'product', $this->product]);
+        $query->andFilterWhere([ 'ilike', 'name', $this->name ])
+            ->andFilterWhere([ 'ilike', 'modelnum', $this->modelnum ])
+            ->andFilterWhere([ 'ilike', 'product', $this->product ])
+            ->andFilterWhere([ 'ilike', 'typeName', $this->typeName ]);
 
         return $dataProvider;
     }

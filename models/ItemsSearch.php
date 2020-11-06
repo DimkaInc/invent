@@ -78,20 +78,20 @@ class ItemsSearch extends Items
             ],
         ]);
         $dataProvider->sort->attributes['statusName'] = [
-            'asc'  => [Status::tableName() . '.name' => SORT_ASC],
-            'desc' => [Status::tableName() . '.name' => SORT_DESC],
+            'asc'  => [ Status::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Status::tableName() . '.name' => SORT_DESC ],
         ];
         $dataProvider->sort->attributes['typeName'] = [
-            'asc'  => [Types::tableName() . '.name' => SORT_ASC],
-            'desc' => [Types::tableName() . '.name' => SORT_DESC],
+            'asc'  => [ Types::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Types::tableName() . '.name' => SORT_DESC ],
         ];
         $dataProvider->sort->attributes['locationName'] = [
-            'asc'  => [Locations::tableName() . '.name' => SORT_ASC],
-            'desc' => [Locations::tableName() . '.name' => SORT_DESC],
+            'asc'  => [ Locations::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Locations::tableName() . '.name' => SORT_DESC ],
         ];
         $dataProvider->sort->attributes['regionName'] = [
-            'asc'  => [Regions::tableName() . '.name' => SORT_ASC],
-            'desc' => [Regions::tableName() . '.name' => SORT_DESC],
+            'asc'  => [ Regions::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Regions::tableName() . '.name' => SORT_DESC ],
         ];
         return $dataProvider;
     }

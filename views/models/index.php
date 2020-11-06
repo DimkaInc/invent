@@ -52,6 +52,7 @@ if (User::canPermission('updateRecord'))
         },
         'format' => 'raw',
     ] );
+    array_push($columns, [ 'class' => 'yii\grid\ActionColumn', 'template' => $template ]);
 }
 else
 {
@@ -75,17 +76,7 @@ else
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'name',
-            'type_id',
-            'modelnum',
-            'product',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
+        'columns' => $columns,
     ]); ?>
 
     <?php Pjax::end(); ?>

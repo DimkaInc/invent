@@ -18,7 +18,7 @@
  */
 return [
     'Create Model' => 'Добавить модель',
-    'Model name' => 'Наименование предмета/оборудования',
+    'Model name' => 'Название',
     'Model number' => 'Номер модели',
     'Models' => 'Модели',
     'Prodict number' => 'Код оборудования',
