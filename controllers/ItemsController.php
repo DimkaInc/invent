@@ -79,42 +79,53 @@ class ItemsController extends Controller
                 $result[ 'id' ] = $item[ 0 ]->id;
                 $result[ 'error' ] = '';
             }
-            // Внесённого оборудования не найдено. Добавим новую запись
-            if (isset($options[ 'model' ]))
+            else
             {
-                $result[ 'error' ] = '';
-                // Если указан тип предмета/оборудования
-                if (isset($options[ 'type' ]))
+                // Внесённого оборудования не найдено. Добавим новую запись
+                if (isset($options[ 'model' ]))
                 {
-                    $type = TypesController::addIfNeed($options[ 'type' ]); // Найдём или добавим тип
-                    // Если тип не добавили
-                    if($type[ 'id' ] === FALSE)
+                    $model = ModelsController::addIfNeed($options);
+                    if ($model[ 'id' ] === FALSE)
                     {
-                        $result[ 'error' ] = $type[ 'error' ] . '<br />';
-                        $type[ 'id' ] = NULL; // сделаем его пустым
+                        $result[ 'error' ] .= $model[ 'error' ] . '<br />';
                     }
-                }
-                // Создаём новую запись предмета/оборудования
-                $item = new Items();
-                $item->name        = isset($options[ 'netName' ]) ? $options[ 'netName' ] : NULL; // Сетевое имя
-                $item->model       = isset($options[ 'model' ]) ? $options[ 'model' ] : NULL;     // Наименование
-                $item->invent      = isset($options[ 'invent' ]) ? $options[ 'invent' ] : NULL;   // Инвентарный номер
-                $item->comment     = isset($options[ 'comment' ]) ? $options[ 'comment' ] : NULL; // Коментарий
-                $item->type_id     = isset($type[ 'id' ]) ? $type[ 'id' ] : NULL;                 // Идентификатор типа
-                $item->os          = isset($options[ 'os' ]) ? $options[ 'os' ] : NULL;           // Операционная система
-                $item->mac         = isset($options[ 'mac' ]) ? $options[ 'mac' ] : NULL;         // MAC-адрес
-                $item->serial      = isset($options[ 'serial' ]) ? $options[ 'serial' ] : NULL;   // Серийный номер
-                $item->product     = isset($options[ 'product' ]) ? $options[ 'product' ] : NULL; // Код оборудования
-                $item->modelnumber = isset($options[ 'modelnum' ]) ? $options[ 'modelnum' ] : NULL; // Номер модели
-                $item->checked     = false;                                                       // Не инвентризирован (требует внимания после импорта)
-                // Сохраняем запись
-                if ($item->validate() && $item->save())
-                {
-                    $result[ 'id' ] = $item->id; // Возвращаем идентификатор записанного оборудования
-                }
-                else
-                {
-                    $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry') . print_r($item->errors());
+                    // Если указан тип предмета/оборудования
+                    if (isset($options[ 'type' ]))
+                    {
+                        $type = TypesController::addIfNeed($options[ 'type' ]); // Найдём или добавим тип
+                        // Если тип не добавили
+                        if($type[ 'id' ] === FALSE)
+                        {
+                            $result[ 'error' ] = $type[ 'error' ] . '<br />';
+                            $type[ 'id' ] = NULL; // сделаем его пустым
+                        }
+                    }
+                    // Создаём новую запись предмета/оборудования
+                    $item = new Items();
+                    $item->name        = isset($options[ 'netName' ]) ? $options[ 'netName' ] : NULL; // Сетевое имя
+
+                    $item->model       = isset($options[ 'model' ]) ? $options[ 'model' ] : NULL;     // Наименование
+                    //$item->model_id    = $model[ 'id' ];                                              // идентификатор модели (Подготовлено для преобразования)
+                    $item->type_id     = isset($type[ 'id' ]) ? $type[ 'id' ] : NULL;                 // Идентификатор типа
+                    $item->product     = isset($options[ 'product' ]) ? $options[ 'product' ] : NULL; // Код оборудования
+                    $item->modelnumber = isset($options[ 'modelnum' ]) ? $options[ 'modelnum' ] : NULL; // Номер модели
+
+                    $item->invent      = isset($options[ 'invent' ]) ? $options[ 'invent' ] : NULL;   // Инвентарный номер
+                    $item->comment     = isset($options[ 'comment' ]) ? $options[ 'comment' ] : NULL; // Коментарий
+                    $item->os          = isset($options[ 'os' ]) ? $options[ 'os' ] : NULL;           // Операционная система
+                    $item->mac         = isset($options[ 'mac' ]) ? $options[ 'mac' ] : NULL;         // MAC-адрес
+                    $item->serial      = isset($options[ 'serial' ]) ? $options[ 'serial' ] : NULL;   // Серийный номер
+                    $item->checked     = false;                                                       // Не инвентризирован (требует внимания после импорта)
+                    // Сохраняем запись
+                    if ($item->validate() && $item->save())
+                    {
+                        $result[ 'id' ] = $item->id; // Возвращаем идентификатор записанного оборудования
+                        $result[ 'error' ] = '';
+                    }
+                    else
+                    {
+                        $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry') . print_r($item->errors());
+                    }
                 }
             }
         }
