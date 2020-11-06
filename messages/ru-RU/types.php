@@ -18,10 +18,11 @@
  */
 return [
     'Create type' => 'Добавить тип оборудования',
+    'Failed to add entry {type}' => 'Ошибка добавления записи {type}',
     'Select type' => 'Выберите тип',
     'Type' => 'Тип оборудования',
     'Types' => 'Типы оборудования',
-    'Update Types: {name}' => 'Изменение типа оборудования: {name}',
-    'Failed to add entry {type}' => 'Ошибка добавления записи {type}',
     'Types: key field "type" missing' => 'Типы: Ключевое поле "type" отсутствует',
+    'Update Types: {name}' => 'Изменение типа оборудования: {name}',
+    'All types' => 'Все типы',
 ];

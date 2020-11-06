@@ -35,7 +35,7 @@ class Models extends \yii\db\ActiveRecord
             [['name', 'type_id'], 'required'],
             [['type_id'], 'default', 'value' => null],
             [['type_id'], 'integer'],
-            [['name', 'modelnum', 'product'], 'string', 'max' => 255],
+            [['name', 'modelnumber', 'product'], 'string', 'max' => 255],
             [['name'], 'unique'],
             [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Types::className(), 'targetAttribute' => ['type_id' => 'id']],
         ];
@@ -50,7 +50,7 @@ class Models extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'Identifier'),
             'name' => Yii::t('models', 'Model name'),
             'type_id' => Yii::t('models', 'Type identify'),
-            'modelnum' => Yii::t('models', 'Model number'),
+            'modelnumber' => Yii::t('models', 'Model number'),
             'product' => Yii::t('models', 'Prodict number'),
             'typeName' => Yii::t('types', 'Type'),
         ];

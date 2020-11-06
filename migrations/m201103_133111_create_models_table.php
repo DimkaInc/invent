@@ -18,11 +18,11 @@ class m201103_133111_create_models_table extends Migration
     {
         $table = '{{%models}}';
         $this->createTable($table, [
-            'id' => 'SERIAL',
-            'name' => $this->string()->unique()->notNull()->comment('Наименование предмета/оборудования'),
-            'type_id' => $this->integer()->notNull()->comment('Идентификатор типа'),
-            'modelnum' => $this->string()->comment('Номер модели'),
-            'product' => $this->string()->comment('Код оборудования'),
+            'id'          => 'SERIAL',
+            'name'        => $this->string()->unique()->notNull()->comment('Наименование предмета/оборудования'),
+            'type_id'     => $this->integer()->notNull()->comment('Идентификатор типа'),
+            'modelnumber' => $this->string()->comment('Номер модели'),
+            'product'     => $this->string()->comment('Код оборудования'),
         ]);
 
         $this->addCommentOnTable($table, 'Список наименований предметов/оборудования');

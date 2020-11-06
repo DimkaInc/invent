@@ -3,8 +3,10 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use yii\helpers\ArrayHelper;
 
 use app\models\User;
+use app\models\Types;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ModelsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -30,6 +32,15 @@ if (User::canPermission('updateRecord'))
     ] );
     // Тип модели
     array_push($columns, [ 'attribute' => 'typeName',
+        'filter' => Html::activeDropDownList(
+            $searchModel,
+            'typeName',
+            ArrayHelper::merge(
+                [ '' => Yii::t('types', 'All types'), ],
+                ArrayHelper::map(Types::find()->orderBy('name')->all(), 'name', 'name')
+            ),
+            [ 'class' => 'form-control', ],
+        ) ,
         'value' => function ($data)
         {
             return showUrlUpdate($data->typeName, $data);
@@ -37,10 +48,10 @@ if (User::canPermission('updateRecord'))
         'format' => 'raw',
     ] );
     // Номер модели
-    array_push($columns, [ 'attribute' => 'modelnum',
+    array_push($columns, [ 'attribute' => 'modelnumber',
         'value' => function ($data)
         {
-            return showUrlUpdate($data->modelnum, $data);
+            return showUrlUpdate($data->modelnumber, $data);
         },
         'format' => 'raw',
     ] );
@@ -57,7 +68,17 @@ if (User::canPermission('updateRecord'))
 else
 {
     array_push($columns, 'name');
-    array_push($columns, 'typeName');
+    array_push($columns, [ 'attribute' => 'typeName',
+        'filter' => Html::activeDropDownList(
+            $searchModel,
+            'typeName',
+            ArrayHelper::merge(
+                [ '' => Yii::t('types', 'All types'), ],
+                ArrayHelper::map(Types::find()->orderBy('name')->all(), 'name', 'name')
+            ),
+            [ 'class' => 'form-control', ],
+        ),
+    ]);
     array_push($columns, 'modelnum');
     array_push($columns, 'product');
 }

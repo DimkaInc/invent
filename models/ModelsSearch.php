@@ -19,7 +19,7 @@ class ModelsSearch extends Models
     {
         return [
             [['id', 'type_id'], 'integer'],
-            [['name', 'modelnum', 'product', 'typeName'], 'safe'],
+            [['name', 'modelnumber', 'product', 'typeName'], 'safe'],
         ];
     }
 
@@ -42,7 +42,7 @@ class ModelsSearch extends Models
     public function search($params)
     {
         $query = Models::find()
-            ->select(Models::tableName().'.*, ' . Types::tableName() . 'name AS typeName')
+            ->select(Models::tableName().'.*, ' . Types::tableName() . '.name AS typeName')
             ->joinWith([ 'types' ]);
 
         // add conditions that should always apply here
@@ -51,10 +51,17 @@ class ModelsSearch extends Models
             'query' => $query,
         ]);
 
+        $dataProvider->setSort([
+            'defaultOrder' => [
+                'name' => SORT_ASC,
+            ],
+        ]);
+        
         $dataProvider->sort->attributes['typeName'] = [
             'asc'  => [ Types::tableName() . '.name' => SORT_ASC ],
             'desc' => [ Types::tableName() . '.name' => SORT_DESC ],
         ];
+
 
         $this->load($params);
 
@@ -71,9 +78,9 @@ class ModelsSearch extends Models
         ]);
 
         $query->andFilterWhere([ 'ilike', 'name', $this->name ])
-            ->andFilterWhere([ 'ilike', 'modelnum', $this->modelnum ])
+            ->andFilterWhere([ 'ilike', 'modelnumber', $this->modelnumber ])
             ->andFilterWhere([ 'ilike', 'product', $this->product ])
-            ->andFilterWhere([ 'ilike', 'typeName', $this->typeName ]);
+            ->andFilterWhere([ 'ilike', Types::tableName() . '.name', $this->typeName ]);
 
         return $dataProvider;
     }
