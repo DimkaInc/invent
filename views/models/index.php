@@ -79,7 +79,7 @@ else
             [ 'class' => 'form-control', ],
         ),
     ]);
-    array_push($columns, 'modelnum');
+    array_push($columns, 'modelnumber');
     array_push($columns, 'product');
 }
 ?>

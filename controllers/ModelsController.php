@@ -5,6 +5,8 @@ namespace app\controllers;
 use Yii;
 use app\models\Models;
 use app\models\ModelsSearch;
+use app\models\User;
+
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,6 +37,10 @@ class ModelsController extends Controller
      */
     public function actionIndex()
     {
+        if (! User::canPermission('createRecord') )
+        {
+            return $this->redirect(['site/index']);
+        }
         $searchModel = new ModelsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -52,6 +58,10 @@ class ModelsController extends Controller
      */
     public function actionView($id)
     {
+        if (! User::canPermission('updateRecord') )
+        {
+            return $this->redirect(['index']);
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -64,10 +74,14 @@ class ModelsController extends Controller
      */
     public function actionCreate()
     {
+        if (! User::canPermission('createRecord') )
+        {
+            return $this->redirect(['site/index']);
+        }
         $model = new Models();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index', 'id' => $model->id]);
         }
 
         return $this->render('create', [
@@ -84,10 +98,14 @@ class ModelsController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (! User::canPermission('updateRecord') )
+        {
+            return $this->redirect(['index']);
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index', 'id' => $model->id]);
         }
 
         return $this->render('update', [
@@ -104,6 +122,10 @@ class ModelsController extends Controller
      */
     public function actionDelete($id)
     {
+        if (! User::canPermission('updateRecord') )
+        {
+            return $this->redirect(['index']);
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
