@@ -215,7 +215,7 @@ class ItemsController extends Controller
                 //$message = '[0] = "' . $keys[0] . '", [1] = "' . $keys[1] . '"<br />';
                 foreach ($items as $row)
                 {
-                    $message .= $row->model . ' (' . $row->id . ')';
+                    $message .= $row->modelName . ' (' . $row->id . ')';
                 }
                 if ($message != '')
                     $message = Yii::t('items', 'Checked item(s): ') . $message;

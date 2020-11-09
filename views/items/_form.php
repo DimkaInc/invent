@@ -71,7 +71,13 @@ use yii\data\Sort;
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
                        Html::a(Yii::t('models', 'Models'), [ 'models/index' ], [ 'class' => 'btn btn-primary' ] ) .
                        '</div><div class="col-md-8">{error}</div></div>' ])
-            ->dropDownList( $models, ['prompt' => Yii::t('models', 'Select model')] ) ?>
+            ->dropDownList( $models, ['prompt' => Yii::t('models', 'Select model')] )
+            ->label(Yii::t('items', 'Model')) ?>
+
+    <?= $form->field($model,
+            'name',
+            [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
+            ->textInput([ 'maxlength' => true ]) ?>
 
     <?= $form->field($model,
             'os',

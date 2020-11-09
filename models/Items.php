@@ -47,7 +47,7 @@ class Items extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [[ 'name', 'model', 'os', 'serial', 'product', 'modelnumber', 'comment' ], 'string', 'max' => 255 ],
+            [[ 'name', 'os', 'serial', 'comment' ], 'string', 'max' => 255 ],
             [[ 'mac' ],    'string', 'max' => 20 ],
             [[ 'invent' ], 'string', 'max' => 50 ],
             [[ 'model_id' ], 'integer' ],

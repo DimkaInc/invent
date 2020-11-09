@@ -18,14 +18,11 @@ class ItemsUpdateCest
         // Заголовок
         $I->see(Yii::t('items', 'Update Items: {name}', [ 'name' => '', ]), 'h1');
         // Поля
-        $I->see(Yii::t('items', 'Item type'), 'label');
         $I->see(Yii::t('items', 'Item network name'), 'label');
         $I->see(Yii::t('items', 'Model'), 'label');
         $I->see(Yii::t('items', 'Operating system'), 'label');
         $I->see(Yii::t('items', 'MAC address'), 'label');
         $I->see(Yii::t('items', 'Serial number'), 'label');
-        $I->see(Yii::t('items', 'Product number'), 'label');
-        $I->see(Yii::t('items', 'Model number'), 'label');
         $I->see(Yii::t('items', 'Inventory number'), 'label');
         $I->see(Yii::t('items', 'Additional Information'), 'label');
         // Кнопки
@@ -61,10 +58,10 @@ class ItemsUpdateCest
     }
 
     // Нажатие на кнопку "Типы"
-    public function pushTypes(\FunctionalTester $I)
+    public function pushModels(\FunctionalTester $I)
     {
-        $I->click(Yii::t('types', 'Types'), 'a.btn');
-        $I->see(Yii::t('types', 'Types'), 'h1');
+        $I->click(Yii::t('models', 'Models'), 'a.btn');
+        $I->see(Yii::t('models', 'Models'), 'h1');
         $I->dontSee(Yii::t('items', 'Update Items: {name}', [ 'name' => '', ]), 'h1');
     }
 

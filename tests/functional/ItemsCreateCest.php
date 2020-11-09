@@ -18,14 +18,11 @@ class ItemsCreateCest
         // Заголовок
         $I->see(Yii::t('items', 'Create Items'), 'h1');
         // Поля
-        $I->see(Yii::t('items', 'Item type'), 'label');
         $I->see(Yii::t('items', 'Item network name'), 'label');
         $I->see(Yii::t('items', 'Model'), 'label');
         $I->see(Yii::t('items', 'Operating system'), 'label');
         $I->see(Yii::t('items', 'MAC address'), 'label');
         $I->see(Yii::t('items', 'Serial number'), 'label');
-        $I->see(Yii::t('items', 'Product number'), 'label');
-        $I->see(Yii::t('items', 'Model number'), 'label');
         $I->see(Yii::t('items', 'Inventory number'), 'label');
         $I->see(Yii::t('items', 'Additional Information'), 'label');
         $I->see(Yii::t('moving', 'Moving date'), 'label');
@@ -40,14 +37,11 @@ class ItemsCreateCest
     public function enterData(FunctionalTester $I)
     {
         $I->submitForm('#ItemForm', [
-            'Items[type_id]'      => '1',
             'Items[name]'         => 'TEST-WS-0001',
-            'Items[model]'        => 'Тестовый компьютер',
+            'Items[model_id]'     => 1,
             'Items[os]'           => 'Тестовая ОС',
             'Items[mac]'          => '00:00-MAC-:00:00',
             'Items[serial]'       => '*TEST SERIAL NUMBER*',
-            'Items[product]'      => 'TEST PRODUCT',
-            'Items[modelnumber]'  => 'TEST MODEL NUMBER',
             'Items[invent]'       => '*TEST INVENTORY NUMBER*',
             'Items[comment]'      => 'Тестирование. Это тестовая запись.',
             'Moving[date]'        => '01.01.2020',
@@ -61,9 +55,9 @@ class ItemsCreateCest
     // Нажатие на кнопку "Типы"
     public function pushTypes(FunctionalTester $I)
     {
-        $I->click(Locator::contains('div a', Yii::t('types', 'Types')));
+        $I->click(Locator::contains('div a', Yii::t('models', 'Models')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
-        $I->see(Yii::t('types', 'Types'), 'h1');
+        $I->see(Yii::t('models', 'Models'), 'h1');
         $I->dontSee(Yii::t('items', 'Create Items'), 'h1');
     }
 
