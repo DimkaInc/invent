@@ -148,7 +148,7 @@ if (User::canPermission('updateRecord'))
 {
     array_push($columns, 'invent');
     array_push($columns, 'serial');
-    array_push($columns, 'model');
+    array_push($columns, 'modelName');
     //array_push($columns, 'id');
     //array_push($columns, 'name');
     array_push($columns, [ 'attribute' => 'regionName',
