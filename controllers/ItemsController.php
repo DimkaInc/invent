@@ -104,8 +104,8 @@ class ItemsController extends Controller
                     $item = new Items();
                     $item->name        = isset($options[ 'netName' ]) ? $options[ 'netName' ] : NULL; // Сетевое имя
 
-                    $item->model       = isset($options[ 'model' ]) ? $options[ 'model' ] : NULL;     // Наименование
                     //$item->model_id    = $model[ 'id' ];                                              // идентификатор модели (Подготовлено для преобразования)
+                    $item->model       = isset($options[ 'model' ]) ? $options[ 'model' ] : NULL;     // Наименование
                     $item->type_id     = isset($type[ 'id' ]) ? $type[ 'id' ] : NULL;                 // Идентификатор типа
                     $item->product     = isset($options[ 'product' ]) ? $options[ 'product' ] : NULL; // Код оборудования
                     $item->modelnumber = isset($options[ 'modelnum' ]) ? $options[ 'modelnum' ] : NULL; // Номер модели

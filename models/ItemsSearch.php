@@ -114,10 +114,11 @@ class ItemsSearch extends Items
         $query = Items::find()
             ->select(Items::tableName() . '.*, ' .
                 Locations::tableName() .  '.name AS locationName, ' .
+//                Models::tableName() . '.name AS modelName' .
                 Types::tableName() .      '.name AS typeName, ' .
                 Regions::tableName() .    '.name AS regionName, ' .
                 Status::tableName() .     '.name AS statusName ')
-            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions' ])
+            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions', /* 'models', */ ])
             ->where([ 'in', Moving::tableName() . '.id', $subQuery ]);
 
         // add conditions that should always apply here
@@ -146,6 +147,8 @@ class ItemsSearch extends Items
             'id'   => $this->id,
         ])->andFilterWhere([
             'ilike', Status::tableName() .    '.name', $this->statusName
+//        ])->andFilterWhere([
+//            'ilike', Models::tableName() .    '.name', $this->modelName
         ])->andFilterWhere([
             'ilike', Types::tableName() .     '.name', $this->typeName
         ])->andFilterWhere([ 'OR', [
@@ -168,6 +171,10 @@ class ItemsSearch extends Items
             ->andFilterWhere(  ['ilike', 'invent',      $this->invent])
             ->andFilterWhere(  ['ilike', 'comment',     $this->comment]);
 
+//        $dataProvider->sort->attributes['modelName'] = [
+//            'asc'  => [Models::tableName() . '.name' => SORT_ASC],
+//            'desc' => [Models::tableName() . '.name' => SORT_DESC],
+//        ];
         $dataProvider->sort->attributes['statusName'] = [
             'asc'  => [Status::tableName() . '.name' => SORT_ASC],
             'desc' => [Status::tableName() . '.name' => SORT_DESC],

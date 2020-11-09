@@ -7,8 +7,9 @@ use Yii;
 /**
  * This is the model class for table 'items'.
  *
- * @property int $id                   Идентификатор (неизменяемый)
- * @property int $type_id              Идентификатор типа оборудования
+ * @property int $id                    Идентификатор (неизменяемый)
+ * @property int $type_id               Идентификатор типа оборудования
+ * @property int $model_id              Идентификатор модели предмета/оборудования
  * @property string|null  $name         Сетевое имя оборудования
  * @property string|null  $model        Модель оборудования
  * @property string|null  $os           Операционная система
@@ -22,6 +23,7 @@ use Yii;
  * @property string|null  $typeName     Наименование типа
  * @property string|null  $locationName Наименование места размещения
  * @property string|null  $regionName   Наименование региона/подразделения
+ * @property string|null  $modelName    Наименование предмета/оборудования
  */
 class Items extends \yii\db\ActiveRecord
 {
@@ -29,6 +31,7 @@ class Items extends \yii\db\ActiveRecord
     public $typeName;
     public $locationName;
     public $regionName;
+    public $modelName;
     public $myMessage;
      /**
      * {@inheritdoc}
@@ -47,7 +50,7 @@ class Items extends \yii\db\ActiveRecord
             [['name', 'model', 'os', 'serial', 'product', 'modelnumber', 'comment' ], 'string', 'max' => 255],
             [['mac'],    'string', 'max' => 20],
             [['invent'], 'string', 'max' => 50],
-            [['type_id'], 'integer'],
+            [['type_id', /* 'model_id' */], 'integer'],
             [['checked'], 'boolean'],
         ];
     }
@@ -61,33 +64,34 @@ class Items extends \yii\db\ActiveRecord
             'id'           => Yii::t('app',   'Identifier'),              // Идентификатор
             'name'         => Yii::t('items', 'Item network name'),       // Сетевое имя оборудования
             'model'        => Yii::t('items', 'Model'),                   // Модель
+            'model_id'     => Yii::t('items', 'Model idemtifier'),        // Идентификатор модели
+            'product'      => Yii::t('items', 'Product number'),          // Номер продукции
+            'modelnumber'  => Yii::t('items', 'Model number'),            // Номер модели
+            'type_id'      => Yii::t('items', 'Item type'),               // Идентификатор типа
+            'typeName'     => Yii::t('items', 'Item type'),               // Название типа
             'os'           => Yii::t('items', 'Operating system'),        // Операционная система
             'mac'          => Yii::t('items', 'MAC address'),             // MAC адрес
             'serial'       => Yii::t('items', 'Serial number'),           // Серийный номер
-            'product'      => Yii::t('items', 'Product number'),          // Номер продукции
-            'modelnumber'  => Yii::t('items', 'Model number'),            // Номер модели
             'invent'       => Yii::t('items', 'Inventory number'),        // Инвентарный номер
             'comment'      => Yii::t('items', 'Additional Information'),  // Дополнительная информация
             'checked'      => Yii::t('items', 'Location checked'),        // Проинвентаризировано
             'statusName'   => Yii::t('items', 'State'),                   // Название состояния
-            'type_id'      => Yii::t('items', 'Item type'),               // Идентификатор типа
-            'typeName'     => Yii::t('items', 'Item type'),               // Название типа
             'locationName' => Yii::t('items', 'Location'),                // Название местоположения
             'regionName'   => Yii::t('items', 'Region'),                  // Название подразделения
 
         ];
     }
 
-    // Получение типа предмета/оборудования
-    public function getTypes()
-    {
-        return $this->hasOne(Types::className(), ['id' => 'type_id']);
-    }
-
     // Получение всех перемещений предмета/оборудования
     public function getMoving()
     {
         return $this->hasMany(Moving::className(), ['item_id' => 'id']);
+    }
+
+    // Получение модели предмета/оборудования
+    public function getModels()
+    {
+        return $this->hasOne(Models::className(), ['id' => 'model_id']);
     }
 
     // Получение статусов предмета/оборудования
@@ -102,10 +106,16 @@ class Items extends \yii\db\ActiveRecord
         return $this->getMoving()->select(Locations::tableName() . '.*')->joinWith('locations');
     }
 
-    // Получение Получение региона/подразделения размещения предмета/оборудования
+    // Получение региона/подразделения размещения предмета/оборудования
     public function getRegions()
     {
         return $this->getLocations()->select(Regions::tableName() .'.*')->joinWith('regions');
     }
 
+    // Получение типа предмета/оборудования
+    public function getTypes()
+    {
+        //return $this->getModels()->select(Types::tableName() . '.*')->joinWith('types'); // Подготовлено для переноса моделей в отдельную таблицу
+        return $this->hasOne(Types::className(), ['id' => 'type_id']);
+    }
 }
