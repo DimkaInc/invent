@@ -53,7 +53,7 @@ class Site extends \yii\data\ActiveDataProvider
 
         $query = Types::find()
             ->select(Types::tableName() . '.name, count(' . Items::tableName() . '.id) AS icount, count( c.tid ) AS ccount')
-            ->joinWith('items')
+            ->joinWith([ 'items', 'models' ])
             ->leftJoin(['c' => Items::find()
                     ->select('id AS tid')
                     ->where(['checked' => true ])

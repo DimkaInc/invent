@@ -127,7 +127,7 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
             // Серийный номер
             'serial',
             // Модель
-            'model',
+            'modelName',
 
             // Название подразделения
             [ 'attribute' => 'regionName',

@@ -63,7 +63,7 @@ class TypesController extends Controller
                 }
                 else
                 {
-                    $result['error'] = Yii::t('types', 'Failed to add entry {type}', $options) . print_r($model->errors()['name']);
+                    $result['error'] = Yii::t('types', 'Failed to add entry {type}', $options) . print_r($model->errors()['name'], TRUE);
                 }
             }
         }

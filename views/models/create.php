@@ -6,7 +6,8 @@ use yii\helpers\Html;
 /* @var $model app\models\Models */
 
 $this->title = Yii::t('models', 'Create Model');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('models', 'Models'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
+$this->params['breadcrumbs'][] = [ 'label' => Yii::t('models', 'Models'), 'url' => [ 'index' ]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="models-create">

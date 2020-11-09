@@ -65,4 +65,9 @@ class Models extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Types::className(), ['id' => 'type_id']);
     }
+
+    public function getItems()
+    {
+        return $this->hasMany(Items::className(), ['model_id' => 'id']);
+    }
 }

@@ -45,10 +45,10 @@ if (User::canPermission('updateRecord'))
     ] );
 
     // Модель
-    array_push($columns, [ 'attribute' => 'model',
+    array_push($columns, [ 'attribute' => 'modelName',
         'value' => function ($data)
         {
-            return showUrlUpdate($data->model, $data);
+            return showUrlUpdate($data->modelName, $data);
         },
         'format' => 'raw',
     ] );

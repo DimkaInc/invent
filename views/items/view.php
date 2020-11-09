@@ -38,12 +38,10 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
         'attributes' => [
             // 'id',
             'name',
-            'model',
+            'modelName',
             'os',
             'mac',
             'serial',
-            'product',
-            'modelnumber',
             'invent',
             'date',
             'comment'

@@ -53,4 +53,5 @@ return [
     'Username' => 'Имя пользователя',
     'You may login with' => 'Вы можете войти как',
     'or' => 'или',
+    'Migration {migrate} can\'t reverted' => 'Миграция {migrate} не может быть отменена.',
 ];

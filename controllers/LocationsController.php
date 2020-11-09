@@ -81,7 +81,7 @@ class LocationsController extends Controller
                     }
                     else
                     {
-                        $result[ 'error' ] = Yii::t('locations', 'Error to create location "{location}"', $options) . print_r($model->errors());
+                        $result[ 'error' ] = Yii::t('locations', 'Error to create location "{location}"', $options) . print_r($model->errors(), TRUE);
                     }
                 }
             }

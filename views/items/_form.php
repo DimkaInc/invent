@@ -10,6 +10,7 @@ use app\models\Status;
 use app\models\Types;
 use app\models\Locations;
 use app\models\Regions;
+use app\models\Models;
 
 use xj\qrcode\QRcode;
 use xj\qrcode\widgets\Email;
@@ -23,7 +24,7 @@ use yii\data\Sort;
 //$this->registerJsFile("@web/js/regiondatepicker.js", ['depends' => [ \yii\web\JqueryAsset::className() ]] );
 
     // Создание сортированного списка для выбора типов оборудования
-    $types = ArrayHelper::map(Types::find()->orderBy('name')->all(), 'id', 'name');
+    $models = ArrayHelper::map(Models::find()->orderBy('name')->all(), 'id', 'name');
 
     if ($model->isNewRecord)
     {
@@ -53,7 +54,7 @@ use yii\data\Sort;
             'size' => 3,
             'margin' => 4,
             'ecLevel' => QRcode::QR_ECLEVEL_L,
-        ]) . '</div><div style="display:table-cell;vertical-align:middle;font-size: 18pt;font-weight: bolder;text-align:center;">' . $model->invent . ', ' . $model->model .
+        ]) . '</div><div style="display:table-cell;vertical-align:middle;font-size: 18pt;font-weight: bolder;text-align:center;">' . $model->invent . ', ' . $model->modelName .
         '</div></div>';
     }
 
@@ -66,21 +67,11 @@ use yii\data\Sort;
     <?php $form = ActiveForm::begin([ 'id' => 'ItemForm' ]); ?>
 
     <?= $form->field($model,
-            'type_id',
+            'model_id',
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-5">{input}</div><div class="col-md-2">' .
-                       Html::a(Yii::t('types', 'Types'), [ 'types/index' ], [ 'class' => 'btn btn-primary' ] ) .
+                       Html::a(Yii::t('models', 'Models'), [ 'models/index' ], [ 'class' => 'btn btn-primary' ] ) .
                        '</div><div class="col-md-8">{error}</div></div>' ])
-            ->dropDownList( $types, ['prompt' => Yii::t('types', 'Select type')] ) ?>
-
-    <?= $form->field($model,
-            'name',
-            [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
-            ->textInput([ 'maxlength' => true ]) ?>
-
-    <?= $form->field($model, 
-            'model',
-            [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
-            ->textInput([ 'maxlength' => true ]) ?>
+            ->dropDownList( $models, ['prompt' => Yii::t('models', 'Select model')] ) ?>
 
     <?= $form->field($model,
             'os',
@@ -94,16 +85,6 @@ use yii\data\Sort;
 
     <?= $form->field($model,
             'serial',
-            [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
-            ->textInput([ 'maxlength' => true ]) ?>
-
-    <?= $form->field($model,
-            'product',
-            [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
-            ->textInput([ 'maxlength' => true ]) ?>
-
-    <?= $form->field($model,
-            'modelnumber',
             [ 'template' => '<div class="row"><div class="col-md-2">{label}</div><div class="col-md-7">{input}</div><div class="col-md-8">{error}</div></div>' ])
             ->textInput([ 'maxlength' => true ]) ?>
 

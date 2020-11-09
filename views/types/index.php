@@ -16,6 +16,7 @@ if (! User::canPermission('createRecord'))
 }
 $this->title = Yii::t('types', 'Types');
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('models', 'Models'), 'url' => [ 'models/index' ]];
 $this->params[ 'breadcrumbs' ][] = $this->title;
 
 $columns = [[ 'class' => 'yii\grid\SerialColumn' ]];

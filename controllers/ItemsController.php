@@ -89,26 +89,11 @@ class ItemsController extends Controller
                     {
                         $result[ 'error' ] .= $model[ 'error' ] . '<br />';
                     }
-                    // Если указан тип предмета/оборудования
-                    if (isset($options[ 'type' ]))
-                    {
-                        $type = TypesController::addIfNeed($options[ 'type' ]); // Найдём или добавим тип
-                        // Если тип не добавили
-                        if($type[ 'id' ] === FALSE)
-                        {
-                            $result[ 'error' ] = $type[ 'error' ] . '<br />';
-                            $type[ 'id' ] = NULL; // сделаем его пустым
-                        }
-                    }
                     // Создаём новую запись предмета/оборудования
                     $item = new Items();
                     $item->name        = isset($options[ 'netName' ]) ? $options[ 'netName' ] : NULL; // Сетевое имя
 
-                    //$item->model_id    = $model[ 'id' ];                                              // идентификатор модели (Подготовлено для преобразования)
-                    $item->model       = isset($options[ 'model' ]) ? $options[ 'model' ] : NULL;     // Наименование
-                    $item->type_id     = isset($type[ 'id' ]) ? $type[ 'id' ] : NULL;                 // Идентификатор типа
-                    $item->product     = isset($options[ 'product' ]) ? $options[ 'product' ] : NULL; // Код оборудования
-                    $item->modelnumber = isset($options[ 'modelnum' ]) ? $options[ 'modelnum' ] : NULL; // Номер модели
+                    $item->model_id    = $model[ 'id' ];                                              // идентификатор модели (Подготовлено для преобразования)
 
                     $item->invent      = isset($options[ 'invent' ]) ? $options[ 'invent' ] : NULL;   // Инвентарный номер
                     $item->comment     = isset($options[ 'comment' ]) ? $options[ 'comment' ] : NULL; // Коментарий
@@ -124,7 +109,7 @@ class ItemsController extends Controller
                     }
                     else
                     {
-                        $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry') . print_r($item->errors());
+                        $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry') . print_r($item->errors(), TRUE);
                     }
                 }
             }

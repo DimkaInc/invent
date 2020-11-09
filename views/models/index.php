@@ -12,6 +12,7 @@ use app\models\Types;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('models', 'Models');
+$this->params['breadcrumbs'][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
 $this->params['breadcrumbs'][] = $this->title;
 
 $columns = [[ 'class' => 'yii\grid\SerialColumn' ]];

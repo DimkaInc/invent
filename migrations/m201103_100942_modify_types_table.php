@@ -20,7 +20,7 @@ class m201103_100942_modify_types_table extends Migration
      */
     public function safeDown()
     {
-        echo "Reverse don\'t need\n";
+        echo "m201103_100942_modify_types_table revert don\'t need\n";
 
         return true;
     }

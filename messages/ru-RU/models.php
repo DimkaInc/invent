@@ -24,4 +24,8 @@ return [
     'Prodict number' => 'Код оборудования',
     'Type identify' => 'Идентификатор типа',
     'Update Model: {name}' => 'Изменение модели {name}',
+    'Migration: error add model: ' => 'Миграция: ошибка добавления модели: ',
+    'Models: Failed to add entry :' => 'Модели: Ошибка добавления записи: ',
+    'Models: Key field missing "model"' => 'Модели: Ключевое поле "model" отсуствует',
+    'Select model' => 'Выберите модель',
 ];

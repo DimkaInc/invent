@@ -22,7 +22,7 @@ class m200902_095218_change_items_table extends Migration
         $this->dropIndex('idx-items-state', $table);
         $this->dropColumn($table, 'date');
         $this->dropColumn($table, 'state_id');
-        $this->dropColumn($table, 'location_id');
+        $this->dropColumn($table, ' location_id');
     }
 
     /**

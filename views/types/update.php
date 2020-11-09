@@ -14,6 +14,7 @@ $this->title = Yii::t('types', 'Update Types: {name}', [
     'name' => $model->name,
 ]);
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('models', 'Models'), 'url' => [ 'models/index' ]];
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('types', 'Types'), 'url' => [ 'index' ]];
 $this->params[ 'breadcrumbs' ][] = Yii::t('app', 'Update');
 ?>

@@ -22,8 +22,8 @@ class ItemsSearch extends Items
     public function rules()
     {
         return [
-            [['id', 'type_id'], 'integer'],
-            [['name', 'model', 'os', 'mac', 'serial', 'product', 'modelnumber', 'invent', 'date', 'comment', 'statusName', 'typeName', 'locationName', 'regionName'], 'safe'],
+            [['id', 'model_id'], 'integer'],
+            [['name', 'modelName', 'os', 'mac', 'serial', 'invent', 'date', 'comment', 'statusName', 'typeName', 'locationName', 'regionName'], 'safe'],
         ];
     }
 
@@ -65,7 +65,7 @@ class ItemsSearch extends Items
                 Types::tableName() .      '.name AS typeName, ' .
                 Regions::tableName() .    '.name AS regionName, ' .
                 Status::tableName() .     '.name AS statusName ')
-            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions' ])
+            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions', 'models' ])
             ->where([ 'in', Moving::tableName() . '.id', $query ])
             ->andWhere([ 'checked' => false ]);
 
@@ -77,6 +77,10 @@ class ItemsSearch extends Items
                 'id' => SORT_ASC,
             ],
         ]);
+        $dataProvider->sort->attributes['modelName'] = [
+            'asc'  => [ Models::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Models::tableName() . '.name' => SORT_DESC ],
+        ];
         $dataProvider->sort->attributes['statusName'] = [
             'asc'  => [ Status::tableName() . '.name' => SORT_ASC ],
             'desc' => [ Status::tableName() . '.name' => SORT_DESC ],
@@ -114,11 +118,11 @@ class ItemsSearch extends Items
         $query = Items::find()
             ->select(Items::tableName() . '.*, ' .
                 Locations::tableName() .  '.name AS locationName, ' .
-//                Models::tableName() . '.name AS modelName' .
+                Models::tableName() . '.name AS modelName, ' .
                 Types::tableName() .      '.name AS typeName, ' .
                 Regions::tableName() .    '.name AS regionName, ' .
                 Status::tableName() .     '.name AS statusName ')
-            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions', /* 'models', */ ])
+            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions', 'models', ])
             ->where([ 'in', Moving::tableName() . '.id', $subQuery ]);
 
         // add conditions that should always apply here
@@ -147,8 +151,8 @@ class ItemsSearch extends Items
             'id'   => $this->id,
         ])->andFilterWhere([
             'ilike', Status::tableName() .    '.name', $this->statusName
-//        ])->andFilterWhere([
-//            'ilike', Models::tableName() .    '.name', $this->modelName
+        ])->andFilterWhere([
+            'ilike', Models::tableName() .    '.name', $this->modelName
         ])->andFilterWhere([
             'ilike', Types::tableName() .     '.name', $this->typeName
         ])->andFilterWhere([ 'OR', [
@@ -162,19 +166,16 @@ class ItemsSearch extends Items
         ]]);
 
         $query->andFilterWhere(['ilike', 'name',        $this->name])
-            ->andFilterWhere(  ['ilike', 'model',       $this->model])
             ->andFilterWhere(  ['ilike', 'os',          $this->os])
             ->andFilterWhere(  ['ilike', 'mac',         $this->mac])
             ->andFilterWhere(  ['ilike', 'serial',      $this->serial])
-            ->andFilterWhere(  ['ilike', 'product',     $this->product])
-            ->andFilterWhere(  ['ilike', 'modelnumber', $this->modelnumber])
             ->andFilterWhere(  ['ilike', 'invent',      $this->invent])
             ->andFilterWhere(  ['ilike', 'comment',     $this->comment]);
 
-//        $dataProvider->sort->attributes['modelName'] = [
-//            'asc'  => [Models::tableName() . '.name' => SORT_ASC],
-//            'desc' => [Models::tableName() . '.name' => SORT_DESC],
-//        ];
+        $dataProvider->sort->attributes['modelName'] = [
+            'asc'  => [Models::tableName() . '.name' => SORT_ASC],
+            'desc' => [Models::tableName() . '.name' => SORT_DESC],
+        ];
         $dataProvider->sort->attributes['statusName'] = [
             'asc'  => [Status::tableName() . '.name' => SORT_ASC],
             'desc' => [Status::tableName() . '.name' => SORT_DESC],

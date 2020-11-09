@@ -8,15 +8,15 @@ use Yii;
  * This is the model class for table 'items'.
  *
  * @property int $id                    Идентификатор (неизменяемый)
- * @property int $type_id               Идентификатор типа оборудования
+// * @property int $type_id               Идентификатор типа оборудования
  * @property int $model_id              Идентификатор модели предмета/оборудования
  * @property string|null  $name         Сетевое имя оборудования
- * @property string|null  $model        Модель оборудования
+// * @property string|null  $model        Модель оборудования
  * @property string|null  $os           Операционная система
  * @property string|null  $mac          Сетевой MAC адрес
  * @property string|null  $serial       Серийный номер
- * @property string|null  $product      Код оборудования
- * @property string|null  $modelnumber  Номер модели
+// * @property string|null  $product      Код оборудования
+// * @property string|null  $modelnumber  Номер модели
  * @property string|null  $invent       Инвентарный номер
  * @property boolean      $checked      Флаг прохождения инвентаризации
  * @property string|null  $statusName   Наименование состояния
@@ -47,11 +47,11 @@ class Items extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'model', 'os', 'serial', 'product', 'modelnumber', 'comment' ], 'string', 'max' => 255],
-            [['mac'],    'string', 'max' => 20],
-            [['invent'], 'string', 'max' => 50],
-            [['type_id', /* 'model_id' */], 'integer'],
-            [['checked'], 'boolean'],
+            [[ 'name', 'model', 'os', 'serial', 'product', 'modelnumber', 'comment' ], 'string', 'max' => 255 ],
+            [[ 'mac' ],    'string', 'max' => 20 ],
+            [[ 'invent' ], 'string', 'max' => 50 ],
+            [[ 'model_id' ], 'integer' ],
+            [[ 'checked' ], 'boolean' ],
         ];
     }
 
@@ -63,11 +63,8 @@ class Items extends \yii\db\ActiveRecord
         return [
             'id'           => Yii::t('app',   'Identifier'),              // Идентификатор
             'name'         => Yii::t('items', 'Item network name'),       // Сетевое имя оборудования
-            'model'        => Yii::t('items', 'Model'),                   // Модель
-            'model_id'     => Yii::t('items', 'Model idemtifier'),        // Идентификатор модели
-            'product'      => Yii::t('items', 'Product number'),          // Номер продукции
-            'modelnumber'  => Yii::t('items', 'Model number'),            // Номер модели
-            'type_id'      => Yii::t('items', 'Item type'),               // Идентификатор типа
+            'modelName'    => Yii::t('items', 'Model'),                   // Модель
+            'model_id'     => Yii::t('items', 'Model identifier'),        // Идентификатор модели
             'typeName'     => Yii::t('items', 'Item type'),               // Название типа
             'os'           => Yii::t('items', 'Operating system'),        // Операционная система
             'mac'          => Yii::t('items', 'MAC address'),             // MAC адрес
@@ -115,7 +112,6 @@ class Items extends \yii\db\ActiveRecord
     // Получение типа предмета/оборудования
     public function getTypes()
     {
-        //return $this->getModels()->select(Types::tableName() . '.*')->joinWith('types'); // Подготовлено для переноса моделей в отдельную таблицу
-        return $this->hasOne(Types::className(), ['id' => 'type_id']);
+        return $this->getModels()->select(Types::tableName() . '.*')->joinWith('types');
     }
 }

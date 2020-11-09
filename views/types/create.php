@@ -12,6 +12,7 @@ if (! User::canPermission('createRecord'))
 }
 $this->title = Yii::t('types', 'Create type');
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('models', 'Models'), 'url' => [ 'models/index' ]];
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('types', 'Types'), 'url' => [ 'index' ]];
 $this->params[ 'breadcrumbs' ][] = $this->title;
 ?>

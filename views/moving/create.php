@@ -10,7 +10,7 @@ if (! User::canPermission('createRecord'))
 {
     return $this->redirect(['site/index']);
 }
-$this->title = Yii::t('moving', 'Create Moving') . ' ' .$model->items->invent . ' (' . $model->items->model . ')';
+$this->title = Yii::t('moving', 'Create Moving') . ' ' .$model->items->invent . ' (' . $model->items->models->name . ')';
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('items', 'Items'), 'url' => [ 'items/index' ]];
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Html::encode($model->items->invent), 'url' => [ 'items/update', 'id' => $model->item_id ]];
 $this->params[ 'breadcrumbs' ][] = $this->title;

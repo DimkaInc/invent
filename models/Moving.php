@@ -45,16 +45,16 @@ class Moving extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['date', 'item_id', 'location_id', 'state_id'], 'required'],
-            [['date'],        'safe'],
-            [['date'],        'date', 'format' => 'dd.MM.yyyy' ],
-            [['date'], 'checkValidDate'],
-            [['item_id', 'location_id', 'state_id'], 'default', 'value' => null],
-            [['id', 'item_id', 'location_id', 'state_id'], 'integer'],
-            [['comment'],     'string'],
-            [['item_id'],     'exist', 'skipOnError' => true, 'targetClass' => Items::className(),     'targetAttribute' => ['item_id' => 'id']],
-            [['location_id'], 'exist', 'skipOnError' => true, 'targetClass' => Locations::className(), 'targetAttribute' => ['location_id' => 'id']],
-            [['state_id'],    'exist', 'skipOnError' => true, 'targetClass' => Status::className(),    'targetAttribute' => ['state_id' => 'id']],
+            [[ 'date', 'item_id', 'location_id', 'state_id'], 'required' ],
+            [[ 'date', 'itemModel' ], 'safe' ],
+            [[ 'date'],        'date', 'format' => 'dd.MM.yyyy' ],
+            [[ 'date'],        'checkValidDate' ],
+            [[ 'item_id', 'location_id', 'state_id' ], 'default', 'value' => null ],
+            [[ 'id', 'item_id', 'location_id', 'state_id' ], 'integer' ],
+            [[ 'comment' ],     'string'],
+            [[ 'item_id' ],     'exist', 'skipOnError' => true, 'targetClass' => Items::className(),     'targetAttribute' => [ 'item_id' => 'id' ]],
+            [[ 'location_id' ], 'exist', 'skipOnError' => true, 'targetClass' => Locations::className(), 'targetAttribute' => [ 'location_id' => 'id' ]],
+            [[ 'state_id' ],    'exist', 'skipOnError' => true, 'targetClass' => Status::className(),    'targetAttribute' => [ 'state_id' => 'id' ]],
         ];
     }
 
@@ -155,6 +155,11 @@ class Moving extends \yii\db\ActiveRecord
     public function getItems()
     {
         return $this->hasOne(Items::className(), [ 'id' => 'item_id' ]);
+    }
+
+    public function getModels()
+    {
+        return $this->getItems()->select(Models::tableName())->joinWith('models');
     }
 
     /**

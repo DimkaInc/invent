@@ -9,6 +9,7 @@ use app\models\Items;
 use app\models\Status;
 use app\models\Locations;
 use app\models\Regions;
+use app\models\Models;
 
 /**
  * MovingSearch represents the model behind the search form of `app\models\Moving`.
@@ -21,8 +22,8 @@ class MovingSearch extends Moving
     public function rules()
     {
         return [
-            [['id', 'item_id', 'location_id', 'state_id'], 'integer'],
-            [['date', 'comment', 'itemModel', 'statusName', 'locationName', 'regionName'], 'safe'],
+            [[ 'id', 'item_id', 'location_id', 'state_id' ], 'integer' ],
+            [[ 'date', 'comment', 'itemModel', 'statusName', 'locationName', 'regionName' ], 'safe' ],
         ];
     }
 
@@ -46,11 +47,11 @@ class MovingSearch extends Moving
     {
         $query = Moving::find()
             ->select(Moving::tableName() . '.*, '
-                . Items::tableName() .     '.model AS itemModel, '
+                . Models::tableName() .     '.name AS itemModel, '
                 . Status::tableName() .    '.name AS statusName, '
                 . Locations::tableName() . '.name AS locationName, '
                 . Regions::tableName() .   '.name AS regionName' )
-            ->joinWith(['items', 'status', 'locations', 'regions']);
+            ->joinWith([ 'items', 'status', 'locations', 'regions', 'models' ]);
 
         // add conditions that should always apply here
 
@@ -81,7 +82,7 @@ class MovingSearch extends Moving
             'state_id'    => $this->state_id,
         ]);
 
-        $query->andFilterWhere([ 'ilike', Items::tableName() .     '.model', $this->itemModel ]);
+        $query->andFilterWhere([ 'ilike', Models::tableName() .     '.name', $this->itemModel ]);
         $query->andFilterWhere([ 'ilike', Status::tableName() .    '.name',  $this->statusName ]);
         $query->andFilterWhere([ 'OR', [ 'ilike', Locations::tableName() . '.name',  $this->locationName ],
             [ 'ilike', Regions::tableName() .   '.name',  $this->locationName ]]);
@@ -91,8 +92,8 @@ class MovingSearch extends Moving
         $query->andFilterWhere(['ilike', 'comment', $this->comment]);
 
         $dataProvider->sort->attributes[ 'itemModel' ] = [
-            'asc'  => [ Items::tableName() . '.model' => SORT_ASC ],
-            'desc' => [ Items::tableName() . '.model' => SORT_DESC ],
+            'asc'  => [ Models::tableName() . '.name' => SORT_ASC ],
+            'desc' => [ Models::tableName() . '.name' => SORT_DESC ],
         ];
 
         $dataProvider->sort->attributes[ 'statusName' ] = [

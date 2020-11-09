@@ -30,6 +30,8 @@ return [
     'Item network name' => 'Сетевое имя',
     'Item type' => 'Тип оборудования',
     'Items' => 'Оборудование',
+    'Items: Failed to add entry' => 'Оборудование: Не удалось добавить запись',
+    'Items: Key field missing "invent", "serial", "model"' => 'Оборудование: Отсутсвуют ключевые поля: "invent", "serial", "model"',
     'Location' => 'Место размещения',
     'Location checked' => 'Место размещения проверено',
     'MAC address' => 'MAC адрес',
@@ -47,6 +49,5 @@ return [
     'Total items checked' => 'Учтено',
     'Total items count' => 'Всего',
     'Update Items: {name}' => 'Изменение оборудования: {name}',
-    'Items: Failed to add entry' => 'Оборудование: Не удалось добавить запись',
-    'Items: Key field missing "invent", "serial", "model"' => 'Оборудование: Отсутсвуют ключевые поля: "invent", "serial", "model"',
+    'Model identifier' => 'Идентификатор модели',
 ];
