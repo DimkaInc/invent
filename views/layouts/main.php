@@ -50,6 +50,8 @@ AppAsset::register($this);
                 [ 'label' => Yii::t('app', 'Login'), 'url' => [ '/site/login' ]]
             ) : (
                 '<li>'
+                . Html::a(Yii::t('users', 'Change password'), Url::to([ 'site/changepassword' ]), [ 'class' => 'btn btn-link' ])
+                . '</li><li>'
                 . Html::beginForm([ '/site/logout' ], 'post')
                 . Html::submitButton(
                     Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',

@@ -17,6 +17,12 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Change password' => 'Смена пароля',
+    'Old password is incorrect.' => 'Старый пароль неправильный',
     'Password' => 'Пароль',
     'User name' => 'Имя пользователя',
+    'You have successfully change your password.' => 'Вы успешно сменили свой пароль',
+    'New password' => 'Новый пароль',
+    'Old password' => 'Старый пароль',
+    'repeat password' => 'Повторите пароль',
 ];

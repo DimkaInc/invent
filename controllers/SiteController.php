@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\User;
 
 use app\models\Site;
 
@@ -70,6 +71,37 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * Смена пароля залогинившегося пользователя
+     */
+    public function actionChangepassword()
+    {
+        // Если пользователь не вошёл, отправим на стартовую
+        if (Yii::$app->user->isGuest)
+        {
+            return $this->goHome();
+        }
+
+        // Получим модель Учётных записей
+        $model = Yii::$app->user->identity;
+        // Включим сценарий смены пароля
+        $model->setScenario('changePassword');
+        
+        // Загрузим и проверим данные из формы
+        if ($model->load(Yii::$app->request->post()) && $model->validate())
+        {
+            // Проверка прошла успешно, потому сохраним новый пароль
+            $model->setPassword($model->new_password);
+            $model->save(FALSE);
+            // Сообщим, что пароль изменили
+            Yii::$app->session->setFlash('success', Yii::t('users', 'You have successfully change your password.'));
+            // Останемся на странице
+            return $this->refresh();
+        }
+        // Покажем форму для смены пароля
+        return $this->render('changepassword', [ 'model' => $model ]);
+    }
+    
     /**
      * Вход пользователем.
      *

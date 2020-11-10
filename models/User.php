@@ -17,7 +17,9 @@ use yii\helpers\Security;
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    
+    public $old_password;
+    public $new_password;
+    public $repeat_password;
     /**
      * {@inheritdoc}
      */
@@ -32,6 +34,9 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
+            [[ 'old_password', 'new_password', 'repeat_password' ], 'required', 'on' => 'changePassword'],
+            [[ 'old_password' ], 'findPasswords', 'on' => 'changePassword' ],
+            [[ 'repeat_password' ], 'compare', 'compareAttribute' => 'new_password', 'on' => 'changePassword' ],
             [[ 'username', 'password' ], 'required' ],
             [[ 'username', 'password' ], 'string', 'max' => 128 ],
             [[ 'username' ], 'unique' ],
@@ -47,6 +52,9 @@ class User extends ActiveRecord implements IdentityInterface
             'id'       => Yii::t('app', 'Identificator'),
             'username' => Yii::t('users', 'User name'),
             'password' => Yii::t('users', 'Password'),
+            'old_password' => Yii::t('users', 'Old password'),
+            'new_password' => Yii::t('users', 'New password'),
+            'repeat_password' => Yii::t('users', 'repeat password'),
         ];
     }
 
@@ -98,6 +106,12 @@ class User extends ActiveRecord implements IdentityInterface
     public function validateAuthKey($authKey)
     {
         return $this->getAuthKey() === $authKey;
+    }
+
+    public function findPasswords($attribute, $params)
+    {
+        if (! $this->validatePassword($this->old_password))
+            $this->addError($attribute, Yii::t('users', 'Old password is incorrect.'));
     }
 
     // Проверка пароля пользователя
