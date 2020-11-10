@@ -65,7 +65,7 @@ class RegionsController extends Controller
                 }
                 else
                 {
-                    $result[ 'error' ] = Yii::t('regions', 'Regions: can\'t add region "{region}"', $options) . print_r($model->errors(), TRUE);
+                    $result[ 'error' ] = Yii::t('regions', 'Regions: can\'t add region "{region}"', $options) . print_r($model->errors, TRUE);
                 }
             }
         }

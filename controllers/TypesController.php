@@ -58,12 +58,12 @@ class TypesController extends Controller
                 $model->name = $options[ 'type' ];
                 if ($model->validate() && $model->save())
                 {
-                    $result['id'] = $model[0]->id;
+                    $result['id'] = $model->id;
                     $result['error'] = '';
                 }
                 else
                 {
-                    $result['error'] = Yii::t('types', 'Failed to add entry {type}', $options) . print_r($model->errors()['name'], TRUE);
+                    $result['error'] = Yii::t('types', 'Failed to add entry {type}', $options) . print_r($model->errors['name'], TRUE);
                 }
             }
         }

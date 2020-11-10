@@ -109,7 +109,7 @@ class ItemsController extends Controller
                     }
                     else
                     {
-                        $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry') . print_r($item->errors(), TRUE);
+                        $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry ') . print_r($item->errors, TRUE);
                     }
                 }
             }
@@ -354,7 +354,7 @@ class ItemsController extends Controller
                                 else
                                 {
                                     // Запись не удалась, пробуем удалить предмет/оборудование
-                                    Items::find()->where([ 'id' => $item_id, 'checked' => FALSE ])->one()->delete();
+                                    Items::find()->where([ 'id' => $item[ 'id' ], 'checked' => FALSE ])->one()->delete();
                                     // Сообщим об ошибке
                                     $arrayReturn[ 'countErrors' ]++;
                                     $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Moving: {date} (') . $moving->errors['date'][0]. Yii::t('import', '), Inventory number:{invent}, model: {model}, location: {location} ( {region} )' , $row);

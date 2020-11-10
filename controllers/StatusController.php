@@ -62,7 +62,7 @@ class StatusController extends Controller
             }
             else
             {
-                $result[ 'error' ] = Yii::t('status', 'Failed to add entry "{status}"', $options) . print_r($model->errors(), TRUE);
+                $result[ 'error' ] = Yii::t('status', 'Failed to add entry "{status}"', $options) . print_r($model->errors, TRUE);
             }
         }
         return $result;

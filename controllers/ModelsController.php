@@ -41,7 +41,7 @@ class ModelsController extends Controller
         if (is_array($options) && isset($options[ 'model' ]))
         {
             $model = Models::find()
-                ->where([ 'model' => $options[ 'model' ]])->all(); // Ищем наименование модели предмета/обрудования
+                ->where([ 'name' => $options[ 'model' ]])->all(); // Ищем наименование модели предмета/обрудования
 
             if (count($model) > 0) // Записи найдены, выводим первую совпавшую
             {
@@ -54,7 +54,7 @@ class ModelsController extends Controller
                 // Если указан тип предмета/оборудования
                 if (isset($options[ 'type' ]))
                 {
-                    $type = TypesController::addIfNeed($options[ 'type' ]); // Найдём или добавим тип
+                    $type = TypesController::addIfNeed($options); // Найдём или добавим тип
                     // Если тип не добавили
                     if($type[ 'id' ] === FALSE)
                     {
@@ -76,7 +76,7 @@ class ModelsController extends Controller
                 }
                 else
                 {
-                    $result[ 'error' ] .= Yii::t('models', 'Models: Failed to add entry :') . print_r($model->errors(), TRUE);
+                    $result[ 'error' ] .= Yii::t('models', 'Models: Failed to add entry :') . print_r($model->errors, TRUE);
                 }
 
             }

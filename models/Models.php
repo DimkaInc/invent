@@ -34,7 +34,7 @@ class Models extends \yii\db\ActiveRecord
         return [
             [['name', 'type_id'], 'required'],
             [['type_id'], 'default', 'value' => null],
-            [['type_id'], 'integer'],
+            [['id', 'type_id'], 'integer'],
             [['name', 'modelnumber', 'product'], 'string', 'max' => 255],
             [['name'], 'unique'],
             [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Types::className(), 'targetAttribute' => ['type_id' => 'id']],
