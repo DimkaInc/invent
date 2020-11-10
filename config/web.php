@@ -10,7 +10,7 @@ $db = require __DIR__ . '/db.php';
 require_once __DIR__ . '/myfunctions.php';
 
 $config = [
-    'version' => '1.30',
+    'version' => '1.31',
     'name' => 'Inventory',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
