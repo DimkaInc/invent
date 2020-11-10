@@ -18,14 +18,14 @@
  */
 return [
     'Create Model' => 'Добавить модель',
+    'Migration: error add model: ' => 'Миграция: ошибка добавления модели: ',
     'Model name' => 'Название',
     'Model number' => 'Номер модели',
     'Models' => 'Модели',
     'Prodict number' => 'Код оборудования',
+    'Select model' => 'Выберите модель',
     'Type identify' => 'Идентификатор типа',
     'Update Model: {name}' => 'Изменение модели {name}',
-    'Migration: error add model: ' => 'Миграция: ошибка добавления модели: ',
-    'Models: Failed to add entry :' => 'Модели: Ошибка добавления записи: ',
-    'Models: Key field missing "model"' => 'Модели: Ключевое поле "model" отсуствует',
-    'Select model' => 'Выберите модель',
+    'Models: Failed to add entry: ' => 'Модели: Невозможно доавить запись: ',
+    'Models: Key field "model", "type" missing: ' => 'Модели: Ключевые поля "model", "type" отсуствуют: ',
 ];

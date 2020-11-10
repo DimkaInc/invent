@@ -61,7 +61,7 @@ class ItemsController extends Controller
     {
         $result = [
             'id' => FALSE,
-            'error' => Yii::t('items', 'Items: Key field missing "invent", "serial", "model"') . print_r($options, TRUE),
+            'error' => Yii::t('items', 'Items: Key field missing "invent" :') . print_r($options, TRUE),
         ];
         // Если указан инвентарный номер
         if (is_array($options) && isset($options[ 'invent' ]))
@@ -87,29 +87,31 @@ class ItemsController extends Controller
                     $model = ModelsController::addIfNeed($options);
                     if ($model[ 'id' ] === FALSE)
                     {
-                        $result[ 'error' ] .= $model[ 'error' ] . '<br />';
-                    }
-                    // Создаём новую запись предмета/оборудования
-                    $item = new Items();
-                    $item->name        = isset($options[ 'netName' ]) ? $options[ 'netName' ] : NULL; // Сетевое имя
-
-                    $item->model_id    = $model[ 'id' ];                                              // идентификатор модели (Подготовлено для преобразования)
-
-                    $item->invent      = isset($options[ 'invent' ]) ? $options[ 'invent' ] : NULL;   // Инвентарный номер
-                    $item->comment     = isset($options[ 'comment' ]) ? $options[ 'comment' ] : NULL; // Коментарий
-                    $item->os          = isset($options[ 'os' ]) ? $options[ 'os' ] : NULL;           // Операционная система
-                    $item->mac         = isset($options[ 'mac' ]) ? $options[ 'mac' ] : NULL;         // MAC-адрес
-                    $item->serial      = isset($options[ 'serial' ]) ? $options[ 'serial' ] : NULL;   // Серийный номер
-                    $item->checked     = false;                                                       // Не инвентризирован (требует внимания после импорта)
-                    // Сохраняем запись
-                    if ($item->validate() && $item->save())
-                    {
-                        $result[ 'id' ] = $item->id; // Возвращаем идентификатор записанного оборудования
-                        $result[ 'error' ] = '';
+                        $result[ 'error' ] .= '<br />' . $model[ 'error' ];
                     }
                     else
                     {
-                        $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry ') . print_r($item->errors, TRUE);
+                        // Создаём новую запись предмета/оборудования
+                        $item = new Items();
+                        $item->name        = isset($options[ 'netName' ]) ? $options[ 'netName' ] : NULL; // Сетевое имя
+
+                        $item->model_id    = $model[ 'id' ];                                              // идентификатор модели (Подготовлено для преобразования)
+                        $item->invent      = isset($options[ 'invent' ]) ? $options[ 'invent' ] : NULL;   // Инвентарный номер
+                        $item->comment     = isset($options[ 'comment' ]) ? $options[ 'comment' ] : NULL; // Коментарий
+                        $item->os          = isset($options[ 'os' ]) ? $options[ 'os' ] : NULL;           // Операционная система
+                        $item->mac         = isset($options[ 'mac' ]) ? $options[ 'mac' ] : NULL;         // MAC-адрес
+                        $item->serial      = isset($options[ 'serial' ]) ? $options[ 'serial' ] : NULL;   // Серийный номер
+                        $item->checked     = false;                                                       // Не инвентризирован (требует внимания после импорта)
+                        // Сохраняем запись
+                        if ($item->validate() && $item->save())
+                        {
+                            $result[ 'id' ] = $item->id; // Возвращаем идентификатор записанного оборудования
+                            $result[ 'error' ] = '';
+                        }
+                        else
+                        {
+                            $result[ 'error' ] .= Yii::t('items', 'Items: Failed to add entry: ') . print_r($item->errors, TRUE) . '<br />';
+                        }
                     }
                 }
             }
@@ -287,6 +289,7 @@ class ItemsController extends Controller
         
         // Проверка наличия ключевых полей
         if ((!isset($arrayRows[ 0 ][ 'model' ]))
+            || (!isset($arrayRows[ 0 ][ 'type' ]))
             || (!isset($arrayRows[ 0 ][ 'invent' ]))
             || (!isset($arrayRows[ 0 ][ 'location' ]))
             || (!isset($arrayRows[ 0 ][ 'region' ]))
@@ -295,7 +298,7 @@ class ItemsController extends Controller
         {
             // Сообщение об ошибке
             $arrayReturn[ 'countErrors' ] = count($arrayRows);
-            $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Skip all. Key column not found: ') . print_r($arrayRows[0], TRUE);
+            $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Skip all. Key column(s) "model", "type", "invent", "location", "region", "date" not found: ') . print_r($arrayRows[0], TRUE);
         }
         else
         {
@@ -308,7 +311,7 @@ class ItemsController extends Controller
                 {
                     // Сообщим об ошибке
                     $arrayReturn[ 'countErrors' ]++;
-                    $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Location: {location} ({region})', $row) . ' :: ' . $location[ 'error' ];
+                    $arrayReturn[ 'errors' ] .= '<br />' . $location[ 'error' ];
                 }
                 else
                 {
@@ -423,13 +426,13 @@ class ItemsController extends Controller
                             if (count($columns) == 0)
                             {
                                 // Ищем строку с заголовком таблицы
-                                if ( stripos($row[0], $columnNames[ 'npp' ]) !== FALSE )
+                                if ( stripos($row[0], $columnsNames[ 'npp' ]) !== FALSE )
                                 {
                                     // Перебираем все колонки
                                     foreach ($row as $key => $item)
                                     {
                                         // Перебираем все названия заголовков колонок
-                                        foreach($columnNamses as $name => $text)
+                                        foreach($columnsNames as $name => $text)
                                         {
                                             // Если название совпало,
                                             if (stripos($item, $text) !== FALSE)

@@ -19,7 +19,6 @@
 return [
     'All regions' => 'Все подразделения',
     'Create location' => 'Добавить место',
-    'Error to create location "{location}"' => 'Ошибка создания размещения "{location}"',
     'Location' => 'Место размещения',
     'Location name' => 'Наименование места размещения',
     'Locations' => 'Места размещения',
@@ -27,5 +26,6 @@ return [
     'Select location' => 'Выберите место',
     'The requested page does not exist.' => 'Запрошенная страница отсуствует',
     'Update Locations: {name}' => 'Изменение места: {name}',
-    'Locations: Key field missing "location" and "region" :' => 'Размещение: Отсутсвуют ключевые поля "location" и "region" :',
+    'Error to create location "{location}": ' => 'Ошибка создания размещения "{location}": ',
+    'Locations: Key field missing "location" and "region": ' => 'Размещение: Ключевы поля "location" и "region" отсутствуют: ',
 ];

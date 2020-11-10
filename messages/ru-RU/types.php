@@ -17,12 +17,12 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'All types' => 'Все типы',
     'Create type' => 'Добавить тип оборудования',
-    'Failed to add entry {type}' => 'Ошибка добавления записи {type}',
     'Select type' => 'Выберите тип',
     'Type' => 'Тип оборудования',
     'Types' => 'Типы оборудования',
-    'Types: key field "type" missing' => 'Типы: Ключевое поле "type" отсутствует',
     'Update Types: {name}' => 'Изменение типа оборудования: {name}',
-    'All types' => 'Все типы',
+    'Failed to add entry "{type}": ' => 'Невозможно добавить запись "{type}": ',
+    'Types: key field "type" missing: ' => 'Типы: Ключевое поле "type" отсутствует: ',
 ];

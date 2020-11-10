@@ -40,7 +40,7 @@ class TypesController extends Controller
      {
         $result = [
             'id' => FALSE,
-            'error' => Yii::t('types', 'Types: key field "type" missing') . print_r($options, TRUE),
+            'error' => Yii::t('types', 'Types: key field "type" missing: ') . print_r($options, TRUE),
         ];
         if (is_array($options) && isset($options[ 'type' ]))
         {
@@ -63,7 +63,7 @@ class TypesController extends Controller
                 }
                 else
                 {
-                    $result['error'] = Yii::t('types', 'Failed to add entry {type}', $options) . print_r($model->errors['name'], TRUE);
+                    $result['error'] = Yii::t('types', 'Failed to add entry "{type}": ', $options) . print_r($model->errors['name'], TRUE);
                 }
             }
         }

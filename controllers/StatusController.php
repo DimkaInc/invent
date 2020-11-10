@@ -40,7 +40,7 @@ class StatusController extends Controller
     {
         $result = [
             'id' => FALSE,
-            'error' => Yii::t('status', 'Status: Key field missing "status" :') . print_r($options, TRUE),
+            'error' => Yii::t('status', 'Status: Key field "status" missing: ') . print_r($options, TRUE),
         ];
         if (is_array($options) && isset($options[ 'status' ]))
         $model = Status::find()
@@ -62,7 +62,7 @@ class StatusController extends Controller
             }
             else
             {
-                $result[ 'error' ] = Yii::t('status', 'Failed to add entry "{status}"', $options) . print_r($model->errors, TRUE);
+                $result[ 'error' ] = Yii::t('status', 'Failed to add entry "{status}": ', $options) . print_r($model->errors, TRUE);
             }
         }
         return $result;

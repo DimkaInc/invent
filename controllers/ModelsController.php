@@ -35,7 +35,7 @@ class ModelsController extends Controller
     {
         $result = [
             'id' => FALSE,
-            'error' => Yii::t('models', 'Models: Key field missing "model"') . print_r($options, TRUE),
+            'error' => Yii::t('models', 'Models: Key field "model", "type" missing: ') . print_r($options, TRUE),
         ];
         // Если указан инвентарный номер
         if (is_array($options) && isset($options[ 'model' ]))
@@ -50,33 +50,31 @@ class ModelsController extends Controller
             }
             else
             {
-                // Внесённой модели оборудования не найдено. Добавим новую запись
-                // Если указан тип предмета/оборудования
-                if (isset($options[ 'type' ]))
+                $type = TypesController::addIfNeed($options); // Найдём или добавим тип
+                // Если тип не добавили
+                if($type[ 'id' ] === FALSE)
                 {
-                    $type = TypesController::addIfNeed($options); // Найдём или добавим тип
-                    // Если тип не добавили
-                    if($type[ 'id' ] === FALSE)
-                    {
-                        $result[ 'error' ] = $type[ 'error' ] . '<br />';
-                        $type[ 'id' ] = NULL; // сделаем его пустым
-                    }
-                }
-                // Создаём новую запись модели предмета/оборудования
-                $model = new Models();
-                $model->name        = $options[ 'model' ]; // Сетевое имя
-                $model->type_id     = isset($type[ 'id' ]) ? $type[ 'id' ] : NULL;                 // Идентификатор типа
-                $model->product     = isset($options[ 'product' ]) ? $options[ 'product' ] : NULL; // Код оборудования
-                $model->modelnumber = isset($options[ 'modelnum' ]) ? $options[ 'modelnum' ] : NULL; // Номер модели
-                // Сохраняем запись
-                if ($model->validate() && $model->save())
-                {
-                    $result[ 'id' ] = $model->id; // Возвращаем идентификатор записанного оборудования
-                    $result[ 'error' ] = '';
+                    $result[ 'error' ] = '<br />' . $type[ 'error' ];
+                    //$type[ 'id' ] = NULL; // сделаем его пустым
                 }
                 else
                 {
-                    $result[ 'error' ] .= Yii::t('models', 'Models: Failed to add entry :') . print_r($model->errors, TRUE);
+                    // Создаём новую запись модели предмета/оборудования
+                    $model = new Models();
+                    $model->name        = $options[ 'model' ]; // Сетевое имя
+                    $model->type_id     = isset($type[ 'id' ]) ? $type[ 'id' ] : NULL;                 // Идентификатор типа
+                    $model->product     = isset($options[ 'product' ]) ? $options[ 'product' ] : NULL; // Код оборудования
+                    $model->modelnumber = isset($options[ 'modelnum' ]) ? $options[ 'modelnum' ] : NULL; // Номер модели
+                    // Сохраняем запись
+                    if ($model->validate() && $model->save())
+                    {
+                        $result[ 'id' ] = $model->id; // Возвращаем идентификатор записанного оборудования
+                        $result[ 'error' ] = '';
+                    }
+                    else
+                    {
+                        $result[ 'error' ] .= Yii::t('models', 'Models: Failed to add entry: ') . print_r($model->errors, TRUE);
+                    }
                 }
 
             }

@@ -41,7 +41,7 @@ class RegionsController extends Controller
     {
         $result = [
             'id' => FALSE,
-            'error' => Yii::t('regions', 'Regions: Key field missing "region"') . print_r($options, TRUE),
+            'error' => Yii::t('regions', 'Regions: Key field "region" missing: ') . print_r($options, TRUE),
         ];
         if (is_array($options) && isset($options[ 'region' ]))
         {
@@ -65,7 +65,7 @@ class RegionsController extends Controller
                 }
                 else
                 {
-                    $result[ 'error' ] = Yii::t('regions', 'Regions: can\'t add region "{region}"', $options) . print_r($model->errors, TRUE);
+                    $result[ 'error' ] = Yii::t('regions', 'Regions: can\'t add region "{region}": ', $options) . print_r($model->errors, TRUE);
                 }
             }
         }

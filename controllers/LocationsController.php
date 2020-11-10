@@ -43,7 +43,7 @@ class LocationsController extends Controller
     {
         $result = [
             'id'    => FALSE,
-            'error' => Yii::t('locations', 'Locations: Key field missing "location" and "region" :') . print_r($options, TRUE),
+            'error' => Yii::t('locations', 'Locations: Key field missing "location" and "region": ') . print_r($options, TRUE),
         ];
         if (is_array($options) && isset($options[ 'location' ]) && (isset($options[ 'region' ]) || isset($options[ 'region_id' ])))
         {
@@ -81,13 +81,13 @@ class LocationsController extends Controller
                     }
                     else
                     {
-                        $result[ 'error' ] = Yii::t('locations', 'Error to create location "{location}" ', $options) . print_r($model->errors, TRUE);
+                        $result[ 'error' ] = Yii::t('locations', 'Error to create location "{location}": ', $options) . print_r($model->errors, TRUE);
                     }
                 }
             }
             else
             {
-                $result[ 'error' ] = $region[ 'error' ];
+                $result[ 'error' ] .= '<br />' . $region[ 'error' ];
             }
         }
         return $result; // Записать не удалось, вернём FALSE

@@ -22,6 +22,6 @@ return [
     'Status name' => 'Состояние',
     'Statuses' => 'Состояния',
     'Update Status: {name}' => 'Изменение состояния: {name}',
-    'Failed to add entry "{status}"' => 'Ошибка добавление записи "{status}"',
-    'Status: Key field missing "status" :' => 'Состояния: Отсутствует ключевое поле "status" :',
+    'Failed to add entry "{status}": ' => 'Невозможно добавить запись "{status}": ',
+    'Status: Key field "status" missing: ' => 'Статусы: Ключевое поле "status" отсутствует: ',
 ];

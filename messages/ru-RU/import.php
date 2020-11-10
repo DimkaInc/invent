@@ -17,14 +17,15 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    '), Inventory number:{invent}, model: {model}, location: {location} ( {region} )' => '), Инвентарный номер:{invent}, модель: {model}, Размещение: {location} ( {region} )',
     'Date of acceptance for registration' => 'Дата принятия к учету',
     'Financially responsible person' => 'МОЛ',
     'Import: {comment}' => 'Импорт: {comment}',
     'Inventory number' => 'Инвентарный номер',
     'Location' => 'Место хранения',
-    'Location: {location} ({region})' => 'Размещение:  {location} ({region})',
     'MAC address' => 'Сетевой адрес',
     'Model number' => 'Номер модели',
+    'Moving: {date} (' => 'Перемещение: {date} (',
     'Network name' => 'Сетевое имя',
     'No. in order' => '№ п/п',
     'Operation system' => 'Операционная система',
@@ -34,7 +35,5 @@ return [
     'Serial number' => 'Серийный номер',
     'State' => 'Состояние',
     'Type' => 'Тип',
-    '), Inventory number:{invent}, model: {model}, location: {location} ( {region} )' => '), Инвентарный номер:{invent}, модель: {model}, Размещение: {location} ( {region} )',
-    'Moving: {date} (' => 'Перемещение: {date} (',
-    'Skip all. Key column not found: ' => 'Всё пропущено. Отсутствуют ключевые поля: ',
+    'Skip all. Key column(s) "model", "type", "invent", "location", "region", "date" not found: ' => 'Всё пропущено. Ключевое(ые) поле(я) "model", "type", "invent", "location", "region", "date" отсутствуют: ',
 ];
