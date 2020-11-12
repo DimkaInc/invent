@@ -54,7 +54,7 @@ use yii\data\Sort;
             'size' => 3,
             'margin' => 4,
             'ecLevel' => QRcode::QR_ECLEVEL_L,
-        ]) . '</div><div style="display:table-cell;vertical-align:middle;font-size: 18pt;font-weight: bolder;text-align:center;">' . $model->invent . ', ' . $model->modelName .
+        ]) . '</div><div style="display:table-cell;vertical-align:middle;font-size: 18pt;font-weight: bolder;text-align:center;">' . $model->invent . ', ' . $model->models->name .
         '</div></div>';
     }
 

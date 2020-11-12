@@ -53,7 +53,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
                                         ]) ?>
                                     </td>
                                     <td style="vertical-align:middle;">
-                                        <?= $model->invent . ', ' . $model->modelName ?>
+                                        <?= $model->invent . ', ' . $model->models->name ?>
                                     </td>
                                 </tr>
                             </tbody>
