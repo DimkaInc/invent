@@ -62,10 +62,11 @@ class ItemsSearch extends Items
         $query = Items::find()
             ->select(Items::tableName() . '.*, ' .
                 Locations::tableName() .  '.name AS locationName, ' .
+                Models::tableName() . '.name AS modelName, ' .
                 Types::tableName() .      '.name AS typeName, ' .
                 Regions::tableName() .    '.name AS regionName, ' .
                 Status::tableName() .     '.name AS statusName ')
-            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions', 'models' ])
+            ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions', 'models', ])
             ->where([ 'in', Moving::tableName() . '.id', $query ])
             ->andWhere([ 'checked' => false ]);
 
