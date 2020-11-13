@@ -53,8 +53,8 @@ git clone https://gitlab.com/DimkaInc/invent.git
 
 Затем выполнить следующие команды:
 
-./yii migrate/up
-./yii migrate --migrationPath=@yii/rbac/migrations
+./yii migrate/up<br>
+./yii migrate --migrationPath=@yii/rbac/migrations<br>
 ./yii rbac/init
 
 Проект находится в режиме постоянной разработки.
