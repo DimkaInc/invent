@@ -46,12 +46,24 @@ AppAsset::register($this);
     {
         array_push($items, [ 'label' => Yii::t('app', 'Items' ), 'url' => [ '/items/index' ]] );
     }
+    if (User::canPermission('updateRecord'))
+    {
+        array_push($items, [ 'label' => Yii::t('users', 'Manage users'), 'options' => [ 'id' => 'down_history' ], 'items' => [
+                [ 'label' => Yii::t('users', 'Change password'), 'url' => [ 'site/changepassword' ]],
+                [ 'label' => Yii::t('users', 'Create users'), 'url' => [ 'site/createusers' ]],
+            ]]);
+    }
+    elseif (User::canPermission('createRecord'))
+    {
+        array_push($items, [ 'label' => Yii::t('users', 'Change password'), 'url' => [ 'site/changepassword' ]]);
+    
+    }
     array_push($items, Yii::$app->user->isGuest ? (
                 [ 'label' => Yii::t('app', 'Login'), 'url' => [ '/site/login' ]]
             ) : (
                 '<li>'
-                . Html::a(Yii::t('users', 'Change password'), Url::to([ 'site/changepassword' ]), [ 'class' => 'btn btn-link' ])
-                . '</li><li>'
+//                . Html::a(Yii::t('users', 'Change password'), Url::to([ 'site/changepassword' ]), [ 'class' => 'btn btn-link' ])
+//                . '</li><li>'
                 . Html::beginForm([ '/site/logout' ], 'post')
                 . Html::submitButton(
                     Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',

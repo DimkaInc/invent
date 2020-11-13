@@ -73,6 +73,8 @@ class SiteController extends Controller
 
     /**
      * Смена пароля залогинившегося пользователя
+     *
+     * @return response|string
      */
     public function actionChangepassword()
     {
@@ -86,7 +88,7 @@ class SiteController extends Controller
         $model = Yii::$app->user->identity;
         // Включим сценарий смены пароля
         $model->setScenario('changePassword');
-        
+
         // Загрузим и проверим данные из формы
         if ($model->load(Yii::$app->request->post()) && $model->validate())
         {
@@ -101,7 +103,35 @@ class SiteController extends Controller
         // Покажем форму для смены пароля
         return $this->render('changepassword', [ 'model' => $model ]);
     }
-    
+
+    /**
+     * Добавление нового пользователя
+     */
+    public function actionCreateusers()
+    {
+        // Если пользователь не администратор, отправим на стартовую
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->goHome();
+        }
+        $model = new User;
+        if ($model->load(Yii::$app->request->post()) && $model->validate())
+        {
+            $model->setPassword($model->password);
+            if ($model->save())
+            {
+                $id = $model->id;
+                $auth = Yii::$app->authManager;
+                $role = $auth->getRole('woker');
+                $auth->assign($role, $id);
+                Yii::$app->session->setFlash('success', Yii::t('users', 'User {name} is created', [ 'name' => $model->name ]));
+            }
+            $model->password = '';
+            return $this->refresh();
+        }
+        return $this->render('createuser', [ 'model' => $model ]);
+    }
+
     /**
      * Вход пользователем.
      *
