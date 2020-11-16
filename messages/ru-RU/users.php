@@ -18,15 +18,18 @@
  */
 return [
     'Change password' => 'Смена пароля',
+    'Create user' => 'Добавление пользователя',
+    'Create users' => 'Добавление пользователей',
+    'Manage users' => 'Управление пользователями',
     'New password' => 'Новый пароль',
     'Old password' => 'Старый пароль',
     'Old password is incorrect.' => 'Старый пароль неправильный',
     'Password' => 'Пароль',
     'User name' => 'Имя пользователя',
+    'User {name} is created' => 'Пользователь {name} создан',
     'You have successfully change your password.' => 'Вы успешно сменили свой пароль',
     'repeat password' => 'Повторите пароль',
-    'Create user' => 'Добавление пользователя',
-    'Create users' => 'Добавление пользователей',
-    'Manage users' => 'Управление пользователями',
-    'User {name} is created' => 'Пользователь {name} создан',
+    'Are you sure? A reset password cannot be recovered.' => 'Вы уверены? Сброшенный пароль невозможно восстановить.',
+    'Reset users passwords' => 'Сброс пароля пользователям',
+    'The password for the "{name}" has been reset. Now it matches the login.' => 'Пароль пользователя "{name}" сброшен. Теперь он совпадает с логином.',
 ];

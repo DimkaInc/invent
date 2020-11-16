@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\User;
+use app\models\UserSearch;
 
 use app\models\Site;
 
@@ -130,6 +131,54 @@ class SiteController extends Controller
             return $this->refresh();
         }
         return $this->render('createuser', [ 'model' => $model ]);
+    }
+
+    /**
+     * Страница сброса паролей для всех пользователей
+     *
+     * @return response|string
+     */
+    public function actionResetuser()
+    {
+        // Если пользователь не администратор, отправим на стартовую
+        if (! User::canPermission('updateRecord'))
+        {
+            return $this->goHome();
+        }
+
+        // формируем список пользователей и показываем его
+        $searchModel  = new UserSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('resetuser', [
+            'searchModel'  => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Сброс пароля конкретного пользователя
+     *
+     * @param integer $id - идентификатор пользователя
+     * @return response|string
+     */
+    public function actionReset($id)
+    {
+        if (! User::canPermission('updateRecord') ) {
+            return $this->redirect(['index']);
+        }
+        $model = User::findOne($id);
+        if ($model !== null)
+        {
+            $model->setPassword($model->username);
+            if ($model->save()) {
+                Yii::$app->session->setFlash('success', Yii::t('users', 'The password for the "{name}" has been reset. Now it matches the login.', [ 'name' => $model->username ]));
+                $this->refresh();
+            }
+        }
+
+        return $this->redirect([ 'resetuser' ]);
+        
     }
 
     /**

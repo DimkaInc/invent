@@ -51,6 +51,7 @@ AppAsset::register($this);
         array_push($items, [ 'label' => Yii::t('users', 'Manage users'), 'options' => [ 'id' => 'down_history' ], 'items' => [
                 [ 'label' => Yii::t('users', 'Change password'), 'url' => [ 'site/changepassword' ]],
                 [ 'label' => Yii::t('users', 'Create users'), 'url' => [ 'site/createusers' ]],
+                [ 'label' => Yii::t('users', 'Reset users passwords'), 'url' => [ 'site/resetuser' ]],
             ]]);
     }
     elseif (User::canPermission('createRecord'))

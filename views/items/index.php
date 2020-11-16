@@ -116,24 +116,6 @@ if (User::canPermission('updateRecord'))
         'format' => 'raw',
     ] ); // */
 
-    /* // Код товара
-    array_push($columns, [ 'attribute' => 'product',
-        'value' => function ($data)
-        {
-            return showUrlUpdate($data->product, $data);
-        },
-        'format' => 'raw',
-    ] ); // */
-
-    /* // Номер модели
-    array_push($columns, [ 'attribute' => 'modelnumber',
-        'value' => function ($data)
-        {
-            return showUrlUpdate($data->modelnumber, $data);
-        },
-        'format' => 'raw',
-    ] ); // */
-
     /* // Примечания
     array_push($columns, [ 'attribute' => 'comment',
         'value' => function ($data)
@@ -143,8 +125,9 @@ if (User::canPermission('updateRecord'))
         'format' => 'raw',
     ] ); // */
 
-    
-} else
+
+}
+else
 {
     array_push($columns, 'invent');
     array_push($columns, 'serial');
