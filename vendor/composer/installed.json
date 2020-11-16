@@ -1548,57 +1548,6 @@
             "install-path": "../myclabs/deep-copy"
         },
         {
-            "name": "odaialali/yii2-qrcode-reader",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/odai-alali/yii2-qrcode-reader.git",
-                "reference": "961000881aad895132f7145f8782c66e24db6b6e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/odai-alali/yii2-qrcode-reader/zipball/961000881aad895132f7145f8782c66e24db6b6e",
-                "reference": "961000881aad895132f7145f8782c66e24db6b6e",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "time": "2017-05-05T09:17:38+00:00",
-            "default-branch": true,
-            "type": "yii2-extension",
-            "installation-source": "source",
-            "autoload": {
-                "psr-4": {
-                    "odaialali\\qrcodereader\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Odai Alali",
-                    "email": "odai.alali@gmail.com"
-                }
-            ],
-            "description": "Yii2 widget for reading qr code using laptop or phone camera",
-            "keywords": [
-                "extension",
-                "javascript",
-                "qrcode",
-                "reader",
-                "yii2"
-            ],
-            "support": {
-                "issues": "https://github.com/odai-alali/yii2-qrcode-reader/issues",
-                "source": "https://github.com/odai-alali/yii2-qrcode-reader/tree/master"
-            },
-            "install-path": "../odaialali/yii2-qrcode-reader"
-        },
-        {
             "name": "opis/closure",
             "version": "3.5.5",
             "version_normalized": "3.5.5.0",
