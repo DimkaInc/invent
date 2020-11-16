@@ -43,13 +43,13 @@ class ComposerStaticInitc8466a27437ca0f14a70d28e6f150d4c
         array (
             'xj\\qrcode\\' => 10,
         ),
-        'r' => 
-        array (
-            'robregonm\\pdf\\' => 14,
-        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'o' => 
+        array (
+            'odaialali\\qrcodereader\\' => 23,
         ),
         'k' => 
         array (
@@ -160,15 +160,15 @@ class ComposerStaticInitc8466a27437ca0f14a70d28e6f150d4c
         array (
             0 => __DIR__ . '/..' . '/xj/yii2-qrcode-widget',
         ),
-        'robregonm\\pdf\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/robregonm/yii2-pdf',
-        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'odaialali\\qrcodereader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/odaialali/yii2-qrcode-reader',
         ),
         'kartik\\mpdf\\' => 
         array (
@@ -410,6 +410,7 @@ class ComposerStaticInitc8466a27437ca0f14a70d28e6f150d4c
         'Codeception\\Util\\JsonArray' => __DIR__ . '/..' . '/codeception/module-rest/src/Codeception/Util/JsonArray.php',
         'Codeception\\Util\\JsonType' => __DIR__ . '/..' . '/codeception/module-rest/src/Codeception/Util/JsonType.php',
         'Codeception\\Util\\Shared\\Asserts' => __DIR__ . '/..' . '/codeception/lib-asserts/src/Codeception/Util/Shared/Asserts.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'FPDF_TPL' => __DIR__ . '/..' . '/setasign/fpdi/fpdf_tpl.php',

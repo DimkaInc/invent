@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25fbe421c3d762f5868fdbd1d676c1eb",
+    "content-hash": "7a3e5f23bdeca0295dfda1e7a12459e1",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -448,6 +448,54 @@
                 "utf-8"
             ],
             "time": "2016-12-12T10:42:18+00:00"
+        },
+        {
+            "name": "odaialali/yii2-qrcode-reader",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/odai-alali/yii2-qrcode-reader.git",
+                "reference": "961000881aad895132f7145f8782c66e24db6b6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/odai-alali/yii2-qrcode-reader/zipball/961000881aad895132f7145f8782c66e24db6b6e",
+                "reference": "961000881aad895132f7145f8782c66e24db6b6e",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "odaialali\\qrcodereader\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Odai Alali",
+                    "email": "odai.alali@gmail.com"
+                }
+            ],
+            "description": "Yii2 widget for reading qr code using laptop or phone camera",
+            "keywords": [
+                "extension",
+                "javascript",
+                "qrcode",
+                "reader",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/odai-alali/yii2-qrcode-reader/issues",
+                "source": "https://github.com/odai-alali/yii2-qrcode-reader/tree/master"
+            },
+            "time": "2017-05-05T09:17:38+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3428,56 +3476,6 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
-            "name": "robregonm/yii2-pdf",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robregonm/yii2-pdf.git",
-                "reference": "af535ca93616cdcc396abef453d649ad8f3e1b36"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robregonm/yii2-pdf/zipball/af535ca93616cdcc396abef453d649ad8f3e1b36",
-                "reference": "af535ca93616cdcc396abef453d649ad8f3e1b36",
-                "shasum": ""
-            },
-            "require": {
-                "mpdf/mpdf": ">=5.7.0 <7.0.0",
-                "php": ">=5.4.0",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-composer": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "robregonm\\pdf\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "robregonm",
-                    "email": "robregonm@gmail.com",
-                    "homepage": "http://obregon.co",
-                    "role": "Author"
-                }
-            ],
-            "description": "Yii 2 PDF Response Formatter",
-            "keywords": [
-                "documents",
-                "formatter",
-                "pdf",
-                "reports",
-                "response",
-                "yii",
-                "yii2"
-            ],
-            "time": "2017-11-03T15:33:01+00:00"
-        },
-        {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.1",
             "source": {
@@ -5475,12 +5473,14 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "odaialali/yii2-qrcode-reader": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.6.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

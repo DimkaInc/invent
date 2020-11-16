@@ -40,6 +40,7 @@ return array(
     'Codeception\\Util\\JsonArray' => $vendorDir . '/codeception/module-rest/src/Codeception/Util/JsonArray.php',
     'Codeception\\Util\\JsonType' => $vendorDir . '/codeception/module-rest/src/Codeception/Util/JsonType.php',
     'Codeception\\Util\\Shared\\Asserts' => $vendorDir . '/codeception/lib-asserts/src/Codeception/Util/Shared/Asserts.php',
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DivisionByZeroError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
     'Error' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/Error.php',
     'FPDF_TPL' => $vendorDir . '/setasign/fpdi/fpdf_tpl.php',

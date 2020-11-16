@@ -32,7 +32,7 @@ foreach ($locations as $key => $val) {
 
 $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), 'id', 'name');
 ?>
-    <script src="https://github.com/mebjas/html5-qrcode/releases/download/V1.2.1/html5-qrcode.min.js"></script>
+    <script src="https://github.com/mebjas/html5-qrcode/releases/download/V1.2.3/html5-qrcode.min.js"></script>
     <script>
         function docReady(fn) {
             // see if DOM is already available
@@ -81,6 +81,10 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
 
 
     <div class="row">
+        <!-- ?= odaialali\qrcodereader\QrReader::widget([
+    'id' => 'qrInput',
+    'successCallback' => "function(data){ $('#qrInput').val(data) }"
+]) ? -->
         <div class="col-md-4" id="qr-reader"></div>
     </div>
 

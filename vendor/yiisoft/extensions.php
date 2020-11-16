@@ -66,13 +66,13 @@ return array (
       '@kartik/mpdf' => $vendorDir . '/kartik-v/yii2-mpdf',
     ),
   ),
-  'robregonm/yii2-pdf' => 
+  'odaialali/yii2-qrcode-reader' => 
   array (
-    'name' => 'robregonm/yii2-pdf',
-    'version' => '1.0.3.0',
+    'name' => 'odaialali/yii2-qrcode-reader',
+    'version' => 'dev-master',
     'alias' => 
     array (
-      '@robregonm/pdf' => $vendorDir . '/robregonm/yii2-pdf',
+      '@odaialali/qrcodereader' => $vendorDir . '/odaialali/yii2-qrcode-reader',
     ),
   ),
 );
