@@ -42,10 +42,40 @@ AppAsset::register($this);
     array_push($items, [ 'label' => Yii::t('app', 'Home'   ), 'url' => [ '/site/index' ]] );
     array_push($items, [ 'label' => Yii::t('app', 'About'  ), 'url' => [ '/site/about' ]] );
     array_push($items, [ 'label' => Yii::t('app', 'Contact'), 'url' => [ '/site/contact' ]] );
+
+    // Предметы/оборудование
     if (User::canPermission('createRecord'))
     {
         array_push($items, [ 'label' => Yii::t('app', 'Items' ), 'url' => [ '/items/index' ]] );
+        // Отчёты
+        array_push($items, [ 'label' => Yii::t('app', 'Reports'), 'url' => [ '/reports/index' ]]);
     }
+
+    // Пользователи
+    $subitems = [];
+    if (Yii::$app->user->isGuest)
+    {
+        array_push($items, [ 'label' => Yii::t('app', 'Login'), 'url' => [ '/site/login' ]]);
+    }
+    else
+    {
+        array_push($subitems, ''
+            . Html::BeginForm([ '/site/logout' ], 'post')
+            . Html::submitButton(
+                Yii::t('app', 'Logout'),
+                [ 'class' => 'btn btn-link logout', ]
+            )
+            . Html::endForm()
+            . '');
+        array_push($subitems, [ 'label' => Yii::t('users', 'Change password'), 'url' => [ 'site/changepassword' ]]);
+        if (User::canPermission('updateRecord'))
+        {
+            array_push($subitems, [ 'label' => Yii::t('users', 'Create users'), 'url' => [ 'site/createusers' ]]);
+            array_push($subitems, [ 'label' => Yii::t('users', 'Reset users passwords'), 'url' => [ 'site/resetuser' ]]);
+        }
+        array_push($items, [ 'label' => Yii::$app->user->identity->username, 'options' => [ 'id' => 'down_history' ], 'items' => $subitems ]);
+    }
+    /*
     if (User::canPermission('updateRecord'))
     {
         array_push($items, [ 'label' => Yii::t('users', 'Manage users'), 'options' => [ 'id' => 'down_history' ], 'items' => [
@@ -63,8 +93,6 @@ AppAsset::register($this);
                 [ 'label' => Yii::t('app', 'Login'), 'url' => [ '/site/login' ]]
             ) : (
                 '<li>'
-//                . Html::a(Yii::t('users', 'Change password'), Url::to([ 'site/changepassword' ]), [ 'class' => 'btn btn-link' ])
-//                . '</li><li>'
                 . Html::beginForm([ '/site/logout' ], 'post')
                 . Html::submitButton(
                     Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
@@ -72,7 +100,7 @@ AppAsset::register($this);
                 )
                 . Html::endForm()
                 . '</li>'
-            ) );
+            ) ); // */
 
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

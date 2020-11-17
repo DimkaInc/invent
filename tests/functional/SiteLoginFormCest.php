@@ -18,7 +18,7 @@ class SiteLoginFormCest
     {
         $I->amLoggedInAs(1);
         $I->amOnPage('/');
-        $I->see(Yii::t('app', 'Logout') . ' (admin)');
+        $I->see('admin');
     }
 
     // demonstrates `amLoggedInAs` method
@@ -26,7 +26,7 @@ class SiteLoginFormCest
     {
         $I->amLoggedInAs(\app\models\User::findByUsername('admin'));
         $I->amOnPage('/');
-        $I->see(Yii::t('app', 'Logout') . ' (admin)');
+        $I->see('admin');
     }
 
     public function loginWithEmptyCredentials(\FunctionalTester $I)
@@ -53,7 +53,7 @@ class SiteLoginFormCest
             'LoginForm[username]' => 'admin',
             'LoginForm[password]' => 'admin',
         ]);
-        $I->see(Yii::t('app', 'Logout') . ' (admin)');
+        $I->see('admin');
         $I->dontSeeElement('form#login-form');
     }
     public function loginDemoWithWrongCredentials(\FunctionalTester $I)
@@ -72,7 +72,7 @@ class SiteLoginFormCest
             'LoginForm[username]' => 'user',
             'LoginForm[password]' => 'user',
         ]);
-        $I->see(Yii::t('app', 'Logout') . ' (user)');
+        $I->see('user');
         $I->dontSeeElement('form#login-form');
     }
 }
