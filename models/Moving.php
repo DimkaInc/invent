@@ -159,7 +159,12 @@ class Moving extends \yii\db\ActiveRecord
 
     public function getModels()
     {
-        return $this->getItems()->select(Models::tableName())->joinWith('models');
+        return $this->getItems()->select(Models::tableName() . '.*')->joinWith('models');
+    }
+
+    public function getTypes()
+    {
+        return $this->getModels()->select(Types::tableName() . '.*')->joinWith('types');
     }
 
     /**

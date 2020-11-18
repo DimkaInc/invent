@@ -35,6 +35,7 @@ return [
     'Items' => 'Оборудование',
     'Login' => 'Вход',
     'Logout' => 'Выход',
+    'Migration {migrate} can\'t reverted' => 'Миграция {migrate} не может быть отменена.',
     'Number of equipment by regions' => 'Количество оборудования по подразделениям',
     'Number of items by type' => 'Количество оборудования по типам',
     'Password' => 'Пароль',
@@ -53,5 +54,5 @@ return [
     'Username' => 'Имя пользователя',
     'You may login with' => 'Вы можете войти как',
     'or' => 'или',
-    'Migration {migrate} can\'t reverted' => 'Миграция {migrate} не может быть отменена.',
+    'Reports' => 'Отчёты',
 ];
