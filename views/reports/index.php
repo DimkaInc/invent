@@ -20,6 +20,11 @@ $lastLocation = 0;
 
 $models = $dataProvider->getModels();
 
+function cell($text, $color, $wrap='')
+{
+    return '<td ' . $wrap . ' style="padding: 2px 2px 2px 2px;"><font color="' . $color . '">' . $text . '</font></td>';
+}
+
 foreach ($models as $model)
 {
     $color='#000000';
@@ -63,14 +68,14 @@ foreach ($models as $model)
     }
     ?>
     <tr>
-        <td style="padding: 2px 2px 2px 2px; color:<?= $color ?>"><?= $model->items->invent ?></td>
-        <td style="padding: 2px 2px 2px 2px; color:<?= $color ?>"><?= $model->items->serial ?></td>
-        <td style="padding: 2px 2px 2px 2px; color:<?= $color ?>"><?= $model->items->models->name ?></td>
-        <td style="padding: 2px 2px 2px 2px; color:<?= $color ?>"><?= $model->items->models->types->name ?></td>
-        <td nowrap style="padding: 2px 2px 2px 2px; color:<?= $color ?>"><?= $model->status->name ?></td>
-        <td nowrap style="padding: 2px 2px 2px 2px; color:<?= $color ?>"><?= $model->items->name ?></td>
-        <td style="padding: 2px 2px 2px 2px; color:<?= $color ?>"><?= $model->items->os ?></td>
-        <td style="padding: 2px 2px 2px 2px; color:<?= $color ?>"><?= $model->items->mac ?></td>
+        <?= cell($model->items->invent, $color) ?>
+        <?= cell($model->items->serial, $color) ?>
+        <?= cell($model->items->models->name, $color) ?>
+        <?= cell($model->items->models->types->name, $color) ?>
+        <?= cell($model->status->name, $color, 'nowrap') ?>
+        <?= cell($model->items->name, $color, 'nowrap') ?>
+        <?= cell($model->items->os, $color) ?>
+        <?= cell($model->items->mac, $color) ?>
     </tr>
     <?php
 }

@@ -63,7 +63,8 @@ AppAsset::register($this);
             . Html::BeginForm([ '/site/logout' ], 'post')
             . Html::submitButton(
                 Yii::t('app', 'Logout'),
-                [ 'class' => 'btn btn-link logout', ]
+//                [ 'class' => 'btn btn-link logout', ]
+                [ 'class' => 'dropdowm-menu', ]
             )
             . Html::endForm()
             . '');
