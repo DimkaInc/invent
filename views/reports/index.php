@@ -25,47 +25,57 @@ function cell($text, $color, $wrap='')
     return '<td ' . $wrap . ' style="padding: 2px 2px 2px 2px;"><font color="' . $color . '">' . $text . '</font></td>';
 }
 
+// Цветовая палитра состояний
+$colors = [ 'Списано' => '#FF0000',
+            'К списанию' => '#FF0000',
+            'Работает' => '#009F00',
+            'Сломано' => '#0000FF',
+    ];
+
 foreach ($models as $model)
 {
-    $color='#000000';
-    if ($model->status->name == 'Списано' || $model->status->name == 'К списанию')
+    // Раскраска строк по состоянию
+    if (isset($colors[ $model->status->name ]))
     {
-        $color='#FF0000';
+        $color = $colors[ $model->status->name ];
     }
-    if ($model->status->name == 'Работает')
+    else
     {
-        $color='#009F00';
+        $color='#000000';
     }
-    if ($model->status->name == 'Сломано')
-    {
-        $color='#0000FF';
-    }
+
+    // Смена места хранения
     if ($model->locations->id != $lastLocation)
     {
+        // Начало таблицы
         if ($lastLocation == 0)
         {
-    ?>
-        <table border="1" style="padding: 2px 2px 2px 2px;" width="100%"><tbody>
-    <?php
+            ?>
+            <table border="1" style="padding: 2px 2px 2px 2px;" width="100%"><tbody>
+            <?php
         }
+
+        // Отображение заголовка
         $lastLocation = $model->locations->id;
-    ?>
+        ?>
         <tr>
             <td colspan="8" style="padding: 2px 2px 2px 2px;"><H2><?= $model->locations->regions->name ?></H2>
             <H3><?= $model->locations->name ?></H3></td>
         </tr>
         <tr bgcolor="#EFEFEF">
-            <th style= "text-align:center">Инвентарный номер</th>
-            <th style= "text-align:center">Серийный номер</th>
-            <th style= "text-align:center">Оборудование</th>
-            <th style= "text-align:center">Тип</th>
-            <th style= "text-align:center">Состояние</th>
-            <th style= "text-align:center">Сетевое имя</th>
-            <th style= "text-align:center">ОС</th>
-            <th style= "text-align:center">МАС адрес</th>
+            <th style= "text-align:center"><?= Yii::t('items', 'Inventory number') ?></th>
+            <th style= "text-align:center"><?= Yii::t('items', 'Serial number') ?></th>
+            <th style= "text-align:center"><?= Yii::t('items', 'Items') ?></th>
+            <th style= "text-align:center"><?= Yii::t('types', 'Type') ?></th>
+            <th style= "text-align:center"><?= Yii::t('status', 'Status') ?></th>
+            <th style= "text-align:center"><?= Yii::t('items', 'Item network name') ?></th>
+            <th style= "text-align:center"><?= Yii::t('items', 'Operating system') ?></th>
+            <th style= "text-align:center"><?= Yii::t('items', 'MAC address') ?></th>
         </tr>
-    <?php
+        <?php
     }
+
+    // Отображение строки
     ?>
     <tr>
         <?= cell($model->items->invent, $color) ?>
@@ -79,14 +89,10 @@ foreach ($models as $model)
     </tr>
     <?php
 }
+// Окончание таблицы
 if ($lastLocation !== 0)
 {
-?>
-        </tbody></table>
-
-<?php
+    ?>
+    </tbody></table>
+    <?php
 }
-?>
-<div>
-
-</div>
