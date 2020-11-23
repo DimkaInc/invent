@@ -96,9 +96,10 @@ else
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
+        'id'           => 'ModelsTable',
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => $columns,
+        'filterModel'  => $searchModel,
+        'columns'      => $columns,
     ]); ?>
 
     <?php Pjax::end(); ?>
