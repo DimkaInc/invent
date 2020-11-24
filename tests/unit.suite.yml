@@ -10,11 +10,11 @@ modules:
       - Yii2:
             part: [orm, email, fixtures]
       - Db:
-            populate: true
-            cleanup: true
-            reconnect: true
-    config:
-        Db:
             dsn: 'pgsql:host=localhost;dbname=invent'
             user: 'invent'
             password: 'Rfhkc0y'
+            populate: true # Загружать dump перед всеми тестом
+            cleanup: true  # Загружать dump перед каждым тестом
+            reconnect: true # 
+            # dump: 'tests/_data/dump.bak'
+            # populator: 'pg_restore -u $user -h $host -D $dbname < $dump'

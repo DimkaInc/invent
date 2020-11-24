@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '83406a939562e8124372ce46ba5a6a38f4b2ab69',
+    'reference' => '68d7ea972c6eabdd3949cbb69fad21b342c72d71',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -112,12 +112,12 @@
     ),
     'codeception/module-db' => 
     array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
+      'pretty_version' => '1.0.2',
+      'version' => '1.0.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '13a2b86206d09c50ab2e5375b261df35b650e58f',
+      'reference' => 'd5f1def43c1f0ebdd57d506224c4a4632e3a6059',
     ),
     'codeception/module-filesystem' => 
     array (
@@ -284,16 +284,6 @@
       array (
         0 => '1.10.1',
       ),
-    ),
-    'odaialali/yii2-qrcode-reader' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-        0 => '9999999-dev',
-      ),
-      'reference' => '961000881aad895132f7145f8782c66e24db6b6e',
     ),
     'opis/closure' => 
     array (
@@ -861,7 +851,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '83406a939562e8124372ce46ba5a6a38f4b2ab69',
+      'reference' => '68d7ea972c6eabdd3949cbb69fad21b342c72d71',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (

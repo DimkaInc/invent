@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a3e5f23bdeca0295dfda1e7a12459e1",
+    "content-hash": "25fbe421c3d762f5868fdbd1d676c1eb",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -448,54 +448,6 @@
                 "utf-8"
             ],
             "time": "2016-12-12T10:42:18+00:00"
-        },
-        {
-            "name": "odaialali/yii2-qrcode-reader",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/odai-alali/yii2-qrcode-reader.git",
-                "reference": "961000881aad895132f7145f8782c66e24db6b6e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/odai-alali/yii2-qrcode-reader/zipball/961000881aad895132f7145f8782c66e24db6b6e",
-                "reference": "961000881aad895132f7145f8782c66e24db6b6e",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "default-branch": true,
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "odaialali\\qrcodereader\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Odai Alali",
-                    "email": "odai.alali@gmail.com"
-                }
-            ],
-            "description": "Yii2 widget for reading qr code using laptop or phone camera",
-            "keywords": [
-                "extension",
-                "javascript",
-                "qrcode",
-                "reader",
-                "yii2"
-            ],
-            "support": {
-                "issues": "https://github.com/odai-alali/yii2-qrcode-reader/issues",
-                "source": "https://github.com/odai-alali/yii2-qrcode-reader/tree/master"
-            },
-            "time": "2017-05-05T09:17:38+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1825,27 +1777,24 @@
         },
         {
             "name": "codeception/module-db",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-db.git",
-                "reference": "13a2b86206d09c50ab2e5375b261df35b650e58f"
+                "reference": "d5f1def43c1f0ebdd57d506224c4a4632e3a6059"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-db/zipball/13a2b86206d09c50ab2e5375b261df35b650e58f",
-                "reference": "13a2b86206d09c50ab2e5375b261df35b650e58f",
+                "url": "https://api.github.com/repos/Codeception/module-db/zipball/d5f1def43c1f0ebdd57d506224c4a4632e3a6059",
+                "reference": "d5f1def43c1f0ebdd57d506224c4a4632e3a6059",
                 "shasum": ""
             },
             "require": {
-                "codeception/codeception": "*@dev",
-                "php": ">=5.6.0 <8.0"
+                "codeception/codeception": "^4.0",
+                "php": ">=5.6.0 <9.0"
             },
             "conflict": {
                 "codeception/codeception": "<4.0"
-            },
-            "require-dev": {
-                "codeception/util-robohelpers": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -1865,14 +1814,18 @@
                     "name": "Gintautas Miselis"
                 }
             ],
-            "description": "WebDriver module for Codeception",
+            "description": "DB module for Codeception",
             "homepage": "http://codeception.com/",
             "keywords": [
-                "acceptance-testing",
-                "browser-testing",
-                "codeception"
+                "codeception",
+                "database-testing",
+                "db-testing"
             ],
-            "time": "2019-12-08T17:56:49+00:00"
+            "support": {
+                "issues": "https://github.com/Codeception/module-db/issues",
+                "source": "https://github.com/Codeception/module-db/tree/1.0.2"
+            },
+            "time": "2020-10-23T18:21:20+00:00"
         },
         {
             "name": "codeception/module-filesystem",
@@ -5473,9 +5426,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "odaialali/yii2-qrcode-reader": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

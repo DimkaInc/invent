@@ -35,7 +35,8 @@ class Types extends \yii\db\ActiveRecord
     {
         return [
             [[ 'id' ], 'integer' ],
-            [[ 'name' ], 'string', 'max' => 100 ],
+            [[ 'name' ], 'string', 'max' => 100, ],
+            [[ 'name' ], 'required' ],
         ];
     }
 

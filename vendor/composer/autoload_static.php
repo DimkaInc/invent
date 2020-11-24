@@ -47,10 +47,6 @@ class ComposerStaticInitc8466a27437ca0f14a70d28e6f150d4c
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
-        'o' => 
-        array (
-            'odaialali\\qrcodereader\\' => 23,
-        ),
         'k' => 
         array (
             'kartik\\mpdf\\' => 12,
@@ -165,10 +161,6 @@ class ComposerStaticInitc8466a27437ca0f14a70d28e6f150d4c
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-        ),
-        'odaialali\\qrcodereader\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/odaialali/yii2-qrcode-reader',
         ),
         'kartik\\mpdf\\' => 
         array (

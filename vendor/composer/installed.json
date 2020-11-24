@@ -494,30 +494,27 @@
         },
         {
             "name": "codeception/module-db",
-            "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
+            "version": "1.0.2",
+            "version_normalized": "1.0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-db.git",
-                "reference": "13a2b86206d09c50ab2e5375b261df35b650e58f"
+                "reference": "d5f1def43c1f0ebdd57d506224c4a4632e3a6059"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-db/zipball/13a2b86206d09c50ab2e5375b261df35b650e58f",
-                "reference": "13a2b86206d09c50ab2e5375b261df35b650e58f",
+                "url": "https://api.github.com/repos/Codeception/module-db/zipball/d5f1def43c1f0ebdd57d506224c4a4632e3a6059",
+                "reference": "d5f1def43c1f0ebdd57d506224c4a4632e3a6059",
                 "shasum": ""
             },
             "require": {
-                "codeception/codeception": "*@dev",
-                "php": ">=5.6.0 <8.0"
+                "codeception/codeception": "^4.0",
+                "php": ">=5.6.0 <9.0"
             },
             "conflict": {
                 "codeception/codeception": "<4.0"
             },
-            "require-dev": {
-                "codeception/util-robohelpers": "dev-master"
-            },
-            "time": "2019-12-08T17:56:49+00:00",
+            "time": "2020-10-23T18:21:20+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -537,13 +534,17 @@
                     "name": "Gintautas Miselis"
                 }
             ],
-            "description": "WebDriver module for Codeception",
+            "description": "DB module for Codeception",
             "homepage": "http://codeception.com/",
             "keywords": [
-                "acceptance-testing",
-                "browser-testing",
-                "codeception"
+                "codeception",
+                "database-testing",
+                "db-testing"
             ],
+            "support": {
+                "issues": "https://github.com/Codeception/module-db/issues",
+                "source": "https://github.com/Codeception/module-db/tree/1.0.2"
+            },
             "install-path": "../codeception/module-db"
         },
         {

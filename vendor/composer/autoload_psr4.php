@@ -15,7 +15,6 @@ return array(
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'xj\\qrcode\\' => array($vendorDir . '/xj/yii2-qrcode-widget'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
-    'odaialali\\qrcodereader\\' => array($vendorDir . '/odaialali/yii2-qrcode-reader'),
     'kartik\\mpdf\\' => array($vendorDir . '/kartik-v/yii2-mpdf'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
