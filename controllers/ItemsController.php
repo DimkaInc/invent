@@ -332,7 +332,7 @@ class ItemsController extends Controller
                         }
                         else
                         {
-                            $state = isset($row[ 'status' ]) ? StatusController::addIfNeed($row) : StatusController::addIfNeed([ 'name' => 'Склад' ]);
+                            $state = isset($row[ 'status' ]) ? StatusController::addIfNeed($row) : StatusController::addIfNeed([ 'status' => 'Склад' ]);
                             if ( $state[ 'id' ] === FALSE )
                             {
                                 // Сообщим об ошибке
@@ -487,12 +487,12 @@ class ItemsController extends Controller
                                 $flag = FALSE;
                                 foreach ($cellIterator as $key => $item)
                                 {
-                                    if (($key == 'A') && (stripos($item->getValue(), $columnsNames[ 'npp' ]) !== FALSE)) $flag = TRUE;
+                                    if (($key == 'A') && (stripos($item->getCalculatedValue(), $columnsNames[ 'npp' ]) !== FALSE)) $flag = TRUE;
                                     if ($flag)
                                     {
                                         foreach ($columnsNames as $name => $text)
                                         {
-                                            if (stripos($item->getValue(), $text) !== FALSE)
+                                            if (stripos($item->getCalculatedValue(), $text) !== FALSE)
                                             {
                                                 $columns[ $name ] = $key;
                                             }
@@ -508,14 +508,14 @@ class ItemsController extends Controller
                                 {
                                     if ($key == $columns[ 'npp' ])
                                     {
-                                        $npp = str_replace(' ', '', $item->getValue());
+                                        $npp = str_replace(' ', '', $item->getCalculatedValue());
                                         if (ctype_digit($npp)) $flag = TRUE;
                                     }
                                     if ($flag)
                                     {
                                         foreach($columns as $keym => $index)
                                         {
-                                            if ($index == $key) $line[ $keym ] = $item->getValue();
+                                            if ($index == $key) $line[ $keym ] = $item->getCalculatedValue();
                                         }
                                     }
                                 }

@@ -12,6 +12,13 @@ class MovingInsertCest
      }
 
     // tests
+
+    public function openMovingLists(\FunctionalTester $I)
+    {
+        $I->amOnRoute('moving/index');
+        $I->see(Yii::t('moving', 'Movings'));
+    }
+
     // Проверка открытия страницы на добавление
     public function openInsertPage(\FunctionalTester $I)
     {

@@ -46,7 +46,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
             [ 'attribute' => 'itemModel',
                 'value' => function($data)
                 {
-                    return showUrlUpdate($data->items->invent . ' (' .$data->items->model . ')', $data);
+                    return showUrlUpdate($data->items->invent . ' (' .$data->items->models->name . ')', $data);
                 },
                 'format' => 'raw',
             ],
