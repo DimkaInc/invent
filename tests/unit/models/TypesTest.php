@@ -2,7 +2,6 @@
 
 namespace tests\unit\models;
 
-use app\models\LoginForm;
 use app\models\Types;
 
 class TypesTest extends \Codeception\Test\Unit
@@ -20,21 +19,30 @@ class TypesTest extends \Codeception\Test\Unit
 
     protected function _after()
     {
-        \Yii::$app->user->logout();
     }
 
-    // tests
-    public function testEnterType()
+    public function testEnterNull()
     {
         $this->types = new Types();
-
+    
         // Пустое значение недопустимо
         $this->types->name = NULL;
         $this->assertFalse($this->types->validate([ 'name' ]));
-
+    }
+    
+    public function testEnterLong()
+    {
+        $this->types = new Types();
+    
         // Больше 100 символов недопустимо
         $this->types->name = '**** aaaaabbbbbcccccdddddeeeeefffffggggghhhhhiiiiijjjjjkkkkklllllmmmmmnnnnnooooopppppqqqqqrrrrrsssss ****';
         $this->assertFalse($this->types->validate([ 'name' ]));
+    }
+
+    // tests
+    public function testEnterData()
+    {
+        $this->types = new Types();
 
         $validName = '--TEST TYPE--';
         // Допустимая комбинация
