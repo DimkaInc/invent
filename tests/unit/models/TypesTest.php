@@ -14,7 +14,7 @@ class TypesTest extends \Codeception\Test\Unit
 
     protected function _before()
     {
-
+        $this->types = new Types();
     }
 
     protected function _after()
@@ -23,27 +23,21 @@ class TypesTest extends \Codeception\Test\Unit
 
     public function testEnterNull()
     {
-        $this->types = new Types();
-    
         // Пустое значение недопустимо
         $this->types->name = NULL;
         $this->assertFalse($this->types->validate([ 'name' ]));
     }
-    
-    public function testEnterLong()
+
+    public function testEnterAbove100()
     {
-        $this->types = new Types();
-    
         // Больше 100 символов недопустимо
-        $this->types->name = '**** aaaaabbbbbcccccdddddeeeeefffffggggghhhhhiiiiijjjjjkkkkklllllmmmmmnnnnnooooopppppqqqqqrrrrrsssss ****';
+        $this->types->name = '**** ' . str_repeat('a', 100) . ' ****';
         $this->assertFalse($this->types->validate([ 'name' ]));
     }
 
     // tests
     public function testEnterData()
     {
-        $this->types = new Types();
-
         $validName = '--TEST TYPE--';
         // Допустимая комбинация
         $this->types->name = $validName;

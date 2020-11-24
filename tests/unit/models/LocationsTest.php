@@ -2,9 +2,10 @@
 
 namespace tests\unit\models;
 
-use app\models\Status;
+use app\models\Regions;
+use app\models\Locations;
 
-class StatusTest extends \Codeception\Test\Unit
+class LocationsTest extends \Codeception\Test\Unit
 {
     private $model;
     /**
@@ -14,7 +15,11 @@ class StatusTest extends \Codeception\Test\Unit
 
     protected function _before()
     {
-
+        $this->model = new Locations();
+        $region = new Regions();
+        $region->name = '-- TEST REGION FOR LOCATION --';
+        $this->assertTrue($region->save());
+        $this->model->region_id = $region->id;
     }
 
     protected function _after()
@@ -24,34 +29,28 @@ class StatusTest extends \Codeception\Test\Unit
     // tests
     public function testEnterNull()
     {
-        $this->model = new Status();
-    
         // Пустое значение недопустимо
         $this->model->name = NULL;
         $this->assertFalse($this->model->validate([ 'name' ]));
     }
 
-    public function testEnterAbove100()
+    public function testEnterAbove120()
     {
-        $this->model = new Status();
-
-        // Больше 100 символов недопустимо
-        $this->model->name = '**** ' . str_repeat('a', 100) . ' ****';
+        // Больше 120 символов недопустимо
+        $this->model->name = '**** ' . str_repeat('a', 120) . ' ****';
         $this->assertFalse($this->model->validate([ 'name' ]));
     }
 
     public function testEnterData()
     {
-        $this->model = new Status();
-
-        $validName = '--TEST STATUS--';
+        $validName = '--TEST LOCATION--';
         // Допустимая комбинация
         $this->model->name = $validName;
         $this->assertTrue($this->model->validate([ 'name' ]));
 
         // Сохранение данных в базу
         $this->assertTrue($this->model->save());
-        $count = count(Status::find()->where([ 'name' => $validName ])->all());
+        $count = count(Locations::find()->where([ 'name' => $validName ])->all());
         $this->assertGreaterThan(0, $count);
         $this->assertEquals(1, $count);
     }
