@@ -46,6 +46,6 @@ class TypesTest extends \Codeception\Test\Unit
         $count = count(Types::find()->where([ 'name' => $validName ])->all());
         $this->assertGreaterThan(0, $count);
         $this->assertEquals(1, $count);
-        $this->tester->seeInDatabase('types', [ 'name' => $validName ]);
+#        $this->tester->seeInDatabase('types', [ 'name' => $validName ]); // ищет в реальной базе данных, а не в тестовой.
     }
 }
