@@ -225,7 +225,8 @@ class ItemsController extends Controller
             }
         }
         $searchModel = new ItemsSearch();
-        $dataProvider = $searchModel->noinvent($model);
+        //$dataProvider = $searchModel->noinvent($model);
+        $dataProvider = $searchModel->noinvent(Yii::$app->request->queryParams);
 
         return $this->render('check', [
             'message'      => $message,

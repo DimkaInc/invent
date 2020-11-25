@@ -62,7 +62,7 @@ class ItemsSearch extends Items
         $query = Items::find()
             ->select(Items::tableName() . '.*, ' .
                 Locations::tableName() .  '.name AS locationName, ' .
-                Models::tableName() . '.name AS modelName, ' .
+                Models::tableName() .     '.name AS modelName, ' .
                 Types::tableName() .      '.name AS typeName, ' .
                 Regions::tableName() .    '.name AS regionName, ' .
                 Status::tableName() .     '.name AS statusName ')
@@ -78,6 +78,40 @@ class ItemsSearch extends Items
                 'id' => SORT_ASC,
             ],
         ]);
+
+        $this->load($params);
+        if (!$this->validate())
+        {
+            return $dataProvider;
+        }
+
+        // grid filtering conditions
+        $query->andFilterWhere([
+            'id'   => $this->id,
+        ])->andFilterWhere([
+            'ilike', Status::tableName() .    '.name', $this->statusName
+        ])->andFilterWhere([
+            'ilike', Models::tableName() .    '.name', $this->modelName
+        ])->andFilterWhere([
+            'ilike', Types::tableName() .     '.name', $this->typeName
+        ])->andFilterWhere([ 'OR', [
+            'ilike', Locations::tableName() . '.name', $this->regionName
+        ], [
+            'ilike', Regions::tableName() .   '.name', $this->regionName
+        ]])->andFilterWhere([ 'OR', [
+            'ilike', Locations::tableName() . '.name', $this->locationName
+        ], [
+            'ilike', Regions::tableName() .   '.name', $this->locationName
+        ]]);
+
+        $query->andFilterWhere(['ilike', 'name',        $this->name])
+            ->andFilterWhere(  ['ilike', 'os',          $this->os])
+            ->andFilterWhere(  ['ilike', 'mac',         $this->mac])
+            ->andFilterWhere(  ['ilike', 'serial',      $this->serial])
+            ->andFilterWhere(  ['ilike', 'invent',      $this->invent])
+            ->andFilterWhere(  ['ilike', 'comment',     $this->comment]);
+
+
         $dataProvider->sort->attributes['modelName'] = [
             'asc'  => [ Models::tableName() . '.name' => SORT_ASC ],
             'desc' => [ Models::tableName() . '.name' => SORT_DESC ],
@@ -119,7 +153,7 @@ class ItemsSearch extends Items
         $query = Items::find()
             ->select(Items::tableName() . '.*, ' .
                 Locations::tableName() .  '.name AS locationName, ' .
-                Models::tableName() . '.name AS modelName, ' .
+                Models::tableName() .     '.name AS modelName, ' .
                 Types::tableName() .      '.name AS typeName, ' .
                 Regions::tableName() .    '.name AS regionName, ' .
                 Status::tableName() .     '.name AS statusName ')

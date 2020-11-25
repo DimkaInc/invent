@@ -123,6 +123,7 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider, // Источник данных
+        'filterModel' => $searchModel,
         'columns' => [
 
             // Инвентарный номер
