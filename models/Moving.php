@@ -49,7 +49,7 @@ class Moving extends \yii\db\ActiveRecord
             [[ 'date', 'itemModel' ], 'safe' ],
             [[ 'date'],        'date', 'format' => 'dd.MM.yyyy' ],
             [[ 'date'],        'checkValidDate' ],
-            [[ 'item_id', 'location_id', 'state_id' ], 'default', 'value' => null ],
+            [[ 'item_id', 'location_id', 'state_id' ], 'default', 'value' => NULL ],
             [[ 'id', 'item_id', 'location_id', 'state_id' ], 'integer' ],
             [[ 'comment' ],     'string'],
             [[ 'item_id' ],     'exist', 'skipOnError' => true, 'targetClass' => Items::className(),     'targetAttribute' => [ 'item_id' => 'id' ]],

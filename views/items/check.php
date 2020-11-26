@@ -91,7 +91,7 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
     <?php Pjax::begin(); ?>
 
     <div class="row"><br /><br />
-        <div class="col-md-4"><?= $message ?></div>
+        <div class="col-md-8"><?= $message ?></div>
     </div>
 
     <?php $form = ActiveForm::begin([ 'options' => [ 'data-pjax' => true ]]); ?>

@@ -212,15 +212,43 @@ class ItemsController extends Controller
             if ((! empty($model->qrcheck)) && strpos($model->qrcheck, ',') !== false)
             {
                 $keys = explode(',', $model->qrcheck);
-                Items::updateAll([ 'checked' => true ], [ 'invent' => trim($keys[ 0 ]), 'serial' => trim($keys[ 1 ]) ]);
+                $color=''; // Цветовая метка по умолчанию
+                // Получаем все предметы/оборудование с совпадением инвентарного и серийного номеров
                 $items = Items::find()->where([ 'invent' => trim($keys[ 0 ]), 'serial' => trim($keys[ 1 ]) ])->all();
-                //$message = '[0] = "' . $keys[0] . '", [1] = "' . $keys[1] . '"<br />';
-                foreach ($items as $row)
+                if (count($items) > 0 )
                 {
-                    $message .= $row->models->name . ' (' . $row->id . ')';
+                    foreach ($items as $row)
+                    {
+                        if ($row->checked)
+                        {
+                            // Этот инвентарный номер был учтён
+                            $color = ' color="#FF0000"';
+                        }
+                        // Ищем местоположение
+                        $moving_id = Moving::find()->select('MAX(id) as id')->groupBy([ 'item_id' ])->where([ 'item_id' => $row->id ])->one()->id;
+                        $moving = Moving::find()->where([ 'id' => $moving_id ])->one();
+                        // Показываем название и местоположение
+                        $message .= $row->models->name . ' (' . $moving->locations->name  . ' [' . $moving->regions->name . '])';
+                    }
                 }
+                else
+                {
+                    // Неизвестный инвентарный номер
+                    $color = ' color = "#FF8830"';
+                    $message .= Yii::t('items', 'Not found!') . ' ' . Yii::t('items', 'Inventory number') . ': ' . trim($keys[ 0 ]);
+                }
+                // Отмечаем проинвентаризированными все найденные предметы/оборудование
+                Items::updateAll([ 'checked' => TRUE ], [ 'invent' => trim($keys[ 0 ]), 'serial' => trim($keys[ 1 ]) ]);
+
                 if ($message != '')
-                    $message = Yii::t('items', 'Checked item(s): ') . $message;
+                    if ( $color == ' color = "#FF8830"')
+                    {
+                        $message = '<font' . $color . '>' . $message . '</font>';
+                    }
+                    else
+                    {
+                        $message = '<font' . $color . '>' . Yii::t('items', 'Checked item(s): ') . $message . '</font>';
+                    }
                 $model->qrcheck = '';
             }
         }
