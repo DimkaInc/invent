@@ -77,7 +77,7 @@ class ModelsSearch extends Models
             'type_id' => $this->type_id,
         ]);
 
-        $query->andFilterWhere([ 'ilike', 'name', $this->name ])
+        $query->andFilterWhere([ 'ilike', Models::tablename() . '.name', $this->name ])
             ->andFilterWhere([ 'ilike', 'modelnumber', $this->modelnumber ])
             ->andFilterWhere([ 'ilike', 'product', $this->product ])
             ->andFilterWhere([ 'ilike', Types::tableName() . '.name', $this->typeName ]);

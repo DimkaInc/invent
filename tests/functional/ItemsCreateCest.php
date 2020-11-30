@@ -52,8 +52,8 @@ class ItemsCreateCest
         $I->dontSee(Yii::t('items', 'Create Items'), 'h1');
     }
 
-    // Нажатие на кнопку "Типы"
-    public function pushTypes(FunctionalTester $I)
+    // Нажатие на кнопку "Модели"
+    public function pushModels(FunctionalTester $I)
     {
         $I->click(Locator::contains('div a', Yii::t('models', 'Models')));
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
