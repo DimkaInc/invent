@@ -371,25 +371,63 @@ class ItemsController extends Controller
                             else
                             {
                                 // Новый предмет/оборудование. Пробуем добавить первое перемещение
-                                $moving = new Moving();
-                                $moving->date        = $row[ 'date' ];
-                                $moving->state_id    = $state[ 'id' ];
-                                $moving->item_id     = $item[ 'id' ];
-                                $moving->location_id = $location[ 'id' ];
-                                $moving->comment     = Yii::t('import', 'Import: {comment}', $row);
-
-                                if ($moving->validate() && $moving->save())
+                                // Проверка что последнее перемещение такое же, как и импортируемое
+                                $moving = Moving::find()->where([ 'item_id' => $item[ 'id' ]])->all();
+                                $flag = false;
+                                if (count($moving) > 0)
                                 {
-                                    // Записаали первое движение
-                                    $arrayReturn[ 'countImported' ]++;
+                                    // Признак, что последнее перемещение совпало с импортируемым
+                                    $flag = $moving[ count($moving) - 1 ]->location_id == $location[ 'id' ];
+                                }
+                                // Проверим, что существующая запись перемещения больше добавляемой
+                                $moving = Moving::find()->where([ 'item_id' => $item[ 'id' ]])->andWhere([ '>', 'date', $row[ 'date' ]])->all();
+                                if ($flag || count($moving) > 0)
+                                {
+                                    // Добавлять запись до существующих нельзя.
+                                    $arrayReturn[ 'countExists' ]++;
                                 }
                                 else
                                 {
-                                    // Запись не удалась, пробуем удалить предмет/оборудование
-                                    Items::find()->where([ 'id' => $item[ 'id' ], 'checked' => FALSE ])->one()->delete();
-                                    // Сообщим об ошибке
-                                    $arrayReturn[ 'countErrors' ]++;
-                                    $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Moving: {date} (') . $moving->errors['date'][0]. Yii::t('import', '), Inventory number:{invent}, model: {model}, location: {location} ( {region} )' , $row);
+                                    // Проверим, есть ли уже такое перемещение
+                                    $moving = Moving::find()->where([ 'item_id' => $item[ 'id' ], 'date' => $row[ 'date' ]])->orderBy([ 'id' => SORT_ASC ])->all();
+                                    if (count($moving) == 0)
+                                    {
+                                        // Такой транзакции нет ещё.
+                                        $moving = new Moving();
+                                        $moving->date        = $row[ 'date' ];
+                                        $moving->state_id    = $state[ 'id' ];
+                                        $moving->item_id     = $item[ 'id' ];
+                                        $moving->location_id = $location[ 'id' ];
+                                        $moving->comment     = Yii::t('import', 'Import: {comment}', $row);
+
+                                        if ($moving->validate() && $moving->save())
+                                        {
+                                            // Записаали первое движение
+                                            $arrayReturn[ 'countImported' ]++;
+                                        }
+                                        else
+                                        {
+                                            // Запись не удалась, пробуем удалить предмет/оборудование
+                                            Items::find()->where([ 'id' => $item[ 'id' ], 'checked' => FALSE ])->one()->delete();
+                                            // Сообщим об ошибке
+                                            $arrayReturn[ 'countErrors' ]++;
+                                            $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Moving: {date} (') . $moving->errors['date'][0]. Yii::t('import', '), Inventory number:{invent}, model: {model}, location: {location} ( {region} )' , $row);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // Такое перемещение уже было
+                                        $arrayReturn[ 'countExists' ]++;
+                                        // Удаление дубликатов, если вдруг они образовались
+                                        if (count($moving) > 1)
+                                        {
+                                            // переберём все записи со второй  и удалим их.
+                                            for ($i = 1; $i < count($moving); $i++)
+                                            {
+                                                $moving[$i]->delete();
+                                            }
+                                        }
+                                    }
                                 }
                                 unset($moving);
                             }
@@ -482,8 +520,9 @@ class ItemsController extends Controller
                                     $line = [];
                                     foreach ($columns as $key => $index)
                                     {
-                                        $line[ $key ] = $row[ $index ];
+                                        $line[ $key ] = trim(str_replace("\t", ' ', $row[ $index ])); // Заменяем табуляторы на пробелы и удаляем ведущие и ведомые пробелы.
                                     }
+                                    // Обработка даты
                                     if (isset($line[ 'date' ]))
                                     {
                                         if ($line[ 'date' ] == '#NULL!') $line[ 'date' ] = date('d.m.Y');
@@ -544,7 +583,7 @@ class ItemsController extends Controller
                                     {
                                         foreach($columns as $keym => $index)
                                         {
-                                            if ($index == $key) $line[ $keym ] = $item->getCalculatedValue();
+                                            if ($index == $key) $line[ $keym ] = trim(str_replace("\t", ' ', $item->getCalculatedValue()));
                                         }
                                     }
                                 }

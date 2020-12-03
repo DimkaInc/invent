@@ -100,7 +100,7 @@ class LocationsSearch extends Locations
             'desc' => [Regions::tableName() . '.name' => SORT_DESC],
         ];
 
-        $query->andFilterWhere(['ilike', 'name', $this->name]);
+        $query->andFilterWhere(['ilike', Locations::tableName() . '.name', $this->name]);
 
         return $dataProvider;
     }
