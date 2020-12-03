@@ -48,7 +48,14 @@ if (User::canPermission('updateRecord'))
     array_push($columns, [ 'attribute' => 'modelName',
         'value' => function ($data)
         {
-            return showUrlUpdate($data->modelName, $data);
+            if ($data->name == '')
+            {
+                return showUrlUpdate($data->modelName, $data);
+            }
+            else
+            {
+                return showUrlUpdate($data->modelName . ' (' . $data->name . ')', $data);
+            }
         },
         'format' => 'raw',
     ] );
