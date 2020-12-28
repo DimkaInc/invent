@@ -76,15 +76,11 @@ $regions = ArrayHelper::map(RegionsSearch::noinvent()->orderBy('name')->all(), '
                 "qr-reader", { fps: 10, qrbox: 250 });
             html5QrcodeScanner.render(onScanSuccess);
         });
-        
+
     </script>
 
 
     <div class="row">
-        <!-- ?= odaialali\qrcodereader\QrReader::widget([
-    'id' => 'qrInput',
-    'successCallback' => "function(data){ $('#qrInput').val(data) }"
-]) ? -->
         <div class="col-md-4" id="qr-reader"></div>
     </div>
 

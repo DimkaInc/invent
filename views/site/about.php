@@ -25,6 +25,6 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
         <li>Разграничение прав для неавторизованного пользователя, авторизованного пользователя и администратора</li>
         <li>Импорт данных из .csv или .xls(x) файла</li>
     </ol>
-    <div style="color:lightgray">По вопросам работы программы, обращайтесь к разработчику.</div>
+    <div style="color:lightgray">По вопросам работы программы, обращайтесь на <a href="https://github.com/DimkaInc/invent">git-hub</a>.</div>
 
 </div>

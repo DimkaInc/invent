@@ -9,7 +9,7 @@ use app\models\User;
 
 if (! User::canPermission('updateRecord'))
 {
-    return $this->redirect(['site/index']);
+    return Yii::$app->response->redirect(['site/index']);
 }
 
 

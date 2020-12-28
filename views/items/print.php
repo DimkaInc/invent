@@ -9,9 +9,9 @@ use xj\qrcode\QRcode;
 use xj\qrcode\widgets\Email;
 use xj\qrcode\widgets\Text;
 
-if (! User::canPermission('updateRecord'))
+if (! User::canPermission('takingInventory'))
 {
-    return $this->redirect(['site/index']);
+    return Yii::$app->response->redirect(['site/index']);
 }
 
 $this->title = Yii::t('items', 'Items');

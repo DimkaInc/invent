@@ -127,7 +127,7 @@ class ItemsController extends Controller
     public function actionPrint()
     {
         if (! User::canPermission('takingInventory') ) {
-            return $this->redirect(['site/index']);
+            return Yii::$app->response->redirect(['site/index']);
         }
         // Список предметов/оборудования, если есть
         $id = Yii::$app->request->get('id');

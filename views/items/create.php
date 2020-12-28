@@ -8,7 +8,7 @@ use app\models\User;
 
 if (! User::canPermission('createRecord'))
 {
-    return $this->redirect(['site/index']);
+    return Yii::$app->response->redirect(['site/index']);
 }
 $this->title = Yii::t('items', 'Create Items');
 $this->params[ 'breadcrumbs' ][] = [ 'label' => Yii::t('app', 'Items'), 'url' => [ 'index' ]];
