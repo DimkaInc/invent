@@ -20,6 +20,16 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'container' => [
+        'definitions' => [
+            'yii\widgets\LinkPager' => [
+                'firstPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-fast-backward', ]),
+                'prevPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-backward', ]),
+                'nextPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-forward', ]),
+                'lastPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-fast-forward', ]),
+            ],
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation

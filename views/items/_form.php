@@ -40,7 +40,15 @@ use yii\data\Sort;
                 ')';
         }
         // Значения по умолчанию для случая создания нового
-        $defLocate = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ], Locations::findOne([ 'name' => 'Матвейково' ])->id => [ 'Selected' => 'true' ]] ];
+        $location = Locations::findOne([ 'name' => 'Матвейково' ]);
+        if (isset($location))
+        {
+            $defLocate = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ], $location->id => [ 'Selected' => 'true' ]] ];
+        }
+        else
+        {
+            $defLocate = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ]] ];
+        }
 
 
         $modelm->date = date('d.m.Y'); // Текущая дата по умолчанию

@@ -44,8 +44,16 @@ use app\models\Regions;
 
     if ($model->isNewRecord)
     {
-        $defState    = [ 'options' => [ Status::findOne([ 'name' => 'Работает' ])->id => [ 'Selected' => 'true' ] ]];
-        $defLocate   = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ], Locations::findOne([ 'name' => 'Матвейково' ])->id => [ 'Selected' => 'true' ]] ];
+        $state    = Status::findOne([ 'name' => 'Работает' ]);
+        if (isset($state))
+        {
+            $defState    = [ 'options' => [ $state->id => [ 'Selected' => 'true' ] ]];
+        }
+        $locate = Locations::findOne([ 'name' => 'Матвейково' ]);
+        if (isset($locate))
+        {
+            $defLocate   = [ 'options' => [ 'empty' => [ 'Disabled' => 'true' ], $locate->id => [ 'Selected' => 'true' ]] ];
+        }
         $model->date = date('d.m.Y');
     }
 
