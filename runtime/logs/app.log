@@ -68181,3 +68181,1065 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1609133766.7853
     'REQUEST_TIME' => 1609133766
 ]
+2020-12-28 12:43:07 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][error][Error] Error: Class 'app\models\Yii' not found in /var/www/invent/basic/models/ItemsSearch.php:168
+Stack trace:
+#0 /var/www/invent/basic/controllers/ItemsController.php(302): app\models\ItemsSearch->search()
+#1 [internal function]: app\controllers\ItemsController->actionIndex()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#7 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-28 12:43:07 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][info][application] $_GET = [
+    'r' => 'items/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PTEecxPMP3yXl7PltVN9pR7EN4HdOERY\";}'
+    'PHPSESSID' => 'j7uf8eb6svs58iau3c9712oqt7'
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=items%2Fupdate&id=1770'
+    'HTTP_COOKIE' => '_csrf=4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PTEecxPMP3yXl7PltVN9pR7EN4HdOERY%22%3B%7D; PHPSESSID=j7uf8eb6svs58iau3c9712oqt7; _identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '7836'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Findex'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Findex'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609148587.6652
+    'REQUEST_TIME' => 1609148587
+]
+2020-12-28 12:43:47 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][error][Error] Error: Call to undefined method Yii::app() in /var/www/invent/basic/models/ItemsSearch.php:168
+Stack trace:
+#0 /var/www/invent/basic/controllers/ItemsController.php(302): app\models\ItemsSearch->search()
+#1 [internal function]: app\controllers\ItemsController->actionIndex()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#7 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-28 12:43:47 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][info][application] $_GET = [
+    'r' => 'items/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PTEecxPMP3yXl7PltVN9pR7EN4HdOERY\";}'
+    'PHPSESSID' => 'nnvrj3p2f5fkdp3tpet73lvg01'
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=items%2Fupdate&id=1770'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PTEecxPMP3yXl7PltVN9pR7EN4HdOERY%22%3B%7D; PHPSESSID=nnvrj3p2f5fkdp3tpet73lvg01; _identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '7849'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Findex'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Findex'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609148627.3841
+    'REQUEST_TIME' => 1609148627
+]
+2020-12-28 12:49:34 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][error][ParseError] ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /var/www/invent/basic/controllers/ItemsController.php:279
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload()
+#1 [internal function]: spl_autoload_call()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(637): class_exists()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#7 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-28 12:49:34 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][info][application] $_GET = [
+    'r' => 'items/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PTEecxPMP3yXl7PltVN9pR7EN4HdOERY\";}'
+    'PHPSESSID' => 'nnvrj3p2f5fkdp3tpet73lvg01'
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=items%2Fupdate&id=1770'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PTEecxPMP3yXl7PltVN9pR7EN4HdOERY%22%3B%7D; PHPSESSID=nnvrj3p2f5fkdp3tpet73lvg01; _identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '7946'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Findex'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Findex'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609148974.1415
+    'REQUEST_TIME' => 1609148974
+]
+2020-12-28 12:50:25 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\web\User::getState() in /var/www/invent/basic/vendor/yiisoft/yii2/base/Component.php:300
+Stack trace:
+#0 /var/www/invent/basic/models/ItemsSearch.php(168): yii\base\Component->__call()
+#1 /var/www/invent/basic/controllers/ItemsController.php(302): app\models\ItemsSearch->search()
+#2 [internal function]: app\controllers\ItemsController->actionIndex()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#8 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2020-12-28 12:50:24 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][info][application] $_GET = [
+    'r' => 'items/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PTEecxPMP3yXl7PltVN9pR7EN4HdOERY\";}'
+    'PHPSESSID' => 'nnvrj3p2f5fkdp3tpet73lvg01'
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=items%2Fupdate&id=1770'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PTEecxPMP3yXl7PltVN9pR7EN4HdOERY%22%3B%7D; PHPSESSID=nnvrj3p2f5fkdp3tpet73lvg01; _identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '7959'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Findex'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Findex'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609149024.9963
+    'REQUEST_TIME' => 1609149024
+]
+2020-12-28 13:01:10 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][error][Error] Error: Class 'app\models\Yii' not found in /var/www/invent/basic/models/ItemsSearch.php:168
+Stack trace:
+#0 /var/www/invent/basic/controllers/ItemsController.php(302): app\models\ItemsSearch->search()
+#1 [internal function]: app\controllers\ItemsController->actionIndex()
+#2 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#7 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-28 13:01:09 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][info][application] $_GET = [
+    'r' => 'items/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PTEecxPMP3yXl7PltVN9pR7EN4HdOERY\";}'
+    'PHPSESSID' => 'nnvrj3p2f5fkdp3tpet73lvg01'
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=items%2Fupdate&id=1770'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PTEecxPMP3yXl7PltVN9pR7EN4HdOERY%22%3B%7D; PHPSESSID=nnvrj3p2f5fkdp3tpet73lvg01; _identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '8144'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Findex'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Findex'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609149669.9986
+    'REQUEST_TIME' => 1609149669
+]
+2020-12-28 13:01:31 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\grid\GridView::header in /var/www/invent/basic/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /var/www/invent/basic/vendor/yiisoft/yii2/BaseYii.php(558): yii\base\Component->__set()
+#1 /var/www/invent/basic/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 /var/www/invent/basic/vendor/yiisoft/yii2/di/Container.php(400): ReflectionClass->newInstanceArgs()
+#4 /var/www/invent/basic/vendor/yiisoft/yii2/di/Container.php(159): yii\di\Container->build()
+#5 /var/www/invent/basic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#6 /var/www/invent/basic/vendor/yiisoft/yii2/base/Widget.php(137): yii\BaseYii::createObject()
+#7 /var/www/invent/basic/views/items/index.php(289): yii\base\Widget::widget()
+#8 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/invent...')
+#9 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/invent/basic/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile()
+#11 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(409): yii\base\View->render()
+#12 /var/www/invent/basic/controllers/ItemsController.php(306): yii\base\Controller->render()
+#13 [internal function]: app\controllers\ItemsController->actionIndex()
+#14 /var/www/invent/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/invent/basic/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/invent/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/invent/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/invent/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/invent/basic/web/index.php(12): yii\base\Application->run()
+#20 {main}
+2020-12-28 13:01:31 [192.168.0.68][1][nnvrj3p2f5fkdp3tpet73lvg01][info][application] $_GET = [
+    'r' => 'items/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PTEecxPMP3yXl7PltVN9pR7EN4HdOERY\";}'
+    'PHPSESSID' => 'nnvrj3p2f5fkdp3tpet73lvg01'
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://192.168.0.32/invent/index.php?r=items%2Fupdate&id=1770'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=4f258b689c3df8c0f109c7d06849e5361a7fd30edceb91156b51aaa19fce378ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PTEecxPMP3yXl7PltVN9pR7EN4HdOERY%22%3B%7D; PHPSESSID=nnvrj3p2f5fkdp3tpet73lvg01; _identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.68'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '8150'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=items%2Findex'
+    'REQUEST_URI' => '/invent/index.php?r=items%2Findex'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609149691.1869
+    'REQUEST_TIME' => 1609149691
+]
+2020-12-28 14:12:32 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+    in /var/www/invent/basic/views/layouts/main.php:104
+    in /var/www/invent/basic/controllers/ItemsController.php:306
+2020-12-28 14:12:32 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+2020-12-28 14:12:32 [192.168.0.80][1][-][info][application] $_GET = [
+    'ItemsSearch' => [
+        'invent' => '1360058'
+        'serial' => ''
+        'modelName' => ''
+        'regionName' => ''
+        'statusName' => ''
+    ]
+    'r' => 'items/index'
+    'page' => '61'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+    'PHPSESSID' => 'cjrbf84aheq4j915gjp72rlnh1'
+    '_csrf' => '60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'MSK'
+    'SSL_SERVER_S_DN_L' => 'Moscow'
+    'SSL_SERVER_S_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_S_DN_OU' => 'IT'
+    'SSL_SERVER_S_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_S_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'MSK'
+    'SSL_SERVER_I_DN_L' => 'Moscow'
+    'SSL_SERVER_I_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_I_DN_OU' => 'IT'
+    'SSL_SERVER_I_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_I_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'A339F5E73AD6C129'
+    'SSL_SERVER_V_START' => 'Sep 19 06:04:13 2020 GMT'
+    'SSL_SERVER_V_END' => 'May 29 06:04:13 2034 GMT'
+    'SSL_SERVER_S_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_I_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?ItemsSearch%5Binvent%5D=58&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D; PHPSESSID=cjrbf84aheq4j915gjp72rlnh1; _csrf=60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.80'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '52926'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'ItemsSearch%5Binvent%5D=1360058&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61'
+    'REQUEST_URI' => '/invent/index.php?ItemsSearch%5Binvent%5D=1360058&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609153952.3798
+    'REQUEST_TIME' => 1609153952
+]
+2020-12-28 14:12:39 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+    in /var/www/invent/basic/views/items/index.php:297
+    in /var/www/invent/basic/controllers/ItemsController.php:306
+2020-12-28 14:12:39 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+    in /var/www/invent/basic/views/items/index.php:297
+    in /var/www/invent/basic/controllers/ItemsController.php:306
+2020-12-28 14:12:38 [192.168.0.80][1][-][info][application] $_GET = [
+    'ItemsSearch' => [
+        'invent' => ''
+        'serial' => ''
+        'modelName' => ''
+        'regionName' => ''
+        'statusName' => ''
+    ]
+    'r' => 'items/index'
+    'page' => '61'
+    '_pjax' => '#p0'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+    '_csrf' => '60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d\";}'
+    'PHPSESSID' => 'tqgacssa075p9gdahk6hgkck6n'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'MSK'
+    'SSL_SERVER_S_DN_L' => 'Moscow'
+    'SSL_SERVER_S_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_S_DN_OU' => 'IT'
+    'SSL_SERVER_S_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_S_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'MSK'
+    'SSL_SERVER_I_DN_L' => 'Moscow'
+    'SSL_SERVER_I_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_I_DN_OU' => 'IT'
+    'SSL_SERVER_I_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_I_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'A339F5E73AD6C129'
+    'SSL_SERVER_V_START' => 'Sep 19 06:04:13 2020 GMT'
+    'SSL_SERVER_V_END' => 'May 29 06:04:13 2034 GMT'
+    'SSL_SERVER_S_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_I_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '21f52dcfeeeff1826781c47ecfdfece9b049d96f33b8141a3b5e9841730d72b4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'FQXXOLVwTnXeL12NJR4KPbUQwkuMzf_FzGlknEgKXOdtTZJxhxgKP41Fau9tWkRHxnKpHfa4p6T6D0mxfn0Dgw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#p0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?ItemsSearch%5Binvent%5D=1360058&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D; _csrf=60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d%22%3B%7D; PHPSESSID=tqgacssa075p9gdahk6hgkck6n'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.80'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '52935'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&_pjax=%23p0'
+    'REQUEST_URI' => '/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&_pjax=%23p0'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609153958.9663
+    'REQUEST_TIME' => 1609153958
+]
+2020-12-28 14:13:10 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+    in /var/www/invent/basic/views/layouts/main.php:104
+    in /var/www/invent/basic/controllers/ItemsController.php:306
+2020-12-28 14:13:10 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+2020-12-28 14:13:10 [192.168.0.80][1][-][info][application] $_GET = [
+    'ItemsSearch' => [
+        'invent' => ''
+        'serial' => ''
+        'modelName' => ''
+        'regionName' => ''
+        'statusName' => ''
+    ]
+    'r' => 'items/index'
+    'page' => '61'
+    '_pjax' => '#ItemsTable'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+    '_csrf' => '60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d\";}'
+    'PHPSESSID' => 'tqgacssa075p9gdahk6hgkck6n'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'pageSize' => 100
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'MSK'
+    'SSL_SERVER_S_DN_L' => 'Moscow'
+    'SSL_SERVER_S_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_S_DN_OU' => 'IT'
+    'SSL_SERVER_S_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_S_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'MSK'
+    'SSL_SERVER_I_DN_L' => 'Moscow'
+    'SSL_SERVER_I_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_I_DN_OU' => 'IT'
+    'SSL_SERVER_I_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_I_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'A339F5E73AD6C129'
+    'SSL_SERVER_V_START' => 'Sep 19 06:04:13 2020 GMT'
+    'SSL_SERVER_V_END' => 'May 29 06:04:13 2034 GMT'
+    'SSL_SERVER_S_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_I_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '21f52dcfeeeff1826781c47ecfdfece9b049d96f33b8141a3b5e9841730d72b4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'FQXXOLVwTnXeL12NJR4KPbUQwkuMzf_FzGlknEgKXOdtTZJxhxgKP41Fau9tWkRHxnKpHfa4p6T6D0mxfn0Dgw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#ItemsTable'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D; _csrf=60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d%22%3B%7D; PHPSESSID=tqgacssa075p9gdahk6hgkck6n'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.80'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '52938'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100&_pjax=%23ItemsTable'
+    'REQUEST_URI' => '/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100&_pjax=%23ItemsTable'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609153990.291
+    'REQUEST_TIME' => 1609153990
+]
+2020-12-28 14:13:10 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+    in /var/www/invent/basic/views/layouts/main.php:104
+    in /var/www/invent/basic/controllers/ItemsController.php:306
+2020-12-28 14:13:10 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+2020-12-28 14:13:10 [192.168.0.80][1][-][info][application] $_GET = [
+    'ItemsSearch' => [
+        'invent' => ''
+        'serial' => ''
+        'modelName' => ''
+        'regionName' => ''
+        'statusName' => ''
+    ]
+    'r' => 'items/index'
+    'page' => '61'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+    '_csrf' => '60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d\";}'
+    'PHPSESSID' => 'tqgacssa075p9gdahk6hgkck6n'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'pageSize' => 100
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'MSK'
+    'SSL_SERVER_S_DN_L' => 'Moscow'
+    'SSL_SERVER_S_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_S_DN_OU' => 'IT'
+    'SSL_SERVER_S_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_S_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'MSK'
+    'SSL_SERVER_I_DN_L' => 'Moscow'
+    'SSL_SERVER_I_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_I_DN_OU' => 'IT'
+    'SSL_SERVER_I_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_I_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'A339F5E73AD6C129'
+    'SSL_SERVER_V_START' => 'Sep 19 06:04:13 2020 GMT'
+    'SSL_SERVER_V_END' => 'May 29 06:04:13 2034 GMT'
+    'SSL_SERVER_S_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_I_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '21f52dcfeeeff1826781c47ecfdfece9b049d96f33b8141a3b5e9841730d72b4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D; _csrf=60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d%22%3B%7D; PHPSESSID=tqgacssa075p9gdahk6hgkck6n'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.80'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '52938'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100'
+    'REQUEST_URI' => '/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609153990.4171
+    'REQUEST_TIME' => 1609153990
+]
+2020-12-28 14:13:20 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+    in /var/www/invent/basic/views/layouts/main.php:104
+    in /var/www/invent/basic/controllers/ItemsController.php:306
+2020-12-28 14:13:20 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+2020-12-28 14:13:20 [192.168.0.80][1][-][info][application] $_GET = [
+    'ItemsSearch' => [
+        'invent' => ''
+        'serial' => ''
+        'modelName' => ''
+        'regionName' => ''
+        'statusName' => ''
+    ]
+    'r' => 'items/index'
+    'page' => '61'
+    '_pjax' => '#ItemsTable'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+    '_csrf' => '60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d\";}'
+    'PHPSESSID' => 'tqgacssa075p9gdahk6hgkck6n'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'pageSize' => 20
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'MSK'
+    'SSL_SERVER_S_DN_L' => 'Moscow'
+    'SSL_SERVER_S_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_S_DN_OU' => 'IT'
+    'SSL_SERVER_S_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_S_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'MSK'
+    'SSL_SERVER_I_DN_L' => 'Moscow'
+    'SSL_SERVER_I_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_I_DN_OU' => 'IT'
+    'SSL_SERVER_I_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_I_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'A339F5E73AD6C129'
+    'SSL_SERVER_V_START' => 'Sep 19 06:04:13 2020 GMT'
+    'SSL_SERVER_V_END' => 'May 29 06:04:13 2034 GMT'
+    'SSL_SERVER_S_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_I_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '21f52dcfeeeff1826781c47ecfdfece9b049d96f33b8141a3b5e9841730d72b4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'WGNlyPrpCDRRGFWOCmM21FlR7AstJThOhHPnzO4y9NIgKyCByIFMfgJyYuxCJ3iuKjOHXVdQYC-yFcrh2EWrtg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#ItemsTable'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D; _csrf=60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d%22%3B%7D; PHPSESSID=tqgacssa075p9gdahk6hgkck6n'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.80'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '52943'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100&pageSize=20&_pjax=%23ItemsTable'
+    'REQUEST_URI' => '/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100&pageSize=20&_pjax=%23ItemsTable'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609154000.5346
+    'REQUEST_TIME' => 1609154000
+]
+2020-12-28 14:13:20 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+    in /var/www/invent/basic/views/layouts/main.php:104
+    in /var/www/invent/basic/controllers/ItemsController.php:306
+2020-12-28 14:13:20 [192.168.0.80][1][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.80
+2020-12-28 14:13:20 [192.168.0.80][1][-][info][application] $_GET = [
+    'ItemsSearch' => [
+        'invent' => ''
+        'serial' => ''
+        'modelName' => ''
+        'regionName' => ''
+        'statusName' => ''
+    ]
+    'r' => 'items/index'
+    'page' => '61'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[1,null,2592000]\";}'
+    '_csrf' => '60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d\";}'
+    'PHPSESSID' => 'tqgacssa075p9gdahk6hgkck6n'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'pageSize' => 20
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_SERVER_S_DN_C' => 'RU'
+    'SSL_SERVER_S_DN_ST' => 'MSK'
+    'SSL_SERVER_S_DN_L' => 'Moscow'
+    'SSL_SERVER_S_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_S_DN_OU' => 'IT'
+    'SSL_SERVER_S_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_S_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_SERVER_I_DN_C' => 'RU'
+    'SSL_SERVER_I_DN_ST' => 'MSK'
+    'SSL_SERVER_I_DN_L' => 'Moscow'
+    'SSL_SERVER_I_DN_O' => 'GBUV MO TERVETUPRAVLENIE N1'
+    'SSL_SERVER_I_DN_OU' => 'IT'
+    'SSL_SERVER_I_DN_CN' => '192.168.0.32'
+    'SSL_SERVER_I_DN_Email' => 'tervet1@inbox.ru'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2u'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'A339F5E73AD6C129'
+    'SSL_SERVER_V_START' => 'Sep 19 06:04:13 2020 GMT'
+    'SSL_SERVER_V_END' => 'May 29 06:04:13 2034 GMT'
+    'SSL_SERVER_S_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_I_DN' => 'emailAddress=tervet1@inbox.ru,CN=192.168.0.32,OU=IT,O=GBUV MO TERVETUPRAVLENIE N1,L=Moscow,ST=MSK,C=RU'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '21f52dcfeeeff1826781c47ecfdfece9b049d96f33b8141a3b5e9841730d72b4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => '192.168.0.32'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'https://192.168.0.32/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=992cc680fcb56a39cf1a309dc6073fe21f1604f6f2a8c4dc514ba5f1d621968aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B1%2Cnull%2C2592000%5D%22%3B%7D; _csrf=60b921b9906d7b559045825bfb97c3c07e1a749cdd5688e5e660b7fd92870bc0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xHEI2hDJSj7bHDNzsbkVzuXa6f--6w_d%22%3B%7D; PHPSESSID=tqgacssa075p9gdahk6hgkck6n'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at 192.168.0.32 Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => '192.168.0.32'
+    'SERVER_ADDR' => '192.168.0.32'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '192.168.0.80'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => '/invent'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/invent/basic/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/invent/basic/web/index.php'
+    'REMOTE_PORT' => '52943'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100&pageSize=20'
+    'REQUEST_URI' => '/invent/index.php?ItemsSearch%5Binvent%5D=&ItemsSearch%5Bserial%5D=&ItemsSearch%5BmodelName%5D=&ItemsSearch%5BregionName%5D=&ItemsSearch%5BstatusName%5D=&r=items%2Findex&page=61&pageSize=100&pageSize=20'
+    'SCRIPT_NAME' => '/invent/index.php'
+    'PHP_SELF' => '/invent/index.php'
+    'REQUEST_TIME_FLOAT' => 1609154000.66
+    'REQUEST_TIME' => 1609154000
+]

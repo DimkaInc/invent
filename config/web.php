@@ -20,16 +20,6 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'container' => [
-        'definitions' => [
-            'yii\widgets\LinkPager' => [
-                'firstPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-fast-backward', ]),
-                'prevPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-backward', ]),
-                'nextPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-forward', ]),
-                'lastPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-fast-forward', ]),
-            ],
-        ],
-    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -118,6 +108,20 @@ $config = [
             ],
         ],
         */
+    ],
+    'container' => [
+        'definitions' => [
+            'yii\widgets\LinkPager' => [
+                'firstPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-fast-backward', 'title' => 'Первая страница', ]),
+                'prevPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-backward', 'title' => 'Предыдущая страница', ]),
+                'nextPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-forward', 'title' => 'Следующая страница', ]),
+                'lastPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-fast-forward', 'title' => 'Последняя страница', ]),
+//                'firstPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-fast-backward', 'title' => Yii::t('app', 'First page'), ]),
+//                'prevPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-backward', 'title' => Yii::t('app', 'Previous page'), ]),
+//                'nextPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-forward', 'title' => Yii::t('app', 'Next page'), ]),
+//                'lastPageLabel' => Html::tag('span', '', [ 'class' => 'glyphicon glyphicon-fast-forward', 'title' => Yii::t('app', 'Last page'), ]),
+            ],
+        ],
     ],
     'params' => $params,
 ];

@@ -22,6 +22,9 @@ $columns = [[ 'class' => 'yii\grid\SerialColumn' ]];
 // Кнопки действий {view} {update} {delete} {print}
 $template = '';
 $buttons = [];
+
+$pageSize = Yii::$app->session['pageSize'] ?? 20;
+
 if (User::canPermission('updateRecord'))
 {
     // Кнопки
@@ -195,7 +198,19 @@ array_push($columns, [
     'class' => 'yii\grid\ActionColumn',
     'template' => $template,
     'buttons' => $buttons,
+    'header' => Html::dropDownList(
+            'pageSize', $pageSize, [
+                20 => 20,
+                50 => 50,
+                100 => 100,
+                0 => 'Все',
+            ],
+            [ 'onChange' => '$.pjax.reload({container: "#ItemsTable", url: $(location).attr("href") + "&pageSize=" + $(this).val()});',
+              'title' => Yii::t('app', 'Lines per page'),
+            ]
+        ),
 ]);
+
 ?>
 <div class="items-index">
 
@@ -257,6 +272,7 @@ array_push($columns, [
         ?>
     </div>
 
+    <?php Pjax::begin(); ?>
     <?= GridView::widget([
         'id' => 'ItemsTable',
         'dataProvider' => $dataProvider, // Источник данных
@@ -274,5 +290,6 @@ array_push($columns, [
             },
         'columns' => $columns,
     ]); ?>
+    <?php Pjax::end(); ?>
 
 </div>

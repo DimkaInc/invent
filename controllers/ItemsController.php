@@ -274,6 +274,11 @@ class ItemsController extends Controller
         {
             return $this->redirect(['site/index']);
         }
+        if (isset($_GET[ 'pageSize' ]))
+        {
+            Yii::$app->session['pageSize'] = (int) $_GET[ 'pageSize' ];
+            unset($_GET[ 'pageSize' ]);
+        }
         $searchModel = new ItemsSearch();
         if (isset(Yii::$app->request->queryParams['id']))
         {
@@ -315,7 +320,7 @@ class ItemsController extends Controller
             'countErrors'   => 0,
             'errors'        => '',
         ];
-        
+
         // Проверка наличия ключевых полей
         if ((!isset($arrayRows[ 0 ][ 'model' ]))
             || (!isset($arrayRows[ 0 ][ 'type' ]))

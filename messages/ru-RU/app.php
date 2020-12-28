@@ -43,6 +43,7 @@ return [
     'Please fill out the following fields to login:' => 'Пожалуйста, заполните следующие поля для входа:',
     'Register' => 'Учесть',
     'Remember Me' => 'Запомнить меня',
+    'Reports' => 'Отчёты',
     'Reset' => 'Сброс',
     'Save' => 'Сохранить',
     'Search' => 'Поиск',
@@ -54,5 +55,9 @@ return [
     'Username' => 'Имя пользователя',
     'You may login with' => 'Вы можете войти как',
     'or' => 'или',
-    'Reports' => 'Отчёты',
+    'First page' => 'Первая страница',
+    'Last page' => 'Последняя страница',
+    'Lines per page' => 'Записей на страницу',
+    'Next page' => 'Следующая страница',
+    'Previous page' => 'Предыдущая страница',
 ];

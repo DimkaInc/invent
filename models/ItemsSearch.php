@@ -164,6 +164,9 @@ class ItemsSearch extends Items
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => \Yii::$app->session['pageSize'] ?? 20,
+            ],
         ]);
 
         $dataProvider->setSort([
