@@ -129,6 +129,8 @@ class ItemsController extends Controller
         if (! User::canPermission('takingInventory') ) {
             return Yii::$app->response->redirect(['site/index']);
         }
+//        Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+//        Yii::$app->response->headers->add('Content-Type', 'application/pdf');
         // Список предметов/оборудования, если есть
         $id = Yii::$app->request->get('id');
 
@@ -157,6 +159,7 @@ class ItemsController extends Controller
 
         // Заполнение страницы данными
         $pdf->content = $this->renderPartial('print', [ 'models' => $models ]);
+
 
         // Выгрузка PDF
         return $pdf->render();
@@ -284,7 +287,6 @@ class ItemsController extends Controller
         {
             $id = Yii::$app->request->queryParams['id'];
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-            //$dataProvider->query->select(Items::tableName() . '.id');
             $pageSize = $dataProvider->pagination->pageSize;
             $dataProvider->pagination = FALSE;
             $rows = $dataProvider->getModels();
@@ -644,10 +646,10 @@ class ItemsController extends Controller
     public function actionCreate()
     {
         if (! User::canPermission('createRecord') ) {
-            return $this->redirect(['site/index']);
+            return $this->redirect([ 'site/index' ]);
         }
         $model = new Items(); // Новый предмет/оборудование
-        $model->checked = true;
+        $model->checked = TRUE;
         $modelm = new Moving();
         if ($model->load(Yii::$app->request->post()) && $model->save())
         {
@@ -664,7 +666,7 @@ class ItemsController extends Controller
                 {
                     $this->findModel($model->id)->delete();  // Иначе удаляем созданную запись предмета/оборудования
                     unset($model->id);                       // Очищаем идентификатор предмета/оборудования
-                    $model->isNewRecord = true;
+                    $model->isNewRecord = TRUE;
                     return $this->render('create', [         // Показываем форму создания нового предмета/оборудования
                         'model'  => $model,
                         'modelm' => $modelm,
@@ -674,7 +676,7 @@ class ItemsController extends Controller
             {
                 $this->findModel($model->id)->delete();  // Иначе удаляем созданную запись предмета/оборудования
                 unset($model->id);                      // Очищаем идентификатор предмета/оборудования
-                $model->isNewRecord = true;
+                $model->isNewRecord = TRUE;
                 return $this->render('create', [        // Показываем форму создания нового предмета/оборудования
                     'model'  => $model,
                     'modelm' => $modelm,
@@ -688,6 +690,65 @@ class ItemsController extends Controller
             ]);
         }
 
+    }
+
+    /**
+     * Добавление новой записи как копии существующей
+     * @param integer $id - идентификатор существующей записи предмета/оборудования
+     * @return mixed
+     */
+    public function actionAddcopy($is)
+    {
+        if (! User::canPermission('createRecord') )
+        {
+            return $this->redirect([ 'site/index' ]);
+        }
+        $origin = Items::find()->where([ 'id' => $is ])->one();
+        $model = new Items();
+        $model->checked = TRUE;
+        $modelm = new Moving();
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            // Удалось сохранить, создаём первую запись движения
+            if ($modelm->load(Yii::$app->request->post()))
+            {
+                $modelm->item_id = $model->id;
+                $modelm->comment = 'Поступление';
+
+                if ( $modelm->save() ) // Пробуем сохранить движение
+                {
+                    return $this->redirect([ 'index', 'id' => $model->id ]); // Если удалось, показываем список оборудования
+                } else
+                {
+                    $this->findModel($model->id)->delete();  // Иначе удаляем созданную запись предмета/оборудования
+                    unset($model->id);                       // Очищаем идентификатор предмета/оборудования
+                    $model->isNewRecord = TRUE;
+                    return $this->render('create', [         // Показываем форму создания нового предмета/оборудования
+                        'model'  => $model,
+                        'modelm' => $modelm,
+                    ]);
+                }
+            } else
+            {
+                $this->findModel($model->id)->delete();  // Иначе удаляем созданную запись предмета/оборудования
+                unset($model->id);                      // Очищаем идентификатор предмета/оборудования
+                $model->isNewRecord = TRUE;
+                return $this->render('create', [        // Показываем форму создания нового предмета/оборудования
+                    'model'  => $model,
+                    'modelm' => $modelm,
+                ]);
+            }
+
+        } else
+        {
+            $model->isNewRecord = TRUE;
+            $model->model_id = $origin->model_id;
+            $model->invent = $origin->invent;
+            return $this->render('create', [
+                'model' => $model,
+                'modelm' => $modelm,
+            ]);
+        }
     }
 
     /**

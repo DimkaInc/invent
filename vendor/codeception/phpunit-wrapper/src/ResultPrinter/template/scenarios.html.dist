@@ -34,8 +34,7 @@
              display: block;
          }
          .screenshot img {
-             transform: scale(0.5);
-             transform-origin: 0 0;
+             zoom: 0.5;
          }
 
          @media (max-width: 1200px) {

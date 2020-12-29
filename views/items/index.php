@@ -25,6 +25,16 @@ $buttons = [];
 
 $pageSize = Yii::$app->session['pageSize'] ?? 20;
 
+if (User::canPermission('createRecord'))
+{
+    $template .= ' {copy}';
+    $buttons [ 'copy' ] = function ($url, $model, $key)
+        {
+            return Html::a('<span class="glyphicon glyphicon-share"></span>',
+                Url::to([ 'addcopy', 'is' => $model->id ]), [ 'title' => Yii::t('items', 'Copy from curren item'), ]);
+        };
+}
+
 if (User::canPermission('updateRecord'))
 {
     // Кнопки
@@ -172,17 +182,16 @@ if (User::canPermission('takingInventory'))
 {
     // Кнопки
     $template .= ' {print}';
-    $buttons = [
-                'print' => function ($url, $model, $key)
-                    {
-                        return Html::a('<span class="glyphicon glyphicon-print"></span>',
-                            Url::to([ 'print', 'id[]' => $model->id ], 'http'),
-                            [ 'target' => '_blank',
-                                'onclick' => 'markToPrint($(this));',
-                                'title' => Yii::t('items', 'Print selected labels'),
-                            ]);
-                    },
-    ];
+    $buttons[ 'print' ] = function ($url, $model, $key)
+        {
+            return Html::a('<span class="glyphicon glyphicon-print"></span>',
+                Url::to([ 'print', 'id[]' => $model->id ], 'http'),
+                [ 'target' => '_blank',
+                    'onclick' => 'markToPrint($(this));',
+                    'data-pjax' => 0,
+                    'title' => Yii::t('items', 'Print selected labels'),
+                ]);
+        };
     // Чекбоксы для выбора предметов/оборудования для печати QR меток
     array_push($columns,
             [ 'class' => 'yii\grid\CheckboxColumn',

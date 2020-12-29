@@ -33,6 +33,7 @@ return [
     'Incorrect username or password.' => 'Неправильное имя пользователя или пароль',
     'Inventory' => 'Инвентаризация',
     'Items' => 'Оборудование',
+    'Lines per page' => 'Записей на страницу',
     'Login' => 'Вход',
     'Logout' => 'Выход',
     'Migration {migrate} can\'t reverted' => 'Миграция {migrate} не может быть отменена.',
@@ -57,7 +58,6 @@ return [
     'or' => 'или',
     'First page' => 'Первая страница',
     'Last page' => 'Последняя страница',
-    'Lines per page' => 'Записей на страницу',
     'Next page' => 'Следующая страница',
     'Previous page' => 'Предыдущая страница',
 ];

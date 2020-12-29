@@ -20,7 +20,7 @@ use yii\web\UploadedFile;
  *
  * Note that you should enable `fileinfo` PHP extension.
  *
- * @property int $sizeLimit The size limit for uploaded files. This property is read-only.
+ * @property-read int $sizeLimit The size limit for uploaded files. This property is read-only.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
@@ -415,7 +415,7 @@ class FileValidator extends Validator
 
         if (!empty($this->extensions)) {
             foreach ((array) $this->extensions as $ext) {
-                if (StringHelper::endsWith($file->name, ".$ext", false)) {
+                if ($extension === $ext || StringHelper::endsWith($file->name, ".$ext", false)) {
                     return true;
                 }
             }

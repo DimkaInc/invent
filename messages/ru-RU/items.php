@@ -37,6 +37,7 @@ return [
     'MAC address' => 'MAC адрес',
     'Model' => 'Модель',
     'Model identifier' => 'Идентификатор модели',
+    'Not found!' => 'Не найдено!',
     'Operating system' => 'Операционная система',
     'Print Items' => 'Печать этикеток',
     'Print selected labels' => 'Печать выбранных этикеток',
@@ -48,5 +49,5 @@ return [
     'Total items checked' => 'Учтено',
     'Total items count' => 'Всего',
     'Update Items: {name}' => 'Изменение оборудования: {name}',
-    'Not found!' => 'Не найдено!',
+    'Copy from curren item' => 'Копировать из этой записи',
 ];
