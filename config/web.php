@@ -78,12 +78,12 @@ $config = [
 
         'i18n' => [ // Переводы сообщений
             'translations' => [
-                '*' => [                                 // Для всех разделов
+                '*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',            // Исходный текст на английском
                     'basePath' => '@app/messages',
                     'fileMap' => [
-                        'app'       => 'app.php',           // Для преложения
+                        'app'       => 'app.php',           // Для приложения
                         'app/error' => 'error.php',         // Для ошибок
                         'contact'   => 'contact.php',       // Для обратной связи
                         'import'    => 'import.php',        // Для импорта. Обозначение полей таблицы

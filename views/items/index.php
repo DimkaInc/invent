@@ -8,6 +8,7 @@ use yii\widgets\DetailView;
 use yii\helpers\ArrayHelper;
 use app\models\Status;
 use app\models\User;
+use app\widgets\MyLinkPager;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ItemsSearch */
@@ -284,6 +285,9 @@ array_push($columns, [
     <?php Pjax::begin(); ?>
     <?= GridView::widget([
         'id' => 'ItemsTable',
+        'pager' => [
+            'class' => 'app\widgets\MyLinkPager',
+        ],
         'dataProvider' => $dataProvider, // Источник данных
         'filterModel' => $searchModel,   // Модель поиска
         'rowOptions' => function($model) // Функция окраски неинвентаризированных предметов/оборудования
