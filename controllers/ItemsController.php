@@ -181,7 +181,7 @@ class ItemsController extends Controller
             ->select('item_id')
             ->joinWith('status')
             ->Where([ 'ilike', Status::tableName() . '.name', 'Списано' ])
-            ->orWhere( [ 'checked' => 2 ] );
+            ->orWhere( [ Items::tableName() .'.checked' => 2 ] );
 
         // Получаем список всех предметов/оборудования, кроме списанного
         $model = Items::find()
