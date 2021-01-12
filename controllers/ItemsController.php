@@ -180,13 +180,13 @@ class ItemsController extends Controller
         $modelS = Moving::find()
             ->select('item_id')
             ->joinWith('status')
-            ->Where([ 'ilike', Status::tableName() . '.name', 'Списано' ])
-            ->orWhere( [ Items::tableName() .'.checked' => 2 ] );
+            ->Where([ 'ilike', Status::tableName() . '.name', 'Списано' ]);
 
         // Получаем список всех предметов/оборудования, кроме списанного
         $model = Items::find()
             ->select('id')
             ->innerJoin([ 'm' => $modelS ], 'not m.item_id = id')
+            ->Where(['not', 'checked', 2])
             ->all();
 
         // Устанавливаем флаг непроинвентаризированных для всех предметов/оборудования из полученного списка.
