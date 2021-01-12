@@ -68,7 +68,7 @@ class ItemsSearch extends Items
                 Status::tableName() .     '.name AS statusName ')
             ->joinWith([ 'types', 'moving', 'status', 'locations', 'regions', 'models', ])
             ->where([ 'in', Moving::tableName() . '.id', $query ])
-            ->andWhere([ 'checked' => false ]);
+            ->andWhere([ 'checked' => 0 ]);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

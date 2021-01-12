@@ -46,7 +46,7 @@ class LocationsSearch extends Locations
                 ->innerJoin([ 'm' => Moving::find()
                     ->select('MAX(' . Moving::tableName() . '.id) AS mid')
                     ->joinWith([ 'items' ])
-                    ->where([ Items::tableName() . '.checked' => false ])
+                    ->where([ Items::tableName() . '.checked' => 0 ])
                     ->groupBy([ 'item_id' ])
                 ], 'id = m.mid')
             ], Locations::tableName() . '.id = m.location_id');

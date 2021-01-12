@@ -51,7 +51,7 @@ class Items extends \yii\db\ActiveRecord
             [[ 'mac' ],    'string', 'max' => 20 ],
             [[ 'invent' ], 'string', 'max' => 50 ],
             [[ 'model_id' ], 'integer' ],
-            [[ 'checked' ], 'boolean' ],
+            [[ 'checked' ], 'integer' ],
         ];
     }
 

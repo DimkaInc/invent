@@ -101,7 +101,7 @@ class ItemsController extends Controller
                         $item->os          = isset($options[ 'os' ]) ? $options[ 'os' ] : NULL;           // Операционная система
                         $item->mac         = isset($options[ 'mac' ]) ? $options[ 'mac' ] : NULL;         // MAC-адрес
                         $item->serial      = isset($options[ 'serial' ]) ? $options[ 'serial' ] : NULL;   // Серийный номер
-                        $item->checked     = false;                                                       // Не инвентризирован (требует внимания после импорта)
+                        $item->checked     = 2;                                                           // Не инвентризирован (требует внимания после импорта)
                         // Сохраняем запись
                         if ($item->validate() && $item->save())
                         {
@@ -180,7 +180,8 @@ class ItemsController extends Controller
         $modelS = Moving::find()
             ->select('item_id')
             ->joinWith('status')
-            ->Where([ 'ilike', Status::tableName() . '.name', 'Списано' ]);
+            ->Where([ 'ilike', Status::tableName() . '.name', 'Списано' ])
+            ->orWhere( [ 'checked' => 2 ] );
 
         // Получаем список всех предметов/оборудования, кроме списанного
         $model = Items::find()
@@ -189,7 +190,7 @@ class ItemsController extends Controller
             ->all();
 
         // Устанавливаем флаг непроинвентаризированных для всех предметов/оборудования из полученного списка.
-        Items::updateAll([ 'checked' => false ], [ 'in', 'id', $model ]);
+        Items::updateAll([ 'checked' => 0 ], [ 'in', 'id', $model ]);
 
         // Переход к списку предметов/оборудования.
         return $this->redirect([ 'index' ]);
@@ -222,7 +223,7 @@ class ItemsController extends Controller
                 {
                     foreach ($items as $row)
                     {
-                        if ($row->checked)
+                        if ( $row->checked == 1 )
                         {
                             // Этот инвентарный номер был учтён
                             $color = ' color="#FF0000"';
@@ -241,7 +242,7 @@ class ItemsController extends Controller
                     $message .= Yii::t('items', 'Not found!') . ' ' . Yii::t('items', 'Inventory number') . ': ' . trim($keys[ 0 ]);
                 }
                 // Отмечаем проинвентаризированными все найденные предметы/оборудование
-                Items::updateAll([ 'checked' => TRUE ], [ 'invent' => trim($keys[ 0 ]), 'serial' => trim($keys[ 1 ]) ]);
+                Items::updateAll([ 'checked' => 1 ], [ 'invent' => trim($keys[ 0 ]), 'serial' => trim($keys[ 1 ]) ]);
 
                 if ($message != '')
                     if ( $color == ' color = "#FF8830"')
@@ -362,7 +363,7 @@ class ItemsController extends Controller
                     {
                         // Проверка, что предмет/оборудование уже были в базе
                         $item = Items::find()->where([ 'id' => $item[ 'id' ]])->one();
-                        if ($item->checked === TRUE)
+                        if ($item->checked < 2)
                         {
                             $arrayReturn[ 'countExists' ]++;
                         }
@@ -415,7 +416,7 @@ class ItemsController extends Controller
                                         else
                                         {
                                             // Запись не удалась, пробуем удалить предмет/оборудование
-                                            Items::find()->where([ 'id' => $item[ 'id' ], 'checked' => FALSE ])->one()->delete();
+                                            Items::find()->where([ 'id' => $item[ 'id' ], 'checked' => 2 ])->one()->delete();
                                             // Сообщим об ошибке
                                             $arrayReturn[ 'countErrors' ]++;
                                             $arrayReturn[ 'errors' ] .= '<br />' . Yii::t('import', 'Moving: {date} (') . $moving->errors['date'][0]. Yii::t('import', '), Inventory number:{invent}, model: {model}, location: {location} ( {region} )' , $row);
@@ -649,7 +650,7 @@ class ItemsController extends Controller
             return $this->redirect([ 'site/index' ]);
         }
         $model = new Items(); // Новый предмет/оборудование
-        $model->checked = TRUE;
+        $model->checked = 1;
         $modelm = new Moving();
         if ($model->load(Yii::$app->request->post()) && $model->save())
         {
@@ -705,7 +706,7 @@ class ItemsController extends Controller
         }
         $origin = Items::find()->where([ 'id' => $is ])->one();
         $model = new Items();
-        $model->checked = TRUE;
+        $model->checked = 1;
         $modelm = new Moving();
         if ($model->load(Yii::$app->request->post()) && $model->save())
         {

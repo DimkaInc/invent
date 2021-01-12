@@ -233,7 +233,7 @@ array_push($columns, [
         var res = '';
         for ( var i = 0; i < ids.length; i++)
         {
-            if (ids[ i ][ "checked" ] == true)
+            if (ids[ i ][ "checked" ] == 1)
             {
                 res += "&id[]=" + ids[ i ][ "value" ];
             }
@@ -288,9 +288,13 @@ array_push($columns, [
         'filterModel' => $searchModel,   // Модель поиска
         'rowOptions' => function($model) // Функция окраски неинвентаризированных предметов/оборудования
             {
-                if ($model->checked == false)     // Критерий проверки планируется
+                if ($model->checked == 0)     // Критерий проверки планируется
                 {
                     return [ 'class' => 'danger' ]; // Отметка неинвентаризированной строки
+                } else
+                if ($model->checked == 2)
+                {
+                    return [ 'class' => 'warning' ]; // Отметка непроверенной строки
                 } else
                 if ($model->statusName == 'Списано')
                 {

@@ -31,7 +31,7 @@ class Site extends \yii\data\ActiveDataProvider
                     ->select(Regions::tableName() . '.id, ' . Items::tableName() . '.id AS tid')
                     ->joinWith(['locations', 'moving', 'items'])
                     ->where(['in', Moving::tableName() . '.id', $subQuery])
-                    ->andWhere(Items::tableName() . '.checked = true')
+                    ->andWhere(Items::tableName() . '.checked = 1')
                 ], Regions::tableName() . '.id = c.id AND ' . Items::tableName() . '.id = c.tid')
             ->groupBy(Regions::tableName() . '.id')
             ->where(['in', Moving::tableName() . '.id', $subQuery]);
@@ -56,7 +56,7 @@ class Site extends \yii\data\ActiveDataProvider
             ->joinWith([ 'items', 'models' ])
             ->leftJoin(['c' => Items::find()
                     ->select('id AS tid')
-                    ->where(['checked' => true ])
+                    ->where(['checked' => 1 ])
                 ], Items::tableName() . '.id = c.tid')
             ->groupBy(Types::tableName() . '.id');
 
