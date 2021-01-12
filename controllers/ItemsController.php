@@ -186,7 +186,7 @@ class ItemsController extends Controller
         $model = Items::find()
             ->select('id')
             ->innerJoin([ 'm' => $modelS ], 'not m.item_id = id')
-            ->Where(['not', 'checked', 2])
+            ->Where('not checked = 2')
             ->all();
 
         // Устанавливаем флаг непроинвентаризированных для всех предметов/оборудования из полученного списка.
